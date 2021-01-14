@@ -1,5 +1,5 @@
 ## 一、前言
-正所谓源于开源，回馈开源！以下是我个人的学习建议。丰富的**音视频资料**往最后翻。
+正所谓源于开源，回馈开源！以下是学习音视频路线推荐。丰富的**音视频资料**往最后翻。
 
 ## 二、学习技能
 
@@ -43,17 +43,17 @@
 - [阅读官方文档](http://ffmpeg.org/ffmpeg.html)
 - 学习官方例子（源码中`doc/examples/xxx`）
 - [[总结]FFMPEG视音频编解码零基础学习方法](https://blog.csdn.net/leixiaohua1020/article/details/15811977)
-- 书籍（推荐，电子书往最后翻）
-> 1. FFmpeg从入门到精通
-> 2. FFMPEG_FFPLAY源码剖析
-> 3. 音视频开发进阶指南：基于Android与iOS平台的实践
-> 4. Android 音视频开发
+- 书籍（电子书往最后翻）
+> - [1.FFmpeg从入门到精通(京东)](https://item.jd.com/12349436.html)
+> - [2.FFMPEG_FFPLAY源码剖析(CSDN)](https://download.csdn.net/detail/leixiaohua1020/6377803)
+> - [3.音视频开发进阶指南：基于Android与iOS平台的实践(京东)](https://item.jd.com/12292642.html)
+> - [4.Android 音视频开发_何俊林(京东)](https://item.jd.com/12467530.html) 
 
 ### 2）学习路线
 [这里不推荐直接学习雷神的[总结]FFMPEG视音频编解码零基础学习方法，建议是通过在学习FFmpeg官方例子中进行学习，避免先入为主使用了过时的API。](https://blog.csdn.net/leixiaohua1020/article/details/15811977)
 
 #### a) 源码编译
-[编译ffmpeg4.2.2通过这篇文章我们基本可以编译出我们想要的FFmpeg库](https://qincji.gitee.io/2020/12/17/ffmpeg/03_build_ffmpeg/)
+[编译ffmpeg4.2.2](https://qincji.gitee.io/2020/12/17/ffmpeg/03_build_ffmpeg/)通过这篇文章我们基本可以编译出我们想要的FFmpeg库
 
 #### b) 源码阅读
 - 源码导入：[FFmpeg导入到Clion（MacOS）](https://qincji.gitee.io/2020/12/24/ffmpeg/04_import_ffmpeg/) 、 [使用Clion阅读FFmpeg源码（支持跳转）](https://qincji.gitee.io/2020/12/27/ffmpeg/05_source/) 
