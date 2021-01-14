@@ -50,14 +50,14 @@
 > - [4.Android 音视频开发_何俊林(京东)](https://item.jd.com/12467530.html) 
 
 ### 2）学习路线
-[这里不推荐直接学习雷神的[总结]FFMPEG视音频编解码零基础学习方法，建议是通过在学习FFmpeg官方例子中进行学习，避免先入为主使用了过时的API。](https://blog.csdn.net/leixiaohua1020/article/details/15811977)
+[这里不推荐直接学习雷神的 [总结]FFMPEG视音频编解码零基础学习方法，建议是通过在学习FFmpeg官方例子中进行学习，避免先入为主使用了过时的API。](https://blog.csdn.net/leixiaohua1020/article/details/15811977)
 
 #### a) 源码编译
 [编译ffmpeg4.2.2](https://qincji.gitee.io/2020/12/17/ffmpeg/03_build_ffmpeg/)通过这篇文章我们基本可以编译出我们想要的FFmpeg库
 
 #### b) 源码阅读
 - 源码导入：[FFmpeg导入到Clion（MacOS）](https://qincji.gitee.io/2020/12/24/ffmpeg/04_import_ffmpeg/) 、 [使用Clion阅读FFmpeg源码（支持跳转）](https://qincji.gitee.io/2020/12/27/ffmpeg/05_source/) 
-- 阅读参考：[FFMPEG/FFPLAY源码剖析(CSDN下载)](https://download.csdn.net/detail/leixiaohua1020/6377803) ，我也放到最下方资料里面了，没条件的朋友们可以从这里下载。 
+- 阅读参考：[FFMPEG_FFPLAY源码剖析(CSDN)](https://download.csdn.net/detail/leixiaohua1020/6377803) 、[雷神的FFmpeg源代码系列](https://blog.csdn.net/leixiaohua1020/article/details/44220151) 
 
 #### c) 学习官方例子
 - [FFmpeg重要结构体（转自雷神）](https://qincji.gitee.io/2020/12/28/ffmpeg/06_struct/) ，因为在学习FFmpeg中，必须得知道结构体中重要参数的含义，否则举步维艰。
