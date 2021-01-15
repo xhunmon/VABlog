@@ -74,6 +74,7 @@
 ## 六、待更...
 
 ## [音视频资料](https://pan.baidu.com/s/1Y5PFgbVu3W0ELBgQnrHNYA)
+**创作皆不易，有条件的朋友请支持原版，谢谢！**
 - 密码:lqi9
 - 动脑视频
 - 网易视频
