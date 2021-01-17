@@ -71,6 +71,9 @@
 - [FFmpeg Filter和SDL（Audio）](https://qincji.gitee.io/2021/01/10/ffmpeg/15_filter_a/) 对应 `doc/examples/filtering_video.c` 。
 - [FFmpeg Transcode(转码)](https://qincji.gitee.io/2021/01/12/ffmpeg/16_transcode/) 对应 `doc/examples/transcoding.c` 。
 
+#### d) 音视频同步
+- [FFmpeg 音视频同步处理](https://qincji.gitee.io/2021/01/17/ffmpeg/17_sync/)
+
 ## 六、待更...
 
 ## [音视频资料](https://pan.baidu.com/s/1Y5PFgbVu3W0ELBgQnrHNYA)
