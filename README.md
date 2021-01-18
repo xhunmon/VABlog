@@ -74,6 +74,10 @@
 #### d) 音视频同步
 - [FFmpeg 音视频同步处理](https://qincji.gitee.io/2021/01/17/ffmpeg/17_sync/)
 
+### 3）FFmpeg相关
+- [FFmpeg 命令使用指南：分析ffmpeg、ffprobe、ffplay工具使用文档，关联官方文档，以及滤镜、协议、视频合并、各种播放参数等相关介绍](https://qincji.gitee.io/2021/01/18/ffmpeg/18_command/)
+
+
 ## 六、待更...
 
 ## [音视频资料](https://pan.baidu.com/s/1Y5PFgbVu3W0ELBgQnrHNYA)
