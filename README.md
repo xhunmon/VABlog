@@ -65,11 +65,12 @@
 - [FFmpeg Muxing（封装）](https://qincji.gitee.io/2021/01/04/ffmpeg/09_muxing/) 对应 `doc/examples/muxing.c` 。
 - [FFmpeg Remuxing（重新封装）](https://qincji.gitee.io/2021/01/04/ffmpeg/10_remuxing/) 对应 `doc/examples/remuxing.c` 。
 - [FFmpeg Decode（解码）](https://qincji.gitee.io/2021/01/06/ffmpeg/11_decode/) 对应 `doc/examples/decode_audio.c` 和 `doc/examples/decode_video.c` 。
-- [FFmpeg Encode（编码）](https://qincji.gitee.io/2021/01/07/ffmpeg/12_encode/) 对应 `doc/examples/decode_audio.c` 和 `doc/examples/decode_video.c` 。
+- [FFmpeg Encode（编码）](https://qincji.gitee.io/2021/01/07/ffmpeg/12_encode/) 对应 `doc/examples/encode_audio.c` 和 `doc/examples/encode_video.c` 。
 - [FFmpeg 简单实现转码](https://qincji.gitee.io/2021/01/08/ffmpeg/13_transfer/) 汇总解封装、解码、编码、封装放到一起方便理解 。
 - [FFmpeg Filter和SDL（Video）](https://qincji.gitee.io/2021/01/09/ffmpeg/14_filter_v/) 对应 `doc/examples/filtering_video.c` 。
 - [FFmpeg Filter和SDL（Audio）](https://qincji.gitee.io/2021/01/10/ffmpeg/15_filter_a/) 对应 `doc/examples/filtering_video.c` 。
 - [FFmpeg Transcode(转码)](https://qincji.gitee.io/2021/01/12/ffmpeg/16_transcode/) 对应 `doc/examples/transcoding.c` 。
+- [FFmpeg Swscale（图像转换）](https://qincji.gitee.io/2021/01/28/ffmpeg/19_swscale/) 对应 `doc/examples/scaling_video.c` 。
 
 #### d) 音视频同步
 - [FFmpeg 音视频同步处理](https://qincji.gitee.io/2021/01/17/ffmpeg/17_sync/)
