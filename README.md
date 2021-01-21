@@ -78,8 +78,17 @@
 ### 3）FFmpeg相关
 - [FFmpeg 命令使用指南：分析ffmpeg、ffprobe、ffplay工具使用文档，关联官方文档，以及滤镜、协议、视频合并、各种播放参数等相关介绍](https://qincji.gitee.io/2021/01/18/ffmpeg/18_command/)
 
+## 六、OpenGL
+OpenGL使用GPU渲染视频，释放宝贵的CPU资源，学习它是必不可少的。但是，正如[雷神所说](https://blog.csdn.net/leixiaohua1020/article/details/40246783) ：作为一个搞视频技术的人研究OpenGL，需要耗费大量时间和精力，这样学习不是很经济。所以推荐只学习有关视频渲染相关知识。
+- [OpenGL介绍，和相关程序库](https://zh.wikipedia.org/wiki/OpenGL)
+- [纹理有关的基础知识](https://blog.csdn.net/leixiaohua1020/article/details/40301179)、[OpenGL播放RGB/YUV](https://blog.csdn.net/leixiaohua1020/article/details/40333583)、[OpenGL播放YUV420P（通过Texture，使用Shader）](https://blog.csdn.net/leixiaohua1020/article/details/40379845)
+- [Android OpenGL ES官方文档](https://developer.android.google.cn/guide/topics/graphics/opengl?hl=zh_cn)
+- [LearnOpenGL-CN](https://github.com/LearnOpenGL-CN/LearnOpenGL-CN)
+- [OpenGL电子书下载](https://github.com/Canber/OpenGL-ES-for-android)
 
-## 六、待更...
+
+
+## 七、待更...
 
 ## [音视频资料](https://pan.baidu.com/s/1Y5PFgbVu3W0ELBgQnrHNYA)
 **创作皆不易，有条件的朋友请支持原版，谢谢！**
