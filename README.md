@@ -34,6 +34,7 @@
 - [第三章：直播推流全过程：视频编码之H.264（3）](https://qincji.gitee.io/2020/12/06/rtmppush/3-h264/)
 - [第四章：直播推流全过程：音频编码之AAC（4）](https://qincji.gitee.io/2020/12/07/rtmppush/4-aac/) 
 - [第五章：直播推流全过程：直播推流编码之RTMP（5）](https://qincji.gitee.io/2020/12/08/rtmppush/5-rtmp/)
+- [直播优化那些事](https://qincji.gitee.io/2021/01/22/rtmppush/6-optimize/)
 - 福利：博主买了个一年的服务器搭建了rtmp接收服务端，地址在项目里面，大家可以拿来测试。
 
 ## 五、学习FFmpeg
