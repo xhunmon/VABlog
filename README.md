@@ -95,6 +95,10 @@ OpenGL使用GPU渲染视频，释放宝贵的CPU资源，学习它是必不可�
 ## [音视频资料](https://pan.baidu.com/s/1Y5PFgbVu3W0ELBgQnrHNYA)
 **创作皆不易，有条件的朋友请支持原版，谢谢！**
 - 密码:lqi9
+- FFmpeg命令大全.docx
+- ffmpeg命令大全.pdf
+- 《FFmpeg_Basics(260页)》.pdf
+- webrtc介绍.pdf
 - 动脑视频
 - 网易视频
 - Advanced C and C++ Compiling.pdf
