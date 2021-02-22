@@ -88,7 +88,7 @@ OpenGL使用GPU渲染视频，释放宝贵的CPU资源，学习它是必不可�
 - [OpenGL电子书下载](https://github.com/Canber/OpenGL-ES-for-android)
 
 ## 其他推荐
-- [博主的AFPlayer：Android 上使用FFmpeg、OpenSL ES、OpenGL SE、MediaCodec等，实现简单的播放器，主要体现出相关知识点的使用。更新中...](https://github.com/xhunmon/AFPlayer)
+- [博主的AFPlayer：Android 上使用FFmpeg、OpenSL ES、OpenGL SE、MediaCodec等，实现简单的播放器，主要体现出相关知识点的使用。（已完成）](https://github.com/xhunmon/AFPlayer)
 
 ## 更多精彩内容持续更新中...
 
