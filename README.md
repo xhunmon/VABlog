@@ -14,7 +14,9 @@
 ## 三、学习音视频理论知识
 - [书：音视频开发进阶指南：基于Android与iOS平台的实践(京东)](https://item.jd.com/12292642.html) ：**第1章　音视频基础概念**；电子书往最后翻。
 - [书：Android 音视频开发_何俊林(京东)](https://item.jd.com/12467530.html) ：**第1章　音视频基础知识**；电子书往最后翻。
-- 也可以在[这里1](https://www.dalipan.com/) 或者[这里2](https://ebook2.lorefree.com/) 搜索。
+- [书：新一代视频压缩编码标准-H.264/AVC(第二版)(京东)](https://item.jd.com/10022441804147.html) : 讲述H.264等编解码原理实现，其中几个算法 [这篇文章](https://zhuanlan.zhihu.com/p/40356456)讲的很深刻。
+- - 也可以在[这里1](https://www.dalipan.com/) 或者[这里2](https://ebook2.lorefree.com/) 搜索。
+- [这系列文章通俗易懂讲述编解码的一些知识](http://www.52im.net/thread-228-1-1.html)。
 
 
 ## 四、学习音视频基本原理
