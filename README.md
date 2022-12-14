@@ -101,6 +101,7 @@ OpenGL使用GPU渲染视频，释放宝贵的CPU资源，学习它是必不可�
 - ffmpeg命令大全.pdf
 - 《FFmpeg_Basics(260页)》.pdf
 - webrtc介绍.pdf
+- 价值几千块的音视频视频
 - 动脑视频
 - 网易视频
 - Advanced C and C++ Compiling.pdf
@@ -136,8 +137,6 @@ OpenGL使用GPU渲染视频，释放宝贵的CPU资源，学习它是必不可�
 
 ## 作者有话说
 若有帮助就Star一下呗，您的鼓励是我开源的动力！
-
-此外：[欢迎光临我的博客](https://qincji.gitee.io/) && [这个导航网页内容也很丰富哦](https://zqxq.club/tools)
 
 ---------------------------------------------
 本文一切皆从网络而来，如有侵权请联系我（邮箱：xhunmon@126.com）进行处理。
