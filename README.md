@@ -104,6 +104,7 @@ OpenGL使用GPU渲染视频，释放宝贵的CPU资源，学习它是必不可�
 - 价值几千块的音视频视频
 - 动脑视频
 - 网易视频
+- c++
 - Advanced C and C++ Compiling.pdf
 - Android 音视频开发_何俊林.pdf
 - C Primer中文版 第五版 .pdf
