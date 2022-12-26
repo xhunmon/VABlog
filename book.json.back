@@ -1,0 +1,153 @@
+{
+  "title": "Qincji's Blog",
+  "author": "Qincji",
+  "description": "select * from learn",
+  "language": "zh-hans",
+  "gitbook": "3.2.3",
+  "styles": {
+    "website": "./styles/website.css"
+  },
+  "structure": {
+    "readme": "README.md"
+  },
+  "links": {
+      "sidebar": {
+        "秦城季Github": "https://github.com/xhunmon"
+      }
+    },
+  "plugins": [
+    "-sharing",
+    "splitter",
+    "expandable-chapters-small",
+    "anchors",
+    "github",
+    "github-buttons",
+    "donate",
+    "sharing-plus",
+    "anchor-navigation-ex",
+    "favicon",
+    "insert-logo",
+    "highlight",
+    "back-to-top-button",
+    "code",
+    "-lunr",
+    "-search",
+    "search-pro",
+    "tbfed-pagefooter",
+    "pageview-count",
+    "auto-scroll-table",
+    "lightbox",
+    "hide-element",
+    "valine",
+    "embed-pdf",
+    "mermaid-gb3",
+    "page-toc-button",
+    "image-wrapper"
+  ],
+  "pluginsConfig": {
+    "github": {
+      "url": "https://github.com"
+    },
+    "github-buttons": {
+      "buttons": [
+        {
+          "user": "xhunmon",
+          "repo": "glory",
+          "type": "star",
+          "size": "small",
+          "count": true
+        }
+      ]
+    },
+    "donate": {
+      "alipay": "./source/images/alipayimg.png",
+      "title": "",
+      "button": "赞赏",
+      "alipayText": " "
+    },
+    "wechat": {
+      "wechat": "./source/images/wechatpayimg.png",
+      "title": "",
+      "button": "赞赏",
+      "alipayText": " "
+    },
+    "sharing": {
+      "douban": false,
+      "facebook": false,
+      "google": false,
+      "hatenaBookmark": false,
+      "instapaper": false,
+      "line": false,
+      "linkedin": false,
+      "messenger": false,
+      "pocket": false,
+      "qq": true,
+      "qzone": false,
+      "stumbleupon": false,
+      "twitter": false,
+      "viber": false,
+      "vk": false,
+      "weibo": true,
+      "whatsapp": false,
+      "all": [
+        "google",
+        "facebook",
+        "weibo",
+        "twitter",
+        "qq",
+        "qzone",
+        "linkedin",
+        "pocket"
+      ]
+    },
+    "anchor-navigation-ex": {
+      "showLevel": false
+    },
+    "favicon": {
+      "shortcut": "./source/images/favicon.jpg",
+      "bookmark": "./source/images/favicon.jpg",
+      "appleTouch": "./source/images/favicon.jpg",
+      "appleTouchMore": {
+        "120x120": "./source/images/favicon.jpg",
+        "180x180": "./source/images/favicon.jpg"
+      }
+    },
+    "fontSettings": {
+      "size": 2
+    },
+    "insert-logo": {
+      "url": "./source/images/favicon.jpg",
+      "style": "background: none; max-height:120px; min-height:80px"
+    },
+    "hide-element": {
+      "elements": [
+        ".gitbook-link"
+      ]
+    },
+    "tbfed-pagefooter": {
+      "copyright": "Copyright &copy jrglinux 2021 ",
+      "modify_label": "Update: ",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "valine": {
+      "appId": "xxxxxx",
+      "appKey": "xxxxxx"
+    },
+    "page-toc-button": {
+      "maxTocDepth": 2,
+      "minTocSize": 2
+    }
+  },
+  "pdf": {
+    "pageNumbers": true,
+    "fontFamily": "Arial",
+    "fontSize": 12,
+    "paperSize": "a4",
+    "margin": {
+      "right": 62,
+      "left": 62,
+      "top": 56,
+      "bottom": 56
+    }
+  }
+}

@@ -1,0 +1,54 @@
+/*jrglinux, add 2021.11.03, for test use*/
+body {
+    font-size: 1.6rem;
+}
+
+/* Show keybindings to look like keys on a keyboard */
+kbd {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.1em 0.5em;
+    margin: 0 0.2em;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+    color: #000000;
+    background-color: #f7f7f7;
+}
+
+/* Over-ride maximum page width - default 800px
+ - if over-ridden then paging arrows can appear over text*/
+.book .book-body .page-wrapper .page-inner {
+    /*max-width: 1000px;*/
+    max-width: 80%;
+}
+
+.image-wrapper {
+    text-align: center;
+    padding: 15px 0px;
+}
+
+/* Place thin green boarder around code blocks & increase font size from 85% to 108% */
+.book .book-body .page-wrapper .page-inner section.normal .highlight pre, .book .book-body .page-wrapper .page-inner section.normal pre {
+    background-color: #f7f7f7;
+    border: 5px solid #D9EDF7;
+    border-radius: 3px;
+    font-size: 100%;
+    line-height: 1.45;
+    overflow: auto;
+    padding: 16px;
+}
+
+/* red text for all non-language specific code sections & increased font size to 108% */
+.book .book-body .page-wrapper .page-inner section.normal code {
+    background-color: #f7f7f7;
+    color: green;
+    border-radius: 3px;
+    font-size: 100%;
+    margin: 0;
+    padding: 0.2em 0;
+}
+
+/*取消显示底部回到顶部的按钮*/
+#anchorNavigationExGoTop{
+    display: none;
+}
