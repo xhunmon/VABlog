@@ -1,0 +1,1073 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>OpenSL ES播放PCM · 秦城季&音视频</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="秦城季">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="02_opengl_es.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"xhunmon","repo":"VABlog","type":"star","count":true,"size":"small"},{"user":"xhunmon","width":"160","type":"follow","count":true,"size":"small"}]};
+    </script>
+
+    
+        <link rel="shortcut icon" href="/source/images/favicon.png" type="image/x-icon">
+    
+    
+    
+    
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-tou ch-icon-precomposed-152.png">
+    
+    
+        
+    
+    
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/xhunmon/VABlog" target="_blank" class="custom-link">秦城季&音视频</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    打怪之路总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../直播推流全过程/">
+            
+                <a href="../直播推流全过程/">
+            
+                    
+                    直播推流全过程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../直播推流全过程/1-yuv.html">
+            
+                <a href="../直播推流全过程/1-yuv.html">
+            
+                    
+                    视频数据源之YUV
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../直播推流全过程/2-pcm.html">
+            
+                <a href="../直播推流全过程/2-pcm.html">
+            
+                    
+                    音频数据源之PCM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../直播推流全过程/3-h264.html">
+            
+                <a href="../直播推流全过程/3-h264.html">
+            
+                    
+                    视频编码之H.264
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../直播推流全过程/4-aac.html">
+            
+                <a href="../直播推流全过程/4-aac.html">
+            
+                    
+                    音频编码之AAC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../直播推流全过程/5-rtmp.html">
+            
+                <a href="../直播推流全过程/5-rtmp.html">
+            
+                    
+                    直播推流编码之RTMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../直播推流全过程/h264-descriptor.html">
+            
+                <a href="../直播推流全过程/h264-descriptor.html">
+            
+                    
+                    其他：H.264符号描述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../直播推流全过程/6-optimize.html">
+            
+                <a href="../直播推流全过程/6-optimize.html">
+            
+                    
+                    其他：直播优化基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    AFPlayer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="01_opensl_es.html">
+            
+                <a href="01_opensl_es.html">
+            
+                    
+                    OpenSL ES播放PCM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="02_opengl_es.html">
+            
+                <a href="02_opengl_es.html">
+            
+                    
+                    OpenGL ES播放RGB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="03_mediacodec.html">
+            
+                <a href="03_mediacodec.html">
+            
+                    
+                    FFmpeg实现MediaCodec解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="04_build_for_android.html">
+            
+                <a href="04_build_for_android.html">
+            
+                    
+                    FFmpeg、x264、fdk-aac、openssl的交叉编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../FFmpeg/">
+            
+                <a href="../FFmpeg/">
+            
+                    
+                    FFmpeg
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../FFmpeg/01_configure_help.html">
+            
+                <a href="../FFmpeg/01_configure_help.html">
+            
+                    
+                    Configure配置选项 (转载)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../FFmpeg/02_shell.html">
+            
+                <a href="../FFmpeg/02_shell.html">
+            
+                    
+                    Shell脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../FFmpeg/03_build_ffmpeg.html">
+            
+                <a href="../FFmpeg/03_build_ffmpeg.html">
+            
+                    
+                    编译FFmpeg4.2.2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../FFmpeg/04_import_ffmpeg.html">
+            
+                <a href="../FFmpeg/04_import_ffmpeg.html">
+            
+                    
+                    FFmpeg导入到Clion（MacOS）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../FFmpeg/05_source.html">
+            
+                <a href="../FFmpeg/05_source.html">
+            
+                    
+                    使用Clion阅读FFmpeg源码（支持跳转）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../FFmpeg/06_struct.html">
+            
+                <a href="../FFmpeg/06_struct.html">
+            
+                    
+                    FFmpeg重要结构体（转载）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../FFmpeg/07_flv.html">
+            
+                <a href="../FFmpeg/07_flv.html">
+            
+                    
+                    手撕FLV协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../FFmpeg/08_demuxing.html">
+            
+                <a href="../FFmpeg/08_demuxing.html">
+            
+                    
+                    Demuxing（解封装）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../FFmpeg/09_muxing.html">
+            
+                <a href="../FFmpeg/09_muxing.html">
+            
+                    
+                    Muxing（封装）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../FFmpeg/10_remuxing.html">
+            
+                <a href="../FFmpeg/10_remuxing.html">
+            
+                    
+                    Remuxing（重新封装）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../FFmpeg/11_decode.html">
+            
+                <a href="../FFmpeg/11_decode.html">
+            
+                    
+                    Decode（解码）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../FFmpeg/12_encode.html">
+            
+                <a href="../FFmpeg/12_encode.html">
+            
+                    
+                    Encode（编码）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../FFmpeg/13_transfer.html">
+            
+                <a href="../FFmpeg/13_transfer.html">
+            
+                    
+                    简单实现转码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../FFmpeg/14_filter_v.html">
+            
+                <a href="../FFmpeg/14_filter_v.html">
+            
+                    
+                    Filter和SDL（Video）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="../FFmpeg/15_filter_a.html">
+            
+                <a href="../FFmpeg/15_filter_a.html">
+            
+                    
+                    Filter和SDL（Audio）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="../FFmpeg/16_transcode.html">
+            
+                <a href="../FFmpeg/16_transcode.html">
+            
+                    
+                    Transcode(转码)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="../FFmpeg/17_sync.html">
+            
+                <a href="../FFmpeg/17_sync.html">
+            
+                    
+                    音视频同步处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="../FFmpeg/18_command.html">
+            
+                <a href="../FFmpeg/18_command.html">
+            
+                    
+                    FFmpeg命令使用指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19" data-path="../FFmpeg/19_swscale.html">
+            
+                <a href="../FFmpeg/19_swscale.html">
+            
+                    
+                    Swscale（图像转换）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../OpenGL/">
+            
+                <a href="../OpenGL/">
+            
+                    
+                    OpenGL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../OpenGL/01_opengl.html">
+            
+                <a href="../OpenGL/01_opengl.html">
+            
+                    
+                    OpenGL基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="02_opengl_es.html">
+            
+                <a href="02_opengl_es.html">
+            
+                    
+                    OpenGL ES播放RGB
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../其他零散知识/01_c_compile.html">
+            
+                <a href="../其他零散知识/01_c_compile.html">
+            
+                    
+                    其他零散知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../其他零散知识/01_c_compile.html">
+            
+                <a href="../其他零散知识/01_c_compile.html">
+            
+                    
+                    初步认识c/c++编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../其他零散知识/02_net_base.html">
+            
+                <a href="../其他零散知识/02_net_base.html">
+            
+                    
+                    网络基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../其他零散知识/03_adb_dy.html">
+            
+                <a href="../其他零散知识/03_adb_dy.html">
+            
+                    
+                    ADB的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >OpenSL ES播放PCM</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#opensl-es&#x64AD;&#x653E;pcm"><b></b>OpenSL ES&#x64AD;&#x653E;PCM</a></li><ul><li><span class="title-icon "></span><a href="#&#x7B80;&#x8FF0;"><b></b>&#x7B80;&#x8FF0;</a></li><li><span class="title-icon "></span><a href="#api&#x57FA;&#x672C;&#x4ECB;&#x7ECD;"><b></b>API&#x57FA;&#x672C;&#x4ECB;&#x7ECD;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5BF9;&#x8C61;&#x548C;&#x63A5;&#x53E3;"><b></b>&#x5BF9;&#x8C61;&#x548C;&#x63A5;&#x53E3;</a></li><li><span class="title-icon "></span><a href="#&#x91CD;&#x8981;&#x63A5;&#x53E3;"><b></b>&#x91CD;&#x8981;&#x63A5;&#x53E3;</a></li></ul><li><span class="title-icon "></span><a href="#&#x64AD;&#x653E;&#x6D41;&#x7A0B;"><b></b>&#x64AD;&#x653E;&#x6D41;&#x7A0B;</a></li><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;&#x5B9E;&#x73B0;"><b></b>&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7F16;&#x8F91;cmakelisttxt&#x8FDB;&#x884C;&#x94FE;&#x63A5;&#x52A8;&#x6001;&#x5E93;"><b></b>&#x7F16;&#x8F91;CMakeList.txt&#x8FDB;&#x884C;&#x94FE;&#x63A5;&#x52A8;&#x6001;&#x5E93;</a></li><li><span class="title-icon "></span><a href="#&#x5173;&#x952E;&#x6D41;&#x7A0B;"><b></b>&#x5173;&#x952E;&#x6D41;&#x7A0B;</a></li></ul><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;"><b></b>&#x53C2;&#x8003;</a></li></ul></ul></div><a href="#opensl-es&#x64AD;&#x653E;pcm" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="opensl-es&#x64AD;&#x653E;pcm"><a name="opensl-es&#x64AD;&#x653E;pcm" class="anchor-navigation-ex-anchor" href="#opensl-es&#x64AD;&#x653E;pcm"><i class="fa fa-link" aria-hidden="true"></i></a><a name="opensl-es&#x64AD;&#x653E;pcm" class="plugin-anchor" href="#opensl-es&#x64AD;&#x653E;pcm"><i class="fa fa-link" aria-hidden="true"></i></a>OpenSL ES&#x64AD;&#x653E;PCM</h1>
+<h2 id="&#x7B80;&#x8FF0;"><a name="&#x7B80;&#x8FF0;" class="anchor-navigation-ex-anchor" href="#&#x7B80;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B80;&#x8FF0;" class="plugin-anchor" href="#&#x7B80;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B80;&#x8FF0;</h2>
+<p>OpenSL ES&#x5168;&#x79F0; Open Sound Library for Embedded Systems&#xFF0C;&#x5373;&#x5D4C;&#x5165;&#x5F0F;&#x7CFB;&#x7EDF;&#x7684;&#x5F00;&#x653E;&#x97F3;&#x9891;&#x5E93;&#x3002;&#x662F;&#x65E0;&#x6388;&#x6743;&#x8D39;&#x3001;&#x8DE8;&#x5E73;&#x53F0;&#x3001;&#x786C;&#x4EF6;&#x52A0;&#x901F;&#x7684;C&#x8BED;&#x8A00;&#x97F3;&#x9891;API&#xFF0C;&#x7528;&#x4E8E;2D&#x548C;3D&#x97F3;&#x9891;&#x3002;</p>
+<h2 id="api&#x57FA;&#x672C;&#x4ECB;&#x7ECD;"><a name="api&#x57FA;&#x672C;&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#api&#x57FA;&#x672C;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="api&#x57FA;&#x672C;&#x4ECB;&#x7ECD;" class="plugin-anchor" href="#api&#x57FA;&#x672C;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>API&#x57FA;&#x672C;&#x4ECB;&#x7ECD;</h2>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4ECE;<a href="https://developer.android.google.cn/ndk/guides/audio/opensl/opensl-prog-notes?hl=zh_cn" target="_blank">Android&#x5B98;&#x7F51;</a>&#x4E2D;&#x4E86;&#x89E3;&#x5230;&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x7684;API&#x4ECB;&#x7ECD;&#x3002;</p>
+<h3 id="&#x5BF9;&#x8C61;&#x548C;&#x63A5;&#x53E3;"><a name="&#x5BF9;&#x8C61;&#x548C;&#x63A5;&#x53E3;" class="anchor-navigation-ex-anchor" href="#&#x5BF9;&#x8C61;&#x548C;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5BF9;&#x8C61;&#x548C;&#x63A5;&#x53E3;" class="plugin-anchor" href="#&#x5BF9;&#x8C61;&#x548C;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BF9;&#x8C61;&#x548C;&#x63A5;&#x53E3;</h3>
+<ul>
+<li>&#x5BF9;&#x8C61;&#xFF1A;<code>SLObjectItf</code>&#xFF0C;&#x7406;&#x89E3;&#x6210;&#x53EA;&#x6709;&#x5B58;&#x50A8;&#x80FD;&#x529B;&#x7684;JavaBean&#xFF0C;&#x6CA1;&#x6709;&#x8C03;&#x7528;&#x5176;&#x4ED6;&#x51FD;&#x6570;&#xFF08;&#x65B9;&#x6CD5;&#xFF09;&#x7684;&#x9014;&#x5F84;&#x3002;&#x6240;&#x6709;&#x5BF9;&#x8C61;&#x7684;&#x540D;&#x79F0;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#xFF0C;&#x800C;&#x521B;&#x5EFA;&#x7684;&#x5BF9;&#x8C61;&#x90FD;&#x9700;&#x8981;&#x8C03;&#x7528;<code>Realize</code>&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;&#x3002;</li>
+<li>&#x63A5;&#x53E3;&#xFF1A;<code>SLEngineItf</code>&#xFF0C;&#x63A5;&#x53E3;&#x662F;&#x8DDF;&#x6BCF;&#x4E00;&#x4E2A;<code>SLObjectItf</code>&#x8FDB;&#x884C;&#x7ED1;&#x5B9A;&#xFF0C;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#xFF0C;&#x62E5;&#x6709;&#x8C03;&#x7528;&#x5176;&#x4ED6;&#x51FD;&#x6570;&#xFF08;&#x65B9;&#x6CD5;&#xFF09;&#x7684;&#x9014;&#x5F84;&#x3002;&#x83B7;&#x53D6;&#x7684;&#x6D41;&#x7A0B;&#x5982;&#x4E0B;&#xFF1A;<pre><code class="lang-text">&#x6D41;&#x7A0B;&#x56FE;
+                  +----------------------------+
+                  |  &#x521B;&#x5EFA;SLObjectItf&#xFF08;&#x5B9E;&#x4F8B;&#x5316;&#x8FC7;&#x7A0B;&#xFF09; |
+                  +----------------------------+
+                              |
+                              V              
+                  +----------------------------+
+                  |       Realize&#xFF08;&#x521D;&#x59CB;&#x5316;&#x8FC7;&#x7A0B;&#xFF09;   |
+                  +----------------------------+ 
+                              |
+                              V              
+                  +-----------------------------+
+                  |  &#x83B7;&#x53D6;GetInterface&#xFF08;&#x7ED1;&#x5B9A;&#x8FC7;&#x7A0B;&#xFF09;  |
+                  +-----------------------------+
+</code></pre>
+</li>
+</ul>
+<h3 id="&#x91CD;&#x8981;&#x63A5;&#x53E3;"><a name="&#x91CD;&#x8981;&#x63A5;&#x53E3;" class="anchor-navigation-ex-anchor" href="#&#x91CD;&#x8981;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x91CD;&#x8981;&#x63A5;&#x53E3;" class="plugin-anchor" href="#&#x91CD;&#x8981;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x91CD;&#x8981;&#x63A5;&#x53E3;</h3>
+<ul>
+<li><code>SLEngineItf</code>&#xFF1A;OpenSL ES&#x5F15;&#x64CE;&#x63A5;&#x53E3;&#xFF0C;&#x5168;&#x5C40;&#x552F;&#x4E00;&#x3002;&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x6DF7;&#x97F3;&#x5668;&#x5BF9;&#x8C61;&#xFF0C;&#x64AD;&#x653E;&#x5668;&#x5BF9;&#x8C61;&#x7B49;&#x3002;</li>
+<li><code>SLPlayItf</code>&#xFF1A;&#x64AD;&#x653E;&#x5668;&#x63A5;&#x53E3;&#x3002;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x64AD;&#x653E;&#x72B6;&#x6001;&#xFF0C;&#x8BBE;&#x7F6E;&#x64AD;&#x653E;&#x72B6;&#x6001;&#x7B49;&#x3002;</li>
+<li><code>SLAndroidSimpleBufferQueueItf</code>&#xFF1A;&#x6570;&#x636E;&#x961F;&#x5217;&#x63A5;&#x53E3;&#x3002;</li>
+</ul>
+<h2 id="&#x64AD;&#x653E;&#x6D41;&#x7A0B;"><a name="&#x64AD;&#x653E;&#x6D41;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x64AD;&#x653E;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x64AD;&#x653E;&#x6D41;&#x7A0B;" class="plugin-anchor" href="#&#x64AD;&#x653E;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x64AD;&#x653E;&#x6D41;&#x7A0B;</h2>
+<p><a href="01_opensl_es/opensles-process.png" data-lightbox="dd08708e-8eb3-4616-ad93-ca45e5d1649d" data-title=""><div class="image-wrapper"><img src="01_opensl_es/opensles-process.png" alt=""></div></a></p>
+<p>&#x901A;&#x8FC7;&#x4E0A;&#x56FE;&#x53EF;&#x77E5;&#xFF1A;</p>
+<ul>
+<li>&#x53EA;&#x6709;&#x63A5;&#x53E3;&#x62E5;&#x6709;&#x8C03;&#x7528;&#x5176;&#x4ED6;&#x51FD;&#x6570;&#x7684;&#x529F;&#x80FD;&#xFF1B;&#x5373;&#xFF1A;<code>SLEngineItf</code>&#x8C03;&#x7528;&#x4E86;<code>CreateOutputMix</code>&#x548C;<code>CreateAudioPlayer</code>&#x3002;</li>
+<li>&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#xFF08;&#x7ED1;&#x5B9A;&#xFF09;&#x591A;&#x4E2A;&#x63A5;&#x53E3;&#xFF1B;&#x5373;&#xFF1A;&quot;&#x64AD;&#x653E;&#x5668;&#x5BF9;&#x8C61;&quot;&#x751F;&#x6210;&#x4E86;<code>SLPlayItf</code>&#x548C;<code>SLAndroidSimpleBufferQueueItf</code>&#x3002;</li>
+</ul>
+<h2 id="&#x4EE3;&#x7801;&#x5B9E;&#x73B0;"><a name="&#x4EE3;&#x7801;&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4EE3;&#x7801;&#x5B9E;&#x73B0;" class="plugin-anchor" href="#&#x4EE3;&#x7801;&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</h2>
+<p>&#x6709;&#x4E2A;&#x6BD4;&#x8F83;&#x5173;&#x952E;&#x7684;&#x70B9;&#x662F;&#xFF1A;OpenEL SE &#x4E0D;&#x652F;&#x6301;&#x6D6E;&#x70B9;&#x7C7B;&#x578B;&#x7684;&#x503C;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x8F6C;&#x6362;&#x6210;&#x6574;&#x5F62;&#x518D;&#x4F7F;&#x7528;&#x3002;&#x672C;&#x6587;&#x6570;&#x636E;&#x6765;&#x6E90;&#x7684;&#x5F62;&#x5F0F;&#x662F;&#x901A;&#x8FC7;&#x8BFB;&#x53D6;&#x672C;&#x5730;Sdcard&#x6587;&#x4EF6;&#x6765;&#x5B8C;&#x6210;&#x7684;&#x3002;&#x5982;&#x679C;&#x662F;&#x60F3;&#x901A;&#x8FC7;&#x7F51;&#x7EDC;&#x6216;&#x5219;asset&#x76EE;&#x5F55;&#xFF0C;&#x8BF7;&#x67E5;&#x770B;<a href="https://github.com/android/ndk-samples/tree/main/native-audio" target="_blank">Android&#x5B98;&#x65B9;&#x9879;&#x76EE;&#xFF1A;native-audio</a> &#x3002;</p>
+<h3 id="&#x7F16;&#x8F91;cmakelisttxt&#x8FDB;&#x884C;&#x94FE;&#x63A5;&#x52A8;&#x6001;&#x5E93;"><a name="&#x7F16;&#x8F91;cmakelisttxt&#x8FDB;&#x884C;&#x94FE;&#x63A5;&#x52A8;&#x6001;&#x5E93;" class="anchor-navigation-ex-anchor" href="#&#x7F16;&#x8F91;cmakelisttxt&#x8FDB;&#x884C;&#x94FE;&#x63A5;&#x52A8;&#x6001;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7F16;&#x8F91;cmakelisttxt&#x8FDB;&#x884C;&#x94FE;&#x63A5;&#x52A8;&#x6001;&#x5E93;" class="plugin-anchor" href="#&#x7F16;&#x8F91;cmakelisttxt&#x8FDB;&#x884C;&#x94FE;&#x63A5;&#x52A8;&#x6001;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7F16;&#x8F91;CMakeList.txt&#x8FDB;&#x884C;&#x94FE;&#x63A5;&#x52A8;&#x6001;&#x5E93;</h3>
+<pre><code class="lang-cmake"><span class="hljs-keyword">target_link_libraries</span>(
+        native-lib
+        log android OpenSLES)
+</code></pre>
+<h3 id="&#x5173;&#x952E;&#x6D41;&#x7A0B;"><a name="&#x5173;&#x952E;&#x6D41;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x5173;&#x952E;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5173;&#x952E;&#x6D41;&#x7A0B;" class="plugin-anchor" href="#&#x5173;&#x952E;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5173;&#x952E;&#x6D41;&#x7A0B;</h3>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">bqPlayerCallback</span><span class="hljs-params">(SLAndroidSimpleBufferQueueItf bq, <span class="hljs-keyword">void</span> *ctx)</span> </span>{
+    (<span class="hljs-keyword">static_cast</span>&lt;AudioPlayer *&gt;(ctx))-&gt;ProcessSLCallback(bq);
+}
+
+
+AudioPlayer::AudioPlayer(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *filename, <span class="hljs-keyword">uint32_t</span> sampleRate, <span class="hljs-keyword">uint8_t</span> channels,
+                         <span class="hljs-keyword">uint32_t</span> bitPerChannel) {
+
+    <span class="hljs-comment">//&#x4E00;&#x5E27;&#x7684;&#x5927;&#x5C0F;</span>
+    frameSize = sampleRate * channels * bitPerChannel / <span class="hljs-number">8</span>;
+    inFile = fopen(filename, <span class="hljs-string">&quot;rb+&quot;</span>);
+
+    SLresult result;
+    <span class="hljs-comment">//1.1&#xFF09;&#x521B;&#x5EFA;&#x5F15;&#x64CE;&#x5BF9;&#x8C61;&#x3002;&#x5F15;&#x64CE;&#x5BF9;&#x8C61;&#x662F;OpenSL ES&#x63D0;&#x4F9B;API&#x7684;&#x552F;&#x4E00;&#x5165;</span>
+    result = slCreateEngine(&amp;slEngineObj_, <span class="hljs-number">0</span>, <span class="hljs-literal">nullptr</span>, <span class="hljs-number">0</span>, <span class="hljs-literal">NULL</span>, <span class="hljs-literal">NULL</span>);
+    SLASSERT(result);<span class="hljs-comment">//&#x65AD;&#x8A00;&#xFF0C;&#x7528;&#x4E8E;&#x8C03;&#x8BD5;&#xFF0C;&#x80FD;&#x5FEB;&#x901F;&#x5B9A;&#x4F4D;&#x95EE;&#x9898;</span>
+    <span class="hljs-comment">//1.2&#xFF09;&#x5B9E;&#x4F8B;&#x5316;&#x5F15;&#x64CE;&#x5BF9;&#x8C61;&#xFF0C;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x5728;&#x7B2C;1&#x6B65;&#x5F97;&#x5230;&#x7684;&#x5F15;&#x64CE;&#x5BF9;&#x8C61;&#x63A5;&#x53E3;&#x6765;&#x5B9E;&#x4F8B;&#x5316;(&#x5728;ELSE&#x4E2D;&#xFF0C;&#x4EFB;&#x4F55;&#x5BF9;&#x8C61;&#x90FD;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x63A5;&#x53E3;&#x6765;&#x8FDB;&#x884C;&#x5B9E;&#x4F8B;&#x5316;)</span>
+    result = (*slEngineObj_)-&gt;Realize(slEngineObj_, SL_BOOLEAN_FALSE);
+    SLASSERT(result);
+    <span class="hljs-comment">//1.3&#xFF09;&#x83B7;&#x53D6;&#x8FD9;&#x4E2A;&#x5F15;&#x64CE;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x63A5;&#x53E3;&#xFF0C;&#x901A;&#x8FC7;GetInterface&#x65B9;&#x6CD5;&#xFF0C;&#x4F7F;&#x7528;&#x7B2C;2&#x6B65;&#x5DF2;&#x7ECF;&#x5B9E;&#x4F8B;&#x5316;&#x597D;&#x4E86;&#x7684;&#x5BF9;&#x8C61;</span>
+    result = (*slEngineObj_)-&gt;GetInterface(slEngineObj_, SL_IID_ENGINE, &amp;slEngineItf_);
+    SLASSERT(result);
+
+    <span class="hljs-comment">//2.&#x521B;&#x5EFA;&#x6DF7;&#x97F3;&#x5668;&#x5BF9;&#x8C61;</span>
+    result = (*slEngineItf_)-&gt;CreateOutputMix(slEngineItf_, &amp;outputMixObjectItf_, <span class="hljs-number">0</span>, <span class="hljs-literal">NULL</span>, <span class="hljs-literal">NULL</span>);
+    SLASSERT(result);
+    result = (*outputMixObjectItf_)-&gt;Realize(outputMixObjectItf_, SL_BOOLEAN_FALSE);
+    SLASSERT(result);
+
+    <span class="hljs-comment">//3&#x3001;&#x521B;&#x5EFA;&#x64AD;&#x653E;&#x5668;</span>
+    <span class="hljs-comment">// numBuffers&#xFF1A;&#x8BBE;&#x7F6E;2&#x4E2A;&#x7F13;&#x51B2;&#x6570;&#x636E;</span>
+    SLDataLocator_AndroidSimpleBufferQueue android_queue = {SL_DATALOCATOR_ANDROIDSIMPLEBUFFERQUEUE,
+                                                            <span class="hljs-number">2</span>};
+    SLDataFormat_PCM pcm = {
+            SL_DATAFORMAT_PCM,<span class="hljs-comment">//&#x64AD;&#x653E;pcm&#x683C;&#x5F0F;&#x7684;&#x6570;&#x636E;</span>
+            channels,<span class="hljs-comment">//&#x58F0;&#x9053;&#x6570;&#xFF08;&#x7ACB;&#x4F53;&#x58F0;&#xFF09;</span>
+            sampleRate * <span class="hljs-number">1000</span>,<span class="hljs-comment">//44100hz -&gt; 44100000 &#x7684;&#x9891;&#x7387;&#xFF1B;&#x53C2;&#x8003;&#xFF1A;SL_SAMPLINGRATE_44_1</span>
+            bitPerChannel == <span class="hljs-number">32</span> ?
+            SL_PCMSAMPLEFORMAT_FIXED_32 : SL_PCMSAMPLEFORMAT_FIXED_16,<span class="hljs-comment">//&#x4F4D;&#x6570; 32&#x4F4D;</span>
+            bitPerChannel == <span class="hljs-number">32</span> ?
+            SL_PCMSAMPLEFORMAT_FIXED_32 : SL_PCMSAMPLEFORMAT_FIXED_16,<span class="hljs-comment">//&#x548C;&#x4F4D;&#x6570;&#x4E00;&#x81F4;&#x5C31;&#x884C;</span>
+            SL_SPEAKER_FRONT_LEFT | SL_SPEAKER_FRONT_RIGHT,<span class="hljs-comment">//&#x7ACB;&#x4F53;&#x58F0;&#xFF08;&#x524D;&#x5DE6;&#x524D;&#x53F3;&#xFF09;</span>
+            SL_BYTEORDER_LITTLEENDIAN<span class="hljs-comment">//&#x5C0F;&#x7AEF;&#x6392;&#x5E8F;</span>
+    };
+    SLDataSource slDataSource = {&amp;android_queue, &amp;pcm};
+    SLDataLocator_OutputMix outputMix = {SL_DATALOCATOR_OUTPUTMIX, outputMixObjectItf_};
+    SLDataSink audioSnk = {&amp;outputMix, <span class="hljs-literal">NULL</span>};
+    <span class="hljs-keyword">const</span> SLInterfaceID ids[<span class="hljs-number">3</span>] = {SL_IID_BUFFERQUEUE, SL_IID_EFFECTSEND, SL_IID_VOLUME};
+    <span class="hljs-keyword">const</span> SLboolean req[<span class="hljs-number">3</span>] = {SL_BOOLEAN_TRUE, SL_BOOLEAN_TRUE, SL_BOOLEAN_TRUE};
+
+    result = (*slEngineItf_)-&gt;CreateAudioPlayer(slEngineItf_, &amp;playerObjectItf_, &amp;slDataSource,
+                                                &amp;audioSnk, <span class="hljs-number">3</span>, ids, req);
+    SLASSERT(result);
+
+    result = (*playerObjectItf_)-&gt;Realize(playerObjectItf_, SL_BOOLEAN_FALSE);
+    SLASSERT(result);
+    result = (*playerObjectItf_)-&gt;GetInterface(playerObjectItf_, SL_IID_PLAY, &amp;playItf_);
+    SLASSERT(result);
+
+    <span class="hljs-comment">//4&#x3001;&#x83B7;&#x53D6;&#x64AD;&#x653E;&#x5668;&#x5BF9;&#x8C61;&#x7684;&#x6570;&#x636E;&#x961F;&#x5217;&#x63A5;&#x53E3;</span>
+    result = (*playerObjectItf_)
+            -&gt;GetInterface(playerObjectItf_, SL_IID_BUFFERQUEUE, &amp;playBufferQueueItf_);
+    SLASSERT(result);
+
+    <span class="hljs-comment">//5. &#x8BBE;&#x7F6E;&#x56DE;&#x8C03;&#x51FD;&#x6570;</span>
+    result = (*playBufferQueueItf_)
+            -&gt;RegisterCallback(playBufferQueueItf_, bqPlayerCallback, <span class="hljs-keyword">this</span>);
+    SLASSERT(result);
+
+    <span class="hljs-comment">//6. &#x83B7;&#x53D6;&#x64AD;&#x653E;&#x72B6;&#x6001;&#x63A5;&#x53E3;</span>
+    result = (*playItf_)-&gt;SetPlayState(playItf_, SL_PLAYSTATE_PLAYING);
+    SLASSERT(result);
+
+    <span class="hljs-comment">//7. &#x4E3B;&#x52A8;&#x8C03;&#x7528;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5F00;&#x59CB;&#x5DE5;&#x4F5C;</span>
+    ProcessSLCallback(playBufferQueueItf_);
+}
+
+<span class="hljs-keyword">void</span> AudioPlayer::ProcessSLCallback(SLAndroidSimpleBufferQueueItf bq) {
+    <span class="hljs-keyword">void</span> *buffer;
+    getPcmData(&amp;buffer);
+    <span class="hljs-keyword">if</span> (<span class="hljs-literal">NULL</span> != buffer) {
+        SLresult result;
+        result = (*bq)-&gt;Enqueue(bq, buffer, frameSize);
+        SLASSERT(result);
+    }
+}
+
+<span class="hljs-keyword">void</span> AudioPlayer::getPcmData(<span class="hljs-keyword">void</span> **pcm) {
+    outBuf = <span class="hljs-keyword">new</span> <span class="hljs-keyword">uint32_t</span>[frameSize];
+    <span class="hljs-keyword">while</span> (!feof(inFile)) {
+        <span class="hljs-comment">//&#x8BFB;&#x53D6;&#x4E00;&#x5E27;&#x6570;&#x636E;</span>
+        <span class="hljs-built_in">memset</span>(outBuf, <span class="hljs-number">0</span>, frameSize);
+        fread(outBuf, frameSize, <span class="hljs-number">1</span>, inFile);
+        <span class="hljs-keyword">if</span> (outBuf == <span class="hljs-literal">nullptr</span>) {<span class="hljs-comment">//&#x8BFB;&#x53D6;&#x7ED3;&#x675F;</span>
+            <span class="hljs-keyword">break</span>;
+        }
+        *pcm = outBuf;
+        <span class="hljs-keyword">goto</span> end;
+    }
+    __android_log_print(ANDROID_LOG_DEBUG, <span class="hljs-string">&quot;audio_play&quot;</span>, <span class="hljs-string">&quot;red finish?&quot;</span>);
+    (*playItf_)-&gt;SetPlayState(playItf_, SL_PLAYSTATE_STOPPED);
+    end:
+    __android_log_print(ANDROID_LOG_DEBUG, <span class="hljs-string">&quot;audio_play&quot;</span>, <span class="hljs-string">&quot;playing&#xFF1F;&quot;</span>);
+}
+</code></pre>
+<ul>
+<li><strong><a href="https://github.com/xhunmon/AFPlayer/tree/main/OpenSLESDemo" target="_blank">Demo&#x5730;&#x5740;&#xFF1A;OpenSLESDemo</a></strong></li>
+</ul>
+<h2 id="&#x53C2;&#x8003;"><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x53C2;&#x8003;" class="plugin-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x8003;</h2>
+<ul>
+<li><p><a href="https://en.wikipedia.org/wiki/OpenSL_ES" target="_blank">https://en.wikipedia.org/wiki/OpenSL_ES</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/ywl5320/article/details/78503768" target="_blank">https://blog.csdn.net/ywl5320/article/details/78503768</a></p>
+</li>
+<li><p><a href="https://github.com/android/ndk-samples/tree/main/audio-echo" target="_blank">https://github.com/android/ndk-samples/tree/main/audio-echo</a> </p>
+</li>
+</ul>
+<p></p><footer class="page-footer"><span class="copyright">Copyright &#xA9; xhunmon 2022  all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Update: 
+2022-12-26 11:55:36
+</span></footer><hr><div id="vcomments"></div><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el: "#vcomments",appId: 'xMemPde6Lax4ffLfLBkuEi9t-gzGzoHsz',appKey: 'jIVEp2lShgotSTy0GalhgIzm',placeholder: 'Just go go',avatar: '',meta: undefined,pageSize: 10,lang: 'zh-CN',recordIP: false})</script><p></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: AFPlayer">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="02_opengl_es.html" class="navigation navigation-next " aria-label="Next page: OpenGL ES播放RGB">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"OpenSL ES播放PCM","level":"1.3.1","depth":2,"next":{"title":"OpenGL ES播放RGB","level":"1.3.2","depth":2,"path":"AFPlayer/02_opengl_es.md","ref":"AFPlayer/02_opengl_es.md","articles":[]},"previous":{"title":"AFPlayer","level":"1.3","depth":1,"path":"AFPlayer/README.md","ref":"AFPlayer/README.md","articles":[{"title":"OpenSL ES播放PCM","level":"1.3.1","depth":2,"path":"AFPlayer/01_opensl_es.md","ref":"AFPlayer/01_opensl_es.md","articles":[]},{"title":"OpenGL ES播放RGB","level":"1.3.2","depth":2,"path":"AFPlayer/02_opengl_es.md","ref":"AFPlayer/02_opengl_es.md","articles":[]},{"title":"FFmpeg实现MediaCodec解码","level":"1.3.3","depth":2,"path":"AFPlayer/03_mediacodec.md","ref":"AFPlayer/03_mediacodec.md","articles":[]},{"title":"FFmpeg、x264、fdk-aac、openssl的交叉编译","level":"1.3.4","depth":2,"path":"AFPlayer/04_build_for_android.md","ref":"AFPlayer/04_build_for_android.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","favicon-absolute","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","highlight","back-to-top-button","code","-lunr","-search","search-pro","tbfed-pagefooter","pageview-count","auto-scroll-table","lightbox","hide-element","valine","embed-pdf","mermaid-gb3","image-wrapper","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy xhunmon 2022 ","modify_label":"Update: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"image-wrapper":{},"github":{"url":"https://github.com/xhunmon"},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"donate":{"alipay":"/source/images/alipayimg.jpeg","alipayText":"支付宝","button":"捐赠","title":"请作者喝杯coffee","wechat":"/source/images/wechatpayimg.jpeg","wechatText":"微信"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"/apple-tou ch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{},"favicon":"/source/images/favicon.png"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"xhunmon","repo":"VABlog","type":"star","count":true,"size":"small"},{"user":"xhunmon","width":"160","type":"follow","count":true,"size":"small"}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"embed-pdf":{},"valine":{"avatar":"","lang":"zh-CN","pageSize":10,"placeholder":"Just go go","recordIP":false,"appId":"xMemPde6Lax4ffLfLBkuEi9t-gzGzoHsz","appKey":"jIVEp2lShgotSTy0GalhgIzm"}},"theme":"default","author":"秦城季","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"秦城季&音视频","language":"zh-hans","links":{"sidebar":{"秦城季&音视频":"https://github.com/xhunmon/VABlog"}},"gitbook":"3.2.3","description":"未来那个项目都不应该缺少音视频！"},"file":{"path":"AFPlayer/01_opensl_es.md","mtime":"2022-12-26T03:55:36.197Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-26T08:27:47.172Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

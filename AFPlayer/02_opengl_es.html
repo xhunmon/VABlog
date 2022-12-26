@@ -1,0 +1,1562 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>OpenGL ES播放RGB · 秦城季&音视频</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="秦城季">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="03_mediacodec.html" />
+    
+    
+    <link rel="prev" href="01_opensl_es.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"xhunmon","repo":"VABlog","type":"star","count":true,"size":"small"},{"user":"xhunmon","width":"160","type":"follow","count":true,"size":"small"}]};
+    </script>
+
+    
+        <link rel="shortcut icon" href="/source/images/favicon.png" type="image/x-icon">
+    
+    
+    
+    
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-tou ch-icon-precomposed-152.png">
+    
+    
+        
+    
+    
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/xhunmon/VABlog" target="_blank" class="custom-link">秦城季&音视频</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    打怪之路总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../直播推流全过程/">
+            
+                <a href="../直播推流全过程/">
+            
+                    
+                    直播推流全过程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../直播推流全过程/1-yuv.html">
+            
+                <a href="../直播推流全过程/1-yuv.html">
+            
+                    
+                    视频数据源之YUV
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../直播推流全过程/2-pcm.html">
+            
+                <a href="../直播推流全过程/2-pcm.html">
+            
+                    
+                    音频数据源之PCM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../直播推流全过程/3-h264.html">
+            
+                <a href="../直播推流全过程/3-h264.html">
+            
+                    
+                    视频编码之H.264
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../直播推流全过程/4-aac.html">
+            
+                <a href="../直播推流全过程/4-aac.html">
+            
+                    
+                    音频编码之AAC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../直播推流全过程/5-rtmp.html">
+            
+                <a href="../直播推流全过程/5-rtmp.html">
+            
+                    
+                    直播推流编码之RTMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../直播推流全过程/h264-descriptor.html">
+            
+                <a href="../直播推流全过程/h264-descriptor.html">
+            
+                    
+                    其他：H.264符号描述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../直播推流全过程/6-optimize.html">
+            
+                <a href="../直播推流全过程/6-optimize.html">
+            
+                    
+                    其他：直播优化基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    AFPlayer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="01_opensl_es.html">
+            
+                <a href="01_opensl_es.html">
+            
+                    
+                    OpenSL ES播放PCM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="02_opengl_es.html">
+            
+                <a href="02_opengl_es.html">
+            
+                    
+                    OpenGL ES播放RGB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="03_mediacodec.html">
+            
+                <a href="03_mediacodec.html">
+            
+                    
+                    FFmpeg实现MediaCodec解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="04_build_for_android.html">
+            
+                <a href="04_build_for_android.html">
+            
+                    
+                    FFmpeg、x264、fdk-aac、openssl的交叉编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../FFmpeg/">
+            
+                <a href="../FFmpeg/">
+            
+                    
+                    FFmpeg
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../FFmpeg/01_configure_help.html">
+            
+                <a href="../FFmpeg/01_configure_help.html">
+            
+                    
+                    Configure配置选项 (转载)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../FFmpeg/02_shell.html">
+            
+                <a href="../FFmpeg/02_shell.html">
+            
+                    
+                    Shell脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../FFmpeg/03_build_ffmpeg.html">
+            
+                <a href="../FFmpeg/03_build_ffmpeg.html">
+            
+                    
+                    编译FFmpeg4.2.2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../FFmpeg/04_import_ffmpeg.html">
+            
+                <a href="../FFmpeg/04_import_ffmpeg.html">
+            
+                    
+                    FFmpeg导入到Clion（MacOS）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../FFmpeg/05_source.html">
+            
+                <a href="../FFmpeg/05_source.html">
+            
+                    
+                    使用Clion阅读FFmpeg源码（支持跳转）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../FFmpeg/06_struct.html">
+            
+                <a href="../FFmpeg/06_struct.html">
+            
+                    
+                    FFmpeg重要结构体（转载）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../FFmpeg/07_flv.html">
+            
+                <a href="../FFmpeg/07_flv.html">
+            
+                    
+                    手撕FLV协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../FFmpeg/08_demuxing.html">
+            
+                <a href="../FFmpeg/08_demuxing.html">
+            
+                    
+                    Demuxing（解封装）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../FFmpeg/09_muxing.html">
+            
+                <a href="../FFmpeg/09_muxing.html">
+            
+                    
+                    Muxing（封装）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../FFmpeg/10_remuxing.html">
+            
+                <a href="../FFmpeg/10_remuxing.html">
+            
+                    
+                    Remuxing（重新封装）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../FFmpeg/11_decode.html">
+            
+                <a href="../FFmpeg/11_decode.html">
+            
+                    
+                    Decode（解码）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../FFmpeg/12_encode.html">
+            
+                <a href="../FFmpeg/12_encode.html">
+            
+                    
+                    Encode（编码）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../FFmpeg/13_transfer.html">
+            
+                <a href="../FFmpeg/13_transfer.html">
+            
+                    
+                    简单实现转码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../FFmpeg/14_filter_v.html">
+            
+                <a href="../FFmpeg/14_filter_v.html">
+            
+                    
+                    Filter和SDL（Video）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="../FFmpeg/15_filter_a.html">
+            
+                <a href="../FFmpeg/15_filter_a.html">
+            
+                    
+                    Filter和SDL（Audio）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="../FFmpeg/16_transcode.html">
+            
+                <a href="../FFmpeg/16_transcode.html">
+            
+                    
+                    Transcode(转码)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="../FFmpeg/17_sync.html">
+            
+                <a href="../FFmpeg/17_sync.html">
+            
+                    
+                    音视频同步处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="../FFmpeg/18_command.html">
+            
+                <a href="../FFmpeg/18_command.html">
+            
+                    
+                    FFmpeg命令使用指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19" data-path="../FFmpeg/19_swscale.html">
+            
+                <a href="../FFmpeg/19_swscale.html">
+            
+                    
+                    Swscale（图像转换）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../OpenGL/">
+            
+                <a href="../OpenGL/">
+            
+                    
+                    OpenGL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../OpenGL/01_opengl.html">
+            
+                <a href="../OpenGL/01_opengl.html">
+            
+                    
+                    OpenGL基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2" data-path="02_opengl_es.html">
+            
+                <a href="02_opengl_es.html">
+            
+                    
+                    OpenGL ES播放RGB
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../其他零散知识/01_c_compile.html">
+            
+                <a href="../其他零散知识/01_c_compile.html">
+            
+                    
+                    其他零散知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../其他零散知识/01_c_compile.html">
+            
+                <a href="../其他零散知识/01_c_compile.html">
+            
+                    
+                    初步认识c/c++编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../其他零散知识/02_net_base.html">
+            
+                <a href="../其他零散知识/02_net_base.html">
+            
+                    
+                    网络基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../其他零散知识/03_adb_dy.html">
+            
+                <a href="../其他零散知识/03_adb_dy.html">
+            
+                    
+                    ADB的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >OpenGL ES播放RGB</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#opengl-es&#x64AD;&#x653E;rgb"><b></b>OpenGL ES&#x64AD;&#x653E;RGB</a></li><ul><li><span class="title-icon "></span><a href="#&#x7B80;&#x8FF0;"><b></b>&#x7B80;&#x8FF0;</a></li><li><span class="title-icon "></span><a href="#&#x5C4F;&#x5E55;&#x56FE;&#x50CF;&#x663E;&#x793A;&#x6D41;&#x7A0B;"><b></b>&#x5C4F;&#x5E55;&#x56FE;&#x50CF;&#x663E;&#x793A;&#x6D41;&#x7A0B;</a></li><li><span class="title-icon "></span><a href="#openggl&#x76F8;&#x5173;&#x5904;&#x7406;"><b></b>OpengGL&#x76F8;&#x5173;&#x5904;&#x7406;</a></li><ul><li><span class="title-icon "></span><a href="#opengl&#x6E32;&#x67D3;&#x7BA1;&#x7EBF;"><b></b>OpenGL&#x6E32;&#x67D3;&#x7BA1;&#x7EBF;</a></li><li><span class="title-icon "></span><a href="#&#x7740;&#x8272;&#x5668;"><b></b>&#x7740;&#x8272;&#x5668;</a></li><li><span class="title-icon "></span><a href="#&#x51E0;&#x4E2A;&#x91CD;&#x8981;&#x6982;&#x5FF5;"><b></b>&#x51E0;&#x4E2A;&#x91CD;&#x8981;&#x6982;&#x5FF5;</a></li><li><span class="title-icon "></span><a href="#&#x7EB9;&#x7406;"><b></b>&#x7EB9;&#x7406;</a></li></ul><li><span class="title-icon "></span><a href="#opengl&#x5C0F;&#x7ED3;"><b></b>OpenGL&#x5C0F;&#x7ED3;</a></li><li><span class="title-icon "></span><a href="#egl&#xFF08;android&#xFF09;"><b></b>EGL&#xFF08;Android&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x5B9E;&#x73B0;&#x663E;&#x793A;rgb24&#xFF08;android&#xFF09;"><b></b>&#x5B9E;&#x73B0;&#x663E;&#x793A;RGB24&#xFF08;Android&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;"><b></b>&#x53C2;&#x8003;</a></li></ul></ul></div><a href="#opengl-es&#x64AD;&#x653E;rgb" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="opengl-es&#x64AD;&#x653E;rgb"><a name="opengl-es&#x64AD;&#x653E;rgb" class="anchor-navigation-ex-anchor" href="#opengl-es&#x64AD;&#x653E;rgb"><i class="fa fa-link" aria-hidden="true"></i></a><a name="opengl-es&#x64AD;&#x653E;rgb" class="plugin-anchor" href="#opengl-es&#x64AD;&#x653E;rgb"><i class="fa fa-link" aria-hidden="true"></i></a>OpenGL ES&#x64AD;&#x653E;RGB</h1>
+<h2 id="&#x7B80;&#x8FF0;"><a name="&#x7B80;&#x8FF0;" class="anchor-navigation-ex-anchor" href="#&#x7B80;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B80;&#x8FF0;" class="plugin-anchor" href="#&#x7B80;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B80;&#x8FF0;</h2>
+<p>OpenGL&#xFF08;&#x82F1;&#x8BED;&#xFF1A;Open Graphics Library&#xFF0C;&#x8BD1;&#x540D;&#xFF1A;&#x5F00;&#x653E;&#x56FE;&#x5F62;&#x5E93;&#x6216;&#x8005;&#x201C;&#x5F00;&#x653E;&#x5F0F;&#x56FE;&#x5F62;&#x5E93;&#x201D;&#xFF09;&#x662F;&#x7528;&#x4E8E;&#x6E32;&#x67D3;2D&#x3001;3D&#x77E2;&#x91CF;&#x56FE;&#x5F62;&#x7684;&#x8DE8;&#x8BED;&#x8A00;&#x3001;&#x8DE8;&#x5E73;&#x53F0;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7F16;&#x7A0B;&#x63A5;&#x53E3;&#xFF08;API&#xFF09;&#x3002;&#x800C;OpenGL ES &#xFF08;OpenGL for Embedded Systems&#xFF09;&#x662F;&#x4E09;&#x7EF4;&#x56FE;&#x5F62;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x63A5;&#x53E3;OpenGL&#x7684;&#x5B50;&#x96C6;&#xFF0C;&#x9488;&#x5BF9;&#x624B;&#x673A;&#x3001;PDA&#x548C;&#x6E38;&#x620F;&#x4E3B;&#x673A;&#x7B49;&#x5D4C;&#x5165;&#x5F0F;&#x8BBE;&#x5907;&#x800C;&#x8BBE;&#x8BA1;&#xFF0C;&#x5982;Android &#x3002;</p>
+<h2 id="&#x5C4F;&#x5E55;&#x56FE;&#x50CF;&#x663E;&#x793A;&#x6D41;&#x7A0B;"><a name="&#x5C4F;&#x5E55;&#x56FE;&#x50CF;&#x663E;&#x793A;&#x6D41;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x5C4F;&#x5E55;&#x56FE;&#x50CF;&#x663E;&#x793A;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5C4F;&#x5E55;&#x56FE;&#x50CF;&#x663E;&#x793A;&#x6D41;&#x7A0B;" class="plugin-anchor" href="#&#x5C4F;&#x5E55;&#x56FE;&#x50CF;&#x663E;&#x793A;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C4F;&#x5E55;&#x56FE;&#x50CF;&#x663E;&#x793A;&#x6D41;&#x7A0B;</h2>
+<p>&#x4E0B;&#x56FE;&#x6240;&#x793A;&#x4E3A;&#x5E38;&#x89C1;&#x7684; CPU&#x3001;GPU&#x3001;&#x663E;&#x793A;&#x5668;&#x5DE5;&#x4F5C;&#x65B9;&#x5F0F;&#xFF08;&#x7F51;&#x4E0A;&#x627E;&#x7684;&#xFF09;&#x3002;CPU &#x8BA1;&#x7B97;&#x597D;&#x663E;&#x793A;&#x5185;&#x5BB9;&#x63D0;&#x4EA4;&#x81F3; GPU&#xFF0C;GPU &#x6E32;&#x67D3;&#x5B8C;&#x6210;&#x540E;&#x5C06;&#x6E32;&#x67D3;&#x7ED3;&#x679C;&#x5B58;&#x5165;&#x5E27;&#x7F13;&#x51B2;&#x533A;&#xFF0C;&#x89C6;&#x9891;&#x63A7;&#x5236;&#x5668;&#x4F1A;&#x6309;&#x7167; VSync &#x4FE1;&#x53F7;&#x9010;&#x5E27;&#x8BFB;&#x53D6;&#x5E27;&#x7F13;&#x51B2;&#x533A;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x7ECF;&#x8FC7;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x540E;&#x6700;&#x7EC8;&#x7531;&#x663E;&#x793A;&#x5668;&#x8FDB;&#x884C;&#x663E;&#x793A;&#x3002;</p>
+<div align="center">![](02_opengl_es/opengles-cpu-gpu-m.png)</div>
+
+<p>&#x6240;&#x4EE5;&#x5728;&#x672C;&#x8282;&#x6D89;&#x53CA;&#x5230;&#x7684;&#x5185;&#x5BB9;&#x4E3B;&#x8981;&#x6709;&#xFF1A;
+CPU&#xFF1A;&#x83B7;&#x53D6;&#x672C;&#x5730;&#x6570;&#x636E;&#xFF08;&#x56FE;&#x50CF;&#xFF09;&#x5E76;&#x8BA1;&#x7B97;&#x597D;&#x4F5C;&#x4E3A;GPU&#x7684;&#x8F93;&#x5165;&#x6570;&#x636E;&#x3002;
+GPU&#xFF1A;&#x901A;&#x8FC7;OpengGL ES&#x5904;&#x7406;&#x540E;&#x7684;&#x6570;&#x636E;&#x4F20;&#x9012;&#x7ED9;Monitor&#x8FDB;&#x884C;&#x663E;&#x793A;&#x3002;
+Monitor&#xFF1A;&#x5728;Android&#x4E2D;&#x9700;&#x8981;&#x901A;&#x8FC7;EGL&#x4F5C;&#x4E3A;&#x6865;&#x6881;&#x8854;&#x63A5;&#x5C4F;&#x5E55;&#x8FDB;&#x884C;&#x663E;&#x793A;&#xFF08;&#x56E0;&#x4E3A;OpenGL&#x4E0D;&#x8D1F;&#x8D23;&#x7A97;&#x53E3;&#x7BA1;&#x7406;&#x53CA;&#x4E0A;&#x4E0B;&#x6587;&#x73AF;&#x5883;&#x7BA1;&#x7406;&#xFF0C;&#x800C;EGL&#x627F;&#x62C5;&#x4E86;&#x8FD9;&#x4E00;&#x804C;&#x8D23;&#xFF09;&#x3002;</p>
+<h2 id="openggl&#x76F8;&#x5173;&#x5904;&#x7406;"><a name="openggl&#x76F8;&#x5173;&#x5904;&#x7406;" class="anchor-navigation-ex-anchor" href="#openggl&#x76F8;&#x5173;&#x5904;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="openggl&#x76F8;&#x5173;&#x5904;&#x7406;" class="plugin-anchor" href="#openggl&#x76F8;&#x5173;&#x5904;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>OpengGL&#x76F8;&#x5173;&#x5904;&#x7406;</h2>
+<h3 id="opengl&#x6E32;&#x67D3;&#x7BA1;&#x7EBF;"><a name="opengl&#x6E32;&#x67D3;&#x7BA1;&#x7EBF;" class="anchor-navigation-ex-anchor" href="#opengl&#x6E32;&#x67D3;&#x7BA1;&#x7EBF;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="opengl&#x6E32;&#x67D3;&#x7BA1;&#x7EBF;" class="plugin-anchor" href="#opengl&#x6E32;&#x67D3;&#x7BA1;&#x7EBF;"><i class="fa fa-link" aria-hidden="true"></i></a>OpenGL&#x6E32;&#x67D3;&#x7BA1;&#x7EBF;</h3>
+<p><strong>&#x56FE;&#x5F62;&#x6E32;&#x67D3;&#x7BA1;&#x7EBF;&#xFF08;Graphics Pipeline&#xFF09;&#xFF1A;</strong> &#x5927;&#x591A;&#x8BD1;&#x4E3A;&#x7BA1;&#x7EBF;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x6307;&#x7684;&#x662F;&#x4E00;&#x5806;&#x539F;&#x59CB;<font color="#008000">&#x56FE;&#x5F62;&#x6570;&#x636E;</font><font color="#888888">&#xFF08;&#x9876;&#x70B9;&#x4FE1;&#x606F;(&#x5750;&#x6807;&#x3001;&#x6CD5;&#x5411;&#x91CF;&#x7B49;)&#x548C;&#x50CF;&#x7D20;&#x4FE1;&#x606F;(&#x56FE;&#x50CF;&#x3001;&#x7EB9;&#x7406;&#x7B49;)&#xFF09;</font>&#x9014;&#x7ECF;&#x4E00;&#x4E2A;&#x8F93;&#x9001;&#x7BA1;&#x9053;&#xFF0C;&#x671F;&#x95F4;&#x7ECF;&#x8FC7;&#x5404;&#x79CD;&#x53D8;&#x5316;&#x5904;&#x7406;&#x6700;&#x7EC8;&#x51FA;&#x73B0;&#x5728;&#x5C4F;&#x5E55;&#x7684;&#x8FC7;&#x7A0B;&#x3002;</p>
+<div align="center">![](02_opengl_es/opengles-all-process.png)</div>
+
+<h4 id="&#x56FE;&#x5F62;&#x6E32;&#x67D3;&#x7BA1;&#x7EBF;&#x7684;&#x4E3B;&#x8981;&#x5DE5;&#x4F5C;&#x53EF;&#x4EE5;&#x88AB;&#x5212;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;&#x90E8;&#x5206;"><a name="&#x56FE;&#x5F62;&#x6E32;&#x67D3;&#x7BA1;&#x7EBF;&#x7684;&#x4E3B;&#x8981;&#x5DE5;&#x4F5C;&#x53EF;&#x4EE5;&#x88AB;&#x5212;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;&#x90E8;&#x5206;" class="anchor-navigation-ex-anchor" href="#&#x56FE;&#x5F62;&#x6E32;&#x67D3;&#x7BA1;&#x7EBF;&#x7684;&#x4E3B;&#x8981;&#x5DE5;&#x4F5C;&#x53EF;&#x4EE5;&#x88AB;&#x5212;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;&#x90E8;&#x5206;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x56FE;&#x5F62;&#x6E32;&#x67D3;&#x7BA1;&#x7EBF;&#x7684;&#x4E3B;&#x8981;&#x5DE5;&#x4F5C;&#x53EF;&#x4EE5;&#x88AB;&#x5212;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;&#x90E8;&#x5206;" class="plugin-anchor" href="#&#x56FE;&#x5F62;&#x6E32;&#x67D3;&#x7BA1;&#x7EBF;&#x7684;&#x4E3B;&#x8981;&#x5DE5;&#x4F5C;&#x53EF;&#x4EE5;&#x88AB;&#x5212;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;&#x90E8;&#x5206;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56FE;&#x5F62;&#x6E32;&#x67D3;&#x7BA1;&#x7EBF;&#x7684;&#x4E3B;&#x8981;&#x5DE5;&#x4F5C;&#x53EF;&#x4EE5;&#x88AB;&#x5212;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;&#x90E8;&#x5206;</h4>
+<ul>
+<li>1&#xFF09;&#x628A; 3D &#x5750;&#x6807;&#x8F6C;&#x6362;&#x4E3A; 2D &#x5750;&#x6807;&#xFF08;&#x5728;OpenGL&#x4E2D;&#xFF0C;&#x4EFB;&#x4F55;&#x4E8B;&#x7269;&#x90FD;&#x5728;3D&#x7A7A;&#x95F4;&#x4E2D;&#xFF0C;&#x800C;&#x5C4F;&#x5E55;&#x548C;&#x7A97;&#x53E3;&#x5374;&#x662F;2D&#x50CF;&#x7D20;&#x6570;&#x7EC4;&#xFF09;&#x3002;</li>
+<li>2&#xFF09;&#x628A; 2D &#x5750;&#x6807;&#x8F6C;&#x53D8;&#x4E3A;&#x5B9E;&#x9645;&#x7684;&#x6709;&#x989C;&#x8272;&#x7684;&#x50CF;&#x7D20;</li>
+</ul>
+<h4 id="&#x56FE;&#x5F62;&#x6E32;&#x67D3;&#x7BA1;&#x7EBF;&#x7684;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x53EF;&#x5206;&#x4E3A;&#x516D;&#x4E2A;&#x9636;&#x6BB5;"><a name="&#x56FE;&#x5F62;&#x6E32;&#x67D3;&#x7BA1;&#x7EBF;&#x7684;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x53EF;&#x5206;&#x4E3A;&#x516D;&#x4E2A;&#x9636;&#x6BB5;" class="anchor-navigation-ex-anchor" href="#&#x56FE;&#x5F62;&#x6E32;&#x67D3;&#x7BA1;&#x7EBF;&#x7684;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x53EF;&#x5206;&#x4E3A;&#x516D;&#x4E2A;&#x9636;&#x6BB5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x56FE;&#x5F62;&#x6E32;&#x67D3;&#x7BA1;&#x7EBF;&#x7684;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x53EF;&#x5206;&#x4E3A;&#x516D;&#x4E2A;&#x9636;&#x6BB5;" class="plugin-anchor" href="#&#x56FE;&#x5F62;&#x6E32;&#x67D3;&#x7BA1;&#x7EBF;&#x7684;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x53EF;&#x5206;&#x4E3A;&#x516D;&#x4E2A;&#x9636;&#x6BB5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56FE;&#x5F62;&#x6E32;&#x67D3;&#x7BA1;&#x7EBF;&#x7684;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x53EF;&#x5206;&#x4E3A;&#x516D;&#x4E2A;&#x9636;&#x6BB5;</h4>
+<div align="center">![&#x7740;&#x8272;&#x5668;&#x5728;&#x6E32;&#x67D3;&#x7BA1;&#x7EBF;&#x4E2D;&#x7684;&#x4F7F;&#x7528;](02_opengl_es/openglse-shader.png)</div>
+
+<ul>
+<li>&#x6CE8;&#xFF1A;&#x84DD;&#x8272;&#x90E8;&#x5206;&#x4EE3;&#x8868;&#x7740;&#x8272;&#x5668;&#x7684;&#x90E8;&#x5206;&#x3002;</li>
+</ul>
+<p><strong>&#x7B2C;&#x4E00;&#x9636;&#x6BB5;&#xFF0C;&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;&#xFF1A;</strong> &#x9876;&#x70B9;&#x6570;&#x636E;&#xFF08;Vertex Data&#xFF09; &#x6570;&#x636E;&#xFF08;&#x4E00;&#x7CFB;&#x5217;&#x9876;&#x70B9;&#x7684;&#x96C6;&#x5408;&#xFF09;&#x7531;3D &#x5750;&#x6807;&#x8F6C;&#x4E3A;&#x53E6;&#x4E00;&#x79CD; 3D &#x5750;&#x6807;&#xFF0C;&#x540C;&#x65F6;&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;&#x53EF;&#x4EE5;&#x5BF9;&#x9876;&#x70B9;&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x5904;&#x7406;&#x3002;&#xFF08;&#x4E0B;&#x9762;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#xFF09;</p>
+<p><strong>&#x7B2C;&#x4E8C;&#x9636;&#x6BB5;&#xFF0C;&#x5F62;&#x72B6;&#xFF08;&#x56FE;&#x5143;&#xFF09;&#x88C5;&#x914D;&#xFF1A;</strong> &#x8BE5;&#x9636;&#x6BB5;&#x5C06;&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;&#x8F93;&#x51FA;&#x7684;&#x6240;&#x6709;&#x9876;&#x70B9;&#x4F5C;&#x4E3A;&#x8F93;&#x5165;&#xFF0C;&#x5E76;&#x5C06;&#x6240;&#x6709;&#x7684;&#x70B9;&#x88C5;&#x914D;&#x6210;&#x6307;&#x5B9A;&#x56FE;&#x5143;&#x7684;&#x5F62;&#x72B6;&#x3002;&#x56FE;&#x4E2D;&#x5219;&#x662F;&#x4E00;&#x4E2A;&#x4E09;&#x89D2;&#x5F62;&#x3002;&#x56FE;&#x5143;&#xFF08;Primitive&#xFF09; &#x7528;&#x4E8E;&#x8868;&#x793A;&#x5982;&#x4F55;&#x6E32;&#x67D3;&#x9876;&#x70B9;&#x6570;&#x636E;&#xFF0C;&#x5982;&#xFF1A;&#x70B9;&#x3001;&#x7EBF;&#x3001;&#x4E09;&#x89D2;&#x5F62;&#x3002;</p>
+<p><strong>&#x7B2C;&#x4E09;&#x9636;&#x6BB5;&#xFF0C;&#x51E0;&#x4F55;&#x7740;&#x8272;&#x5668;&#xFF1A;</strong> &#x8BE5;&#x9636;&#x6BB5;&#x628A;&#x56FE;&#x5143;&#x5F62;&#x5F0F;&#x7684;&#x4E00;&#x7CFB;&#x5217;&#x9876;&#x70B9;&#x7684;&#x96C6;&#x5408;&#x4F5C;&#x4E3A;&#x8F93;&#x5165;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EA7;&#x751F;&#x65B0;&#x9876;&#x70B9;&#x6784;&#x9020;&#x51FA;&#x65B0;&#x7684;&#xFF08;&#x6216;&#x662F;&#x5176;&#x5B83;&#x7684;&#xFF09;&#x56FE;&#x5143;&#x6765;&#x751F;&#x6210;&#x5176;&#x4ED6;&#x5F62;&#x72B6;&#x3002;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x5B83;&#x751F;&#x6210;&#x4E86;&#x53E6;&#x4E00;&#x4E2A;&#x4E09;&#x89D2;&#x5F62;&#x3002;&#xFF08;&#x8FD9;&#x4E2A;&#x9636;&#x6BB5;&#x53EF;&#x4EE5;&#x7701;&#x7565;&#xFF09;</p>
+<p><strong>&#x7B2C;&#x56DB;&#x9636;&#x6BB5;&#xFF0C;&#x5149;&#x6805;&#x5316;&#xFF1A;</strong> &#x8BE5;&#x9636;&#x6BB5;&#x4F1A;&#x628A;&#x56FE;&#x5143;&#x6620;&#x5C04;&#x4E3A;&#x6700;&#x7EC8;&#x5C4F;&#x5E55;&#x4E0A;&#x76F8;&#x5E94;&#x7684;&#x50CF;&#x7D20;&#xFF0C;&#x751F;&#x6210;&#x7247;&#x6BB5;&#x3002;&#x7247;&#x6BB5;&#xFF08;Fragment&#xFF09; &#x662F;&#x6E32;&#x67D3;&#x4E00;&#x4E2A;&#x50CF;&#x7D20;&#x6240;&#x9700;&#x8981;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#xFF08;&#x4E00;&#x4E2A;&#x77E9;&#x5F62;&#x6570;&#x7EC4;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x989C;&#x8272;&#x3001;&#x6DF1;&#x5EA6;&#x3001;&#x7EBF;&#x5BBD;&#x3001;&#x70B9;&#x7684;&#x5927;&#x5C0F;&#x7B49;&#x4FE1;&#x606F;&#xFF09;&#x3002;</p>
+<p><strong>&#x7B2C;&#x4E94;&#x9636;&#x6BB5;&#xFF0C;&#x7247;&#x6BB5;&#x7740;&#x8272;&#x5668;&#xFF1A;</strong> &#x8BE5;&#x9636;&#x6BB5;&#x9996;&#x5148;&#x4F1A;&#x5BF9;&#x8F93;&#x5165;&#x7684;&#x7247;&#x6BB5;&#x8FDB;&#x884C; &#x88C1;&#x5207;&#xFF08;Clipping&#xFF09;&#x3002;&#x88C1;&#x5207;&#x4F1A;&#x4E22;&#x5F03;&#x8D85;&#x51FA;&#x89C6;&#x56FE;&#x4EE5;&#x5916;&#x7684;&#x6240;&#x6709;&#x50CF;&#x7D20;&#xFF0C;&#x7528;&#x6765;&#x63D0;&#x5347;&#x6267;&#x884C;&#x6548;&#x7387;&#x3002;&#xFF08;&#x4E0B;&#x9762;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#xFF09;</p>
+<p><strong>&#x7B2C;&#x516D;&#x9636;&#x6BB5;&#xFF0C;&#x6D4B;&#x8BD5;&#x4E0E;&#x6DF7;&#x5408;</strong> &#x8BE5;&#x9636;&#x6BB5;&#x4F1A;&#x68C0;&#x6D4B;&#x7247;&#x6BB5;&#x7684;&#x5BF9;&#x5E94;&#x7684;&#x6DF1;&#x5EA6;&#x503C;&#xFF08;z &#x5750;&#x6807;&#xFF09;&#xFF0C;&#x5224;&#x65AD;&#x8FD9;&#x4E2A;&#x50CF;&#x7D20;&#x4F4D;&#x4E8E;&#x5176;&#x5B83;&#x7269;&#x4F53;&#x7684;&#x524D;&#x9762;&#x8FD8;&#x662F;&#x540E;&#x9762;&#xFF0C;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x5E94;&#x8BE5;&#x4E22;&#x5F03;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x8BE5;&#x9636;&#x6BB5;&#x8FD8;&#x4F1A;&#x68C0;&#x67E5; alpha &#x503C;&#xFF08; alpha &#x503C;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x7269;&#x4F53;&#x7684;&#x900F;&#x660E;&#x5EA6;&#xFF09;&#xFF0C;&#x4ECE;&#x800C;&#x5BF9;&#x7269;&#x4F53;&#x8FDB;&#x884C;&#x6DF7;&#x5408;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5373;&#x4F7F;&#x5728;&#x7247;&#x6BB5;&#x7740;&#x8272;&#x5668;&#x4E2D;&#x8BA1;&#x7B97;&#x51FA;&#x6765;&#x4E86;&#x4E00;&#x4E2A;&#x50CF;&#x7D20;&#x8F93;&#x51FA;&#x7684;&#x989C;&#x8272;&#xFF0C;&#x5728;&#x6E32;&#x67D3;&#x591A;&#x4E2A;&#x4E09;&#x89D2;&#x5F62;&#x7684;&#x65F6;&#x5019;&#x6700;&#x540E;&#x7684;&#x50CF;&#x7D20;&#x989C;&#x8272;&#x4E5F;&#x53EF;&#x80FD;&#x5B8C;&#x5168;&#x4E0D;&#x540C;&#x3002;</p>
+<p>&#x8FD9;&#x662F;OpenGL&#x5185;&#x90E8;&#x9700;&#x8981;&#x5904;&#x7406;&#x7684;&#x6D41;&#x7A0B;&#xFF0C;&#x800C;&#x6211;&#x4EEC;&#x7A0B;&#x5E8F;&#x5904;&#x7406;OpenGL&#x7684;&#x5219;&#x662F;&#x4EE5;&#x4E0B;&#x4E24;&#x5927;&#x6A21;&#x5757;&#xFF1A;
+1&#xFF09;&#x521B;&#x5EFA;&#x7740;&#x8272;&#x5668;&#xFF08;&#x81F3;&#x5C11;&#x662F;&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;&#x548C;&#x7247;&#x6BB5;&#x7740;&#x8272;&#x5668;&#xFF09;&#xFF0C;&#x8BBE;&#x7F6E;&#x76F8;&#x5173;&#x53C2;&#x6570;&quot;&#x544A;&#x8BC9;&quot;OpenGL&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x4EE5;&#x53CA;&#x7ED1;&#x5B9A;&#x76F8;&#x5173;&#x7A0B;&#x5E8F;&#x3002;
+2&#xFF09;&#x751F;&#x6210;&#x4EE5;&#x53CA;&#x7F16;&#x8BD1;&#x7EB9;&#x7406;&#xFF0C;&#x628A;&#x7EB9;&#x7406;&#x8F93;&#x5165;&#x5230;&#x7740;&#x8272;&#x5668;&#x4E2D;&#xFF0C;&#x5E76;&#x4E14;&#x8BBE;&#x7F6E;&#x76F8;&#x5173;&#x53C2;&#x6570;&quot;&#x544A;&#x8BC9;&quot;OpenGL&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;</p>
+<h3 id="&#x7740;&#x8272;&#x5668;"><a name="&#x7740;&#x8272;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x7740;&#x8272;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7740;&#x8272;&#x5668;" class="plugin-anchor" href="#&#x7740;&#x8272;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7740;&#x8272;&#x5668;</h3>
+<p><strong>&#x7740;&#x8272;&#x5668;(Shader)&#xFF1A;</strong> &#x662F;&#x6307;GPU&#x4E0A;&#x4E3A;&#x6BCF;&#x4E00;&#x4E2A;&#xFF08;&#x6E32;&#x67D3;&#x7BA1;&#x7EBF;&#xFF09;&#x9636;&#x6BB5;&#x8FD0;&#x884C;&#x5404;&#x81EA;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x3002;&#x800C;OpenGL&#x7740;&#x8272;&#x5668;&#x662F;&#x7528;OpenGL&#x7740;&#x8272;&#x5668;&#x8BED;&#x8A00;(OpenGL Shading Language, GLSL)&#x5199;&#x6210;&#x7684;&#xFF0C;<a href="https://learnopengl-cn.readthedocs.io/zh/latest/01%20Getting%20started/05%20Shaders/" target="_blank">&#x8FD9;&#x662F;&#x8BED;&#x6CD5;&#x7B80;&#x5355;&#x4ECB;&#x7ECD;</a> &#x3002;&#x4E0A;&#x9762;&#x5C31;&#x4ECB;&#x7ECD;&#x4E86;3&#x79CD;&#x7740;&#x8272;&#x5668;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x6253;&#x7B97;&#x505A;&#x6E32;&#x67D3;&#x7684;&#x8BDD;&#xFF0C;&#x5728;&#x73B0;&#x4EE3;OpenGL&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x5B9A;&#x4E49;&#x81F3;&#x5C11;&#x4E00;&#x4E2A;&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;&#x548C;&#x4E00;&#x4E2A;&#x7247;&#x6BB5;&#x7740;&#x8272;&#x5668;&#xFF08;&#x56E0;&#x4E3A;GPU&#x4E2D;&#x6CA1;&#x6709;&#x9ED8;&#x8BA4;&#x7684;&#x9876;&#x70B9;/&#x7247;&#x6BB5;&#x7740;&#x8272;&#x5668;&#xFF09;&#x3002;&#x4EE5;&#x4E0B;&#x5C06;&#x8981;&#x5BF9;&#x4E24;&#x8005;&#x505A;&#x8BE6;&#x7EC6;&#x7684;&#x4ECB;&#x7ECD;&#x3002;</p>
+<h4 id="&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;"><a name="&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;" class="plugin-anchor" href="#&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;</h4>
+<p>&#x4E3B;&#x8981;&#x7684;&#x76EE;&#x7684;&#x662F;&#x628A;3D&#x5750;&#x6807;&#x8F6C;&#x4E3A;&#x53E6;&#x4E00;&#x79CD;3D&#x5750;&#x6807;(&#x6807;&#x51C6;&#x5316;&#x8BBE;&#x5907;&#x5750;&#x6807;)&#xFF0C;&#x4EE5;&#x53CA;&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x5BF9;&#x9876;&#x70B9;&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x6807;&#x51C6;&#x5316;&#x8BBE;&#x5907;&#x5750;&#x6807;&#xFF08;&#x5C31;&#x662F;&#x4E0B;&#x6587;&#x7EB9;&#x7406;&#x8BF4;&#x7684;OpenGL&#x7269;&#x4F53;&#x8868;&#x9762;&#x5750;&#x6807;&#xFF09;&#x662F;&#x4E00;&#x4E2A;x&#x3001;y&#x548C;z&#x503C;&#x5728;-1.0&#x5230;1.0&#x7684;&#x4E00;&#x5C0F;&#x6BB5;&#x7A7A;&#x95F4;&#x3002;&#x4EFB;&#x4F55;&#x843D;&#x5728;&#x8303;&#x56F4;&#x5916;&#x7684;&#x5750;&#x6807;&#x90FD;&#x4F1A;&#x88AB;&#x4E22;&#x5F03;/&#x88C1;&#x526A;&#xFF0C;&#x4E0D;&#x4F1A;&#x663E;&#x793A;&#x5728;&#x4F60;&#x7684;&#x5C4F;&#x5E55;&#x4E0A;&#x3002;&#x4E0B;&#x9762;&#x4F60;&#x4F1A;&#x770B;&#x5230;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x7684;&#x5728;&#x6807;&#x51C6;&#x5316;&#x8BBE;&#x5907;&#x5750;&#x6807;&#x4E2D;&#x7684;&#x4E09;&#x89D2;&#x5F62;(&#x5FFD;&#x7565;z&#x8F74;)&#xFF1A;</p>
+<div align="center">![](02_opengl_es/openglse-ndc.png)</div>
+
+<p>&#x4E0E;&#x901A;&#x5E38;&#x7684;&#x5C4F;&#x5E55;&#x5750;&#x6807;&#x4E0D;&#x540C;&#xFF0C;y&#x8F74;&#x6B63;&#x65B9;&#x5411;&#x4E3A;&#x5411;&#x4E0A;&#xFF0C;(0, 0)&#x5750;&#x6807;&#x662F;&#x8FD9;&#x4E2A;&#x56FE;&#x50CF;&#x7684;&#x4E2D;&#x5FC3;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5DE6;&#x4E0A;&#x89D2;&#x3002;&#x6700;&#x7EC8;&#x4F60;&#x5E0C;&#x671B;&#x6240;&#x6709;(&#x53D8;&#x6362;&#x8FC7;&#x7684;)&#x5750;&#x6807;&#x90FD;&#x5728;&#x8FD9;&#x4E2A;&#x5750;&#x6807;&#x7A7A;&#x95F4;&#x4E2D;&#xFF0C;&#x5426;&#x5219;&#x5B83;&#x4EEC;&#x5C31;&#x4E0D;&#x53EF;&#x89C1;&#x4E86;&#x3002;&#x4F60;&#x7684;&#x6807;&#x51C6;&#x5316;&#x8BBE;&#x5907;&#x5750;&#x6807;&#x63A5;&#x7740;&#x4F1A;&#x53D8;&#x6362;&#x4E3A;&#x5C4F;&#x5E55;&#x7A7A;&#x95F4;&#x5750;&#x6807;(Screen-space Coordinates)&#xFF0C;&#x8FD9;&#x662F;&#x4F7F;&#x7528;&#x4F60;&#x901A;&#x8FC7;<code>glViewport</code>&#x51FD;&#x6570;&#x63D0;&#x4F9B;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x8FDB;&#x884C;&#x89C6;&#x53E3;&#x53D8;&#x6362;(Viewport Transform)&#x5B8C;&#x6210;&#x7684;&#x3002;&#x6240;&#x5F97;&#x7684;&#x5C4F;&#x5E55;&#x7A7A;&#x95F4;&#x5750;&#x6807;&#x53C8;&#x4F1A;&#x88AB;&#x53D8;&#x6362;&#x4E3A;&#x7247;&#x6BB5;&#x8F93;&#x5165;&#x5230;&#x7247;&#x6BB5;&#x7740;&#x8272;&#x5668;&#x4E2D;&#x3002;</p>
+<p>&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x6307;&#x5B9A;&#x4EFB;&#x4F55;&#x4EE5;&#x9876;&#x70B9;&#x5C5E;&#x6027;&#x4E3A;&#x5F62;&#x5F0F;&#x7684;&#x8F93;&#x5165;&#x3002;&#x8FD9;&#x4F7F;&#x5176;&#x5177;&#x6709;&#x5F88;&#x5F3A;&#x7684;&#x7075;&#x6D3B;&#x6027;&#x7684;&#x540C;&#x65F6;&#xFF0C;&#x5B83;&#x8FD8;&#x7684;&#x786E;&#x610F;&#x5473;&#x7740;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x624B;&#x52A8;&#x6307;&#x5B9A;&#x8F93;&#x5165;&#x6570;&#x636E;&#x7684;&#x54EA;&#x4E00;&#x4E2A;&#x90E8;&#x5206;&#x5BF9;&#x5E94;&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;&#x7684;&#x54EA;&#x4E00;&#x4E2A;&#x9876;&#x70B9;&#x5C5E;&#x6027;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x5728;&#x6E32;&#x67D3;&#x524D;&#x6307;&#x5B9A;OpenGL&#x8BE5;&#x5982;&#x4F55;&#x89E3;&#x91CA;&#x9876;&#x70B9;&#x6570;&#x636E;&#x3002;</p>
+<p><strong>&#x4F7F;&#x7528;&#x793A;&#x4F8B;&#xFF1A;</strong>
+1&#xFF09;&#x7F16;&#x5199;&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#xFF08;&#x6839;c&#x8BED;&#x8A00;&#x57FA;&#x672C;&#x4E00;&#x6837;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">const</span> GLchar* VERTEX_SHADER =
+        <span class="hljs-string">&quot;#version 330 core\n&quot;</span>
+        <span class="hljs-string">&quot;layout (location = 0) in vec3 position;\n&quot;</span>
+        <span class="hljs-string">&quot;layout (location = 1) in vec3 color;\n&quot;</span>
+        <span class="hljs-string">&quot;layout (location = 2) in vec2 texCoord;\n&quot;</span>
+        <span class="hljs-string">&quot;out vec3 ourColor;\n&quot;</span>
+        <span class="hljs-string">&quot;out vec2 TexCoord;\n&quot;</span>
+        <span class="hljs-string">&quot;void main(){\n&quot;</span>
+        <span class="hljs-string">&quot;    gl_Position = vec4(position, 1.0f);\n&quot;</span>
+        <span class="hljs-string">&quot;    ourColor = color;\n&quot;</span>
+        <span class="hljs-string">&quot;    TexCoord = texCoord;\n&quot;</span>
+        <span class="hljs-string">&quot;}\n&quot;</span>;
+</code></pre>
+<ul>
+<li><code>#version 330 core</code>&#xFF1A;&#x8868;&#x793A;&#x9700;&#x8981;&#x4F7F;&#x7528;OpenGL&#x7684;&#x7248;&#x672C;&#x3002;</li>
+<li><p><code>layout (location = 0) in vec3 position;</code>&#xFF08;&#x7B2C;&#x4E09;&#x3001;&#x56DB;&#x884C;&#x540C;&#x7406;&#xFF09;&#xFF1A;</p>
+<blockquote>
+<p>1) <code>layout (location = 0)</code>&#xFF1A;&#x8BBE;&#x5B9A;&#x4E86;&#x8F93;&#x5165;&#x53D8;&#x91CF;<code>position</code>&#x7684;&#x4F4D;&#x7F6E;&#x503C;&#x4E3A;<code>0</code>&#xFF0C;&#x8DDF;<code>glVertexAttribPointer</code>&#x914D;&#x5408;&#x4F7F;&#x7528;&#xFF0C;&#x7528;&#x6765;&#x544A;&#x8BC9;OpenGL&#x8BE5;&#x5982;&#x4F55;&#x89E3;&#x6790;&#x9876;&#x70B9;&#x6570;&#x636E;&#x3002;&#x4E0B;&#x9762;&#x7EB9;&#x7406;&#x8FD8;&#x4F1A;&#x5177;&#x4F53;&#x4ECB;&#x7ECD;&#x3002;
+2) <code>in</code>&#xFF1A;&#x8868;&#x793A;<code>position</code>&#x53D8;&#x91CF;&#x662F;&#x63A5;&#x6536;&#x5916;&#x754C;&#x51FA;&#x5165;&#x7684;&#x6570;&#x636E;&#x3002;
+3&#xFF09;<code>vec3</code>&#xFF1A;&#x8868;&#x793A;&#x503C;&#x4E3A;<code>float</code>&#x7C7B;&#x578B;&#xFF0C;&#x6709;3&#x5206;&#x91CF;&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x540C;&#x7406;&#x6709;&#xFF1A;<code>ivecn</code>&#x5305;&#x542B;n&#x4E2A;int&#x5206;&#x91CF;&#x7684;&#x5411;&#x91CF;&#xFF1B;<code>uvecn</code>&#x5305;&#x542B;n&#x4E2A;unsigned int&#x5206;&#x91CF;&#x7684;&#x5411;&#x91CF;&#x7B49;&#x7B49;&#x3002;</p>
+</blockquote>
+</li>
+<li><p><code>out vec3 ourColor;</code>&#xFF1A; &#x8868;&#x793A;<code>ourColor</code>&#x53D8;&#x91CF;&#x7684;&#x6570;&#x636E;&#x5C06;&#x4F5C;&#x4E3A;&#x8F93;&#x51FA;&#xFF0C;&#x4F20;&#x9012;&#x5230;&quot;&#x7247;&#x6BB5;&#x7740;&#x8272;&#x5668;&quot;&#x4E2D;&#x4F5C;&#x4E3A;&#x8F93;&#x5165;&#x88AB;&#x4F7F;&#x7528;&#x3002;</p>
+</li>
+<li><code>gl_Position = vec4(position, 1.0f);</code>&#xFF1A;<blockquote>
+<p>1) <code>gl_Position</code>&#xFF1A;&#x539F;&#x59CB;&#x7684;&#x9876;&#x70B9;&#x6570;&#x636E;&#x5728;&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;&#x4E2D;&#x7ECF;&#x8FC7;&#x5E73;&#x79FB;&#x3001;&#x65CB;&#x8F6C;&#x3001;&#x7F29;&#x653E;&#x7B49;&#x6570;&#x5B66;&#x53D8;&#x6362;&#x540E;&#xFF0C;&#x751F;&#x6210;&#x65B0;&#x7684;&#x9876;&#x70B9;&#x4F4D;&#x7F6E;&#xFF08;&#x4E00;&#x4E2A;&#x56DB;&#x7EF4; (vec4) &#x53D8;&#x91CF;&#xFF0C;&#x5305;&#x542B;&#x9876;&#x70B9;&#x7684; x&#x3001;y&#x3001;z &#x548C; w &#x503C;&#xFF09;&#x3002;&#x65B0;&#x7684;&#x9876;&#x70B9;&#x4F4D;&#x7F6E;&#x901A;&#x8FC7;&#x5728;&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;&#x4E2D;&#x5199;&#x5165;gl_Position&#x4F20;&#x9012;&#x5230;&#x6E32;&#x67D3;&#x7BA1;&#x7EBF;&#x7684;&#x540E;&#x7EE7;&#x9636;&#x6BB5;&#x7EE7;&#x7EED;&#x5904;&#x7406;&#x3002;
+2) <code>vec4(position, 1.0f)</code>&#xFF1A;&#x628A;3&#x4E2A;&#x5206;&#x91CF;&#x7684;&#x5BB9;&#x5668;<code>position</code>&#x518D;&#x4E00;&#x4E2A;&#x5206;&#x91CF;<code>1.0f</code>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;4&#x4E2A;&#x5206;&#x91CF;&#x7684;&#x5BB9;&#x5668;&#x3002;</p>
+</blockquote>
+</li>
+</ul>
+<p>2&#xFF09;&#x7F16;&#x8BD1;&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;&#xFF08;&#x4E3A;&#x4E86;&#x80FD;&#x591F;&#x8BA9;OpenGL&#x4F7F;&#x7528;&#x5B83;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-c">GLuint vertexShader;
+vertexShader = glCreateShader(GL_VERTEX_SHADER);   <span class="hljs-comment">//&#x521B;&#x5EFA;&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;</span>
+glShaderSource(vertexShader, <span class="hljs-number">1</span>, VERTEX_SHADER, <span class="hljs-literal">NULL</span>); <span class="hljs-comment">//&#x5173;&#x8054;&#x4E0A;&#x9762;&#x7684;&#x6E90;&#x4EE3;&#x7801;</span>
+glCompileShader(vertexShader);                        <span class="hljs-comment">//&#x5728;&#x7EBF;&#x7F16;&#x8BD1;</span>
+<span class="hljs-comment">//&#x4EE5;&#x4E0B;&#x4E3A;&#x5F02;&#x5E38;&#x60C5;&#x51B5;&#x5904;&#x7406;&#xFF0C;&#x6253;&#x5370;&#x7F16;&#x8BD1;&#x9519;&#x8BEF;&#xFF08;&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;&#xFF09;</span>
+GLint success;
+GLchar infoLog[<span class="hljs-number">512</span>];
+glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &amp;success);
+<span class="hljs-keyword">if</span>(!success){
+    glGetShaderInfoLog(vertex, <span class="hljs-number">512</span>, <span class="hljs-literal">NULL</span>, infoLog);
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;ERROR::SHADER::VERTEX::COMPILATION_FAILED\n&quot;</span> &lt;&lt; infoLog &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+};
+</code></pre>
+<p>3&#xFF09;&#x94FE;&#x63A5;&#x5230;&#x4E00;&#x4E2A;&#x7528;&#x6765;&#x6E32;&#x67D3;&#x7684;&#x7740;&#x8272;&#x5668;&#x7A0B;&#x5E8F;&#xFF0C;<strong>&#x7740;&#x8272;&#x5668;&#x7A0B;&#x5E8F;</strong> &#xFF0C;&#x5DF2;&#x6FC0;&#x6D3B;&#x7740;&#x8272;&#x5668;&#x7A0B;&#x5E8F;&#x7684;&#x7740;&#x8272;&#x5668;&#x5C06;&#x5728;&#x6211;&#x4EEC;&#x53D1;&#x9001;&#x6E32;&#x67D3;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#x88AB;&#x4F7F;&#x7528;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-comment">//1&#xFF09;&#x7740;&#x8272;&#x5668;&#x7A0B;&#x5E8F;</span>
+GLuint shaderProgram;
+shaderProgram = glCreateProgram();              <span class="hljs-comment">//&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x5BF9;&#x8C61;</span>
+glAttachShader(shaderProgram, vertexShader);    <span class="hljs-comment">//&#x628A;&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;&#x9644;&#x52A0;&#x5230;&#x7A0B;&#x5E8F;&#x5BF9;&#x8C61;&#x4E0A;</span>
+glAttachShader(shaderProgram, fragmentShader);  <span class="hljs-comment">//&#x628A;&#x7247;&#x6BB5;&#x7740;&#x8272;&#x5668;&#x9644;&#x52A0;&#x5230;&#x7A0B;&#x5E8F;&#x5BF9;&#x8C61;&#x4E0A;</span>
+glLinkProgram(shaderProgram);                   <span class="hljs-comment">//&#x94FE;&#x63A5;&#x5B83;&#x4EEC;</span>
+glUseProgram(shaderProgram);                    <span class="hljs-comment">//&#x6FC0;&#x6D3B;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x5BF9;&#x8C61;&#xFF0C;&#x8C03;&#x7528;&#x540E;&#x6BCF;&#x4E2A;&#x7740;&#x8272;&#x5668;&#x8C03;&#x7528;&#x548C;&#x6E32;&#x67D3;&#x8C03;&#x7528;&#x90FD;&#x4F1A;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x5BF9;&#x8C61;</span>
+<span class="hljs-comment">// &#x6253;&#x5370;&#x8FDE;&#x63A5;&#x9519;&#x8BEF;&#xFF08;&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;&#xFF09;</span>
+glGetProgramiv(shaderProgram, GL_LINK_STATUS, &amp;success);
+<span class="hljs-keyword">if</span>(!success){
+    glGetProgramInfoLog(shaderProgram, <span class="hljs-number">512</span>, <span class="hljs-literal">NULL</span>, infoLog);
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;ERROR::SHADER::PROGRAM::LINKING_FAILED\n&quot;</span> &lt;&lt; infoLog &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+}
+
+<span class="hljs-comment">//2&#xFF09;&#x5220;&#x9664;&#x7740;&#x8272;&#x5668;&#xFF0C;&#x5B83;&#x4EEC;&#x5DF2;&#x7ECF;&#x94FE;&#x63A5;&#x5230;&#x6211;&#x4EEC;&#x7684;&#x7A0B;&#x5E8F;&#x4E2D;&#x4E86;&#xFF0C;&#x5DF2;&#x7ECF;&#x4E0D;&#x518D;&#x9700;&#x8981;&#x4E86;</span>
+glDeleteShader(vertex);
+glDeleteShader(fragment);
+</code></pre>
+<h4 id="&#x7247;&#x6BB5;&#x7740;&#x8272;&#x5668;"><a name="&#x7247;&#x6BB5;&#x7740;&#x8272;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x7247;&#x6BB5;&#x7740;&#x8272;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7247;&#x6BB5;&#x7740;&#x8272;&#x5668;" class="plugin-anchor" href="#&#x7247;&#x6BB5;&#x7740;&#x8272;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7247;&#x6BB5;&#x7740;&#x8272;&#x5668;</h4>
+<p>&#x7247;&#x6BB5;&#x7740;&#x8272;&#x5668;(Fragment Shader)&#x5168;&#x662F;&#x5173;&#x4E8E;&#x8BA1;&#x7B97;&#x4F60;&#x7684;&#x50CF;&#x7D20;&#x6700;&#x540E;&#x7684;&#x989C;&#x8272;&#x8F93;&#x51FA;&#x3002;&#x5728;&#x8BA1;&#x7B97;&#x673A;&#x56FE;&#x5F62;&#x4E2D;&#x989C;&#x8272;&#x88AB;&#x8868;&#x793A;&#x4E3A;&#x6709;4&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x6570;&#x7EC4;&#xFF1A;&#x7EA2;&#x8272;&#x3001;&#x7EFF;&#x8272;&#x3001;&#x84DD;&#x8272;&#x548C;alpha(&#x900F;&#x660E;&#x5EA6;)&#x5206;&#x91CF;&#xFF0C;&#x901A;&#x5E38;&#x7F29;&#x5199;&#x4E3A;RGBA&#x3002;&#x5F53;&#x5728;OpenGL&#x6216;GLSL&#x4E2D;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x989C;&#x8272;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x628A;&#x989C;&#x8272;&#x6BCF;&#x4E2A;&#x5206;&#x91CF;&#x7684;&#x5F3A;&#x5EA6;&#x8BBE;&#x7F6E;&#x5728;0.0&#x5230;1.0&#x4E4B;&#x95F4;&#x3002;&#x6BD4;&#x5982;&#x8BF4;&#x6211;&#x4EEC;&#x8BBE;&#x7F6E;&#x7EA2;&#x4E3A;1.0f&#xFF0C;&#x7EFF;&#x4E3A;1.0f&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x5F97;&#x5230;&#x4E24;&#x4E2A;&#x989C;&#x8272;&#x7684;&#x6DF7;&#x5408;&#x8272;&#xFF0C;&#x5373;&#x9EC4;&#x8272;&#x3002;</p>
+<p><strong>&#x4F7F;&#x7528;&#x793A;&#x4F8B;&#xFF1A;</strong>
+1&#xFF09;&#x7F16;&#x5199;&#x7247;&#x6BB5;&#x7740;&#x8272;&#x5668;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">const</span> GLchar* FRAGMENT_SHADER =
+        <span class="hljs-string">&quot;#version 330 core\n&quot;</span>
+        <span class="hljs-string">&quot;in vec3 ourColor;\n&quot;</span>
+        <span class="hljs-string">&quot;in vec2 TexCoord;\n&quot;</span>
+        <span class="hljs-string">&quot;out vec4 color;\n&quot;</span>
+        <span class="hljs-string">&quot;uniform sampler2D ourTexture;\n&quot;</span>
+        <span class="hljs-string">&quot;void main(){\n&quot;</span>
+        <span class="hljs-string">&quot;    color = texture(ourTexture, TexCoord);\n&quot;</span>
+        <span class="hljs-string">&quot;}\n&quot;</span>;
+</code></pre>
+<ul>
+<li><code>uniform sampler2D ourTexture;</code>&#xFF1A;&#x5B9A;&#x4E49;&#x5168;&#x5C40;(<code>uniform</code>)&#x53D8;&#x91CF;<code>ourTexture</code>&#xFF0C;<code>sampler2D</code>&#x662F;&#x6307;2D&#x7684;&#x7EB9;&#x7406;&#x91C7;&#x6837;&#x5668;&#x3002;</li>
+<li><code>color = texture(ourTexture, TexCoord);</code>&#xFF1A;GLSL&#x5185;&#x5EFA;&#x7684;<code>texture</code>&#x51FD;&#x6570;&#x6765;&#x91C7;&#x6837;&#x7EB9;&#x7406;&#x7684;&#x989C;&#x8272;&#xFF0C;&#x5B83;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x7EB9;&#x7406;&#x91C7;&#x6837;&#x5668;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x5BF9;&#x5E94;&#x7684;&#x7EB9;&#x7406;&#x5750;&#x6807;&#x3002;</li>
+</ul>
+<p>2&#xFF09;&#x7F16;&#x8BD1;&#x7247;&#x6BB5;&#x7740;&#x8272;&#x5668;&#xFF08;&#x540C;&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;&#xFF0C;&#x53C2;&#x6570;&#x53D8;&#x4E86;&#x800C;&#x5DF2;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-c">GLuint fragmentShader;
+vertexShader = glCreateShader(GL_FRAGMENT_SHADER);            <span class="hljs-comment">//&#x521B;&#x5EFA;&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;</span>
+glShaderSource(fragmentShader, <span class="hljs-number">1</span>, FRAGMENT_SHADER, <span class="hljs-literal">NULL</span>);     <span class="hljs-comment">//&#x5173;&#x8054;&#x4E0A;&#x9762;&#x7684;&#x6E90;&#x4EE3;&#x7801;</span>
+glCompileShader(fragmentShader);                              <span class="hljs-comment">//&#x5728;&#x7EBF;&#x7F16;&#x8BD1;</span>
+<span class="hljs-comment">//&#x4EE5;&#x4E0B;&#x4E3A;&#x5F02;&#x5E38;&#x60C5;&#x51B5;&#x5904;&#x7406;&#xFF0C;&#x6253;&#x5370;&#x7F16;&#x8BD1;&#x9519;&#x8BEF;&#xFF08;&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;&#xFF09;</span>
+GLint success;
+GLchar infoLog[<span class="hljs-number">512</span>];
+glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &amp;success);
+<span class="hljs-keyword">if</span>(!success){
+    glGetShaderInfoLog(vertex, <span class="hljs-number">512</span>, <span class="hljs-literal">NULL</span>, infoLog);
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;ERROR::SHADER::VERTEX::COMPILATION_FAILED\n&quot;</span> &lt;&lt; infoLog &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+};
+</code></pre>
+<p>3&#xFF09;&#x94FE;&#x63A5;&#x5230;&#x4E00;&#x4E2A;&#x7528;&#x6765;&#x6E32;&#x67D3;&#x7684;&#x7740;&#x8272;&#x5668;&#x7A0B;&#x5E8F;&#xFF0C;&#x540C;&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;&#x3002;</p>
+<h3 id="&#x51E0;&#x4E2A;&#x91CD;&#x8981;&#x6982;&#x5FF5;"><a name="&#x51E0;&#x4E2A;&#x91CD;&#x8981;&#x6982;&#x5FF5;" class="anchor-navigation-ex-anchor" href="#&#x51E0;&#x4E2A;&#x91CD;&#x8981;&#x6982;&#x5FF5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x51E0;&#x4E2A;&#x91CD;&#x8981;&#x6982;&#x5FF5;" class="plugin-anchor" href="#&#x51E0;&#x4E2A;&#x91CD;&#x8981;&#x6982;&#x5FF5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x51E0;&#x4E2A;&#x91CD;&#x8981;&#x6982;&#x5FF5;</h3>
+<h4 id="vbo"><a name="vbo" class="anchor-navigation-ex-anchor" href="#vbo"><i class="fa fa-link" aria-hidden="true"></i></a><a name="vbo" class="plugin-anchor" href="#vbo"><i class="fa fa-link" aria-hidden="true"></i></a>VBO</h4>
+<p>VBO&#xFF1A;&#x9876;&#x70B9;&#x7F13;&#x51B2;&#x5BF9;&#x8C61;(Vertex Buffer Objects)&#xFF1B;&#x5B83;&#x4F1A;&#x5728;GPU&#x5185;&#x5B58;(&#x901A;&#x5E38;&#x88AB;&#x79F0;&#x4E3A;&#x663E;&#x5B58;)&#x4E2D;&#x50A8;&#x5B58;&#x5927;&#x91CF;&#x9876;&#x70B9;&#xFF0C;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x7F13;&#x51B2;&#x5BF9;&#x8C61;&#x7684;&#x597D;&#x5904;&#x662F;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4E00;&#x6B21;&#x6027;&#x7684;&#x53D1;&#x9001;&#x4E00;&#x5927;&#x6279;&#x6570;&#x636E;&#x5230;&#x663E;&#x5361;&#x4E0A;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6BCF;&#x4E2A;&#x9876;&#x70B9;&#x53D1;&#x9001;&#x4E00;&#x6B21;&#x3002;&#x4ECE;CPU&#x628A;&#x6570;&#x636E;&#x53D1;&#x9001;&#x5230;&#x663E;&#x5361;&#x76F8;&#x5BF9;&#x8F83;&#x6162;&#xFF0C;&#x6240;&#x4EE5;&#x53EA;&#x8981;&#x53EF;&#x80FD;&#x6211;&#x4EEC;&#x90FD;&#x8981;&#x5C1D;&#x8BD5;&#x5C3D;&#x91CF;&#x4E00;&#x6B21;&#x6027;&#x53D1;&#x9001;&#x5C3D;&#x53EF;&#x80FD;&#x591A;&#x7684;&#x6570;&#x636E;&#x3002;&#x5F53;&#x6570;&#x636E;&#x53D1;&#x9001;&#x81F3;&#x663E;&#x5361;&#x7684;&#x5185;&#x5B58;&#x4E2D;&#x540E;&#xFF0C;&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;&#x51E0;&#x4E4E;&#x80FD;&#x7ACB;&#x5373;&#x8BBF;&#x95EE;&#x9876;&#x70B9;&#xFF0C;&#x8FD9;&#x662F;&#x4E2A;&#x975E;&#x5E38;&#x5FEB;&#x7684;&#x8FC7;&#x7A0B;&#x3002;</p>
+<p><strong>&#x4F7F;&#x7528;&#x5B9E;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-c">GLuint VBO;
+glGenBuffers(<span class="hljs-number">1</span>, &amp;VBO); 
+glBindBuffer(GL_ARRAY_BUFFER, VBO); <span class="hljs-comment">//&#x6B64;&#x65F6;&#xFF1A;&#x4F1A;&#x751F;&#x6210; 1 &#x4E2A; GL_ARRAY_BUFFER &#x7C7B;&#x578B;&#x7684; VBO&#x5BF9;&#x8C61;&#xFF08;&#x6570;&#x91CF;&#x53EF;&#x4EE5;&#x4E00;&#x6B21;&#x591A;&#x4E2A;&#xFF09;</span>
+glBufferData(GL_ARRAY_BUFFER, <span class="hljs-keyword">sizeof</span>(vertices), vertices, GL_STATIC_DRAW);<span class="hljs-comment">//&#x628A;&#x4E4B;&#x524D;&#x5B9A;&#x4E49;&#x7684;&#x9876;&#x70B9;&#x6570;&#x636E;&#x590D;&#x5236;&#x5230;&#x7F13;&#x51B2;&#x7684;&#x5185;&#x5B58;&#x4E2D;</span>
+
+<span class="hljs-comment">//&#x6700;&#x540E;&#x7A0B;&#x5E8F;&#x9000;&#x51FA;&#x65F6;&#xFF1A;</span>
+glDeleteBuffers(<span class="hljs-number">1</span>, &amp;VBO);
+</code></pre>
+<p><strong>glBufferData&#x76F8;&#x5173;&#x53C2;&#x6570;&#x4ECB;&#x7ECD;&#xFF1A;</strong></p>
+<ul>
+<li>&#x53C2;1&#xFF1A;&#x76EE;&#x6807;&#x7F13;&#x51B2;&#x7684;&#x7C7B;&#x578B;&#xFF1A;&#x9876;&#x70B9;&#x7F13;&#x51B2;&#x5BF9;&#x8C61;&#x5F53;&#x524D;&#x7ED1;&#x5B9A;&#x5230;GL_ARRAY_BUFFER&#x76EE;&#x6807;&#x4E0A;&#x3002;&#x8FD8;&#x6709;GL_ELEMENT_ARRAY_BUFFER&#x7B49;&#xFF0C;&#x4E0B;&#x9762;&#x4ECB;&#x7ECD;&#x3002;</li>
+<li>&#x53C2;2&#xFF1A;&#x6307;&#x5B9A;&#x4F20;&#x8F93;&#x6570;&#x636E;&#x7684;&#x5927;&#x5C0F;(&#x4EE5;&#x5B57;&#x8282;&#x4E3A;&#x5355;&#x4F4D;)&#xFF1B;&#x7528;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;sizeof&#x8BA1;&#x7B97;&#x51FA;&#x9876;&#x70B9;&#x6570;&#x636E;&#x5927;&#x5C0F;&#x5C31;&#x884C;&#x3002;</li>
+<li>&#x53C2;3&#xFF1A;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x53D1;&#x9001;&#x7684;&#x5B9E;&#x9645;&#x6570;&#x636E;&#x3002;</li>
+<li>&#x53C2;4&#xFF1A;&#x6307;&#x5B9A;&#x4E86;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x663E;&#x5361;&#x5982;&#x4F55;&#x7BA1;&#x7406;&#x7ED9;&#x5B9A;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5B83;&#x6709;&#x4E09;&#x79CD;&#x5F62;&#x5F0F;&#xFF1A;<blockquote>
+<ul>
+<li>GL_STATIC_DRAW &#xFF1A;&#x6570;&#x636E;&#x4E0D;&#x4F1A;&#x6216;&#x51E0;&#x4E4E;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x3002;</li>
+<li>GL_DYNAMIC_DRAW&#xFF1A;&#x6570;&#x636E;&#x4F1A;&#x88AB;&#x6539;&#x53D8;&#x5F88;&#x591A;&#x3002;</li>
+<li>GL_STREAM_DRAW &#xFF1A;&#x6570;&#x636E;&#x6BCF;&#x6B21;&#x7ED8;&#x5236;&#x65F6;&#x90FD;&#x4F1A;&#x6539;&#x53D8;&#x3002;</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h4 id="vao&#xFF08;android-opengl-es30&#x624D;&#x652F;&#x6301;&#xFF09;"><a name="vao&#xFF08;android-opengl-es30&#x624D;&#x652F;&#x6301;&#xFF09;" class="anchor-navigation-ex-anchor" href="#vao&#xFF08;android-opengl-es30&#x624D;&#x652F;&#x6301;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="vao&#xFF08;android-opengl-es30&#x624D;&#x652F;&#x6301;&#xFF09;" class="plugin-anchor" href="#vao&#xFF08;android-opengl-es30&#x624D;&#x652F;&#x6301;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>VAO&#xFF08;Android OpenGL ES3.0&#x624D;&#x652F;&#x6301;&#xFF09;</h4>
+<p>VAO&#xFF1A;&#x9876;&#x70B9;&#x6570;&#x7EC4;&#x5BF9;&#x8C61;(Vertex Array Object)&#xFF1B;&#x53EF;&#x4EE5;&#x50CF;&#x9876;&#x70B9;&#x7F13;&#x51B2;&#x5BF9;&#x8C61;&#x90A3;&#x6837;&#x88AB;&#x7ED1;&#x5B9A;&#xFF0C;&#x4EFB;&#x4F55;&#x968F;&#x540E;&#x7684;&#x9876;&#x70B9;&#x5C5E;&#x6027;&#x8C03;&#x7528;&#x90FD;&#x4F1A;&#x50A8;&#x5B58;&#x5728;&#x8FD9;&#x4E2A;VAO&#x4E2D;&#x3002;&#x8FD9;&#x6837;&#x7684;&#x597D;&#x5904;&#x5C31;&#x662F;&#xFF0C;&#x5F53;&#x914D;&#x7F6E;&#x9876;&#x70B9;&#x5C5E;&#x6027;&#x6307;&#x9488;&#x65F6;&#xFF0C;&#x4F60;&#x53EA;&#x9700;&#x8981;&#x5C06;&#x90A3;&#x4E9B;&#x8C03;&#x7528;&#x6267;&#x884C;&#x4E00;&#x6B21;&#xFF0C;&#x4E4B;&#x540E;&#x518D;&#x7ED8;&#x5236;&#x7269;&#x4F53;&#x7684;&#x65F6;&#x5019;&#x53EA;&#x9700;&#x8981;&#x7ED1;&#x5B9A;&#x76F8;&#x5E94;&#x7684;VAO&#x5C31;&#x884C;&#x4E86;&#x3002;&#x8FD9;&#x4F7F;&#x5728;&#x4E0D;&#x540C;&#x9876;&#x70B9;&#x6570;&#x636E;&#x548C;&#x5C5E;&#x6027;&#x914D;&#x7F6E;&#x4E4B;&#x95F4;&#x5207;&#x6362;&#x53D8;&#x5F97;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x7ED1;&#x5B9A;&#x4E0D;&#x540C;&#x7684;VAO&#x5C31;&#x884C;&#x4E86;&#x3002;&#x521A;&#x521A;&#x8BBE;&#x7F6E;&#x7684;&#x6240;&#x6709;&#x72B6;&#x6001;&#x90FD;&#x5C06;&#x5B58;&#x50A8;&#x5728;VAO&#x4E2D;&#x3002;</p>
+<p><strong>&#x4E00;&#x4E2A;&#x9876;&#x70B9;&#x6570;&#x7EC4;&#x5BF9;&#x8C61;&#x4F1A;&#x50A8;&#x5B58;&#x4EE5;&#x4E0B;&#x8FD9;&#x4E9B;&#x5185;&#x5BB9;&#xFF1A;</strong></p>
+<ul>
+<li><code>glEnableVertexAttribArray</code>&#x548C;<code>glDisableVertexAttribArray</code>&#x7684;&#x8C03;&#x7528;&#x3002;</li>
+<li>&#x901A;&#x8FC7;<code>glVertexAttribPointer</code>&#x8BBE;&#x7F6E;&#x7684;&#x9876;&#x70B9;&#x5C5E;&#x6027;&#x914D;&#x7F6E;&#x3002;</li>
+<li>&#x901A;&#x8FC7;<code>glVertexAttribPointer</code>&#x8C03;&#x7528;&#x8FDB;&#x884C;&#x7684;&#x9876;&#x70B9;&#x7F13;&#x51B2;&#x5BF9;&#x8C61;&#x4E0E;&#x9876;&#x70B9;&#x5C5E;&#x6027;&#x94FE;&#x63A5;&#x3002;<div align="center">![](02_opengl_es/opengles-vao.png)</div>
+
+</li>
+</ul>
+<p><strong>&#x4F7F;&#x7528;&#x5B9E;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-c">GLuint VAO;
+glGenVertexArrays(<span class="hljs-number">1</span>, &amp;VAO);   <span class="hljs-comment">//&#x521B;&#x5EFA;&#x4E00;&#x4E2A;VAO&#x548C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;VBO&#x5F88;&#x7C7B;&#x4F3C;</span>
+<span class="hljs-comment">// ..:: &#x521D;&#x59CB;&#x5316;&#x4EE3;&#x7801;&#xFF08;&#x53EA;&#x8FD0;&#x884C;&#x4E00;&#x6B21; (&#x9664;&#x975E;&#x4F60;&#x7684;&#x7269;&#x4F53;&#x9891;&#x7E41;&#x6539;&#x53D8;)&#xFF09; ::..</span>
+<span class="hljs-comment">// 1. &#x7ED1;&#x5B9A;VAO</span>
+glBindVertexArray(VAO);
+    <span class="hljs-comment">// 2. &#x628A;&#x9876;&#x70B9;&#x6570;&#x7EC4;&#x590D;&#x5236;&#x5230;&#x7F13;&#x51B2;&#x4E2D;&#x4F9B;OpenGL&#x4F7F;&#x7528;</span>
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, <span class="hljs-keyword">sizeof</span>(vertices), vertices, GL_STATIC_DRAW);
+    <span class="hljs-comment">// 3. &#x8BBE;&#x7F6E;&#x9876;&#x70B9;&#x5C5E;&#x6027;&#x6307;&#x9488;</span>
+    glVertexAttribPointer(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, GL_FLOAT, GL_FALSE, <span class="hljs-number">8</span> * <span class="hljs-keyword">sizeof</span>(GLfloat), (GLvoid*)(<span class="hljs-number">6</span> * <span class="hljs-keyword">sizeof</span>(GLfloat)));
+    glEnableVertexAttribArray(<span class="hljs-number">2</span>);<span class="hljs-comment">//&#x5BF9;&#x5E94;glVertexAttribPointer&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570; 2</span>
+<span class="hljs-comment">//4. &#x89E3;&#x7ED1;VAO</span>
+glBindVertexArray(<span class="hljs-number">0</span>);
+
+[...]
+
+<span class="hljs-comment">// ..:: &#x7ED8;&#x5236;&#x4EE3;&#xFF08;&#x6E38;&#x620F;&#x5FAA;&#x73AF;&#x4E2D;&#xFF09; ::..</span>
+<span class="hljs-comment">// 5. &#x7ED8;&#x5236;&#x7269;&#x4F53;</span>
+glUseProgram(shaderProgram);
+glBindVertexArray(VAO);
+<span class="hljs-comment">//&#x4F7F;&#x7528; glDrawElements &#x7B49;&#x8FDB;&#x884C;&#x7ED8;&#x5236;</span>
+glBindVertexArray(<span class="hljs-number">0</span>);
+</code></pre>
+<p><strong>glVertexAttribPointer&#x76F8;&#x5173;&#x53C2;&#x6570;&#x4ECB;&#x7ECD;&#xFF1A;</strong></p>
+<ul>
+<li>&#x53C2;1&#xFF1A;&#x6307;&#x5B9A;&#x6211;&#x4EEC;&#x8981;&#x914D;&#x7F6E;&#x7684;&#x9876;&#x70B9;&#x5C5E;&#x6027;&#x3002;&#x8FD8;&#x8BB0;&#x5F97;&#x6211;&#x4EEC;&#x5728;&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;&#x4E2D;&#x4F7F;&#x7528;layout(location = 0)&#x5B9A;&#x4E49;&#x4E86;position&#x9876;&#x70B9;&#x5C5E;&#x6027;&#x7684;&#x4F4D;&#x7F6E;&#x503C;(Location)&#x5417;&#xFF1F;&#x5B83;&#x53EF;&#x4EE5;&#x628A;&#x9876;&#x70B9;&#x5C5E;&#x6027;&#x7684;&#x4F4D;&#x7F6E;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A;2&#x3002;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x628A;&#x6570;&#x636E;&#x4F20;&#x9012;&#x5230;&#x8FD9;&#x4E00;&#x4E2A;&#x9876;&#x70B9;&#x5C5E;&#x6027;&#x4E2D;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4F20;&#x5165;2&#x3002;</li>
+<li>&#x53C2;2&#xFF1A;&#x6307;&#x5B9A;&#x9876;&#x70B9;&#x5C5E;&#x6027;&#x7684;&#x5927;&#x5C0F;&#x3002;&#x9876;&#x70B9;&#x5C5E;&#x6027;&#x662F;&#x4E00;&#x4E2A;vec2&#xFF0C;&#x5B83;&#x7531;2&#x4E2A;&#x503C;&#x7EC4;&#x6210;&#xFF0C;&#x6240;&#x4EE5;&#x5927;&#x5C0F;&#x662F;2&#x3002;</li>
+<li>&#x53C2;3&#xFF1A;&#x6307;&#x5B9A;&#x6570;&#x636E;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x8FD9;&#x91CC;&#x662F;GL_FLOAT(GLSL&#x4E2D;vec*&#x90FD;&#x662F;&#x7531;&#x6D6E;&#x70B9;&#x6570;&#x503C;&#x7EC4;&#x6210;&#x7684;)&#x3002;</li>
+<li>&#x53C2;4&#xFF1A;&#x6211;&#x4EEC;&#x662F;&#x5426;&#x5E0C;&#x671B;&#x6570;&#x636E;&#x88AB;&#x6807;&#x51C6;&#x5316;(Normalize)&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x8BBE;&#x7F6E;&#x4E3A;GL_TRUE&#xFF0C;&#x6240;&#x6709;&#x6570;&#x636E;&#x90FD;&#x4F1A;&#x88AB;&#x6620;&#x5C04;&#x5230;0&#xFF08;&#x5BF9;&#x4E8E;&#x6709;&#x7B26;&#x53F7;&#x578B;signed&#x6570;&#x636E;&#x662F;-1&#xFF09;&#x5230;1&#x4E4B;&#x95F4;&#x3002;&#x6211;&#x4EEC;&#x628A;&#x5B83;&#x8BBE;&#x7F6E;&#x4E3A;GL_FALSE&#x3002;</li>
+<li>&#x53C2;5&#xFF1A;&#x6B65;&#x957F;(Stride)&#xFF0C;&#x5B83;&#x544A;&#x8BC9;&#x6211;&#x4EEC;&#x5728;&#x8FDE;&#x7EED;&#x7684;&#x9876;&#x70B9;&#x5C5E;&#x6027;&#x7EC4;&#x4E4B;&#x95F4;&#x7684;&#x95F4;&#x9694;&#x3002;&#x7531;&#x4E8E;&#x4E0B;&#x4E2A;&#x7EC4;&#x4F4D;&#x7F6E;&#x6570;&#x636E;&#x5728;8&#x4E2A;GLfloat&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x628A;&#x6B65;&#x957F;&#x8BBE;&#x7F6E;&#x4E3A;8 * sizeof(GLfloat)&#x3002;</li>
+<li>&#x53C2;6&#xFF1A;&#x7C7B;&#x578B;&#x662F;GLvoid*&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x8FDB;&#x884C;&#x8FD9;&#x4E2A;&#x5947;&#x602A;&#x7684;&#x5F3A;&#x5236;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x3002;&#x5B83;&#x8868;&#x793A;&#x4F4D;&#x7F6E;&#x6570;&#x636E;&#x5728;&#x7F13;&#x51B2;&#x4E2D;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#x7684;&#x504F;&#x79FB;&#x91CF;(Offset)&#x3002;</li>
+</ul>
+<p>&#x8BE5;&#x65B9;&#x6CD5;&#x544A;&#x8BC9;&#x4E86;OpenGL&#x5982;&#x4F55;&#x6307;&#x5411;&#xFF08;&#x89E3;&#x6790;&#xFF09;&#x4E0D;&#x540C;&#x7684;&#x9876;&#x70B9;&#x3002;&#x5982;&#x4E0A;&#x9762;&#x5B9A;&#x4E49;&#x7684;<code>&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;</code>&#x4E2D;&#x7684;&#x5C5E;&#x6027;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-string">&quot;layout (location = 0) in vec3 position;\n&quot;</span>
+<span class="hljs-string">&quot;layout (location = 1) in vec3 color;\n&quot;</span>
+<span class="hljs-string">&quot;layout (location = 2) in vec2 texCoord;\n&quot;</span>
+</code></pre>
+<p>&#x8BF4;&#x660E;&#x4E00;&#x4E2A;&#x9876;&#x70B9;&#x4E2D;&#x5B58;&#x5728;&#x4E86;&#xFF1A;3&#x4E2A;&#x5411;&#x91CF;&#x9876;&#x70B9;&#x4F4D;&#x7F6E; + 3&#x4E2A;&#x5411;&#x91CF;RGB&#x989C;&#x8272; + 2&#x4E2A;&#x5411;&#x91CF;&#x7EB9;&#x7406; = 8&#x4E2A;&#x5411;&#x91CF;&#xFF1B;&#x6839;&#x636E;&#x4E0B;&#x56FE;&#x66F4;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#x662F;&#x5982;&#x4F55;&#x5982;&#x4F55;&#x8BA1;&#x7B97;&#x5BFB;&#x627E;&#x4E0B;&#x4E00;&#x4E2A;&#x9876;&#x70B9;&#x4F4D;&#x7F6E;&#x7684;&#x7EB9;&#x7406;&#x4F4D;&#x7F6E;&#xFF1A;</p>
+<div align="center">![](02_opengl_es/opengles-vap.png)</div>
+
+
+<h4 id="ebo"><a name="ebo" class="anchor-navigation-ex-anchor" href="#ebo"><i class="fa fa-link" aria-hidden="true"></i></a><a name="ebo" class="plugin-anchor" href="#ebo"><i class="fa fa-link" aria-hidden="true"></i></a>EBO</h4>
+<p>EBO&#xFF1A;&#x7D22;&#x5F15;&#x7F13;&#x51B2;&#x5BF9;&#x8C61;(Element Buffer Object&#xFF0C;EBO&#xFF0C;&#x4E5F;&#x53EB;Index Buffer Object&#xFF0C;IBO)&#xFF1B;&#x548C;&#x9876;&#x70B9;&#x7F13;&#x51B2;&#x5BF9;&#x8C61;&#x4E00;&#x6837;&#xFF0C;EBO&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x7F13;&#x51B2;&#xFF0C;&#x5B83;&#x4E13;&#x95E8;&#x50A8;&#x5B58;&#x7D22;&#x5F15;&#xFF0C;OpenGL&#x8C03;&#x7528;&#x8FD9;&#x4E9B;&#x9876;&#x70B9;&#x7684;&#x7D22;&#x5F15;&#x6765;&#x51B3;&#x5B9A;&#x8BE5;&#x7ED8;&#x5236;&#x54EA;&#x4E2A;&#x9876;&#x70B9;&#x3002;&#x56E0;&#x4E3A;OpenGL&#x4E3B;&#x8981;&#x5904;&#x7406;&#x4E09;&#x89D2;&#x5F62;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x7ED8;&#x5236;&#x77E9;&#x5F62;&#x5219;&#x9700;&#x8981;&#x7ED8;&#x5236;&#x4E24;&#x4E2A;&#x4E09;&#x89D2;&#x5F62;&#xFF0C;&#x800C;&#x4E24;&#x4E2A;&#x4E09;&#x89D2;&#x5F62;&#x6709;6&#x4E2A;&#x9876;&#x70B9;&#xFF0C;&#x5176;&#x4E2D;&#x6709;&#x4E24;&#x4E2A;&#x9876;&#x70B9;&#x662F;&#x91CD;&#x53E0;&#x7684;&#xFF0C;&#x9020;&#x6210;&#x591A;&#x4F59;&#x7684;&#x6D6A;&#x8D39;&#xFF0C;&#x4E3A;&#x6B64;&#xFF0C;OpenGL&#x5F15;&#x5165;&#x4E86;&quot;&#x7D22;&#x5F15;&#x7F13;&#x51B2;&#x5BF9;&#x8C61;&quot;&#x6765;&#x5904;&#x7406;&#xFF0C;&#x53EA;&#x9700;&#x8981;4&#x4E2A;&#x9876;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x753B;&#x4E24;&#x4E2A;&#x4E09;&#x89D2;&#x5F62;&#x5373;&#x53EF;&#xFF1B;&#x5982;&#xFF1A;
+&#x539F;&#x672C;&#x901A;&#x8FC7;6&#x4E2A;&#x9876;&#x70B9;&#x6765;&#x7ED8;&#x5236;&#x4E00;&#x4E2A;&#x77E9;&#x5F62;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-text">GLfloat vertices[] = {
+    // &#x7B2C;&#x4E00;&#x4E2A;&#x4E09;&#x89D2;&#x5F62;
+    0.5f, 0.5f, 0.0f,   // &#x53F3;&#x4E0A;&#x89D2;
+    0.5f, -0.5f, 0.0f,  // &#x53F3;&#x4E0B;&#x89D2;
+    -0.5f, 0.5f, 0.0f,  // &#x5DE6;&#x4E0A;&#x89D2;
+    // &#x7B2C;&#x4E8C;&#x4E2A;&#x4E09;&#x89D2;&#x5F62;
+    0.5f, -0.5f, 0.0f,  // &#x53F3;&#x4E0B;&#x89D2;
+    -0.5f, -0.5f, 0.0f, // &#x5DE6;&#x4E0B;&#x89D2;
+    -0.5f, 0.5f, 0.0f   // &#x5DE6;&#x4E0A;&#x89D2;
+};
+</code></pre>
+<p>&#x73B0;&#x5728;&#x901A;&#x8FC7;EBO&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5B58;&#x50A8;4&#x4E2A;&#x9876;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x544A;&#x8BC9;OpenGL&#x5982;&#x4F55;&#x7ED8;&#x5236;&#x5373;&#x53EF;&#xFF1A;</p>
+<pre><code class="lang-text">GLfloat vertices[] = {
+    0.5f, 0.5f, 0.0f,   // &#x53F3;&#x4E0A;&#x89D2;
+    0.5f, -0.5f, 0.0f,  // &#x53F3;&#x4E0B;&#x89D2;
+    -0.5f, -0.5f, 0.0f, // &#x5DE6;&#x4E0B;&#x89D2;
+    -0.5f, 0.5f, 0.0f   // &#x5DE6;&#x4E0A;&#x89D2;
+};
+
+GLuint indices[] = { // &#x6CE8;&#x610F;&#x7D22;&#x5F15;&#x4ECE;0&#x5F00;&#x59CB;! 
+    0, 1, 3, // &#x7B2C;&#x4E00;&#x4E2A;&#x4E09;&#x89D2;&#x5F62;
+    1, 2, 3  // &#x7B2C;&#x4E8C;&#x4E2A;&#x4E09;&#x89D2;&#x5F62;
+};
+</code></pre>
+<p>&#x4E0B;&#x56FE;&#x4E3A;&#x901A;&#x8FC7;&#x56FE;&#xFF1A;</p>
+<div align="center">![](02_opengl_es/opengles-ebo.png)</div>
+
+<p><strong>&#x4E0B;&#x9762;&#x4F7F;&#x7528;&#x7D22;&#x5F15;&#x7ED8;&#x5236;&#x4E24;&#x4E2A;&#x4E09;&#x89D2;&#x5F62;&#x62FC;&#x6210;&#x4E00;&#x4E2A;&#x77E9;&#x5F62;&#xFF0C;&#x4F7F;&#x7528;&#x5B9E;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-c">GLuint EBO;
+glGenBuffers(<span class="hljs-number">1</span>, &amp;EBO);
+glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);         <span class="hljs-comment">//&#x548C;VBO&#x7C7B;&#x4F3C;&#xFF0C;</span>
+glBufferData(GL_ELEMENT_ARRAY_BUFFER, <span class="hljs-keyword">sizeof</span>(indices), indices, GL_STATIC_DRAW);<span class="hljs-comment">//&#x628A;&#x7D22;&#x5F15;&#x590D;&#x5236;&#x5230;&#x7F13;&#x51B2;&#x91CC;</span>
+<span class="hljs-comment">//&#x5F53;&#x8FDB;&#x884C;&#x4F7F;&#x7528;&#x65F6;</span>
+glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+glDrawElements(GL_TRIANGLES, <span class="hljs-number">6</span>, GL_UNSIGNED_INT, <span class="hljs-number">0</span>);<span class="hljs-comment">//&#x4F7F;&#x7528;&#x5F53;&#x524D;&#x7ED1;&#x5B9A;&#x5230;GL_ELEMENT_ARRAY_BUFFER&#x76EE;&#x6807;&#x7684;EBO&#x4E2D;&#x83B7;&#x53D6;&#x7D22;&#x5F15;&#x8FDB;&#x884C;&#x7ED8;&#x5236;</span>
+</code></pre>
+<p><strong>glDrawElements&#x76F8;&#x5173;&#x53C2;&#x6570;&#x4ECB;&#x7ECD;&#xFF1A;</strong></p>
+<ul>
+<li>&#x53C2;1&#xFF1A;&#x6307;&#x5B9A;&#x7ED8;&#x5236;&#x6A21;&#x5F0F;&#xFF0C;&#x8FD9;&#x91CC;&#x4E09;&#x89D2;&#x5F62;&#x3002;</li>
+<li>&#x53C2;2&#xFF1A;&#x7ED8;&#x5236;&#x9876;&#x70B9;&#x7684;&#x4E2A;&#x6570;&#xFF0C;&#x7ED8;&#x5236;&#x4E24;&#x4E2A;&#x4E09;&#x89D2;&#x5F62;&#xFF0C;&#x5373;6&#x4E2A;&#x9876;&#x70B9;&#x3002;</li>
+<li>&#x53C2;3&#xFF1A;&#x7D22;&#x5F15;&#x7684;&#x7C7B;&#x578B;&#xFF0C;GL_UNSIGNED_INT&#xFF08;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x5F62;&#xFF09;&#x3002;</li>
+<li>&#x53C2;4&#xFF1A;&#x6307;&#x5B9A;EBO&#x4E2D;&#x7684;&#x504F;&#x79FB;&#x91CF;&#xFF0C;&#xFF08;&#x6216;&#x8005;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x7D22;&#x5F15;&#x6570;&#x7EC4;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x662F;&#x5F53;&#x4F60;&#x4E0D;&#x5728;&#x4F7F;&#x7528;&#x7D22;&#x5F15;&#x7F13;&#x51B2;&#x5BF9;&#x8C61;&#x7684;&#x65F6;&#x5019;&#xFF09;&#x3002;</li>
+</ul>
+<p>&#x6CE8;&#x610F;&#xFF1A;VAO&#x7ED1;&#x5B9A;&#x65F6;&#x6B63;&#x5728;&#x7ED1;&#x5B9A;&#x7684;&#x7D22;&#x5F15;&#x7F13;&#x51B2;&#x5BF9;&#x8C61;&#x4F1A;&#x88AB;&#x4FDD;&#x5B58;&#x4E3A;VAO&#x7684;&#x5143;&#x7D20;&#x7F13;&#x51B2;&#x5BF9;&#x8C61;&#x3002;&#x7ED1;&#x5B9A;VAO&#x7684;&#x540C;&#x65F6;&#x4E5F;&#x4F1A;&#x81EA;&#x52A8;&#x7ED1;&#x5B9A;EBO&#xFF0C;&#x5982;&#x56FE;:</p>
+<div align="center">![](02_opengl_es/opengles-vao_ebo.png)</div>
+
+<h4 id="vbo&#x3001;vao&#x3001;ebo&#x603B;&#x7ED3;"><a name="vbo&#x3001;vao&#x3001;ebo&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#vbo&#x3001;vao&#x3001;ebo&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="vbo&#x3001;vao&#x3001;ebo&#x603B;&#x7ED3;" class="plugin-anchor" href="#vbo&#x3001;vao&#x3001;ebo&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>VBO&#x3001;VAO&#x3001;EBO&#x603B;&#x7ED3;</h4>
+<p>VBO&#x5728;GPU&#x4E2D;&#x7F13;&#x5B58;&#x5927;&#x91CF;&#x9876;&#x70B9;&#x6570;&#x636E;&#xFF0C;VAO&#x5B58;&#x50A8;&#x9876;&#x70B9;&#x5C5E;&#x6027;(&#x51FD;&#x6570;)&#x7684;&#x8C03;&#x7528;&#xFF0C;&#x800C;EBO&#x5219;&#x6839;&#x636E;&#x7D22;&#x5F15;&#x6765;&#x7ED8;&#x5236;&#x9876;&#x70B9;&#xFF08;&#x4E09;&#x89D2;&#x5F62;-&gt;&#x77E9;&#x5F62;&#xFF09;&#x3002;</p>
+<h3 id="&#x7EB9;&#x7406;"><a name="&#x7EB9;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x7EB9;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7EB9;&#x7406;" class="plugin-anchor" href="#&#x7EB9;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EB9;&#x7406;</h3>
+<p>&#x7EB9;&#x7406;&#xFF08;Texture&#xFF09;&#x662F;&#x4E00;&#x4E2A;2D&#x56FE;&#x7247;&#xFF08;&#x751A;&#x81F3;&#x4E5F;&#x6709;1D&#x548C;3D&#x7684;&#x7EB9;&#x7406;&#xFF09;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x6DFB;&#x52A0;&#x7269;&#x4F53;&#x7684;&#x7EC6;&#x8282;&#xFF1B;&#x5728;&#x89C6;&#x9891;&#x6E32;&#x67D3;&#x4E2D;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5904;&#x7406;2D&#x7684;&#x7EB9;&#x7406;&#x3002;<a href="https://learnopengl-cn.readthedocs.io/zh/latest/01%20Getting%20started/06%20Textures/" target="_blank">&#x8FD9;&#x662F;&#x7EB9;&#x7406;&#x7684;&#x4ECB;&#x7ECD;&#x548C;&#x4F7F;&#x7528;</a> &#x3002;</p>
+<h4 id="&#x7EB9;&#x7406;&#x6240;&#x5728;&#x6D41;&#x7A0B;"><a name="&#x7EB9;&#x7406;&#x6240;&#x5728;&#x6D41;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x7EB9;&#x7406;&#x6240;&#x5728;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7EB9;&#x7406;&#x6240;&#x5728;&#x6D41;&#x7A0B;" class="plugin-anchor" href="#&#x7EB9;&#x7406;&#x6240;&#x5728;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EB9;&#x7406;&#x6240;&#x5728;&#x6D41;&#x7A0B;</h4>
+<pre><code class="lang-text">&#x7EB9;&#x7406;(&#x56FE;&#x7247;) --&#x6620;&#x5C04;-&gt; &#x7EB9;&#x7406;&#x5750;&#x6807; --&#x4F20;&#x5165;-&gt; &#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;(&#x8FDB;&#x884C;&#x91C7;&#x6837;) --&#x4F20;&#x5165;-&gt; &#x7247;&#x6BB5;&#x7740;&#x8272;&#x5668;(&#x4E3A;&#x6BCF;&#x4E2A;&#x7247;&#x6BB5;&#x8FDB;&#x884C;&#x7EB9;&#x7406;&#x5750;&#x6807;&#x7684;&#x63D2;&#x503C;)
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x6D41;&#x7A0B;&#x4ECB;&#x7ECD;&#x4E86;&#x7EB9;&#x7406;(&#x56FE;&#x7247;)&#x88AB;&#x5904;&#x7406;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x8FD9;&#x90FD;&#x662F;&#x5728;OpengGL&#x6E32;&#x67D3;&#x7BA1;&#x9053;&#x91CC;&#x9762;&#x88AB;&#x5904;&#x7406;&#x7684;&#xFF0C;&#x800C;&#x6211;&#x4EEC;&#x6240;&#x9700;&#x8981;&#x505A;&#x7684;&#x5C31;&#x662F;&#x5982;&#x4F55;&#x8BBE;&#x7F6E;&#x53C2;&#x6570;&#xFF0C;&#x6307;&#x5F15;OpenGL&#x5904;&#x7406;&#xFF0C;&#x5904;&#x7406;&#x4E4B;&#x524D;&#xFF0C;&#x9700;&#x8981;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#x7EB9;&#x7406;&#x7684;&#x76F8;&#x5173;&#x77E5;&#x8BC6;&#x3002;</p>
+<h5 id="&#x7EB9;&#x7406;&#x5750;&#x6807;texture-coordinate"><a name="&#x7EB9;&#x7406;&#x5750;&#x6807;texture-coordinate" class="anchor-navigation-ex-anchor" href="#&#x7EB9;&#x7406;&#x5750;&#x6807;texture-coordinate"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7EB9;&#x7406;&#x5750;&#x6807;texture-coordinate" class="plugin-anchor" href="#&#x7EB9;&#x7406;&#x5750;&#x6807;texture-coordinate"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EB9;&#x7406;&#x5750;&#x6807;(Texture Coordinate)</h5>
+<p>&#x8FD9;&#x91CC;&#x8BF4;&#x7684;&#x7EB9;&#x7406;&#x5750;&#x6807;&#x662F;&#x6307;OpenGL&#x7EB9;&#x7406;&#x5750;&#x6807;&#xFF0C;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x77E5;&#x9053;&#x53E6;&#x5916;&#x4E24;&#x4E2A;&#x5750;&#x6807;&#x7CFB;&#xFF0C;&quot;&#x8BA1;&#x7B97;&#x673A;&#x56FE;&#x50CF;&#x7EB9;&#x7406;&#x5750;&#x6807;&quot; &#x548C; &quot;OpenGL&#x7269;&#x4F53;&#x8868;&#x9762;&#x5750;&#x6807;&quot;&#xFF1B;&#x901A;&#x5E38;&#x4F7F;&#x7528;&#x662F;&#x4ECE;&#x56FE;&#x7247;&#x7B49;&#x89E3;&#x6790;&#x51FA;&#x6765;RGB&#x683C;&#x5F0F;&#x7684;Byte&#x6570;&#x7EC4;&#x662F; &quot;&#x8BA1;&#x7B97;&#x673A;&#x56FE;&#x50CF;&#x7EB9;&#x7406;&#x5750;&#x6807;&quot; &#xFF1B;&#x4E09;&#x8005;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-text">&#x8BA1;&#x7B97;&#x673A;&#x56FE;&#x50CF;&#x7EB9;&#x7406;&#x5750;&#x6807; -&gt; OpenGL&#x7EB9;&#x7406;&#x5750;&#x6807; -&gt; OpenGL&#x7269;&#x4F53;&#x8868;&#x9762;&#x5750;&#x6807;
+</code></pre>
+<p>&#x4EE5;&#x4E0B;&#x4E3A;&#x4E09;&#x8005;&#x7684;&#x5750;&#x6807;&#x7CFB;&#xFF1A;</p>
+<div align="center">![](02_opengl_es/opengles-coord1.png)</div>
+
+<p>&#x5F53;&#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x628A;&#x89E3;&#x6790;&#x51FA;&#x6765;&#x7684;&#x6570;&#x636E;&#xFF08;&#x56FE;&#xFF1A;&#x5750;&#x7740;&#x7535;&#x8111;&#x524D;&#x7684;&#x4EBA;&#xFF09;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x5728; &quot;OpenGL&#x7EB9;&#x7406;&#x5750;&#x6807;&quot; &#x4E0A;&#xFF0C;&#x5C31;&#x4F1A;&#x4E0A;&#x4E0B;&#x98A0;&#x5012;&#x4E86;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<div align="center">![](02_opengl_es/opengles-coord2.png)</div>
+
+<p>&#x6B63;&#x786E;&#x59FF;&#x52BF;&#x5982;&#x4E0B;&#xFF08;&#x770B;&quot;&#x8BA1;&#x7B97;&#x673A;&#x56FE;&#x50CF;&#x7EB9;&#x7406;&#x5750;&#x6807;&quot;&#x548C;&quot;OpenGL&#x7269;&#x4F53;&#x8868;&#x9762;&#x5750;&#x6807;&quot;&#x5BF9;&#x5E94;&#x7684;&#x5750;&#x6807;&#x4E0E;&#x56FE;&#x50CF;&#x7684;&#x53D8;&#x5316;&#xFF09;&#xFF1A;</p>
+<div align="center">![](02_opengl_es/opengles-coord3.png)</div>
+
+<p>&#x5750;&#x6807;&#x7406;&#x89E3;&#x975E;&#x5E38;&#x91CD;&#x8981;&#xFF0C;&#x5904;&#x7406;&#x4E0D;&#x597D;&#x5BFC;&#x81F4;&#x7684;&#x6548;&#x679C;&#x5C31;&#x662F;&#x6B6A;&#x753B;&#x9762;&#x3002;&#x8FD9;&#x91CC;&#x7EB9;&#x7406;&#x8FD8;&#x9700;&#x8981;&#x5BF9;&#x5E94;&#x7740;&#x9876;&#x70B9;&#x7684;&#x5750;&#x6807;&#xFF0C;&#x89C1;&#x4E0B;&#x9762;&#x3010;&#x7EB9;&#x7406;&#x7684;&#x4F7F;&#x7528;&#x3011;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;<code>vertices</code>&#x7EB9;&#x7406;&#x5750;&#x6807;&#x3002;</p>
+<h5 id="&#x91C7;&#x6837;sampling"><a name="&#x91C7;&#x6837;sampling" class="anchor-navigation-ex-anchor" href="#&#x91C7;&#x6837;sampling"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x91C7;&#x6837;sampling" class="plugin-anchor" href="#&#x91C7;&#x6837;sampling"><i class="fa fa-link" aria-hidden="true"></i></a>&#x91C7;&#x6837;(Sampling)</h5>
+<p>&#x4F7F;&#x7528;&#x7EB9;&#x7406;&#x5750;&#x6807;&#x83B7;&#x53D6;&#x7EB9;&#x7406;&#x989C;&#x8272;&#x3002;</p>
+<h5 id="&#x7247;&#x6BB5;&#x63D2;&#x503C;fragment-interpolation"><a name="&#x7247;&#x6BB5;&#x63D2;&#x503C;fragment-interpolation" class="anchor-navigation-ex-anchor" href="#&#x7247;&#x6BB5;&#x63D2;&#x503C;fragment-interpolation"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7247;&#x6BB5;&#x63D2;&#x503C;fragment-interpolation" class="plugin-anchor" href="#&#x7247;&#x6BB5;&#x63D2;&#x503C;fragment-interpolation"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7247;&#x6BB5;&#x63D2;&#x503C;(Fragment Interpolation)</h5>
+<p>&#x5728;&#x7247;&#x6BB5;&#x4E2D;&#xFF08;&#x5047;&#x5982;&#x65E0;&#x9650;&#x653E;&#x5927;&#x540E;&#xFF0C;&#x7EB9;&#x7406;&#x5728;&#x7269;&#x4F53;&#x8868;&#x9762;&#x4E2D;&#x7684;&#x7247;&#x6BB5;&#xFF09;&#xFF0C;&#x67D0;&#x4E9B;&#x5750;&#x6807;&#x70B9;&#x6CA1;&#x6709;&#x989C;&#x8272;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x9700;&#x8981;&#x5BF9;&#x8FD9;&#x4E9B;&#x5750;&#x6807;&#x8FDB;&#x884C;&#x63D2;&#x503C;&#x3002;</p>
+<h4 id="&#x7EB9;&#x7406;&#x7684;&#x4F7F;&#x7528;"><a name="&#x7EB9;&#x7406;&#x7684;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x7EB9;&#x7406;&#x7684;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7EB9;&#x7406;&#x7684;&#x4F7F;&#x7528;" class="plugin-anchor" href="#&#x7EB9;&#x7406;&#x7684;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EB9;&#x7406;&#x7684;&#x4F7F;&#x7528;</h4>
+<p>&#x5148;&#x770B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-c"><span class="hljs-comment">/*****************************************/</span>
+<span class="hljs-comment">/*****       1&#xFF09;&#x751F;&#x6210;&#x7EB9;&#x7406;&#xFF1A;      ************/</span>
+<span class="hljs-comment">/*****************************************/</span>
+GLuint texture;
+glGenTextures(<span class="hljs-number">1</span>, &amp;texture);             <span class="hljs-comment">//&#x751F;&#x6210;&quot;1&quot;&#x4E2A;&#x7EB9;&#x7406;</span>
+glBindTexture(GL_TEXTURE_2D, texture);  <span class="hljs-comment">//&#x7ED1;&#x5B9A;&#x4E3A;2D&#x7C7B;&#x578B;</span>
+<span class="hljs-comment">//&#x5C06;image&#x56FE;&#x7247;&#x6570;&#x636E;&#x751F;&#x6210;&#x7EB9;&#x7406;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;image&#x6570;&#x636E;&#x4F1A;&#x6839;&#x636E;&#x4E0B;&#x9762;vertices&#x4E2D;- &#x7EB9;&#x7406;&#x5750;&#x6807; -&#x4F20;&#x5165;&#x5230;&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;&#x4E2D;&#x8FDB;&#x884C;&#x5904;&#x7406;</span>
+glTexImage2D(GL_TEXTURE_2D, <span class="hljs-number">0</span>, GL_RGB, width, height, <span class="hljs-number">0</span>, GL_RGB, GL_UNSIGNED_BYTE, image);
+glGenerateMipmap(GL_TEXTURE_2D);        <span class="hljs-comment">//&#x8FD9;&#x4F1A;&#x4E3A;&#x5F53;&#x524D;&#x7ED1;&#x5B9A;&#x7684;&#x7EB9;&#x7406;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x6240;&#x6709;&#x9700;&#x8981;&#x7684;&#x591A;&#x7EA7;&#x6E10;&#x8FDC;&#x7EB9;&#x7406;&#x3002;</span>
+glBindTexture(GL_TEXTURE_2D, <span class="hljs-number">0</span>);        <span class="hljs-comment">//&#x751F;&#x6210;&#x4E86;&#x7EB9;&#x7406;&#x548C;&#x76F8;&#x5E94;&#x7684;&#x591A;&#x7EA7;&#x6E10;&#x8FDC;&#x7EB9;&#x7406;&#x540E;&#xFF0C;&#x91CA;&#x653E;&#x56FE;&#x50CF;&#x7684;&#x5185;&#x5B58;&#x5E76;&#x89E3;&#x7ED1;&#x7EB9;&#x7406;&#x5BF9;&#x8C61;</span>
+<span class="hljs-comment">/*****************************************/</span>
+<span class="hljs-comment">/*****       2&#xFF09;&#x5E94;&#x7528;&#x7EB9;&#x7406;&#xFF1A;      ************/</span>
+<span class="hljs-comment">/*****************************************/</span>
+<span class="hljs-comment">//&#x4F7F;&#x7528;&#x7EB9;&#x7406;&#x5750;&#x6807;&#x66F4;&#x65B0;&#x9876;&#x70B9;&#x6570;&#x636E;&#xFF1A;</span>
+GLfloat vertices[] = {
+    <span class="hljs-comment">//  ---- &#x9876;&#x70B9;&#x4F4D;&#x7F6E; ----       ---- &#x989C;&#x8272; ----     - &#x7EB9;&#x7406;&#x5750;&#x6807; -</span>
+        <span class="hljs-number">1.0f</span>,  <span class="hljs-number">1.0f</span>, <span class="hljs-number">0.0f</span>,   <span class="hljs-number">1.0f</span>, <span class="hljs-number">0.0f</span>, <span class="hljs-number">0.0f</span>,   <span class="hljs-number">1.0f</span>, <span class="hljs-number">0.0f</span>, <span class="hljs-comment">// &#x53F3;&#x4E0A;</span>
+        <span class="hljs-number">1.0f</span>, <span class="hljs-number">-1.0</span>f, <span class="hljs-number">0.0f</span>,   <span class="hljs-number">0.0f</span>, <span class="hljs-number">1.0f</span>, <span class="hljs-number">0.0f</span>,   <span class="hljs-number">1.0f</span>,  <span class="hljs-number">1.0f</span>, <span class="hljs-comment">// &#x53F3;&#x4E0B;</span>
+        <span class="hljs-number">-1.0</span>f, <span class="hljs-number">-1.0</span>f, <span class="hljs-number">0.0f</span>,   <span class="hljs-number">0.0f</span>, <span class="hljs-number">0.0f</span>, <span class="hljs-number">1.0f</span>,   <span class="hljs-number">0.0f</span>,  <span class="hljs-number">1.0f</span>, <span class="hljs-comment">// &#x5DE6;&#x4E0B;</span>
+        <span class="hljs-number">-1.0</span>f,  <span class="hljs-number">1.0f</span>, <span class="hljs-number">0.0f</span>,   <span class="hljs-number">1.0f</span>, <span class="hljs-number">1.0f</span>, <span class="hljs-number">0.0f</span>,   <span class="hljs-number">0.0f</span>, <span class="hljs-number">0.0f</span>  <span class="hljs-comment">// &#x5DE6;&#x4E0A;</span>
+};
+<span class="hljs-comment">//&#x544A;&#x8BC9;OpenGL&#x5E94;&#x8BE5;&#x5982;&#x4F55;&#x53BB;&#x627E;&#x65B0;&#x7684;&#x9876;&#x70B9;&#x7EB9;&#x7406;&#x5C5E;&#x6027;&#x6570;&#x636E;</span>
+glVertexAttribPointer(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, GL_FLOAT,GL_FALSE, <span class="hljs-number">8</span> * <span class="hljs-keyword">sizeof</span>(GLfloat), (GLvoid*)(<span class="hljs-number">6</span> * <span class="hljs-keyword">sizeof</span>(GLfloat)));
+glEnableVertexAttribArray(<span class="hljs-number">2</span>);
+<span class="hljs-comment">//&#x8C03;&#x6574;&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;&#x4F7F;&#x5176;&#x80FD;&#x591F;&#x63A5;&#x53D7;&#x9876;&#x70B9;&#x5750;&#x6807;&#x4E3A;&#x4E00;&#x4E2A;&#x9876;&#x70B9;&#x5C5E;&#x6027;&#xFF0C;&#x5E76;&#x628A;&#x5750;&#x6807;&#x4F20;&#x7ED9;&#x7247;&#x6BB5;&#x7740;&#x8272;&#x5668;&#xFF1A;</span>
+<span class="hljs-keyword">const</span> GLchar* VERTEX_SHADER = <span class="hljs-string">&quot;&#x89C1; &#x9876;&#x70B9;&#x7740;&#x8272;&#x5668; &#x6E90;&#x7801;&quot;</span>;
+<span class="hljs-comment">//&#x7247;&#x6BB5;&#x7740;&#x8272;&#x5668;&#xFF1A;&#x63A5;&#x6536;&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;&#x4F20;&#x9012;&#x8FC7;&#x6765;&#x7684;&#x7EB9;&#x7406;&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;sampler2D&#x91C7;&#x96C6;&#x5668;&#x8FDB;&#x884C;&#x91C7;&#x96C6;</span>
+<span class="hljs-keyword">const</span> GLchar* FRAGMENT_SHADER = <span class="hljs-string">&quot;&#x89C1; &#x7247;&#x6BB5;&#x7740;&#x8272;&#x5668; &#x6E90;&#x7801;&quot;</span>;
+
+<span class="hljs-comment">//&#x8FD9;&#x91CC;&#x7701;&#x7565;&#x7740;&#x8272;&#x5668;&#x4EE5;&#x53CA;&#x5173;&#x8054;&#x7A0B;&#x5E8F;&#x6D41;&#x7A0B;</span>
+
+<span class="hljs-comment">//&#x7ED1;&#x5B9A;&#x7EB9;&#x7406;&#xFF0C;&#x5E76;&#x8FDB;&#x884C;&#x7ED8;&#x5236;</span>
+glBindTexture(GL_TEXTURE_2D, texture);
+glBindVertexArray(VAO);
+glDrawElements(GL_TRIANGLES, <span class="hljs-number">6</span>, GL_UNSIGNED_INT, <span class="hljs-number">0</span>);
+glBindVertexArray(<span class="hljs-number">0</span>);
+</code></pre>
+<h2 id="opengl&#x5C0F;&#x7ED3;"><a name="opengl&#x5C0F;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#opengl&#x5C0F;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="opengl&#x5C0F;&#x7ED3;" class="plugin-anchor" href="#opengl&#x5C0F;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>OpenGL&#x5C0F;&#x7ED3;</h2>
+<p>&#x4E0A;&#x9762;&#x662F;&#x76F4;&#x63A5;&#x4F7F;&#x7528;RGB24&#x683C;&#x5F0F;&#x7684;&#x7EB9;&#x7406;&#x8FDB;&#x884C;&#x6E32;&#x67D3;&#xFF0C;&#x800C;OpenGL&#x662F;&#x652F;&#x6301;&#x77E9;&#x9635;&#x8BA1;&#x7B97;&#x7684;(<a href="https://learnopengl-cn.readthedocs.io/zh/latest/01%20Getting%20started/07%20Transformations/" target="_blank">&#x77E9;&#x9635;&#x4F7F;&#x7528;&#x5728;&#x8FD9;</a>) &#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x53EF;&#x4EE5;&#x652F;&#x6301;&#x8F93;&#x5165;YUV&#x683C;&#x5F0F;&#x6570;&#x636E;&#xFF0C;&#x901A;&#x8FC7;GPU&#x5728;<code>&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;</code>&#x8FDB;&#x884C;&#x77E9;&#x9635;&#x8BA1;&#x7B97;&#xFF0C;&#x8F6C;&#x6362;&#x6210;RGB&#x540E;&#x518D;&#x8FDB;&#x884C;&#x4F7F;&#x7528;&#x3002;&#x4F46;&#x8FD9;&#x4E5F;&#x4F1A;&#x5BFC;&#x81F4;&#x66F4;&#x590D;&#x6742;&#x7684;&#x8BA1;&#x7B97;&#x4EE5;&#x53CA;&#x9002;&#x914D;&#x95EE;&#x9898;&#xFF08;&#x5982;&#x5404;&#x79CD;yuv&#x6216;&#x5176;&#x4ED6;&#x683C;&#x5F0F;&#x7684;rgb&#x6570;&#x636E;&#x8F6C;&#x6362;&#x4E3A;RGB&#x65F6;&#xFF09;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x727A;&#x7272;&#x4E00;&#x70B9;CPU&#x4F7F;&#x7528;<code>FFmpeg</code>&#x8FDB;&#x884C;&#x683C;&#x5F0F;&#x8F6C;&#x6362;&#x540E;&#x518D;&#x8FDB;&#x884C;&#x6E32;&#x67D3;&#x3002;</p>
+<p>&#x4E0A;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x5DF2;&#x7ECF;&#x628A;OpenGL&#x4E2D;&#x7EB9;&#x7406;&#x7ED8;&#x5236;&#x8BB2;&#x89E3;&#x5B8C;&#x4E86;&#xFF0C;&#x7136;&#x540E;&#x5728;Mac&#x4E0A;&#x5199;&#x4E86;&#x4E00;&#x4E2A;Demo&#xFF0C;&#x5B9E;&#x73B0;&#x7ED8;&#x5236;&#x4E00;&#x5F20;rgb24&#x683C;&#x5F0F;&#x7684;&#x88F8;&#x6570;&#x636E; <strong><a href="https://github.com/xhunmon/AFPlayer/tree/main/OpenGLMacTextureDemo" target="_blank">Demo&#x5730;&#x5740;&#xFF1A;OpenGLMacTextureDemo</a></strong> &#x3002;&#x63A5;&#x4E0B;&#x6765;&#x8981;&#x5728;Android&#x4E2D;&#x5B9E;&#x73B0;&#x3002;</p>
+<h2 id="egl&#xFF08;android&#xFF09;"><a name="egl&#xFF08;android&#xFF09;" class="anchor-navigation-ex-anchor" href="#egl&#xFF08;android&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="egl&#xFF08;android&#xFF09;" class="plugin-anchor" href="#egl&#xFF08;android&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>EGL&#xFF08;Android&#xFF09;</h2>
+<p>&#x5F00;&#x5934;&#x5C31;&#x5DF2;&#x7ECF;&#x8BF4;&#x4E86;EGL&#x7684;&#x4F5C;&#x7528;&#x4E86;&#xFF0C;&#x5C31;&#x662F;&#x4F5C;&#x4E3A;OpenGL&#x7684;&#x8F93;&#x51FA;&#x4E0E;&#x8BBE;&#x5907;&#x7684;&#x5C4F;&#x5E55;&#x4E4B;&#x95F4;&#x67B6;&#x63A5;&#x8D77;&#x7684;&#x6865;&#x6881;&#xFF0C;EGL&#x662F;&#x53CC;&#x7F13;&#x51B2;&#x7684;&#x5DE5;&#x4F5C;&#x6A21;&#x5F0F;&#xFF0C;&#x5373;&#x6709;&#x4E00;&#x4E2A;Back Frame Buffer&#x548C;&#x4E00;&#x4E2A;Front Frame Buffer&#xFF0C;&#x6B63;&#x5E38;&#x7ED8;&#x5236;&#x64CD;&#x4F5C;&#x7684;&#x76EE;&#x6807;&#x90FD;&#x662F;Back Frame Buffer&#xFF0C;&#x64CD;&#x4F5C;&#x5B8C;&#x6BD5;&#x4E4B;&#x540E;&#xFF0C;&#x8C03;&#x7528;<code>eglSwapBuffer</code>&#x8FD9;&#x4E2A;API&#xFF0C;&#x5C06;&#x7ED8;&#x5236;&#x5B8C;&#x6BD5;&#x7684;FrameBuffer&#x4EA4;&#x6362;&#x5230;Front Frame Buffer&#x5E76;&#x663E;&#x793A;&#x51FA;&#x6765;&#x3002;&#x800C;&#x5728;Android&#x5E73;&#x53F0;&#x4E0A;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x662F;EGL&#x8FD9;&#x4E00;&#x5957;&#x673A;&#x5236;&#xFF0C;EGL&#x627F;&#x62C5;&#x4E86;&#x4E3A;OpenGL&#x63D0;&#x4F9B;&#x4E0A;&#x4E0B;&#x6587;&#x73AF;&#x5883;&#x4EE5;&#x53CA;&#x7A97;&#x53E3;&#x7BA1;&#x7406;&#x7684;&#x804C;&#x8D23;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x76F4;&#x63A5;&#x6765;&#x770B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-comment">//_surface&#x662F;&#x4ECE;JAVA&#x5C42;&#x4F20;&#x9012;&#x8FC7;&#x6765;&#x7684;</span>
+ANativeWindow *window = ANativeWindow_fromSurface(env, _surface);
+
+ <span class="hljs-comment">// 1 EGL dispaly&#x521B;&#x5EFA;&#x548C;&#x521D;&#x59CB;&#x5316;</span>
+EGLDisplay display = eglGetDisplay(EGL_DEFAULT_DISPLAY);
+<span class="hljs-keyword">if</span>(display == EGL_NO_DISPLAY){
+    LOGE(<span class="hljs-string">&quot;eglGetDisplay failed&quot;</span>);
+    <span class="hljs-keyword">return</span>;
+}
+<span class="hljs-comment">//&#x521D;&#x59CB;&#x5316;&#x8FD9;&#x4E2A;&#x663E;&#x793A;&#x8BBE;&#x5907;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x578B;&#x53D8;&#x91CF;&#x6765;&#x4EE3;&#x8868;&#x6267;&#x884C;&#x72B6;&#x6001;&#xFF0C;&#x540E;&#x9762;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x5219;&#x4EE3;&#x8868;Major&#x548C;Minor&#x7684;&#x7248;&#x672C;&#x3002;</span>
+<span class="hljs-keyword">if</span> (EGL_FALSE == eglInitialize(display, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)) {
+    LOGE(<span class="hljs-string">&quot;NativeEngine: failed to init display, error %d&quot;</span>, eglGetError());
+    <span class="hljs-keyword">return</span>;
+}
+
+<span class="hljs-comment">//&#x4E00;&#x65E6;EGL&#x6709;&#x4E86;Display&#x4E4B;&#x540E;&#xFF0C;&#x5B83;&#x5C31;&#x53EF;&#x4EE5;&#x5C06;OpenGL ES&#x7684;&#x8F93;&#x51FA;&#x548C;&#x8BBE;&#x5907;&#x7684;&#x5C4F;&#x5E55;&#x6865;&#x63A5;&#x8D77;&#x6765;&#xFF0C;&#x4F46;&#x662F;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x4E00;&#x4E9B;&#x914D;&#x7F6E;&#x9879;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;&#x8272;&#x5F69;&#x683C;&#x5F0F;&#x3001;&#x50CF;&#x7D20;&#x683C;&#x5F0F;&#x3001;RGBA&#x7684;&#x8868;&#x793A;&#x4EE5;&#x53CA;SurfaceType&#x7B49;</span>
+
+<span class="hljs-comment">//2 surface&#x7A97;&#x53E3;&#x914D;&#x7F6E;</span>
+EGLConfig config;
+EGLint configNum;
+EGLint attribs[] = {
+        EGL_SURFACE_TYPE,EGL_WINDOW_BIT,
+        EGL_BUFFER_SIZE, <span class="hljs-number">24</span>,
+        EGL_RED_SIZE,<span class="hljs-number">8</span>,
+        EGL_GREEN_SIZE, <span class="hljs-number">8</span>,
+        EGL_BLUE_SIZE, <span class="hljs-number">8</span>,
+        EGL_DEPTH_SIZE, <span class="hljs-number">16</span>,
+        EGL_NONE
+};
+<span class="hljs-keyword">if</span>(EGL_TRUE != eglChooseConfig(display, attribs, &amp;config, <span class="hljs-number">1</span>, &amp;configNum)){
+    LOGE(<span class="hljs-string">&quot;eglChooseConfig failed!&quot;</span>);
+    <span class="hljs-keyword">return</span>;
+}
+
+<span class="hljs-comment">//3. &#x521B;&#x5EFA;surface&#xFF0C;&#x5C06;EGL&#x548C;&#x8BBE;&#x5907;&#x7684;&#x5C4F;&#x5E55;&#x8FDE;&#x63A5;&#x8D77;&#x6765;</span>
+EGLSurface surface = <span class="hljs-literal">NULL</span>;
+EGLint format;
+<span class="hljs-keyword">if</span> (!eglGetConfigAttrib(display, config, EGL_NATIVE_VISUAL_ID,
+                        &amp;format)) {
+    LOGE(<span class="hljs-string">&quot;eglGetConfigAttrib() returned error %d&quot;</span>, eglGetError());
+    <span class="hljs-keyword">return</span>;
+}
+ANativeWindow_setBuffersGeometry(window, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, format);
+<span class="hljs-keyword">if</span> (!(surface = eglCreateWindowSurface(display, config, window, <span class="hljs-number">0</span>))) {
+    LOGE(<span class="hljs-string">&quot;eglCreateWindowSurface() returned error %d&quot;</span>, eglGetError());
+}
+
+
+<span class="hljs-comment">//4 context &#x521B;&#x5EFA;&#x5173;&#x8054;&#x7684;&#x4E0A;&#x4E0B;&#x6587;</span>
+<span class="hljs-keyword">const</span> EGLint ctxAttr[] = {
+        EGL_CONTEXT_CLIENT_VERSION, <span class="hljs-number">2</span>, EGL_NONE
+};
+EGLContext  context = eglCreateContext(display, config, EGL_NO_CONTEXT, ctxAttr);
+<span class="hljs-keyword">if</span>(context == EGL_NO_CONTEXT){
+    LOGE(<span class="hljs-string">&quot;eglCreateContext failed!&quot;</span>);
+    <span class="hljs-keyword">return</span>;
+}
+
+<span class="hljs-comment">//5. &#x8FDB;&#x884C;&#x7ED1;&#x5B9A;</span>
+<span class="hljs-keyword">if</span>(EGL_TRUE != eglMakeCurrent(display, surface, surface, context)){
+    LOGE(<span class="hljs-string">&quot;eglMakeCurrent failed&#xFF01;&quot;</span>);
+    <span class="hljs-keyword">return</span>;
+}
+
+<span class="hljs-comment">//&#x6B64;&#x5904;&#x4E3A;&#x5904;&#x7406;&#x4EE5;&#x4E0A;OpenGL&#x76F8;&#x5173;</span>
+
+<span class="hljs-comment">//&#x5728;OpenGL&#x6267;&#x884C;&#x6E32;&#x67D3;&#x4E4B;&#x540E;&#xFF0C;&#x6700;&#x540E;&#x901A;&#x77E5;window&#x8FDB;&#x884C;&#x663E;&#x793A;&#xFF1A;</span>
+eglSwapBuffers(display,surface);
+</code></pre>
+<h2 id="&#x5B9E;&#x73B0;&#x663E;&#x793A;rgb24&#xFF08;android&#xFF09;"><a name="&#x5B9E;&#x73B0;&#x663E;&#x793A;rgb24&#xFF08;android&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x73B0;&#x663E;&#x793A;rgb24&#xFF08;android&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5B9E;&#x73B0;&#x663E;&#x793A;rgb24&#xFF08;android&#xFF09;" class="plugin-anchor" href="#&#x5B9E;&#x73B0;&#x663E;&#x793A;rgb24&#xFF08;android&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x73B0;&#x663E;&#x793A;RGB24&#xFF08;Android&#xFF09;</h2>
+<p>1&#xFF09;&#x5728;<code>CMakeList.txt</code>&#x5F15;&#x5165;&#x76F8;&#x5173;&#x5E93;:</p>
+<pre><code class="lang-cmake"><span class="hljs-keyword">target_link_libraries</span>(
+        native-lib
+        android log EGL GLESv3)
+</code></pre>
+<p>2&#xFF09;&#x7533;&#x8BF7;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x6743;&#x9650;&#xFF1B;&#xFF08;&#x56E0;&#x4E3A;&#x672C;demo&#x9700;&#x8981;&#x628A;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;&#x5230;&#x624B;&#x673A;&#x7684;Download&#x76EE;&#x5F55;&#x4E0B;&#xFF09;&#x3002;
+3&#xFF09;&#x5728;java&#x5C42;&#x901A;&#x8FC7;<code>SurfaceView.getHolder().getSurface()</code>&#x51FD;&#x6570;&#x628A;Surface&#x4F20;&#x9012;&#x7ED9;&#x5E95;&#x5C42;&#xFF0C;&#x5F00;&#x542F;&#x5B50;&#x7EBF;&#x7A0B;&#x3002;
+4&#xFF09;&#x5728;C++&#x5904;&#x7406;OpenGL&#x4EE5;&#x53CA;&#x7A97;&#x53E3;&#x663E;&#x793A;&#x7B49;&#xFF1A;</p>
+<pre><code class="lang-c++">VideoPlayer::VideoPlayer(ANativeWindow* window,<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *filename) {
+     <span class="hljs-comment">// 1 EGL dispaly&#x521B;&#x5EFA;&#x548C;&#x521D;&#x59CB;&#x5316;</span>
+    EGLDisplay display = eglGetDisplay(EGL_DEFAULT_DISPLAY);
+    <span class="hljs-keyword">if</span>(display == EGL_NO_DISPLAY){
+        LOGE(<span class="hljs-string">&quot;eglGetDisplay failed&quot;</span>);
+        <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-comment">//&#x521D;&#x59CB;&#x5316;&#x8FD9;&#x4E2A;&#x663E;&#x793A;&#x8BBE;&#x5907;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x578B;&#x53D8;&#x91CF;&#x6765;&#x4EE3;&#x8868;&#x6267;&#x884C;&#x72B6;&#x6001;&#xFF0C;&#x540E;&#x9762;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x5219;&#x4EE3;&#x8868;Major&#x548C;Minor&#x7684;&#x7248;&#x672C;&#x3002;</span>
+    <span class="hljs-keyword">if</span> (EGL_FALSE == eglInitialize(display, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)) {
+        LOGE(<span class="hljs-string">&quot;NativeEngine: failed to init display, error %d&quot;</span>, eglGetError());
+        <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-comment">//&#x4E00;&#x65E6;EGL&#x6709;&#x4E86;Display&#x4E4B;&#x540E;&#xFF0C;&#x5B83;&#x5C31;&#x53EF;&#x4EE5;&#x5C06;OpenGL ES&#x7684;&#x8F93;&#x51FA;&#x548C;&#x8BBE;&#x5907;&#x7684;&#x5C4F;&#x5E55;&#x6865;&#x63A5;&#x8D77;&#x6765;&#xFF0C;&#x4F46;&#x662F;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x4E00;&#x4E9B;&#x914D;&#x7F6E;&#x9879;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;&#x8272;&#x5F69;&#x683C;&#x5F0F;&#x3001;&#x50CF;&#x7D20;&#x683C;&#x5F0F;&#x3001;RGBA&#x7684;&#x8868;&#x793A;&#x4EE5;&#x53CA;SurfaceType&#x7B49;</span>
+
+    <span class="hljs-comment">//2 surface&#x7A97;&#x53E3;&#x914D;&#x7F6E;</span>
+    EGLConfig config;
+    EGLint configNum;
+    EGLint attribs[] = {
+            EGL_SURFACE_TYPE,EGL_WINDOW_BIT,
+            EGL_BUFFER_SIZE, <span class="hljs-number">24</span>,
+            EGL_RED_SIZE,<span class="hljs-number">8</span>,
+            EGL_GREEN_SIZE, <span class="hljs-number">8</span>,
+            EGL_BLUE_SIZE, <span class="hljs-number">8</span>,
+            EGL_DEPTH_SIZE, <span class="hljs-number">16</span>,
+            EGL_NONE
+    };
+    <span class="hljs-keyword">if</span>(EGL_TRUE != eglChooseConfig(display, attribs, &amp;config, <span class="hljs-number">1</span>, &amp;configNum)){
+        LOGE(<span class="hljs-string">&quot;eglChooseConfig failed!&quot;</span>);
+        <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-comment">//3. &#x521B;&#x5EFA;surface&#xFF0C;&#x5C06;EGL&#x548C;&#x8BBE;&#x5907;&#x7684;&#x5C4F;&#x5E55;&#x8FDE;&#x63A5;&#x8D77;&#x6765;</span>
+    EGLSurface surface = <span class="hljs-literal">NULL</span>;
+    EGLint format;
+    <span class="hljs-keyword">if</span> (!eglGetConfigAttrib(display, config, EGL_NATIVE_VISUAL_ID,
+                            &amp;format)) {
+        LOGE(<span class="hljs-string">&quot;eglGetConfigAttrib() returned error %d&quot;</span>, eglGetError());
+        <span class="hljs-keyword">return</span>;
+    }
+    ANativeWindow_setBuffersGeometry(window, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, format);
+    <span class="hljs-keyword">if</span> (!(surface = eglCreateWindowSurface(display, config, window, <span class="hljs-number">0</span>))) {
+        LOGE(<span class="hljs-string">&quot;eglCreateWindowSurface() returned error %d&quot;</span>, eglGetError());
+    }
+
+
+    <span class="hljs-comment">//4 context &#x521B;&#x5EFA;&#x5173;&#x8054;&#x7684;&#x4E0A;&#x4E0B;&#x6587;</span>
+    <span class="hljs-keyword">const</span> EGLint ctxAttr[] = {
+            EGL_CONTEXT_CLIENT_VERSION, <span class="hljs-number">2</span>, EGL_NONE
+    };
+    EGLContext  context = eglCreateContext(display, config, EGL_NO_CONTEXT, ctxAttr);
+    <span class="hljs-keyword">if</span>(context == EGL_NO_CONTEXT){
+        LOGE(<span class="hljs-string">&quot;eglCreateContext failed!&quot;</span>);
+        <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-comment">//5. &#x8FDB;&#x884C;&#x7ED1;&#x5B9A;</span>
+    <span class="hljs-keyword">if</span>(EGL_TRUE != eglMakeCurrent(display, surface, surface, context)){
+        LOGE(<span class="hljs-string">&quot;eglMakeCurrent failed&#xFF01;&quot;</span>);
+        <span class="hljs-keyword">return</span>;
+    }
+
+    LOGD(<span class="hljs-string">&quot;NativeEngine: EGL finish, and creating OpenGL.&quot;</span>);
+    <span class="hljs-comment">/*********************************************************/</span>
+    <span class="hljs-comment">/*******************       OpenGL     ********************/</span>
+    <span class="hljs-comment">/*********************************************************/</span>
+
+
+<span class="hljs-comment">// &#x7248;&#x672C;&#x67E5;&#x770B;NDK Demo</span>
+    <span class="hljs-keyword">const</span> GLchar *VERTEX_SHADER =
+            <span class="hljs-string">&quot;#version 300 es\n&quot;</span>
+            <span class="hljs-string">&quot;layout (location = 0) in vec3 position;\n&quot;</span>
+            <span class="hljs-string">&quot;layout (location = 1) in vec3 color;\n&quot;</span>
+            <span class="hljs-string">&quot;layout (location = 2) in vec2 texCoord;\n&quot;</span>
+            <span class="hljs-string">&quot;out vec3 ourColor;\n&quot;</span>
+            <span class="hljs-string">&quot;out vec2 TexCoord;\n&quot;</span>
+            <span class="hljs-string">&quot;void main(){\n&quot;</span>
+            <span class="hljs-string">&quot;    gl_Position = vec4(position, 1.0f);\n&quot;</span>
+            <span class="hljs-string">&quot;    ourColor = color;\n&quot;</span>
+            <span class="hljs-string">&quot;    TexCoord = texCoord;\n&quot;</span>
+            <span class="hljs-string">&quot;}\n&quot;</span>;
+
+    <span class="hljs-comment">//precision mediump float; &#x662F;&#x4ECE;&#x62A5;&#x9519;&#x65E5;&#x5FD7;&#x67E5;&#x51FA;&#x6765;&#x7684;</span>
+    <span class="hljs-keyword">const</span> GLchar *FRAGMENT_SHADER =
+            <span class="hljs-string">&quot;#version 300 es\n&quot;</span>
+            <span class="hljs-string">&quot;precision mediump float;\n&quot;</span>
+            <span class="hljs-string">&quot;in vec3 ourColor;\n&quot;</span>
+            <span class="hljs-string">&quot;in vec2 TexCoord;\n&quot;</span>
+            <span class="hljs-string">&quot;out vec4 color;\n&quot;</span>
+            <span class="hljs-string">&quot;uniform sampler2D ourTexture;\n&quot;</span>
+            <span class="hljs-string">&quot;void main(){\n&quot;</span>
+            <span class="hljs-string">&quot;    color = texture(ourTexture, TexCoord);\n&quot;</span>
+            <span class="hljs-string">&quot;}\n&quot;</span>;
+
+
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> pixel_w = <span class="hljs-number">384</span>, pixel_h = <span class="hljs-number">216</span>;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> *buffer = <span class="hljs-keyword">new</span> <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span>[pixel_w * pixel_h * <span class="hljs-number">3</span>];
+    FILE *fp = fopen(filename, <span class="hljs-string">&quot;rb+&quot;</span>);
+    fread(buffer, pixel_w * pixel_h * <span class="hljs-number">3</span>, <span class="hljs-number">1</span>, fp);
+    <span class="hljs-comment">// Define the viewport dimensions</span>
+    <span class="hljs-comment">//&#x6B64;&#x5904;&#x5E94;&#x8BE5;&#x611F;&#x89C9;&#x5C4F;&#x5E55;&#x5B9E;&#x9645;&#x5927;&#x5C0F;&#x8FDB;&#x884C;&#x5904;&#x7406;</span>
+    glViewport(<span class="hljs-number">80</span>, <span class="hljs-number">300</span>, pixel_w*<span class="hljs-number">2</span>, pixel_h*<span class="hljs-number">2</span>);
+
+
+    <span class="hljs-comment">// Build and compile our shader program</span>
+    GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
+    glShaderSource(vertexShader, <span class="hljs-number">1</span>, &amp;VERTEX_SHADER, <span class="hljs-literal">NULL</span>);
+    glCompileShader(vertexShader);
+
+    <span class="hljs-comment">//&#x4EE5;&#x4E0B;&#x4E3A;&#x5F02;&#x5E38;&#x60C5;&#x51B5;&#x5904;&#x7406;&#xFF0C;&#x6253;&#x5370;&#x7F16;&#x8BD1;&#x9519;&#x8BEF;&#xFF08;&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;&#xFF09;</span>
+    GLint success;
+    GLchar infoLog[<span class="hljs-number">512</span>];
+    glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &amp;success);
+    <span class="hljs-keyword">if</span>(!success){
+        glGetShaderInfoLog(vertexShader, <span class="hljs-number">512</span>, <span class="hljs-literal">NULL</span>, infoLog);
+        LOGE(<span class="hljs-string">&quot;ERROR::SHADER::VERTEX::COMPILATION_FAILED1 %s\n&quot;</span>,infoLog);
+    }
+
+    GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+    glShaderSource(fragmentShader, <span class="hljs-number">1</span>, &amp;FRAGMENT_SHADER, <span class="hljs-literal">NULL</span>);
+    glCompileShader(fragmentShader);
+
+    <span class="hljs-comment">//&#x4EE5;&#x4E0B;&#x4E3A;&#x5F02;&#x5E38;&#x60C5;&#x51B5;&#x5904;&#x7406;&#xFF0C;&#x6253;&#x5370;&#x7F16;&#x8BD1;&#x9519;&#x8BEF;&#xFF08;&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;&#xFF09;</span>
+    glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &amp;success);
+    <span class="hljs-keyword">if</span>(!success){
+        glGetShaderInfoLog(fragmentShader, <span class="hljs-number">512</span>, <span class="hljs-literal">NULL</span>, infoLog);
+        LOGE(<span class="hljs-string">&quot;ERROR::SHADER::VERTEX::COMPILATION_FAILED2 %s\n&quot;</span>,infoLog);
+    }
+
+    GLuint shaderProgram = glCreateProgram();
+    glAttachShader(shaderProgram, vertexShader);
+    glAttachShader(shaderProgram, fragmentShader);
+    glLinkProgram(shaderProgram);
+    glDeleteShader(vertexShader);
+    glDeleteShader(fragmentShader);
+
+
+    <span class="hljs-comment">// Set up vertex data (and buffer(s)) and attribute pointers</span>
+    GLfloat vertices[] = {
+            <span class="hljs-comment">//     ---- &#x4F4D;&#x7F6E; ----       ---- &#x989C;&#x8272; ----     - &#x7EB9;&#x7406;&#x5750;&#x6807; -</span>
+            <span class="hljs-number">1.0f</span>,  <span class="hljs-number">1.0f</span>,  <span class="hljs-number">0.0f</span>,    <span class="hljs-number">1.0f</span>, <span class="hljs-number">0.0f</span>, <span class="hljs-number">0.0f</span>,   <span class="hljs-number">1.0f</span>, <span class="hljs-number">0.0f</span>, <span class="hljs-comment">// &#x53F3;&#x4E0A;</span>
+            <span class="hljs-number">1.0f</span>, <span class="hljs-number">-1.0</span>f,  <span class="hljs-number">0.0f</span>,    <span class="hljs-number">0.0f</span>, <span class="hljs-number">1.0f</span>, <span class="hljs-number">0.0f</span>,   <span class="hljs-number">1.0f</span>, <span class="hljs-number">1.0f</span>, <span class="hljs-comment">// &#x53F3;&#x4E0B;</span>
+            <span class="hljs-number">-1.0</span>f, <span class="hljs-number">-1.0</span>f, <span class="hljs-number">0.0f</span>,    <span class="hljs-number">0.0f</span>, <span class="hljs-number">0.0f</span>, <span class="hljs-number">1.0f</span>,   <span class="hljs-number">0.0f</span>, <span class="hljs-number">1.0f</span>, <span class="hljs-comment">// &#x5DE6;&#x4E0B;</span>
+            <span class="hljs-number">-1.0</span>f, <span class="hljs-number">1.0f</span>,  <span class="hljs-number">0.0f</span>,    <span class="hljs-number">1.0f</span>, <span class="hljs-number">1.0f</span>, <span class="hljs-number">0.0f</span>,   <span class="hljs-number">0.0f</span>, <span class="hljs-number">0.0f</span>  <span class="hljs-comment">// &#x5DE6;&#x4E0A;</span>
+    };
+    <span class="hljs-comment">//&#x4ECE;0&#x5F00;&#x59CB;&#xFF0C;&#x753B;&#x4E24;&#x4E2A;&#x4E09;&#x89D2;&#x5F62;&#xFF0C;&#x7EC4;&#x6210;&#x77E9;&#x5F62;&#xFF08;&#x4ECE;0&#x5F00;&#x59CB;&#xFF0C;&#x753B;&#x4E24;&#x4E2A;&#x4E09;&#x89D2;&#x5F62;&#x7684;&#x7D22;&#x5F15;&#x5373;&#x53EF;&#xFF09;</span>
+    GLuint indices[] = {  <span class="hljs-comment">// Note that we start from 0!</span>
+            <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-comment">// First Triangle</span>
+            <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>  <span class="hljs-comment">// Second Triangle</span>
+    };
+    GLuint VBO, VAO, EBO;
+    <span class="hljs-comment">// 1. &#x7ED1;&#x5B9A;&#x9876;&#x70B9;&#x6570;&#x7EC4;&#x5BF9;&#x8C61;</span>
+    glGenVertexArrays(<span class="hljs-number">1</span>, &amp;VAO);
+    glGenBuffers(<span class="hljs-number">1</span>, &amp;VBO);
+    glGenBuffers(<span class="hljs-number">1</span>, &amp;EBO);
+
+    glBindVertexArray(VAO);
+
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, <span class="hljs-keyword">sizeof</span>(vertices), vertices, GL_STATIC_DRAW);
+
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, <span class="hljs-keyword">sizeof</span>(indices), indices, GL_STATIC_DRAW);
+
+    <span class="hljs-comment">// Position attribute</span>
+    glVertexAttribPointer(<span class="hljs-number">0</span>, <span class="hljs-number">3</span>, GL_FLOAT, GL_FALSE, <span class="hljs-number">8</span> * <span class="hljs-keyword">sizeof</span>(GLfloat), (GLvoid *) <span class="hljs-number">0</span>);
+    glEnableVertexAttribArray(<span class="hljs-number">0</span>);
+    <span class="hljs-comment">// Color attribute</span>
+    glVertexAttribPointer(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, GL_FLOAT, GL_FALSE, <span class="hljs-number">8</span> * <span class="hljs-keyword">sizeof</span>(GLfloat), (GLvoid *) (<span class="hljs-number">3</span> * <span class="hljs-keyword">sizeof</span>(GLfloat)));
+    glEnableVertexAttribArray(<span class="hljs-number">1</span>);
+    <span class="hljs-comment">// TexCoord attribute</span>
+    glVertexAttribPointer(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, GL_FLOAT, GL_FALSE, <span class="hljs-number">8</span> * <span class="hljs-keyword">sizeof</span>(GLfloat), (GLvoid *) (<span class="hljs-number">6</span> * <span class="hljs-keyword">sizeof</span>(GLfloat)));
+    glEnableVertexAttribArray(<span class="hljs-number">2</span>);
+
+    glBindVertexArray(<span class="hljs-number">0</span>); <span class="hljs-comment">// Unbind VAO</span>
+
+
+    <span class="hljs-comment">// Load and create a texture</span>
+    GLuint texture;
+    glGenTextures(<span class="hljs-number">1</span>, &amp;texture);
+    glBindTexture(GL_TEXTURE_2D,
+                  texture); <span class="hljs-comment">// All upcoming GL_TEXTURE_2D operations now have effect on this texture object</span>
+    <span class="hljs-comment">// Set the texture wrapping parameters</span>
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S,
+                    GL_REPEAT);    <span class="hljs-comment">// Set texture wrapping to GL_REPEAT (usually basic wrapping method)</span>
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    <span class="hljs-comment">// Set texture filtering parameters</span>
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    <span class="hljs-comment">// Load image, create texture and generate mipmaps</span>
+
+    <span class="hljs-comment">//&#x5C31;&#x8BA9;&#x4ED6;&#x4E00;&#x76F4;&#x663E;&#x793A;&#x5427;</span>
+    <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>){
+        <span class="hljs-comment">// Render</span>
+        <span class="hljs-comment">// Clear the colorbuffer</span>
+        glClearColor(<span class="hljs-number">0.2f</span>, <span class="hljs-number">0.3f</span>, <span class="hljs-number">0.3f</span>, <span class="hljs-number">1.0f</span>);
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        <span class="hljs-comment">// Bind Texture</span>
+        glBindTexture(GL_TEXTURE_2D, texture);
+        glTexImage2D(GL_TEXTURE_2D, <span class="hljs-number">0</span>, GL_RGB, pixel_w, pixel_h, <span class="hljs-number">0</span>, GL_RGB, GL_UNSIGNED_BYTE, buffer);
+
+        <span class="hljs-comment">// Activate shader</span>
+        glUseProgram(shaderProgram);
+
+        <span class="hljs-comment">// Draw container</span>
+        glBindVertexArray(VAO);
+        glDrawElements(GL_TRIANGLES, <span class="hljs-number">6</span>, GL_UNSIGNED_INT, <span class="hljs-number">0</span>);
+        glBindVertexArray(<span class="hljs-number">0</span>);
+
+        eglSwapBuffers(display,surface);
+        sleep(<span class="hljs-number">0.5</span>);
+    }
+
+    <span class="hljs-comment">// Properly de-allocate all resources once they&apos;ve outlived their purpose</span>
+    glDeleteVertexArrays(<span class="hljs-number">1</span>, &amp;VAO);
+    glDeleteBuffers(<span class="hljs-number">1</span>, &amp;VBO);
+    glDeleteBuffers(<span class="hljs-number">1</span>, &amp;EBO);
+
+    <span class="hljs-comment">//&#x7701;&#x7565;&#x91CA;&#x653E;&#x5185;&#x5B58;&#x7B49;.....</span>
+}
+</code></pre>
+<p><strong><a href="https://github.com/xhunmon/AFPlayer/tree/main/OpenGLESDemo" target="_blank">Android&#x9879;&#x76EE;&#x5730;&#x5740;&#xFF1A;OpenGLESDemo</a></strong></p>
+<p><strong><a href="https://github.com/xhunmon/AFPlayer/tree/main/OpenGLMacTextureDemo" target="_blank">Mac&#x9879;&#x76EE;&#x5730;&#x5740;&#xFF1A;OpenGLMacTextureDemo</a></strong></p>
+<h2 id="&#x53C2;&#x8003;"><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x53C2;&#x8003;" class="plugin-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x8003;</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/OpenSL_ES" target="_blank">https://en.wikipedia.org/wiki/OpenSL_ES</a></li>
+<li><a href="https://blog.csdn.net/leixiaohua1020/article/details/40379845" target="_blank">https://blog.csdn.net/leixiaohua1020/article/details/40379845</a></li>
+<li><a href="https://github.com/android/ndk-samples/tree/main/audio-echo" target="_blank">https://github.com/android/ndk-samples/tree/main/audio-echo</a></li>
+<li><a href="https://blog.csdn.net/ywl5320/article/details/78503768" target="_blank">https://blog.csdn.net/ywl5320/article/details/78503768</a></li>
+<li><a href="http://web.cse.ohio-state.edu/~shen.94/781/Site/Slides_files/pipeline.pdf" target="_blank">http://web.cse.ohio-state.edu/~shen.94/781/Site/Slides_files/pipeline.pdf</a></li>
+</ul>
+<p></p><footer class="page-footer"><span class="copyright">Copyright &#xA9; xhunmon 2022  all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Update: 
+2022-12-26 12:05:43
+</span></footer><hr><div id="vcomments"></div><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el: "#vcomments",appId: 'xMemPde6Lax4ffLfLBkuEi9t-gzGzoHsz',appKey: 'jIVEp2lShgotSTy0GalhgIzm',placeholder: 'Just go go',avatar: '',meta: undefined,pageSize: 10,lang: 'zh-CN',recordIP: false})</script><p></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="01_opensl_es.html" class="navigation navigation-prev " aria-label="Previous page: OpenSL ES播放PCM">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="03_mediacodec.html" class="navigation navigation-next " aria-label="Next page: FFmpeg实现MediaCodec解码">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"OpenGL ES播放RGB","level":"1.3.2","depth":2,"next":{"title":"FFmpeg实现MediaCodec解码","level":"1.3.3","depth":2,"path":"AFPlayer/03_mediacodec.md","ref":"AFPlayer/03_mediacodec.md","articles":[]},"previous":{"title":"OpenSL ES播放PCM","level":"1.3.1","depth":2,"path":"AFPlayer/01_opensl_es.md","ref":"AFPlayer/01_opensl_es.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","favicon-absolute","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","highlight","back-to-top-button","code","-lunr","-search","search-pro","tbfed-pagefooter","pageview-count","auto-scroll-table","lightbox","hide-element","valine","embed-pdf","mermaid-gb3","image-wrapper","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy xhunmon 2022 ","modify_label":"Update: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"image-wrapper":{},"github":{"url":"https://github.com/xhunmon"},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"donate":{"alipay":"/source/images/alipayimg.jpeg","alipayText":"支付宝","button":"捐赠","title":"请作者喝杯coffee","wechat":"/source/images/wechatpayimg.jpeg","wechatText":"微信"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"/apple-tou ch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{},"favicon":"/source/images/favicon.png"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"xhunmon","repo":"VABlog","type":"star","count":true,"size":"small"},{"user":"xhunmon","width":"160","type":"follow","count":true,"size":"small"}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"embed-pdf":{},"valine":{"avatar":"","lang":"zh-CN","pageSize":10,"placeholder":"Just go go","recordIP":false,"appId":"xMemPde6Lax4ffLfLBkuEi9t-gzGzoHsz","appKey":"jIVEp2lShgotSTy0GalhgIzm"}},"theme":"default","author":"秦城季","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"秦城季&音视频","language":"zh-hans","links":{"sidebar":{"秦城季&音视频":"https://github.com/xhunmon/VABlog"}},"gitbook":"3.2.3","description":"未来那个项目都不应该缺少音视频！"},"file":{"path":"AFPlayer/02_opengl_es.md","mtime":"2022-12-26T04:05:43.582Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-26T08:27:47.172Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

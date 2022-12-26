@@ -1,0 +1,1293 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Shell脚本 · 秦城季&音视频</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="秦城季">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="03_build_ffmpeg.html" />
+    
+    
+    <link rel="prev" href="01_configure_help.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"xhunmon","repo":"VABlog","type":"star","count":true,"size":"small"},{"user":"xhunmon","width":"160","type":"follow","count":true,"size":"small"}]};
+    </script>
+
+    
+        <link rel="shortcut icon" href="/source/images/favicon.png" type="image/x-icon">
+    
+    
+    
+    
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-tou ch-icon-precomposed-152.png">
+    
+    
+        
+    
+    
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/xhunmon/VABlog" target="_blank" class="custom-link">秦城季&音视频</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    打怪之路总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../直播推流全过程/">
+            
+                <a href="../直播推流全过程/">
+            
+                    
+                    直播推流全过程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../直播推流全过程/1-yuv.html">
+            
+                <a href="../直播推流全过程/1-yuv.html">
+            
+                    
+                    视频数据源之YUV
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../直播推流全过程/2-pcm.html">
+            
+                <a href="../直播推流全过程/2-pcm.html">
+            
+                    
+                    音频数据源之PCM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../直播推流全过程/3-h264.html">
+            
+                <a href="../直播推流全过程/3-h264.html">
+            
+                    
+                    视频编码之H.264
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../直播推流全过程/4-aac.html">
+            
+                <a href="../直播推流全过程/4-aac.html">
+            
+                    
+                    音频编码之AAC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../直播推流全过程/5-rtmp.html">
+            
+                <a href="../直播推流全过程/5-rtmp.html">
+            
+                    
+                    直播推流编码之RTMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../直播推流全过程/h264-descriptor.html">
+            
+                <a href="../直播推流全过程/h264-descriptor.html">
+            
+                    
+                    其他：H.264符号描述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../直播推流全过程/6-optimize.html">
+            
+                <a href="../直播推流全过程/6-optimize.html">
+            
+                    
+                    其他：直播优化基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../AFPlayer/">
+            
+                <a href="../AFPlayer/">
+            
+                    
+                    AFPlayer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../AFPlayer/01_opensl_es.html">
+            
+                <a href="../AFPlayer/01_opensl_es.html">
+            
+                    
+                    OpenSL ES播放PCM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../AFPlayer/02_opengl_es.html">
+            
+                <a href="../AFPlayer/02_opengl_es.html">
+            
+                    
+                    OpenGL ES播放RGB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../AFPlayer/03_mediacodec.html">
+            
+                <a href="../AFPlayer/03_mediacodec.html">
+            
+                    
+                    FFmpeg实现MediaCodec解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../AFPlayer/04_build_for_android.html">
+            
+                <a href="../AFPlayer/04_build_for_android.html">
+            
+                    
+                    FFmpeg、x264、fdk-aac、openssl的交叉编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    FFmpeg
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="01_configure_help.html">
+            
+                <a href="01_configure_help.html">
+            
+                    
+                    Configure配置选项 (转载)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="02_shell.html">
+            
+                <a href="02_shell.html">
+            
+                    
+                    Shell脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="03_build_ffmpeg.html">
+            
+                <a href="03_build_ffmpeg.html">
+            
+                    
+                    编译FFmpeg4.2.2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="04_import_ffmpeg.html">
+            
+                <a href="04_import_ffmpeg.html">
+            
+                    
+                    FFmpeg导入到Clion（MacOS）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="05_source.html">
+            
+                <a href="05_source.html">
+            
+                    
+                    使用Clion阅读FFmpeg源码（支持跳转）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="06_struct.html">
+            
+                <a href="06_struct.html">
+            
+                    
+                    FFmpeg重要结构体（转载）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="07_flv.html">
+            
+                <a href="07_flv.html">
+            
+                    
+                    手撕FLV协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="08_demuxing.html">
+            
+                <a href="08_demuxing.html">
+            
+                    
+                    Demuxing（解封装）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="09_muxing.html">
+            
+                <a href="09_muxing.html">
+            
+                    
+                    Muxing（封装）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="10_remuxing.html">
+            
+                <a href="10_remuxing.html">
+            
+                    
+                    Remuxing（重新封装）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="11_decode.html">
+            
+                <a href="11_decode.html">
+            
+                    
+                    Decode（解码）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="12_encode.html">
+            
+                <a href="12_encode.html">
+            
+                    
+                    Encode（编码）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="13_transfer.html">
+            
+                <a href="13_transfer.html">
+            
+                    
+                    简单实现转码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="14_filter_v.html">
+            
+                <a href="14_filter_v.html">
+            
+                    
+                    Filter和SDL（Video）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="15_filter_a.html">
+            
+                <a href="15_filter_a.html">
+            
+                    
+                    Filter和SDL（Audio）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="16_transcode.html">
+            
+                <a href="16_transcode.html">
+            
+                    
+                    Transcode(转码)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="17_sync.html">
+            
+                <a href="17_sync.html">
+            
+                    
+                    音视频同步处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="18_command.html">
+            
+                <a href="18_command.html">
+            
+                    
+                    FFmpeg命令使用指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19" data-path="19_swscale.html">
+            
+                <a href="19_swscale.html">
+            
+                    
+                    Swscale（图像转换）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../OpenGL/">
+            
+                <a href="../OpenGL/">
+            
+                    
+                    OpenGL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../OpenGL/01_opengl.html">
+            
+                <a href="../OpenGL/01_opengl.html">
+            
+                    
+                    OpenGL基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../AFPlayer/02_opengl_es.html">
+            
+                <a href="../AFPlayer/02_opengl_es.html">
+            
+                    
+                    OpenGL ES播放RGB
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../其他零散知识/01_c_compile.html">
+            
+                <a href="../其他零散知识/01_c_compile.html">
+            
+                    
+                    其他零散知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../其他零散知识/01_c_compile.html">
+            
+                <a href="../其他零散知识/01_c_compile.html">
+            
+                    
+                    初步认识c/c++编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../其他零散知识/02_net_base.html">
+            
+                <a href="../其他零散知识/02_net_base.html">
+            
+                    
+                    网络基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../其他零散知识/03_adb_dy.html">
+            
+                <a href="../其他零散知识/03_adb_dy.html">
+            
+                    
+                    ADB的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Shell脚本</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#shell&#x811A;&#x672C;"><b></b>Shell&#x811A;&#x672C;</a></li><ul><ul><li><span class="title-icon "></span><a href="#&#x7B80;&#x4ECB;"><b></b>&#x7B80;&#x4ECB;</a></li><li><span class="title-icon "></span><a href="#shell&#x811A;&#x672C;&#x6743;&#x9650;"><b></b>Shell&#x811A;&#x672C;&#x6743;&#x9650;</a></li><li><span class="title-icon "></span><a href="#shell&#x57FA;&#x672C;&#x8BED;&#x6CD5;"><b></b>Shell&#x57FA;&#x672C;&#x8BED;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#shell&#x5176;&#x4ED6;&#x5173;&#x952E;&#x8BCD;"><b></b>Shell&#x5176;&#x4ED6;&#x5173;&#x952E;&#x8BCD;</a></li></ul></ul></ul></div><a href="#shell&#x811A;&#x672C;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="shell&#x811A;&#x672C;"><a name="shell&#x811A;&#x672C;" class="anchor-navigation-ex-anchor" href="#shell&#x811A;&#x672C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="shell&#x811A;&#x672C;" class="plugin-anchor" href="#shell&#x811A;&#x672C;"><i class="fa fa-link" aria-hidden="true"></i></a>Shell&#x811A;&#x672C;</h1>
+<h3 id="&#x7B80;&#x4ECB;"><a name="&#x7B80;&#x4ECB;" class="anchor-navigation-ex-anchor" href="#&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B80;&#x4ECB;" class="plugin-anchor" href="#&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B80;&#x4ECB;</h3>
+<p><code>Shell</code>&#x811A;&#x672C;&#xFF08;Shell Script&#xFF09;&#x662F;&#x4E00;&#x79CD;&#x4E3A;<code>Shell</code>&#x7F16;&#x5199;&#x7684;&#x811A;&#x672C;&#x7A0B;&#x5E8F;&#x3002;&#x800C;<code>Shell</code>&#x662F;&#x4E00;&#x4E2A;&#x7528;<code>C</code>&#x8BED;&#x8A00;&#x7F16;&#x5199;&#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x5B83;&#x662F;&#x7528;&#x6237;&#x4F7F;&#x7528;<code>Linux</code>&#x7684;&#x6865;&#x6881;&#x3002;&#x5728;<code>Linux</code>&#x4E2D;<code>Shell</code>&#x7A0B;&#x5E8F;&#x53C8;&#x6709;&#x5F88;&#x591A;&#x79CD;&#xFF0C;&#x5982;&#xFF1A;</p>
+<ul>
+<li>sh - &#x5373; Bourne Shell&#x3002;sh &#x662F; Unix &#x6807;&#x51C6;&#x9ED8;&#x8BA4;&#x7684; shell&#x3002;</li>
+<li>bash - &#x5373; Bourne Again Shell&#x3002;bash &#x662F; Linux &#x6807;&#x51C6;&#x9ED8;&#x8BA4;&#x7684; shell&#x3002;
+&#x2026;&#x2026;</li>
+</ul>
+<p>&#x5176;&#x4E2D;&#xFF0C;bash&#x7531;&#x4E8E;&#x6613;&#x7528;&#x548C;&#x514D;&#x8D39;&#xFF0C;&#x88AB;&#x5E7F;&#x6CDB;&#x4F7F;&#x7528;&#x3002;&#x6BCF;&#x79CD;<code>Shell</code>&#x7A0B;&#x5E8F;&#x90FD;&#x6709;&#x5176;&#x5BF9;&#x5E94;&#x7684;<code>&#x89E3;&#x91CA;&#x5668;</code>&#xFF0C;&#x5728;&#x811A;&#x672C;&#x6587;&#x4EF6;&#x7B2C;&#x4E00;&#x884C;&#x4F1A;&#x544A;&#x8BC9;&#x7CFB;&#x7EDF;&#x5F53;&#x524D;&#x7A0B;&#x5E8F;&#x5C5E;&#x4E8E;&#x90A3;&#x79CD;&#x7C7B;&#x578B;&#xFF0C;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-c">#!/bin/bash
+echo <span class="hljs-string">&quot;&#x8FD9;&#x662F;bash&#x7C7B;&#x578B;&#x7684;shell&#x7A0B;&#x5E8F;&quot;</span>
+</code></pre>
+<p>&#x672C;&#x6587;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;bash&#x7C7B;&#x578B;&#x7684;<code>Shell</code>&#x811A;&#x672C;&#x7684;&#x57FA;&#x672C;&#x4F7F;&#x7528;&#x3002;</p>
+<h3 id="shell&#x811A;&#x672C;&#x6743;&#x9650;"><a name="shell&#x811A;&#x672C;&#x6743;&#x9650;" class="anchor-navigation-ex-anchor" href="#shell&#x811A;&#x672C;&#x6743;&#x9650;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="shell&#x811A;&#x672C;&#x6743;&#x9650;" class="plugin-anchor" href="#shell&#x811A;&#x672C;&#x6743;&#x9650;"><i class="fa fa-link" aria-hidden="true"></i></a>Shell&#x811A;&#x672C;&#x6743;&#x9650;</h3>
+<p><code>Shell</code>&#x811A;&#x672C;&#x88AB;&#x6267;&#x884C;&#x524D;&#x9700;&#x8981;&#x53EF;&#x6267;&#x884C;&#x6743;&#x9650;&#x3002;&#x5982;&#x521A;&#x521B;&#x5EFA;&#x7684;<code>test.sh</code>&#x811A;&#x672C;&#xFF0C;&#x9700;<code>chmod +x test.sh</code>&#x65B9;&#x80FD;&#x6267;&#x884C;&#xFF1A;</p>
+<pre><code class="lang-c">qincji:giteeblog mac$ ./test.sh
+-bash: ./test.sh: Permission denied
+qincji:giteeblog mac$ chmod +x test.sh 
+qincji:giteeblog mac$ ./test.sh 
+Hellow Shell
+</code></pre>
+<p>&#x6CE8;&#xFF1A;&#x6267;&#x884C;&#x811A;&#x672C;&#x6587;&#x4EF6;&#x7684;&#x547D;&#x4EE4;&#x4F7F;&#x7528;<code>sh</code>&#x6216;<code>.</code>&#xFF0C;&#x5982;<code>sh test.sh</code>&#x6216;<code>./test.sh</code>&#x3002;</p>
+<h3 id="shell&#x57FA;&#x672C;&#x8BED;&#x6CD5;"><a name="shell&#x57FA;&#x672C;&#x8BED;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#shell&#x57FA;&#x672C;&#x8BED;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="shell&#x57FA;&#x672C;&#x8BED;&#x6CD5;" class="plugin-anchor" href="#shell&#x57FA;&#x672C;&#x8BED;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>Shell&#x57FA;&#x672C;&#x8BED;&#x6CD5;</h3>
+<h4 id="&#x6CE8;&#x91CA;"><a name="&#x6CE8;&#x91CA;" class="anchor-navigation-ex-anchor" href="#&#x6CE8;&#x91CA;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6CE8;&#x91CA;" class="plugin-anchor" href="#&#x6CE8;&#x91CA;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6CE8;&#x91CA;</h4>
+<ul>
+<li>&#x5355;&#x884C;&#x6CE8;&#x91CA; - &#x4EE5; <code>#</code> &#x5F00;&#x5934;&#xFF0C;&#x5230;&#x884C;&#x5C3E;&#x7ED3;&#x675F;&#x3002;</li>
+<li>&#x591A;&#x884C;&#x6CE8;&#x91CA; - &#x4EE5; <code>:&lt;&lt;EOF</code> &#x5F00;&#x5934;&#xFF0C;&#x5230; <code>EOF</code> &#x7ED3;&#x675F;&#x3002;</li>
+</ul>
+<p>&#x5982;&#x7F16;&#x8F91;<code>test.s</code>h&#x811A;&#x672C;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-c">#!/bin/bash     
+echo <span class="hljs-string">&quot;Hellow Shell&quot;</span>
+<span class="hljs-meta">#echo <span class="hljs-meta-string">&quot;&#x4F7F;&#x7528;#&#x5355;&#x884C;&#x6CE8;&#x91CA;&#x4E86;&#xFF0C;&#x4E0D;&#x80FD;&#x8F93;&#x51FA;&quot;</span></span>
+
+:&lt;&lt;EOF
+echo <span class="hljs-string">&quot;EOF&#x91CC;&#x9762;111&quot;</span>
+echo <span class="hljs-string">&quot;EOF&#x91CC;&#x9762;222&quot;</span> 
+EOF
+</code></pre>
+<p>&#x6267;&#x884C;<code>sh test.sh</code>&#x67E5;&#x770B;&#x8F93;&#x51FA;&#xFF1A;</p>
+<pre><code class="lang-c">qincji:giteeblog mac$ sh test.sh 
+Hellow Shell
+</code></pre>
+<h4 id="echo&#x8F93;&#x51FA;"><a name="echo&#x8F93;&#x51FA;" class="anchor-navigation-ex-anchor" href="#echo&#x8F93;&#x51FA;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="echo&#x8F93;&#x51FA;" class="plugin-anchor" href="#echo&#x8F93;&#x51FA;"><i class="fa fa-link" aria-hidden="true"></i></a>echo&#x8F93;&#x51FA;</h4>
+<p><code>echo</code>&#x7528;&#x4E8E;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x8F93;&#x51FA;&#x3002;&#x7F16;&#x8F91;<code>test.sh</code>&#x8FDB;&#x884C;&#x4ECB;&#x7ECD;&#xFF1A;</p>
+<pre><code class="lang-c">#!/bin/bash                   
+echo &quot;1-You&quot; #1.&#x8F93;&#x51FA;&#x666E;&#x901A;&#x5B57;&#x7B26;&#x4E32;
+echo &quot;2-You \&quot;are\&quot;&quot; #2.&#x8F93;&#x51FA;&#x4F7F;&#x7528;\&#x8F6C;&#x4E49;
+age=18
+echo &quot;3-You \&quot;are\&quot; ${age}&quot; #3.&#x4F7F;&#x7528;${&#x53D8;&#x91CF;&#x540D;}&#x8F93;&#x51FA;&#x5305;&#x542B;&#x53D8;&#x91CF;&#x7684;&#x5B57;&#x7B26;&#x4E32;
+echo &quot;4-You \&quot;are\&quot; &quot;$age&quot;&quot; #4.&#x4F7F;&#x7528;&quot;$&#x53D8;&#x91CF;&#x540D;&quot;&#x8F93;&#x51FA;&#x5305;&#x542B;&#x53D8;&#x91CF;&#x7684;&#x5B57;&#x7B26;&#x4E32;&quot;
+echo -e &quot;5-YES\nNO&quot; #5.&#x4F7F;&#x7528; -e &#x5F00;&#x542F;&#xFF08;&#x5BF9;\n&#xFF09;&#x8F6C;&#x4E49;
+echo &quot;6-test&quot; &gt; test.txt #6.&#x8F93;&#x51FA;&#x91CD;&#x5B9A;&#x5411;&#x81F3;&#x6587;&#x4EF6;
+</code></pre>
+<p>&#x6267;&#x884C;&#x540E;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-c">qincji:giteeblog mac$ ./test.sh 
+<span class="hljs-number">1</span>-You
+<span class="hljs-number">2</span>-You <span class="hljs-string">&quot;are&quot;</span>
+<span class="hljs-number">3</span>-You <span class="hljs-string">&quot;are&quot;</span> <span class="hljs-number">18</span>
+<span class="hljs-number">4</span>-You <span class="hljs-string">&quot;are&quot;</span> <span class="hljs-number">18</span>
+<span class="hljs-number">5</span>-YES
+NO
+qincji:giteeblog mac$ cat test.txt
+<span class="hljs-number">6</span>-test
+</code></pre>
+<h4 id="&#x53D8;&#x91CF;"><a name="&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x53D8;&#x91CF;" class="plugin-anchor" href="#&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53D8;&#x91CF;</h4>
+<p>Bash &#x4E2D;&#x6CA1;&#x6709;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;bash &#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x4FDD;&#x5B58;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x3001;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x3001;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7B49;&#x7B49;&#x3002;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;&#x540D;&#x7684;&#x89C4;&#x5219;&#xFF1A;</p>
+<ul>
+<li>1.&#x547D;&#x540D;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#xFF0C;&#x6570;&#x5B57;&#x548C;&#x4E0B;&#x5212;&#x7EBF;&#xFF0C;&#x9996;&#x4E2A;&#x5B57;&#x7B26;&#x4E0D;&#x80FD;&#x4EE5;&#x6570;&#x5B57;&#x5F00;&#x5934;&#x3002;</li>
+<li>2.&#x4E2D;&#x95F4;&#x4E0D;&#x80FD;&#x6709;&#x7A7A;&#x683C;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0B;&#x5212;&#x7EBF;&#xFF08;_&#xFF09;&#x3002;</li>
+<li>3.&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x6807;&#x70B9;&#x7B26;&#x53F7;&#x3002;</li>
+<li>4.&#x4E0D;&#x80FD;&#x4F7F;&#x7528; bash &#x91CC;&#x7684;&#x5173;&#x952E;&#x5B57;&#xFF08;&#x53EF;&#x7528; help &#x547D;&#x4EE4;&#x67E5;&#x770B;&#x4FDD;&#x7559;&#x5173;&#x952E;&#x5B57;&#xFF09;&#x3002;</li>
+</ul>
+<p>&#x5982;&#xFF0C;&#x7F16;&#x8F91;<code>test.sh</code>&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c">#!/bin/bash
+#&#x6709;&#x6548;&#x53D8;&#x91CF;&#x540D;
+var=<span class="hljs-string">&quot;0 &#x5B57;&#x7B26;&#x4E32;&quot;</span>
+VAR=<span class="hljs-number">1</span>
+_var=<span class="hljs-number">2</span>
+_var2=<span class="hljs-number">3</span>
+_3var=<span class="hljs-number">4</span>
+#&#x4EE5;&#x4E0B;&#x4E3A;&#x65E0;&#x6548;&#x53D8;&#x91CF;&#x540D;
+<span class="hljs-number">4</span>var=<span class="hljs-number">5</span>
+?var=<span class="hljs-number">6</span>
+var*<span class="hljs-number">2</span>=<span class="hljs-number">7</span>
+#&#x4F7F;&#x7528;&#x8868;&#x8FBE;&#x5F0F;&#x547D;&#x4EE4;&#x8D4B;&#x503C;&#xFF0C;&#x8F93;&#x51FA;&#x770B;&#x770B;&#x547D;&#x4EE4;&#x7684;&#x7ED3;&#x679C;
+files=`du -sh .`
+echo ${files}
+
+#&#x5220;&#x9664;&#x53D8;&#x91CF;
+unset var
+echo ${var}
+</code></pre>
+<p>&#x6267;&#x884C;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-c">qincji:giteeblog mac$ ./test.sh 
+./test.sh: line <span class="hljs-number">9</span>: <span class="hljs-number">4</span>var=<span class="hljs-number">5</span>: command not found
+./test.sh: line <span class="hljs-number">10</span>: ?var=<span class="hljs-number">6</span>: command not found
+./test.sh: line <span class="hljs-number">11</span>: var*<span class="hljs-number">2</span>=<span class="hljs-number">7</span>: command not found
+<span class="hljs-number">138</span>M .
+</code></pre>
+<h4 id="&#x5B57;&#x7B26;&#x4E32;"><a name="&#x5B57;&#x7B26;&#x4E32;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x7B26;&#x4E32;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5B57;&#x7B26;&#x4E32;" class="plugin-anchor" href="#&#x5B57;&#x7B26;&#x4E32;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B57;&#x7B26;&#x4E32;</h4>
+<p>&#x4F7F;&#x7528;<code>&apos;</code>&#x6216;&#x8005;<code>&quot;</code>&#x6765;&#x5B9A;&#x4E49;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x5F15;&#x53F7;&#x3002;&#x4F46;&#x662F;<code>&apos;</code>&#x4E2D;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x53D8;&#x91CF;&#x548C;&#x8F6C;&#x4E49;&#x7B26;&#x3002;&#x6240;&#x4EE5;&#x8BB0;&#x4F4F;&#x7528;<code>&quot;</code>&#x5C31;&#x884C;&#x4E86;&#x3002;&#x5B57;&#x7B26;&#x4E32;&#x5E38;&#x89C4;&#x64CD;&#x4F5C;&#xFF0C;&#x6709;&#xFF1A;</p>
+<ul>
+<li>1.&#x5B57;&#x7B26;&#x4E32;&#x62FC;&#x63A5;&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;<code>&apos;hello&#xFF0C;&apos;${&#x4E32;}&apos;&apos;</code>&#x6216;<code>&quot;hello&#xFF0C;${&#x4E32;}&quot;</code>&#x3002;</li>
+<li>2.&#x83B7;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;<code>${#&#x4E32;}</code>&#x3002;</li>
+<li>3.&#x622A;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x683C;&#x5F0F;<code>${&#x4E32;:2:3}</code>&#xFF0C;&#x5176;&#x4E2D;2&#x4E3A;&#x8D77;&#x70B9;&#xFF0C;3&#x4E3A;&#x622A;&#x53D6;&#x7684;&#x4E2A;&#x6570;&#x3002;</li>
+</ul>
+<p>&#x7F16;&#x8F91;<code>test.sh</code>&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c">#!/bin/bash
+name=&quot;123456&quot;
+full1=&apos;1-hello&#xFF0C;&apos;${name}&apos;&apos; #1.&#x5355;&#x5F15;&#x53F7;&#x5B57;&#x7B26;&#x4E32;&#x62FC;&#x63A5;
+full2=&quot;1-hello&#xFF0C;${name}&quot; #1.&#x53CC;&#x5F15;&#x53F7;&#x5B57;&#x7B26;&#x4E32;&#x62FC;&#x63A5;
+echo ${full1}
+echo ${full2}
+echo &quot;2-&#x957F;&#x5EA6;&#xFF1A;${#name}&quot;  #2.&#x83B7;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;
+echo &quot;3-&#x622A;&#x53D6;&#xFF1A;${name:2:3}&quot;  #3.&#x622A;&#x53D6;&#x5B57;&#x7B26;&#x4E32;
+</code></pre>
+<p>&#x6267;&#x884C;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-c">qincji:giteeblog mac$ ./test.sh 
+<span class="hljs-number">1</span>-hello&#xFF0C;<span class="hljs-number">123456</span>
+<span class="hljs-number">1</span>-hello&#xFF0C;<span class="hljs-number">123456</span>
+<span class="hljs-number">2</span>-&#x957F;&#x5EA6;&#xFF1A;<span class="hljs-number">6</span>
+<span class="hljs-number">3</span>-&#x622A;&#x53D6;&#xFF1A;<span class="hljs-number">345</span>
+</code></pre>
+<h4 id="&#x6570;&#x7EC4;"><a name="&#x6570;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6570;&#x7EC4;" class="plugin-anchor" href="#&#x6570;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x7EC4;</h4>
+<p>Bash&#x53EA;&#x652F;&#x6301;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#xFF0C;&#x4E0B;&#x6807;&#x4ECE; 0 &#x5F00;&#x59CB;&#xFF0C;&#x4E0B;&#x6807;&#x53EF;&#x4EE5;&#x662F;&#x6574;&#x6570;&#x6216;&#x7B97;&#x672F;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x5176;&#x503C;&#x5E94;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E; 0&#x3002;&#x6570;&#x7EC4;&#x5E38;&#x89C4;&#x64CD;&#x4F5C;&#xFF0C;&#x6709;&#xFF1A;</p>
+<ul>
+<li>1.&#x521B;&#x5EFA;&#x6570;&#x7EC4;&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;<code>array=(value0 value1 value2)</code>&#x6216;&#x6307;&#x5B9A;&#x4E0B;&#x6807;<code>array=([1]=value0 [1]=value1 [2]=value2)</code>&#x3002;</li>
+<li>2.&#x8BBF;&#x95EE;&#x5143;&#x7D20;&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;&#x83B7;&#x53D6;&#x5355;&#x4E2A;&#xFF1A;<code>&quot;${array[&#x4E0B;&#x6807;]}&quot;</code>&#xFF1B;&#x83B7;&#x53D6;&#x6240;&#x6709;&#xFF1A;<code>&quot;${array[@]}&quot;</code>&#x3002;</li>
+<li>3.&#x53D6;&#x5F97;&#x4E2A;&#x6570;&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;<code>&quot;${#array[@]}&quot;</code>&#x6216;<code>&quot;${#array[*]}&quot;</code>&#x3002;</li>
+<li>4.&#x589E;&#x52A0;&#x5143;&#x7D20;&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;<code>array=(value3 &quot;${array[@]}&quot; value4)</code>&#x3002;</li>
+<li>5.&#x5220;&#x9664;&#x5143;&#x7D20;&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;<code>unset array[0]</code>&#x3002;</li>
+</ul>
+<p>&#x7F16;&#x8F91;<code>test.sh</code>&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c">#!/bin/bash
+<span class="hljs-built_in">array</span>=([<span class="hljs-number">1</span>]=<span class="hljs-number">1</span> [<span class="hljs-number">0</span>]=<span class="hljs-string">&quot;a&quot;</span> [<span class="hljs-number">3</span>]=<span class="hljs-string">&quot;&#xFFE5;&quot;</span>)  #<span class="hljs-number">1.</span>&#x521B;&#x5EFA;&#x6570;&#x7EC4;
+echo <span class="hljs-string">&quot;2-&#x8BBF;&#x95EE;&#xFF1A;v1=${array[1]}&#xFF0C;v2=${array[@]}&quot;</span> #<span class="hljs-number">2.</span>&#x8BBF;&#x95EE;&#x5143;&#x7D20;
+echo <span class="hljs-string">&quot;3-&#x83B7;&#x53D6;&#xFF1A;len1=${#array[@]}&#xFF0C;len2=${#array[*]}&quot;</span> #<span class="hljs-number">3.</span>&#x53D6;&#x5F97;&#x4E2A;&#x6570;
+<span class="hljs-built_in">array</span>=(<span class="hljs-string">&quot;NO&quot;</span> <span class="hljs-string">&quot;${array[@]}&quot;</span> <span class="hljs-number">33</span>) #<span class="hljs-number">4.</span>&#x589E;&#x52A0;&#x5143;&#x7D20;
+echo <span class="hljs-string">&quot;4-&#x589E;&#x52A0;&#xFF1A;${array[@]}&quot;</span>
+unset <span class="hljs-built_in">array</span>[<span class="hljs-number">0</span>] #<span class="hljs-number">5.</span>&#x5220;&#x9664;&#x5143;&#x7D20;
+echo <span class="hljs-string">&quot;5-&#x5220;&#x9664;&#xFF1A;${array[@]}&quot;</span>
+</code></pre>
+<p>&#x6267;&#x884C;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-c">qincji:giteeblog mac$ ./test.sh 
+<span class="hljs-number">2</span>-&#x8BBF;&#x95EE;&#xFF1A;v1=<span class="hljs-number">1</span>&#xFF0C;v2=a <span class="hljs-number">1</span> &#xFFE5;
+<span class="hljs-number">3</span>-&#x83B7;&#x53D6;&#xFF1A;len1=<span class="hljs-number">3</span>&#xFF0C;len2=<span class="hljs-number">3</span>
+<span class="hljs-number">4</span>-&#x589E;&#x52A0;&#xFF1A;NO a <span class="hljs-number">1</span> &#xFFE5; <span class="hljs-number">33</span>
+<span class="hljs-number">5</span>-&#x5220;&#x9664;&#xFF1A;a <span class="hljs-number">1</span> &#xFFE5; <span class="hljs-number">33</span>
+</code></pre>
+<h4 id="&#x8FD0;&#x7B97;&#x7B26;"><a name="&#x8FD0;&#x7B97;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8FD0;&#x7B97;&#x7B26;" class="plugin-anchor" href="#&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD0;&#x7B97;&#x7B26;</h4>
+<h5 id="&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x7B26;"><a name="&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x7B26;" class="plugin-anchor" href="#&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x7B26;</h5>
+<ul>
+<li>+ - <em> / %&#xFF08;&#x52A0;&#x51CF;&#x4E58;&#x9664;&#x53D6;&#x4F59;&#xFF09;&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;<code>expr value0 &#x7B26;&#x53F7; value1</code>&#xFF0C;&#x7279;&#x6B8A;&#x7B26;&#x53F7;&#x9700;&#x8981;&#x8F6C;&#x4E49;&#xFF0C;&#x5982;`expr 3 \</em> 4`&#x7ED3;&#x679C;&#x4E3A;12&#x3002;</li>
+<li>=&#xFF08;&#x8D4B;&#x503C;&#xFF09;&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;<code>value=value1</code>&#xFF0C;&#x628A;value1&#x8D4B;&#x503C;&#x7ED9;value&#x3002;</li>
+<li>==&#xFF08;&#x6BD4;&#x8F83;&#x76F8;&#x7B49;&#xFF09;&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;<code>[ value1 == value2 ]</code>&#xFF0C;&#x5982;<code>[ 2 == 5 ]</code>&#xFF0C;&#x8FD4;&#x56DE;false&#x3002;</li>
+<li>!=&#xFF08;&#x6BD4;&#x8F83;&#x4E0D;&#x76F8;&#x7B49;&#xFF09;&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;<code>[ value1 != value2 ]</code>&#xFF0C;&#x5982;<code>[ 2 != 5 ]</code>&#xFF0C;&#x8FD4;&#x56DE;true&#x3002;
+&#x6CE8;&#x610F;&#xFF1A;<code>[ value1 != &apos;value2&apos; ]</code>&#x662F;&#x5E26;&#x7A7A;&#x683C;&#x7684;&#xFF0C;&#x5982;&#x9519;&#x8BEF;&#x5199;&#x6CD5;&#xFF1A;<code>[value1!=&apos;value2&apos;]</code>&#x3002;&#x5728;&#x5FAA;&#x73AF;&#x4F53;&#x6D4B;&#x8BD5;&#x4E2D;&#x4F7F;&#x7528;<code>[]</code>&#x4E0D;&#x8D77;&#x4F5C;&#x7528;&#xFF0C;&#x9700;&#x8981;&#x7528;<code>(())</code>&#xFF0C;&#x5982;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-c">a=1
+while (($a &lt; 10)); do
+# if [ a == 2 ] #&#x4E0D;&#x8D77;&#x4F5C;&#x7528;
+  if ((a == 2)); then
+    echo &quot;while&#x8BED;&#x53E5;&#xFF1A;continue&quot;
+    let &quot;a++&quot;
+    continue
+  elif ((a == 4)); then
+    echo &quot;while&#x8BED;&#x53E5;&#xFF1A;break&quot;
+    break
+  fi
+  echo &quot;while&#x8BED;&#x53E5;&#xFF1A;$a&quot;
+  let &quot;a++&quot;
+done
+</code></pre>
+<p>&#x7F16;&#x8F91;<code>test.sh</code>&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c">#!/bin/bash
+a=<span class="hljs-number">3</span>
+b=<span class="hljs-number">3</span>
+o1=`expr ${a} \* ${b}`
+echo <span class="hljs-string">&quot;o1=${o1}&quot;</span>
+<span class="hljs-keyword">if</span> [ $a == $b ]
+then
+   echo <span class="hljs-string">&quot;a &#x7B49;&#x4E8E; b&quot;</span>
+<span class="hljs-keyword">else</span>
+   echo <span class="hljs-string">&quot;a &#x4E0D;&#x7B49;&#x4E8E; b&quot;</span>
+fi
+</code></pre>
+<p>&#x6267;&#x884C;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-c">qincji:giteeblog mac$ ./test.sh 
+o1=<span class="hljs-number">9</span>
+a &#x7B49;&#x4E8E; b
+</code></pre>
+<h5 id="&#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;"><a name="&#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;" class="plugin-anchor" href="#&#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;</h5>
+<p>&#x901A;&#x7528;&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;<code>[ value1 &#x7B26;&#x53F7; value2 ]</code>&#xFF0C;&#x7528;&#x4E8E;&#x6BD4;&#x8F83;&#x7ED3;&#x6784;&#x4E2D;&#xFF0C;&#x540C;&#x4E0A;<code>==</code>&#x548C;<code>!=</code>&#x7528;&#x6CD5;&#x4E00;&#x6837;&#x3002;</p>
+<ul>
+<li>-eq &#x662F;&#x5426;&#x76F8;&#x7B49;&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;<code>[ value1 -eq value2 ]</code>&#xFF0C;&#x5982;<code>[ 2 -eq 5 ]</code>&#xFF0C;&#x8FD4;&#x56DE;false&#x3002;</li>
+<li>-ne &#x662F;&#x5426;&#x4E0D;&#x76F8;&#x7B49;&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;&#x540C;&#x4E0A;&#x3002;</li>
+<li>-gt &gt;&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;&#x540C;&#x4E0A;&#x3002;</li>
+<li>-lt &lt;&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;&#x540C;&#x4E0A;&#x3002;</li>
+<li>-ge &gt;=&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;&#x540C;&#x4E0A;&#x3002;</li>
+<li>-le &lt;=&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;&#x540C;&#x4E0A;&#x3002;</li>
+</ul>
+<h5 id="&#x5E03;&#x5C14;&#x8FD0;&#x7B97;&#x7B26;"><a name="&#x5E03;&#x5C14;&#x8FD0;&#x7B97;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x5E03;&#x5C14;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5E03;&#x5C14;&#x8FD0;&#x7B97;&#x7B26;" class="plugin-anchor" href="#&#x5E03;&#x5C14;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E03;&#x5C14;&#x8FD0;&#x7B97;&#x7B26;</h5>
+<ul>
+<li>! &#x975E;&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;<code>[ ! &#x8868;&#x8FBE;&#x5F0F; ]</code>&#x3002;&#x4E0E;&#x8868;&#x793A;&#x5F0F;&#x7ED3;&#x679C;&#x76F8;&#x53CD;&#x3002;&#x3002;&#x5982;<code>[ ! 1 == 1 ]</code>&#x8FD4;&#x56DE; false&#x3002;</li>
+<li>-o &#x6216; (&#x4E0E;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;<code>||</code>&#x76F8;&#x540C;)&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;<code>[ &#x8868;&#x8FBE;&#x5F0F;1 -o &#x8868;&#x8FBE;&#x5F0F;2 ]</code>&#x3002;&#x6709;&#x4E00;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x4E3A; true &#x5219;&#x8FD4;&#x56DE; true&#x3002;&#x5982;<code>[ 1 == 1 -o 2 != 2 ]</code>&#x8FD4;&#x56DE; true&#x3002;</li>
+<li>-a &#x4E0E; (&#x4E0E;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;<code>&amp;&amp;</code>&#x76F8;&#x540C;)&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;<code>[ &#x8868;&#x8FBE;&#x5F0F;1 -o &#x8868;&#x8FBE;&#x5F0F;2 ]</code>&#x3002;&#x4E24;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x90FD;&#x4E3A; true &#x624D;&#x8FD4;&#x56DE; true&#x3002;&#x5982;<code>[ 1 == 1 -a 2 != 2 ]</code>&#x8FD4;&#x56DE; false&#x3002;</li>
+</ul>
+<h5 id="&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;"><a name="&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;" class="plugin-anchor" href="#&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;</h5>
+<p><code>||</code>&#x548C;<code>&amp;&amp;</code>&#x53C2;&#x8003;<code>&#x5E03;&#x5C14;&#x8FD0;&#x7B97;&#x7B26;</code>&#x3002;</p>
+<h5 id="&#x5B57;&#x7B26;&#x4E32;&#x8FD0;&#x7B97;&#x7B26;"><a name="&#x5B57;&#x7B26;&#x4E32;&#x8FD0;&#x7B97;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x7B26;&#x4E32;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5B57;&#x7B26;&#x4E32;&#x8FD0;&#x7B97;&#x7B26;" class="plugin-anchor" href="#&#x5B57;&#x7B26;&#x4E32;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B57;&#x7B26;&#x4E32;&#x8FD0;&#x7B97;&#x7B26;</h5>
+<ul>
+<li>= &#x5B57;&#x7B26;&#x4E32;&#x76F8;&#x7B49;&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;<code>[ value1 = value2 ]</code>&#xFF0C;&#x5982;a=&quot;a&quot;,b=&quot;b&quot;&#xFF0C;<code>[ ${a} = ${b} ]</code>&#xFF0C;&#x8FD4;&#x56DE;true&#x3002;</li>
+<li>!= &#x5B57;&#x7B26;&#x4E32;&#x4E0D;&#x76F8;&#x7B49;&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;<code>[ value1 != value2 ]</code>&#xFF0C;&#x5982;a=&quot;a&quot;,b=&quot;b&quot;&#xFF0C;<code>[ ${a} != ${b} ]</code>&#xFF0C;&#x8FD4;&#x56DE;false&#x3002;</li>
+<li>-z &#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;&#x4E3A;0&#x4E3A;true&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;<code>[ -z value ]</code>&#xFF0C;&#x5982;a=&quot;a&quot;&#xFF0C;<code>[ -z ${a} ]</code>&#xFF0C;&#x8FD4;&#x56DE;false&#x3002;</li>
+<li>-n &#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;&#x4E0D;&#x4E3A;0&#x4E3A;true&#xFF0C; &#x683C;&#x5F0F;&#xFF1A;<code>[ -n = value ]</code>&#xFF0C;&#x5982;a=&quot;a&quot;&#xFF0C;<code>[ -n = ${a} ]</code>&#xFF0C;&#x8FD4;&#x56DE;true&#x3002;</li>
+</ul>
+<h5 id="&#x6587;&#x4EF6;&#x8FD0;&#x7B97;&#x7B26;"><a name="&#x6587;&#x4EF6;&#x8FD0;&#x7B97;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x4EF6;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6587;&#x4EF6;&#x8FD0;&#x7B97;&#x7B26;" class="plugin-anchor" href="#&#x6587;&#x4EF6;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6587;&#x4EF6;&#x8FD0;&#x7B97;&#x7B26;</h5>
+<p>&#x901A;&#x7528;&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;<code>[&#x7B26;&#x53F7; &#x6587;&#x4EF6;&#x8DEF;&#x5F84; ]</code>&#xFF0C;&#x7528;&#x4E8E;&#x68C0;&#x67E5;&#x6587;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x5982;&#x4F55;&#x7B26;&#x5408;&#x4E3A;true&#x3002;</p>
+<ul>
+<li>-d &#x76EE;&#x5F55;&#x5B58;&#x5728;&#x4E3A;true&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;<code>[ -d filePath ]</code>&#xFF0C;&#x5982;<code>[ -d &quot;./&quot; ]</code>&#xFF0C;&#x4E3A;true&#x3002;</li>
+<li>-f &#x6587;&#x4EF6;&#x5B58;&#x5728;&#x4E3A;true&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;<code>[ -f filePath ]</code>&#xFF0C;&#x5982;<code>[ -f &quot;./test.sh&quot; ]</code>&#xFF0C;&#x4E3A;true&#x3002;</li>
+<li>-r &#x53EF;&#x8BFB;&#x4E3A;true&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;&#x540C;&#x4E0A;&#x3002;</li>
+<li>-w &#x53EF;&#x5199;&#x4E3A;true&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;&#x540C;&#x4E0A;&#x3002;</li>
+<li>-x &#x53EF;&#x6267;&#x884C; &#x53EF;&#x6267;&#x884C;&#x4E3A;true&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;&#x540C;&#x4E0A;&#x3002;</li>
+<li>-s &#x6587;&#x4EF6;&#x4E0D;&#x4E3A;&#x7A7A;(&#x6709;&#x5185;&#x5BB9;) true&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;&#x540C;&#x4E0A;&#x3002;</li>
+<li>-e &#x6587;&#x4EF6;/&#x76EE;&#x5F55;&#x5B58;&#x5728;&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;&#x540C;&#x4E0A;&#x3002;</li>
+</ul>
+<p>&#x7F16;&#x8F91;<code>test.sh</code>&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c">#!/bin/bash
+<span class="hljs-keyword">if</span> [ -d <span class="hljs-string">&quot;./&quot;</span> ]
+then
+   echo <span class="hljs-string">&quot;1-&#x8F93;&#x51FA;&#x4E3A;true&quot;</span>
+<span class="hljs-keyword">else</span>
+   echo <span class="hljs-string">&quot;1-&#x8F93;&#x51FA;&#x4E3A;false&quot;</span>
+fi
+<span class="hljs-keyword">if</span> [ -w <span class="hljs-string">&quot;./test.sh&quot;</span> ]
+then
+   echo <span class="hljs-string">&quot;2-&#x8F93;&#x51FA;&#x4E3A;true&quot;</span>
+<span class="hljs-keyword">else</span>
+   echo <span class="hljs-string">&quot;2-&#x8F93;&#x51FA;&#x4E3A;false&quot;</span>
+fi
+</code></pre>
+<p>&#x6267;&#x884C;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-c">qincji:giteeblog mac$ ./test.sh 
+<span class="hljs-number">1</span>-&#x8F93;&#x51FA;&#x4E3A;<span class="hljs-literal">true</span>
+<span class="hljs-number">2</span>-&#x8F93;&#x51FA;&#x4E3A;<span class="hljs-literal">true</span>
+</code></pre>
+<h4 id="&#x6D41;&#x7A0B;&#x63A7;&#x5236;"><a name="&#x6D41;&#x7A0B;&#x63A7;&#x5236;" class="anchor-navigation-ex-anchor" href="#&#x6D41;&#x7A0B;&#x63A7;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6D41;&#x7A0B;&#x63A7;&#x5236;" class="plugin-anchor" href="#&#x6D41;&#x7A0B;&#x63A7;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D41;&#x7A0B;&#x63A7;&#x5236;</h4>
+<ul>
+<li>&#x6761;&#x4EF6;&#x8BED;&#x53E5;&#xFF1A;
+&#x2460;<code>if..elif..else</code>&#xFF0C;&#x4F7F;&#x7528;<code>then..fi</code>&#x6765;&#x63A7;&#x5236;&#x547D;&#x4E2D;&#x7684;&#x8303;&#x56F4;&#x3002;&#x5355;&#x884C;&#x683C;&#x5F0F;&#xFF1A;<code>if [ &#x6761;&#x4EF6;1 ]; then &#x6267;&#x884C;&#x4F53;1; elif [ &#x6761;&#x4EF6;2 ]; then &#x6267;&#x884C;&#x4F53;2; else &#x6267;&#x884C;&#x4F53;2; fi</code>&#xFF0C;&#x591A;&#x884C;&#x683C;&#x5F0F;&#xFF1A;&#x76F4;&#x63A5;<code>;</code>&#x53BB;&#x6389;&#x5373;&#x53EF;&#x3002;
+&#x2461;<code>case</code>&#xFF0C;&#x5728;<code>exec..esac</code>&#x8303;&#x56F4;&#x5185;&#x3002;&#x683C;&#x5F0F;&#x5982;&#x4E0B;</li>
+</ul>
+<pre><code class="lang-c">exec
+<span class="hljs-keyword">case</span> &#x8F93;&#x5165; in
+&#x6761;&#x4EF6;<span class="hljs-number">1</span>) &#x6267;&#x884C;&#x4F53;<span class="hljs-number">1</span>;;
+&#x6761;&#x4EF6;<span class="hljs-number">2</span>) &#x6267;&#x884C;&#x4F53;<span class="hljs-number">2</span>;;
+*) &#x5176;&#x4ED6;&#x6267;&#x884C;&#x4F53;;;
+esac
+</code></pre>
+<ul>
+<li>&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#xFF1A;<code>for</code>&#x3001;<code>while</code>&#x548C;<code>until</code>&#x3002;&#x5FAA;&#x73AF;&#x4F53;&#x5728;<code>do..done</code>&#x8303;&#x56F4;&#x5185;&#xFF0C;&#x5728;&#x5FAA;&#x73AF;&#x4E2D;&#x9047;&#x5230;<code>continue</code>&#x4F1A;&#x8FDB;&#x5165;&#x4E0B;&#x4E2A;&#x5FAA;&#x73AF;&#xFF0C;&#x9047;&#x5230;<code>break</code>&#x8DF3;&#x51FA;&#x5FAA;&#x73AF;&#x3002;</li>
+</ul>
+<p>&#x7F16;&#x8F91;<code>test.sh</code>&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c">#!/bin/bash
+#1.&#x6CE8;&#x610F;&#x5355;&#x884C;&#x7684;&#x5199;&#x6CD5;&#x9700;&#x8981;&#x7528; &#xFF1B; &#x628A;&#x8BED;&#x53E5;&#x6BB5;&#x843D;&#x9694;&#x5F00;
+if [ &quot;111&quot; = &quot;abc&quot; ]; then
+  echo &quot;&#x8F93;&#x51FA;if-1&quot;
+elif [ &quot;abc&quot; = &quot;abc&quot; ]; then
+  echo &quot;&#x8F93;&#x51FA;elif-1&quot;
+else
+  echo &quot;&#x8F93;&#x51FA;else-1&quot;
+fi
+#2.&#x6CE8;&#x610F;&#x5355;&#x884C;&#x7684;&#x5199;&#x6CD5;&#x9700;&#x8981;&#x7528; &#xFF1B; &#x628A;&#x8BED;&#x53E5;&#x6BB5;&#x843D;&#x9694;&#x5F00;
+if [ &quot;111&quot; = &quot;abc&quot; ]; then echo &quot;&#x8F93;&#x51FA;if-2&quot;; elif [ &quot;abc2&quot; = &quot;abc&quot; ]; then echo &quot;&#x8F93;&#x51FA;elif-2&quot;; else echo &quot;&#x8F93;&#x51FA;else-2&quot;; fi
+
+#3.case&#x8BED;&#x53E5;
+exec
+case &quot;4&quot; in
+&quot;a&quot;) echo &quot;case&#x8F93;&#x51FA;a&quot; ;;
+&quot;b&quot;) echo &quot;case&#x8F93;&#x51FA;b&quot; ;;
+*) echo &quot;case&#x8F93;&#x51FA;*&quot; ;;
+esac
+
+#4.for&#x8BED;&#x53E5;
+for var in &quot;red&quot; 2 &quot;yes&quot;; do echo &quot;for&#x8BED;&#x53E5;&#xFF1A;${var}&quot;; done
+
+#5.while&#x8BED;&#x53E5;
+a=1
+#while [ $a -le 10 ]
+while (($a &lt; 10)); do
+  # if [ a == 2 ] #&#x4E0D;&#x8D77;&#x4F5C;&#x7528;
+  if ((a == 2)); then
+    echo &quot;while&#x8BED;&#x53E5;&#xFF1A;continue&quot;
+    let &quot;a++&quot;
+    continue
+  elif ((a == 4)); then
+    echo &quot;while&#x8BED;&#x53E5;&#xFF1A;break&quot;
+    break
+  fi
+  echo &quot;while&#x8BED;&#x53E5;&#xFF1A;$a&quot;
+  let &quot;a++&quot;
+done
+
+#6.until&#x8BED;&#x53E5;
+until (($a &gt;= 6)); do
+  echo &quot;until&#x8BED;&#x53E5;&#xFF1A;$a&quot;
+  let &quot;a++&quot;
+done
+</code></pre>
+<p>&#x6267;&#x884C;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-c">qincji:giteeblog mac$ ./test.sh 
+&#x8F93;&#x51FA;elif<span class="hljs-number">-1</span>
+&#x8F93;&#x51FA;<span class="hljs-keyword">else</span><span class="hljs-number">-2</span>
+<span class="hljs-keyword">case</span>&#x8F93;&#x51FA;*
+<span class="hljs-keyword">for</span>&#x8BED;&#x53E5;&#xFF1A;red
+<span class="hljs-keyword">for</span>&#x8BED;&#x53E5;&#xFF1A;<span class="hljs-number">2</span>
+<span class="hljs-keyword">for</span>&#x8BED;&#x53E5;&#xFF1A;yes
+<span class="hljs-keyword">while</span>&#x8BED;&#x53E5;&#xFF1A;<span class="hljs-number">1</span>
+<span class="hljs-keyword">while</span>&#x8BED;&#x53E5;&#xFF1A;<span class="hljs-keyword">continue</span>
+<span class="hljs-keyword">while</span>&#x8BED;&#x53E5;&#xFF1A;<span class="hljs-number">3</span>
+<span class="hljs-keyword">while</span>&#x8BED;&#x53E5;&#xFF1A;<span class="hljs-keyword">break</span>
+until&#x8BED;&#x53E5;&#xFF1A;<span class="hljs-number">4</span>
+until&#x8BED;&#x53E5;&#xFF1A;<span class="hljs-number">5</span>
+</code></pre>
+<h4 id="&#x51FD;&#x6570;"><a name="&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x51FD;&#x6570;" class="plugin-anchor" href="#&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x51FD;&#x6570;</h4>
+<p>&#x7F16;&#x8F91;<code>test.sh</code>&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-javascript">#!/bin/bash
+#function&#x5173;&#x952E;&#x5B57;&#x53EF;&#x7701;&#x4E86;&#xFF0C;fun_name&#x968F;&#x4FBF;&#x5B9A;&#x7684;&#x51FD;&#x6570;&#x540D;&#x79F0;&#x3002;
+function fun_name(){
+    echo $0 #$0&#xFF1A;&#x6587;&#x4EF6;&#x540D;&#x79F0;
+    echo $1 #$1&#xFF1A;&#x4F20;&#x9012;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;
+    echo $2 #$2&#xFF1A;&#x4F20;&#x9012;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;
+}
+fun_name 1 &quot;Yes&quot;
+</code></pre>
+<p>&#x6267;&#x884C;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-c">qincji:giteeblog mac$ ./test.sh 
+./test.sh
+<span class="hljs-number">1</span>
+Yes
+</code></pre>
+<h3 id="shell&#x5176;&#x4ED6;&#x5173;&#x952E;&#x8BCD;"><a name="shell&#x5176;&#x4ED6;&#x5173;&#x952E;&#x8BCD;" class="anchor-navigation-ex-anchor" href="#shell&#x5176;&#x4ED6;&#x5173;&#x952E;&#x8BCD;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="shell&#x5176;&#x4ED6;&#x5173;&#x952E;&#x8BCD;" class="plugin-anchor" href="#shell&#x5176;&#x4ED6;&#x5173;&#x952E;&#x8BCD;"><i class="fa fa-link" aria-hidden="true"></i></a>Shell&#x5176;&#x4ED6;&#x5173;&#x952E;&#x8BCD;</h3>
+<h4 id="eval"><a name="eval" class="anchor-navigation-ex-anchor" href="#eval"><i class="fa fa-link" aria-hidden="true"></i></a><a name="eval" class="plugin-anchor" href="#eval"><i class="fa fa-link" aria-hidden="true"></i></a><code>eval</code></h4>
+<p>&#x8BED;&#x6CD5;&#xFF1A;eval cmdLine&#xFF0C;eval&#x4F1A;&#x5BF9;&#x540E;&#x9762;&#x7684;cmdLine&#x8FDB;&#x884C;&#x4E24;&#x904D;&#x626B;&#x63CF;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x7B2C;&#x4E00;&#x904D;&#x626B;&#x9762;&#x540E;cmdLine&#x662F;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x547D;&#x4EE4;&#xFF0C;&#x5219;&#x6267;&#x884C;&#x6B64;&#x547D;&#x4EE4;&#xFF1B;&#x5982;&#x679C;cmdLine&#x4E2D;&#x542B;&#x6709;&#x53D8;&#x91CF;&#x7684;&#x95F4;&#x63A5;&#x5F15;&#x7528;&#xFF0C;&#x5219;&#x4FDD;&#x8BC1;&#x7B80;&#x4ECB;&#x5F15;&#x7528;&#x7684;&#x8BED;&#x4E49;&#x3002;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;
+&#x7F16;&#x8F91;<code>test.sh</code>&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c">#!/bin/bash
+#&#x6587;&#x4EF6;&#x4F20;&#x9012;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x8F93;&#x51FA;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x6570;
+<span class="hljs-function">function <span class="hljs-title">test</span><span class="hljs-params">()</span> </span>{
+    echo <span class="hljs-string">&quot;\$$#&quot;</span>
+    #&#x8FD9;&#x624D;&#x662F;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x7ED3;&#x679C;
+    eval echo <span class="hljs-string">&quot;\$$#&quot;</span>
+}
+test <span class="hljs-number">11</span> <span class="hljs-number">22</span> <span class="hljs-number">33</span> <span class="hljs-number">44</span>
+</code></pre>
+<p>&#x6267;&#x884C;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-c">qincji:giteeblog mac$ ./test.sh 
+$<span class="hljs-number">4</span>
+<span class="hljs-number">44</span>
+</code></pre>
+<h4 id="shift"><a name="shift" class="anchor-navigation-ex-anchor" href="#shift"><i class="fa fa-link" aria-hidden="true"></i></a><a name="shift" class="plugin-anchor" href="#shift"><i class="fa fa-link" aria-hidden="true"></i></a><code>shift</code></h4>
+<p>&#x8BED;&#x6CD5;&#xFF1A;shift number&#xFF0C;&#x4F4D;&#x7F6E;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x7528;shift&#x547D;&#x4EE4;&#x5DE6;&#x79FB;&#x3002;&#x6BD4;&#x5982;shift 3&#x8868;&#x793A;&#x539F;&#x6765;&#x7684;$4&#x73B0;&#x5728;&#x53D8;&#x6210;$1&#xFF0C;&#x539F;&#x6765;&#x7684;$5&#x73B0;&#x5728;&#x53D8;&#x6210;$2&#x7B49;&#x7B49;&#xFF0C;&#x539F;&#x6765;&#x7684;$1&#x3001;$2&#x3001;$3&#x4E22;&#x5F03;&#xFF0C;$0&#x4E0D;&#x79FB;&#x52A8;&#x3002;&#x4E0D;&#x5E26;&#x53C2;&#x6570;&#x7684;shift&#x547D;&#x4EE4;&#x76F8;&#x5F53;&#x4E8E;shift 1&#x3002;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;
+&#x7F16;&#x8F91;<code>test.sh</code>&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c">#!/bin/bash
+#&#x6587;&#x4EF6;&#x4F20;&#x9012;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x8F93;&#x51FA;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x6570;
+<span class="hljs-function">function <span class="hljs-title">test</span><span class="hljs-params">()</span> </span>{
+  until [ $# -eq <span class="hljs-number">0</span> ]; <span class="hljs-keyword">do</span>
+    echo <span class="hljs-string">&quot;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;: $1 &#x53C2;&#x6570;&#x4E2A;&#x6570;&#x4E3A;: $#&quot;</span>
+    shift <span class="hljs-number">2</span>
+  done
+}
+test <span class="hljs-number">11</span> <span class="hljs-number">22</span> <span class="hljs-number">33</span> <span class="hljs-number">44</span> <span class="hljs-number">55</span> <span class="hljs-number">66</span>
+</code></pre>
+<p>&#x6267;&#x884C;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-c">qincji:giteeblog mac$ ./test.sh 
+&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;: <span class="hljs-number">11</span> &#x53C2;&#x6570;&#x4E2A;&#x6570;&#x4E3A;: <span class="hljs-number">6</span>
+&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;: <span class="hljs-number">33</span> &#x53C2;&#x6570;&#x4E2A;&#x6570;&#x4E3A;: <span class="hljs-number">4</span>
+&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;: <span class="hljs-number">55</span> &#x53C2;&#x6570;&#x4E2A;&#x6570;&#x4E3A;: <span class="hljs-number">2</span>
+</code></pre>
+<p>&#x53C2;&#x8003;</p>
+<ul>
+<li><a href="https://www.cnblogs.com/jingmoxukong/p/7867397.html" target="_blank">https://www.cnblogs.com/jingmoxukong/p/7867397.html</a> </li>
+</ul>
+<p></p><footer class="page-footer"><span class="copyright">Copyright &#xA9; xhunmon 2022  all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Update: 
+2022-12-26 16:03:56
+</span></footer><hr><div id="vcomments"></div><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el: "#vcomments",appId: 'xMemPde6Lax4ffLfLBkuEi9t-gzGzoHsz',appKey: 'jIVEp2lShgotSTy0GalhgIzm',placeholder: 'Just go go',avatar: '',meta: undefined,pageSize: 10,lang: 'zh-CN',recordIP: false})</script><p></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="01_configure_help.html" class="navigation navigation-prev " aria-label="Previous page: Configure配置选项 (转载)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="03_build_ffmpeg.html" class="navigation navigation-next " aria-label="Next page: 编译FFmpeg4.2.2">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Shell脚本","level":"1.4.2","depth":2,"next":{"title":"编译FFmpeg4.2.2","level":"1.4.3","depth":2,"path":"FFmpeg/03_build_ffmpeg.md","ref":"FFmpeg/03_build_ffmpeg.md","articles":[]},"previous":{"title":"Configure配置选项 (转载)","level":"1.4.1","depth":2,"path":"FFmpeg/01_configure_help.md","ref":"FFmpeg/01_configure_help.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","favicon-absolute","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","highlight","back-to-top-button","code","-lunr","-search","search-pro","tbfed-pagefooter","pageview-count","auto-scroll-table","lightbox","hide-element","valine","embed-pdf","mermaid-gb3","image-wrapper","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy xhunmon 2022 ","modify_label":"Update: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"image-wrapper":{},"github":{"url":"https://github.com/xhunmon"},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"donate":{"alipay":"/source/images/alipayimg.jpeg","alipayText":"支付宝","button":"捐赠","title":"请作者喝杯coffee","wechat":"/source/images/wechatpayimg.jpeg","wechatText":"微信"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"/apple-tou ch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{},"favicon":"/source/images/favicon.png"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"xhunmon","repo":"VABlog","type":"star","count":true,"size":"small"},{"user":"xhunmon","width":"160","type":"follow","count":true,"size":"small"}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"embed-pdf":{},"valine":{"avatar":"","lang":"zh-CN","pageSize":10,"placeholder":"Just go go","recordIP":false,"appId":"xMemPde6Lax4ffLfLBkuEi9t-gzGzoHsz","appKey":"jIVEp2lShgotSTy0GalhgIzm"}},"theme":"default","author":"秦城季","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"秦城季&音视频","language":"zh-hans","links":{"sidebar":{"秦城季&音视频":"https://github.com/xhunmon/VABlog"}},"gitbook":"3.2.3","description":"未来那个项目都不应该缺少音视频！"},"file":{"path":"FFmpeg/02_shell.md","mtime":"2022-12-26T08:03:56.693Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-26T08:27:47.172Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

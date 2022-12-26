@@ -1,0 +1,1314 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>手撕FLV协议 · 秦城季&音视频</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="秦城季">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="08_demuxing.html" />
+    
+    
+    <link rel="prev" href="06_struct.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"xhunmon","repo":"VABlog","type":"star","count":true,"size":"small"},{"user":"xhunmon","width":"160","type":"follow","count":true,"size":"small"}]};
+    </script>
+
+    
+        <link rel="shortcut icon" href="/source/images/favicon.png" type="image/x-icon">
+    
+    
+    
+    
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-tou ch-icon-precomposed-152.png">
+    
+    
+        
+    
+    
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/xhunmon/VABlog" target="_blank" class="custom-link">秦城季&音视频</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    打怪之路总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../直播推流全过程/">
+            
+                <a href="../直播推流全过程/">
+            
+                    
+                    直播推流全过程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../直播推流全过程/1-yuv.html">
+            
+                <a href="../直播推流全过程/1-yuv.html">
+            
+                    
+                    视频数据源之YUV
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../直播推流全过程/2-pcm.html">
+            
+                <a href="../直播推流全过程/2-pcm.html">
+            
+                    
+                    音频数据源之PCM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../直播推流全过程/3-h264.html">
+            
+                <a href="../直播推流全过程/3-h264.html">
+            
+                    
+                    视频编码之H.264
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../直播推流全过程/4-aac.html">
+            
+                <a href="../直播推流全过程/4-aac.html">
+            
+                    
+                    音频编码之AAC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../直播推流全过程/5-rtmp.html">
+            
+                <a href="../直播推流全过程/5-rtmp.html">
+            
+                    
+                    直播推流编码之RTMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../直播推流全过程/h264-descriptor.html">
+            
+                <a href="../直播推流全过程/h264-descriptor.html">
+            
+                    
+                    其他：H.264符号描述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../直播推流全过程/6-optimize.html">
+            
+                <a href="../直播推流全过程/6-optimize.html">
+            
+                    
+                    其他：直播优化基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../AFPlayer/">
+            
+                <a href="../AFPlayer/">
+            
+                    
+                    AFPlayer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../AFPlayer/01_opensl_es.html">
+            
+                <a href="../AFPlayer/01_opensl_es.html">
+            
+                    
+                    OpenSL ES播放PCM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../AFPlayer/02_opengl_es.html">
+            
+                <a href="../AFPlayer/02_opengl_es.html">
+            
+                    
+                    OpenGL ES播放RGB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../AFPlayer/03_mediacodec.html">
+            
+                <a href="../AFPlayer/03_mediacodec.html">
+            
+                    
+                    FFmpeg实现MediaCodec解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../AFPlayer/04_build_for_android.html">
+            
+                <a href="../AFPlayer/04_build_for_android.html">
+            
+                    
+                    FFmpeg、x264、fdk-aac、openssl的交叉编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    FFmpeg
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="01_configure_help.html">
+            
+                <a href="01_configure_help.html">
+            
+                    
+                    Configure配置选项 (转载)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="02_shell.html">
+            
+                <a href="02_shell.html">
+            
+                    
+                    Shell脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="03_build_ffmpeg.html">
+            
+                <a href="03_build_ffmpeg.html">
+            
+                    
+                    编译FFmpeg4.2.2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="04_import_ffmpeg.html">
+            
+                <a href="04_import_ffmpeg.html">
+            
+                    
+                    FFmpeg导入到Clion（MacOS）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="05_source.html">
+            
+                <a href="05_source.html">
+            
+                    
+                    使用Clion阅读FFmpeg源码（支持跳转）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="06_struct.html">
+            
+                <a href="06_struct.html">
+            
+                    
+                    FFmpeg重要结构体（转载）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.7" data-path="07_flv.html">
+            
+                <a href="07_flv.html">
+            
+                    
+                    手撕FLV协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="08_demuxing.html">
+            
+                <a href="08_demuxing.html">
+            
+                    
+                    Demuxing（解封装）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="09_muxing.html">
+            
+                <a href="09_muxing.html">
+            
+                    
+                    Muxing（封装）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="10_remuxing.html">
+            
+                <a href="10_remuxing.html">
+            
+                    
+                    Remuxing（重新封装）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="11_decode.html">
+            
+                <a href="11_decode.html">
+            
+                    
+                    Decode（解码）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="12_encode.html">
+            
+                <a href="12_encode.html">
+            
+                    
+                    Encode（编码）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="13_transfer.html">
+            
+                <a href="13_transfer.html">
+            
+                    
+                    简单实现转码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="14_filter_v.html">
+            
+                <a href="14_filter_v.html">
+            
+                    
+                    Filter和SDL（Video）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="15_filter_a.html">
+            
+                <a href="15_filter_a.html">
+            
+                    
+                    Filter和SDL（Audio）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="16_transcode.html">
+            
+                <a href="16_transcode.html">
+            
+                    
+                    Transcode(转码)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="17_sync.html">
+            
+                <a href="17_sync.html">
+            
+                    
+                    音视频同步处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="18_command.html">
+            
+                <a href="18_command.html">
+            
+                    
+                    FFmpeg命令使用指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19" data-path="19_swscale.html">
+            
+                <a href="19_swscale.html">
+            
+                    
+                    Swscale（图像转换）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../OpenGL/">
+            
+                <a href="../OpenGL/">
+            
+                    
+                    OpenGL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../OpenGL/01_opengl.html">
+            
+                <a href="../OpenGL/01_opengl.html">
+            
+                    
+                    OpenGL基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../AFPlayer/02_opengl_es.html">
+            
+                <a href="../AFPlayer/02_opengl_es.html">
+            
+                    
+                    OpenGL ES播放RGB
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../其他零散知识/01_c_compile.html">
+            
+                <a href="../其他零散知识/01_c_compile.html">
+            
+                    
+                    其他零散知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../其他零散知识/01_c_compile.html">
+            
+                <a href="../其他零散知识/01_c_compile.html">
+            
+                    
+                    初步认识c/c++编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../其他零散知识/02_net_base.html">
+            
+                <a href="../其他零散知识/02_net_base.html">
+            
+                    
+                    网络基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../其他零散知识/03_adb_dy.html">
+            
+                <a href="../其他零散知识/03_adb_dy.html">
+            
+                    
+                    ADB的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >手撕FLV协议</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x624B;&#x6495;flv&#x534F;&#x8BAE;"><b></b>&#x624B;&#x6495;FLV&#x534F;&#x8BAE;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B9E;&#x73B0;&#x6548;&#x679C;"><b></b>&#x5B9E;&#x73B0;&#x6548;&#x679C;</a></li><li><span class="title-icon "></span><a href="#flv&#x534F;&#x8BAE;"><b></b>FLV&#x534F;&#x8BAE;</a></li><li><span class="title-icon "></span><a href="#&#x5B9E;&#x73B0;&#x4EE3;&#x7801;"><b></b>&#x5B9E;&#x73B0;&#x4EE3;&#x7801;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;ffplay&#x67E5;&#x770B;&#x8F93;&#x51FA;&#x6587;&#x4EF6;"><b></b>&#x4F7F;&#x7528;ffplay&#x67E5;&#x770B;&#x8F93;&#x51FA;&#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x5730;&#x5740;"><b></b>&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x5730;&#x5740;</a></li></ul></ul></div><a href="#&#x624B;&#x6495;flv&#x534F;&#x8BAE;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x624B;&#x6495;flv&#x534F;&#x8BAE;"><a name="&#x624B;&#x6495;flv&#x534F;&#x8BAE;" class="anchor-navigation-ex-anchor" href="#&#x624B;&#x6495;flv&#x534F;&#x8BAE;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x624B;&#x6495;flv&#x534F;&#x8BAE;" class="plugin-anchor" href="#&#x624B;&#x6495;flv&#x534F;&#x8BAE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x624B;&#x6495;FLV&#x534F;&#x8BAE;</h1>
+<h2 id="&#x5B9E;&#x73B0;&#x6548;&#x679C;"><a name="&#x5B9E;&#x73B0;&#x6548;&#x679C;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x73B0;&#x6548;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5B9E;&#x73B0;&#x6548;&#x679C;" class="plugin-anchor" href="#&#x5B9E;&#x73B0;&#x6548;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x73B0;&#x6548;&#x679C;</h2>
+<p>&#x7EAF;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x5206;&#x79BB;FLV&#x97F3;&#x89C6;&#x9891;&#x6D41;&#xFF0C;&#x5E76;&#x7EC4;&#x88C5;&#x6210;AAC&#x548C;H264&#x6587;&#x4EF6;&#xFF0C;&#x6700;&#x540E;&#x80FD;&#x6B63;&#x5E38;&#x64AD;&#x653E;&#x3002;&#x6CE8;&#xFF1A;&#x672C;&#x6587;&#x53EA;&#x5BF9;&#x6709;AAC&#x548C;H264&#x683C;&#x5F0F;&#x97F3;&#x89C6;&#x9891;&#x6D41;&#x7EC4;&#x6210;&#x7684;flv&#x8FDB;&#x884C;&#x5206;&#x79BB;&#x3002;</p>
+<h2 id="flv&#x534F;&#x8BAE;"><a name="flv&#x534F;&#x8BAE;" class="anchor-navigation-ex-anchor" href="#flv&#x534F;&#x8BAE;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="flv&#x534F;&#x8BAE;" class="plugin-anchor" href="#flv&#x534F;&#x8BAE;"><i class="fa fa-link" aria-hidden="true"></i></a>FLV&#x534F;&#x8BAE;</h2>
+<p><a href="07_flv/flv-pr.jpg" data-lightbox="fe2f9a95-dfa2-4164-b8ab-f214d23e39c5" data-title="FLV&#x534F;&#x8BAE;"><div class="image-wrapper"><img src="07_flv/flv-pr.jpg" alt="FLV&#x534F;&#x8BAE;"></div></a></p>
+<p>&#x6CE8;&#xFF1A;&#x811A;&#x672C;&#x90E8;&#x5206;&#x672C;&#x6587;&#x672A;&#x4F7F;&#x7528;&#xFF0C;<a href="https://www.cnblogs.com/chyingp/p/flv-getting-started.html" target="_blank">&#x53EF;&#x524D;&#x5F80;&#x8FD9;&#x67E5;&#x770B;</a>&#x3002;</p>
+<h2 id="&#x5B9E;&#x73B0;&#x4EE3;&#x7801;"><a name="&#x5B9E;&#x73B0;&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x73B0;&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5B9E;&#x73B0;&#x4EE3;&#x7801;" class="plugin-anchor" href="#&#x5B9E;&#x73B0;&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x73B0;&#x4EE3;&#x7801;</h2>
+<p>&#x4EE3;&#x7801;&#x6CE8;&#x91CA;&#x5DF2;&#x7ECF;&#x5F88;&#x8BE6;&#x7EC6;&#x4E86;&#xFF0C;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x5BF9;&#x7167;&#x534F;&#x8BAE;&#x8868;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x89E3;&#x6790;&#xFF0C;&#x5176;&#x4E2D;&#xFF1A;</p>
+<ul>
+<li>(1) H264&#x534F;&#x8BAE;&#x8BF7;&#x770B;<a href="../&#x76F4;&#x64AD;&#x63A8;&#x6D41;&#x5168;&#x8FC7;&#x7A0B;/3-h264.html">&#x76F4;&#x64AD;&#x63A8;&#x6D41;&#x5168;&#x8FC7;&#x7A0B;&#xFF1A;&#x89C6;&#x9891;&#x7F16;&#x7801;&#x4E4B;H.264&#xFF08;3&#xFF09;</a>;</li>
+<li>(2) AAC&#x534F;&#x8BAE;&#x8BF7;&#x770B;<a href="../&#x76F4;&#x64AD;&#x63A8;&#x6D41;&#x5168;&#x8FC7;&#x7A0B;/4-aac.html">&#x76F4;&#x64AD;&#x63A8;&#x6D41;&#x5168;&#x8FC7;&#x7A0B;&#xFF1A;&#x97F3;&#x9891;&#x7F16;&#x7801;&#x4E4B;AAC&#xFF08;4&#xFF09;</a>;</li>
+</ul>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstdlib&gt;</span></span>
+
+<span class="hljs-comment">/**
+ * @author &#x79E6;&#x57CE;&#x5B63;
+ * @email xhunmon@126.com
+ * @Blog https://qincji.gitee.io
+ * @date 2021/01/01
+ * description:   &lt;br&gt;
+ */</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstdio&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> Tag {
+    <span class="hljs-keyword">int</span> TagType;
+    <span class="hljs-keyword">unsigned</span> DataSize;
+    <span class="hljs-keyword">unsigned</span> Timestamp;
+    <span class="hljs-keyword">unsigned</span> TimestampExtended;
+    <span class="hljs-keyword">int</span> StreamID;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> *Data;
+} Tag;
+
+<span class="hljs-comment">//&#x4ECE;flv&#x4E2D;&#x7B2C;&#x4E00;&#x5E27;&#x83B7;&#x53D6;&#x7684;&#x6570;&#x636E;</span>
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> FLV_AAC_HEAD {
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> audioObjectType: <span class="hljs-number">5</span>;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> samplingFrequencyIndex: <span class="hljs-number">4</span>;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> channelConfiguration: <span class="hljs-number">4</span>;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> other: <span class="hljs-number">3</span>;<span class="hljs-comment">//&#x5360;&#x4F4D;&#xFF1B;&#x8FD9;&#x4E2A;&#x503C;&#x4E0D;&#x9700;&#x8981;&#x7684; 000</span>
+} FLV_AAC_HEAD;
+
+<span class="hljs-comment">//aac&#x5C01;&#x88C5; &#x6BCF;&#x4E2A;&#x5E27;&#x5934;&#x7ED3;&#x6784;&#x8BBE;&#x5B9A;&#x6052;&#x4E3A;7Byte</span>
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> AAC_ADST_HEAD {
+    <span class="hljs-comment">//1. adts_fixed_header</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">short</span> syncword: <span class="hljs-number">12</span>;           <span class="hljs-comment">/* &#x6052;&#x4E3A; 1111 1111 1111*/</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> ID: <span class="hljs-number">1</span>;                    <span class="hljs-comment">/* 0&#xFF1A;MPEG-4&#xFF0C;1&#xFF1A;MPEG-2*/</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> layer: <span class="hljs-number">2</span>;                  <span class="hljs-comment">/* 00*/</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> protection_absent: <span class="hljs-number">1</span>;     <span class="hljs-comment">/* &#x662F;&#x5426;&#x4F7F;&#x7528;error_check()&#x3002;0&#xFF1A;&#x4F7F;&#x7528;&#xFF0C;1&#xFF1A;&#x4E0D;&#x4F7F;&#x7528;&#x3002;*/</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> profile: <span class="hljs-number">2</span>;               <span class="hljs-comment">/* AAC&#x7C7B;&#x578B;*/</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> sampling_frequency_index: <span class="hljs-number">4</span>;<span class="hljs-comment">/* &#x91C7;&#x6837;&#x7387;&#x7684;&#x6570;&#x7EC4;&#x4E0B;&#x6807;&#xFF0C;&#x5373;&#xFF1A;sampling frequeny[sampling_frequency_index] */</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> private_bit: <span class="hljs-number">1</span>;           <span class="hljs-comment">/* 0*/</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> channel_configuration: <span class="hljs-number">3</span>; <span class="hljs-comment">/* &#x58F0;&#x9053;&#x6570;*/</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> original_copy: <span class="hljs-number">1</span>;         <span class="hljs-comment">/* 0*/</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> home: <span class="hljs-number">1</span>;                  <span class="hljs-comment">/* 0*/</span>
+
+    <span class="hljs-comment">//2. adts_variable_header</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> copyright_identification_bit: <span class="hljs-number">1</span>;  <span class="hljs-comment">/* 0*/</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> copyright_identification_start: <span class="hljs-number">1</span>; <span class="hljs-comment">/* 0*/</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">short</span> frame_length: <span class="hljs-number">13</span>;                 <span class="hljs-comment">/* &#x5E27;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x5305;&#x62EC;head*/</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">short</span> adts_buffer_fullness: <span class="hljs-number">11</span>;        <span class="hljs-comment">/* &#x56FA;&#x5B9A;0x7FF*/</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> number_of_raw_data_blocks_in_frame: <span class="hljs-number">2</span>; <span class="hljs-comment">/*&#x5728;ADTS&#x5E27;&#x4E2D;&#x6709;number_of_raw_data_blocks_in_frame + 1&#x4E2A;AAC&#x539F;&#x59CB;&#x6570;&#x636E;&#x5757;&#x3002;number_of_raw_data_blocks_in_frame == 0 &#x8868;&#x793A;&#x8BF4;ADTS&#x5E27;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;AAC&#x539F;&#x59CB;&#x6570;&#x636E;&#x5757;&#x3002;*/</span>
+} AAC_ADST_HEAD;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">checkFLV</span><span class="hljs-params">(FILE *fp_in)</span> </span>{
+    <span class="hljs-keyword">int</span> ret = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">char</span> *head = (<span class="hljs-keyword">char</span> *) <span class="hljs-built_in">malloc</span>(<span class="hljs-number">9</span>);
+    fread(head, <span class="hljs-number">1</span>, <span class="hljs-number">9</span>, fp_in);
+    <span class="hljs-comment">//Signature(FLV)</span>
+    <span class="hljs-keyword">if</span> (head[<span class="hljs-number">0</span>] != <span class="hljs-string">&apos;F&apos;</span> || head[<span class="hljs-number">1</span>] != <span class="hljs-string">&apos;L&apos;</span> || head[<span class="hljs-number">2</span>] != <span class="hljs-string">&apos;V&apos;</span>) {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Not FLV File !\n&quot;</span>);
+        ret = <span class="hljs-number">0</span>;
+    }
+    <span class="hljs-comment">//&#x7B2C;5&#x4E2A;&#x5B57;&#x8282;&#x4E3A;Flags(&#x6D41;&#x4FE1;&#x606F;)&#xFF0C;&#x89C6;&#x9891;&#x6807;&#x5FD7;&#x4F4D;&#xFF1A;.... ...1&#xFF1B;&#x97F3;&#x9891;&#x6807;&#x5FD7;&#x4F4D;&#xFF1A;.... .1..</span>
+    <span class="hljs-keyword">int</span> vFlags = head[<span class="hljs-number">4</span>] &amp; <span class="hljs-number">0x01</span>;
+    <span class="hljs-keyword">int</span> aFlags = (head[<span class="hljs-number">4</span>] &amp; <span class="hljs-number">0x04</span>) &gt;&gt; <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">if</span> (!vFlags) {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Not Video Data !\n&quot;</span>);
+        ret = <span class="hljs-number">0</span>;
+    }
+    <span class="hljs-keyword">if</span> (!aFlags) {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Not Audio Data !\n&quot;</span>);
+        ret = <span class="hljs-number">0</span>;
+    }
+    <span class="hljs-built_in">free</span>(head);
+    <span class="hljs-keyword">return</span> ret;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getTagAndTagSize</span><span class="hljs-params">(FILE *fp_in, Tag *tag)</span> </span>{
+    <span class="hljs-keyword">int</span> length = <span class="hljs-number">-1</span>;
+    <span class="hljs-comment">//Tag&#x8868;&#x4E2D;&#x9664;&#x4E86;Data&#x4E4B;&#x5916;&#xFF0C;&#x5176;&#x4ED6;&#x6240;&#x6709;&#x7684;&#x5B57;&#x8282;</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> *buf = (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> *) <span class="hljs-built_in">malloc</span>(<span class="hljs-number">11</span>);
+    <span class="hljs-comment">//&#x8BFB;&#x53D6;Tag&#x524D;&#x9762;11&#x4E2A;&#x5B57;&#x8282;</span>
+    fread(buf, <span class="hljs-number">1</span>, <span class="hljs-number">11</span>, fp_in);
+    tag-&gt;TagType = buf[<span class="hljs-number">0</span>];
+    tag-&gt;DataSize = (buf[<span class="hljs-number">1</span>] &lt;&lt; <span class="hljs-number">16</span>) + (buf[<span class="hljs-number">2</span>] &lt;&lt; <span class="hljs-number">8</span>) + buf[<span class="hljs-number">3</span>];
+    tag-&gt;Timestamp = (buf[<span class="hljs-number">4</span>] &lt;&lt; <span class="hljs-number">16</span>) + (buf[<span class="hljs-number">5</span>] &lt;&lt; <span class="hljs-number">8</span>) + buf[<span class="hljs-number">6</span>];
+    tag-&gt;TimestampExtended = buf[<span class="hljs-number">7</span>];
+    tag-&gt;StreamID = (buf[<span class="hljs-number">8</span>] &lt;&lt; <span class="hljs-number">16</span>) + (buf[<span class="hljs-number">9</span>] &lt;&lt; <span class="hljs-number">8</span>) + buf[<span class="hljs-number">10</span>];
+    tag-&gt;Data = (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> *) <span class="hljs-built_in">calloc</span>(tag-&gt;DataSize, <span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">char</span>));
+    <span class="hljs-comment">//&#x8BFB;&#x53D6;Data</span>
+    fread(tag-&gt;Data, <span class="hljs-number">1</span>, tag-&gt;DataSize, fp_in);
+    <span class="hljs-comment">//&#x8BFB;&#x53D6;PreviousTagSize&#x7684;4&#x4E2A;&#x5B57;&#x8282;</span>
+    fread(buf, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, fp_in);
+    <span class="hljs-comment">//&#x8FD9;&#x4E2A;&#x957F;&#x5EA6;&#x5C31;&#x662F; Tag(n)+PreviousTagSize(n)&#x7684;&#x957F;&#x5EA6;</span>
+    length = <span class="hljs-number">11</span> + tag-&gt;DataSize + <span class="hljs-number">4</span>;
+    <span class="hljs-keyword">unsigned</span> PreviousTagSize = (buf[<span class="hljs-number">0</span>] &lt;&lt; <span class="hljs-number">24</span>) + (buf[<span class="hljs-number">1</span>] &lt;&lt; <span class="hljs-number">16</span>) + (buf[<span class="hljs-number">2</span>] &lt;&lt; <span class="hljs-number">8</span>) + buf[<span class="hljs-number">3</span>];
+    <span class="hljs-built_in">free</span>(buf);
+    <span class="hljs-built_in">fprintf</span>(<span class="hljs-built_in">stdout</span>, <span class="hljs-string">&quot;%9d| %9d| %10d| %18d| %9d| %16d|\n&quot;</span>, tag-&gt;TagType, tag-&gt;DataSize, tag-&gt;Timestamp,
+            tag-&gt;TimestampExtended,
+            tag-&gt;StreamID, PreviousTagSize);
+    <span class="hljs-keyword">return</span> length;
+}
+
+<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> *sps_nalu = <span class="hljs-literal">NULL</span>;
+<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> *pps_nalu = <span class="hljs-literal">NULL</span>;
+<span class="hljs-keyword">char</span> *buf_start = <span class="hljs-literal">NULL</span>;
+<span class="hljs-keyword">unsigned</span> sps_nalu_size = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">unsigned</span> pps_nalu_size = <span class="hljs-number">0</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">videoToH264</span><span class="hljs-params">(FILE *fp_video, Tag *tag)</span> </span>{
+    <span class="hljs-keyword">int</span> ret = <span class="hljs-number">1</span>;
+    <span class="hljs-comment">//tag-&gt;Data = FrameType + CodecID + VideoData ;</span>
+    <span class="hljs-comment">//VideoData = AVCPacketType + CompositionTime + &#x3010;Data&#xFF08;&#x6CE8;&#xFF1A;&#x89C6;&#x9891;&#x6570;&#x636E;&#xFF09;&#x3011;</span>
+    <span class="hljs-keyword">unsigned</span> FrameType = (tag-&gt;Data[<span class="hljs-number">0</span>] &amp; <span class="hljs-number">0xF0</span>) &gt;&gt; <span class="hljs-number">4</span>;<span class="hljs-comment">//Data&#x8868;(&#x89C6;&#x9891;)&#xFF1A;&#x9AD8;4bit</span>
+    <span class="hljs-keyword">unsigned</span> CodecID = tag-&gt;Data[<span class="hljs-number">0</span>] &amp; <span class="hljs-number">0x0F</span>;         <span class="hljs-comment">//Data&#x8868;(&#x89C6;&#x9891;)&#xFF1A;&#x4F4E;4bit</span>
+    <span class="hljs-keyword">unsigned</span> AVCPacketType = tag-&gt;Data[<span class="hljs-number">1</span>];          <span class="hljs-comment">//VideoData&#x8868;( AVCVIDEOPACKE)</span>
+    <span class="hljs-keyword">unsigned</span> CompositionTime = (tag-&gt;Data[<span class="hljs-number">2</span>] &lt;&lt; <span class="hljs-number">16</span>) + (tag-&gt;Data[<span class="hljs-number">3</span>] &lt;&lt; <span class="hljs-number">8</span>) + tag-&gt;Data[<span class="hljs-number">4</span>];<span class="hljs-comment">//VideoData&#x8868;( AVCVIDEOPACKE)</span>
+    <span class="hljs-keyword">if</span> (CodecID != <span class="hljs-number">7</span>) {<span class="hljs-comment">//7: AVC(&#x9AD8;&#x7EA7;&#x89C6;&#x9891;&#x7F16;&#x7801;)</span>
+        ret = <span class="hljs-number">0</span>;
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Not AVC Error\n&quot;</span>);
+        <span class="hljs-keyword">goto</span> end;
+    }
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;FrameType=%d\t|CodecID=%d\t|AVCPacketType=%d\t|CompositionTime=%d\t\n&quot;</span>, FrameType, CodecID, AVCPacketType,
+           CompositionTime);
+    <span class="hljs-comment">//&#x4ECE;tag-&gt;Data[5]&#x5F00;&#x59CB;&#x81F3;&#x7ED3;&#x675F;&#x4E3A;&#x3010;Data&#xFF08;&#x6CE8;&#xFF1A;&#x89C6;&#x9891;&#x6570;&#x636E;&#xFF09;&#x3011;</span>
+
+    <span class="hljs-comment">//&#x4E00;&#x822C;FLV&#x7B2C;&#x4E00;&#x4E2A;&#x89C6;&#x9891;Tag&#x4E3A;sps&#x548C;pps&#x6570;&#x636E;&#xFF0C;&#x9700;&#x8981;&#x6839;&#x636E;AVCDecoderConfigurationRecord&#x8FDB;&#x884C;&#x89E3;&#x6790;&#xFF0C;&#x5355;&#x72EC;&#x62BD;&#x51FA;&#x6765;&#x5C01;&#x88C5;&#x6210;NALU&#x6570;&#x636E;</span>
+    <span class="hljs-keyword">if</span> (AVCPacketType == <span class="hljs-number">0</span>) {<span class="hljs-comment">//0: AVC sequence header</span>
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;0: AVC sequence header\n&quot;</span>);
+        <span class="hljs-keyword">if</span> (sps_nalu) {
+            <span class="hljs-built_in">free</span>(sps_nalu);
+        }
+        <span class="hljs-keyword">if</span> (pps_nalu) {
+            <span class="hljs-built_in">free</span>(pps_nalu);
+        }
+        <span class="hljs-keyword">unsigned</span> Version = tag-&gt;Data[<span class="hljs-number">5</span>];<span class="hljs-comment">//sps&#xFF1A;&#x7248;&#x672C;</span>
+        <span class="hljs-keyword">unsigned</span> AVCProfileIndication = tag-&gt;Data[<span class="hljs-number">6</span>];<span class="hljs-comment">//sps&#xFF1A;&#x7F16;&#x7801;&#x89C4;&#x683C;</span>
+        <span class="hljs-keyword">unsigned</span> profile_compatibility = tag-&gt;Data[<span class="hljs-number">7</span>];<span class="hljs-comment">//sps&#xFF1A;&#x7F16;&#x7801;&#x89C4;&#x683C;</span>
+        <span class="hljs-keyword">unsigned</span> AVCLevelIndication = tag-&gt;Data[<span class="hljs-number">8</span>];<span class="hljs-comment">//sps&#xFF1A;&#x7F16;&#x7801;&#x89C4;&#x683C;</span>
+        <span class="hljs-keyword">unsigned</span> reserved_And_lengthSizeMinusOne = tag-&gt;Data[<span class="hljs-number">9</span>];<span class="hljs-comment">//sps&#xFF1A;&#x5E94;&#x6052;&#x4E3A;0xFF</span>
+        <span class="hljs-keyword">unsigned</span> numOfSequenceParameterSets = tag-&gt;Data[<span class="hljs-number">10</span>] &amp; <span class="hljs-number">0x1F</span>;<span class="hljs-comment">//sps&#xFF1A;sps&#x4E2A;&#x6570;&#xFF0C;&#x53D6;&#x4F4E;5&#x4F4D;&#xFF1B;tag-&gt;Data[10]&#x4E00;&#x822C;&#x4E3A;0xE1</span>
+        <span class="hljs-keyword">unsigned</span> sps_len = (tag-&gt;Data[<span class="hljs-number">11</span>] &lt;&lt; <span class="hljs-number">8</span>) + tag-&gt;Data[<span class="hljs-number">12</span>];<span class="hljs-comment">//sps&#xFF1A;sps&#x957F;&#x5EA6;</span>
+        sps_nalu_size = sps_len + <span class="hljs-number">4</span>;
+        sps_nalu = (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> *) <span class="hljs-built_in">malloc</span>(sps_nalu_size);<span class="hljs-comment">//&#x52A0;4&#x4E2A;&#x4E3A;&#x8D77;&#x59CB;&#x4F4D;</span>
+        <span class="hljs-built_in">memcpy</span>(sps_nalu, buf_start, <span class="hljs-number">4</span>);
+        <span class="hljs-built_in">memcpy</span>(sps_nalu + <span class="hljs-number">4</span>, tag-&gt;Data + <span class="hljs-number">13</span>, sps_len);
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;sps_len=%d\nsps_data=&quot;</span>, sps_len);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">4</span>; i &lt; sps_nalu_size; ++i) {
+            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%.2x&quot;</span>, sps_nalu[i]);
+        }
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\n&quot;</span>);
+        fwrite(sps_nalu, <span class="hljs-number">1</span>, sps_nalu_size, fp_video);
+
+        <span class="hljs-keyword">unsigned</span> ppsIndex = <span class="hljs-number">13</span> + sps_len;
+        <span class="hljs-keyword">unsigned</span> numOfPictureParameterSets = tag-&gt;Data[ppsIndex];<span class="hljs-comment">//pps&#xFF1A;pps&#x4E2A;&#x6570;&#xFF0C;1&#x4E2A;&#x5B57;&#x8282;&#xFF1B;</span>
+        <span class="hljs-keyword">unsigned</span> pps_len = (tag-&gt;Data[ppsIndex + <span class="hljs-number">1</span>] &lt;&lt; <span class="hljs-number">8</span>) + tag-&gt;Data[ppsIndex + <span class="hljs-number">2</span>];<span class="hljs-comment">//pps&#xFF1A;pps&#x957F;&#x5EA6;</span>
+        pps_nalu_size = pps_len + <span class="hljs-number">4</span>;
+        pps_nalu = (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> *) <span class="hljs-built_in">malloc</span>(pps_nalu_size);<span class="hljs-comment">//&#x52A0;4&#x4E2A;&#x4E3A;&#x8D77;&#x59CB;&#x4F4D;</span>
+        <span class="hljs-built_in">memcpy</span>(pps_nalu, buf_start, <span class="hljs-number">4</span>);
+        <span class="hljs-built_in">memcpy</span>(pps_nalu + <span class="hljs-number">4</span>, tag-&gt;Data + ppsIndex + <span class="hljs-number">3</span>, pps_len);
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;pps_len=%d\npps_data=&quot;</span>, pps_len);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">4</span>; i &lt; pps_nalu_size; ++i) {
+            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%.2x&quot;</span>, pps_nalu[i]);
+        }
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\n&quot;</span>);
+        fwrite(pps_nalu, <span class="hljs-number">1</span>, pps_nalu_size, fp_video);
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (AVCPacketType == <span class="hljs-number">1</span>) {<span class="hljs-comment">//1: AVC NALU&#xFF1A;&#x53EF;&#x80FD;&#x5305;&#x62EC;&#x591A;&#x4E2A;NALU&#xFF0C;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x5C01;&#x88C5;</span>
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;1: AVC NALU\n&quot;</span>);
+        <span class="hljs-comment">//&#x3010;Data&#xFF08;&#x6CE8;&#xFF1A;&#x89C6;&#x9891;&#x6570;&#x636E;&#xFF09;&#x3011;= [size1+pic1]+...+[sizen+picn] &#x8F6C;&#x6210; [&#x8D77;&#x59CB;&#x7801;+pic1]+...+[&#x8D77;&#x59CB;&#x7801;+picn]</span>
+        <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> pic_start = <span class="hljs-number">5</span>;
+        <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> pic_size = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> pic_next_index = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) {
+            <span class="hljs-keyword">if</span> (pic_start + <span class="hljs-number">4</span> &gt;= tag-&gt;DataSize) {
+                <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;----break-----, pic_start + 4 &gt;= tag-&gt;DataSize\n&quot;</span>);
+                <span class="hljs-keyword">break</span>;
+            }
+            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;pic_size=0x%.2x%.2x%.2x%.2x\n&quot;</span>, tag-&gt;Data[pic_start], tag-&gt;Data[pic_start + <span class="hljs-number">1</span>],
+                   tag-&gt;Data[pic_start + <span class="hljs-number">2</span>],
+                   tag-&gt;Data[pic_start + <span class="hljs-number">3</span>]);
+            pic_size =
+                    (tag-&gt;Data[pic_start] &lt;&lt; <span class="hljs-number">24</span>) + (tag-&gt;Data[pic_start + <span class="hljs-number">1</span>] &lt;&lt; <span class="hljs-number">16</span>) + (tag-&gt;Data[pic_start + <span class="hljs-number">2</span>] &lt;&lt; <span class="hljs-number">8</span>) +
+                    tag-&gt;Data[pic_start + <span class="hljs-number">3</span>];
+            pic_next_index = pic_start + <span class="hljs-number">4</span> + pic_size;
+            <span class="hljs-keyword">if</span> (pic_size &lt;= <span class="hljs-number">0</span> || tag-&gt;DataSize &lt; pic_next_index) {
+                <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;----break-----, Data Error ! pic_start=%d\tpic_size=%d\tpic_next_index=%d\tDataSize=%d \n&quot;</span>,
+                       pic_start, pic_size, pic_next_index,
+                       tag-&gt;DataSize);
+                <span class="hljs-keyword">break</span>;
+            }
+            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;write pic data,pic_start=%d\tpic_size=%d\tpic_next_index=%d\tDataSize=%d \n&quot;</span>, pic_start, pic_size,
+                   pic_next_index,
+                   tag-&gt;DataSize);
+            <span class="hljs-comment">//&#x5F53;&#x524D;&#x5E27;&#x6570;&#x636E;&#x8303;&#x56F4; pic_start + 4 ~ pic_next_index</span>
+            fwrite(buf_start, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, fp_video);
+            fwrite(tag-&gt;Data + pic_start + <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, pic_size, fp_video);
+            pic_start = pic_next_index;
+        }
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (AVCPacketType == <span class="hljs-number">2</span>) {<span class="hljs-comment">//2: AVC end of sequence</span>
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;2: AVC end of sequence\n&quot;</span>);
+    }
+
+    end:
+    <span class="hljs-built_in">free</span>(tag-&gt;Data);
+    <span class="hljs-keyword">return</span> ret;
+}
+
+AAC_ADST_HEAD *aacAdstHead = <span class="hljs-literal">NULL</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getAACHeadBuf</span><span class="hljs-params">(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> *buf, AAC_ADST_HEAD *aacAdstHead, <span class="hljs-keyword">const</span> <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> frame_size)</span> </span>{
+    <span class="hljs-keyword">int</span> ret = <span class="hljs-number">0</span>;
+    aacAdstHead-&gt;frame_length = frame_size;
+    <span class="hljs-comment">//&#x53D6;syncword&#x9AD8;&#x4F4D;1Byte</span>
+    buf[<span class="hljs-number">0</span>] = aacAdstHead-&gt;syncword &gt;&gt; <span class="hljs-number">4</span>;
+    <span class="hljs-comment">//syncword(&#x4F4E;4&#x4F4D;)+ID(1)+layer(2)+protection_absent(1)</span>
+    buf[<span class="hljs-number">1</span>] = ((aacAdstHead-&gt;syncword &amp; <span class="hljs-number">0x00F</span>) &lt;&lt; <span class="hljs-number">4</span>) + (aacAdstHead-&gt;ID &gt;&gt; <span class="hljs-number">3</span>) + (aacAdstHead-&gt;layer &gt;&gt; <span class="hljs-number">1</span>) +
+             aacAdstHead-&gt;protection_absent;
+    <span class="hljs-comment">//profile(2)+sampling_frequency_index(4)+private_bit(1)+channel_configuration(3bit&#x53D6;&#x6700;&#x9AD8;1bit)</span>
+    buf[<span class="hljs-number">2</span>] = (aacAdstHead-&gt;profile &lt;&lt; <span class="hljs-number">6</span>) + (aacAdstHead-&gt;sampling_frequency_index &lt;&lt; <span class="hljs-number">2</span>) + (aacAdstHead-&gt;private_bit
+            &lt;&lt; <span class="hljs-number">1</span>) + (aacAdstHead-&gt;channel_configuration
+            &gt;&gt; <span class="hljs-number">2</span>);
+    <span class="hljs-comment">// ...00000 00000000</span>
+    <span class="hljs-comment">//channel_configuration(3bit&#x53D6;&#x4F4E;2bit)+original_copy(1)+home(1)+copyright_identification_bit(1)+copyright_identification_start(1)+frame_length(13bit&#x53D6;&#x6700;&#x9AD8;2bit)</span>
+    buf[<span class="hljs-number">3</span>] = (aacAdstHead-&gt;channel_configuration &lt;&lt; <span class="hljs-number">6</span>) + (aacAdstHead-&gt;original_copy &lt;&lt; <span class="hljs-number">5</span>) + (aacAdstHead-&gt;home &lt;&lt; <span class="hljs-number">4</span>)
+             + (aacAdstHead-&gt;copyright_identification_bit &lt;&lt; <span class="hljs-number">3</span>) + (aacAdstHead-&gt;copyright_identification_start &lt;&lt; <span class="hljs-number">2</span>)
+             + (aacAdstHead-&gt;frame_length &gt;&gt; <span class="hljs-number">11</span>);
+    <span class="hljs-comment">//frame_length(13bit&#x53D6;&#xFF1A;&#x53BB;&#x6389;&#x6700;&#x9AD8;2bit&#x5F00;&#x59CB;8&#x4F4D;)</span>
+    buf[<span class="hljs-number">4</span>] = (aacAdstHead-&gt;frame_length &gt;&gt; <span class="hljs-number">3</span>) &amp; <span class="hljs-number">0x0FF</span>;
+    <span class="hljs-comment">//frame_length(13bit&#x53D6;&#x6700;&#x4F4E;3bit)+adts_buffer_fullness(11bit&#x53D6;&#x9AD8;5bit)</span>
+    buf[<span class="hljs-number">5</span>] = (aacAdstHead-&gt;frame_length &lt;&lt; <span class="hljs-number">5</span>) + (aacAdstHead-&gt;adts_buffer_fullness &gt;&gt; <span class="hljs-number">6</span>);
+    <span class="hljs-comment">//adts_buffer_fullness(11bit&#x53D6;&#x4F4E;6bit) + number_of_raw_data_blocks_in_frame(2)</span>
+    buf[<span class="hljs-number">6</span>] = (aacAdstHead-&gt;adts_buffer_fullness &lt;&lt; <span class="hljs-number">2</span>) + aacAdstHead-&gt;number_of_raw_data_blocks_in_frame;
+    <span class="hljs-keyword">return</span> ret;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">audioToAac</span><span class="hljs-params">(FILE *fp_audio, Tag *tag)</span> </span>{
+    <span class="hljs-keyword">int</span> ret = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">unsigned</span> SoundFormat = tag-&gt;Data[<span class="hljs-number">0</span>] &gt;&gt; <span class="hljs-number">4</span>;
+    <span class="hljs-keyword">unsigned</span> SoundRate = (tag-&gt;Data[<span class="hljs-number">0</span>] &amp; <span class="hljs-number">0x0F</span>) &gt;&gt; <span class="hljs-number">2</span>;
+    <span class="hljs-keyword">unsigned</span> SoundSize = (tag-&gt;Data[<span class="hljs-number">0</span>] &amp; <span class="hljs-number">0x02</span>) &gt;&gt; <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">unsigned</span> SoundType = tag-&gt;Data[<span class="hljs-number">0</span>] &amp; <span class="hljs-number">0x01</span>;
+    <span class="hljs-comment">//SoundData = AACPacketType + Data</span>
+    <span class="hljs-keyword">unsigned</span> AACPacketType = tag-&gt;Data[<span class="hljs-number">1</span>];
+
+    <span class="hljs-keyword">if</span> (SoundFormat != <span class="hljs-number">10</span>) {<span class="hljs-comment">//10 = AAC</span>
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Not AAC Error\n&quot;</span>);
+        ret = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">goto</span> end;
+    }
+
+    <span class="hljs-keyword">if</span> (AACPacketType == <span class="hljs-number">0</span>) {<span class="hljs-comment">//0: AAC sequence header(&#x53C2;&#x8003;14496-3 AudioSpecificConfig https://wiki.multimedia.cx/index.php/MPEG-4_Audio#Audio_Specific_Config)</span>
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;0: AAC sequence header\n&quot;</span>);
+        <span class="hljs-comment">//&#x8BFB;&#x53D6;flv&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5934;&#x4FE1;&#x606F;</span>
+        FLV_AAC_HEAD *flvAacHead = (FLV_AAC_HEAD *) <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(FLV_AAC_HEAD));
+        <span class="hljs-comment">//&#x53EA;&#x8981;&#x524D;&#x9762;&#x4E24;&#x4E2A;&#x5B57;&#x8282;&#x5C31;&#x884C;&#xFF0C;&#x5982;0x1390=00010011 10010000</span>
+        flvAacHead-&gt;audioObjectType = tag-&gt;Data[<span class="hljs-number">2</span>] &gt;&gt; <span class="hljs-number">3</span>;<span class="hljs-comment">//UB[5]=00010... ........</span>
+        flvAacHead-&gt;samplingFrequencyIndex =
+                ((tag-&gt;Data[<span class="hljs-number">2</span>] &amp; <span class="hljs-number">0x07</span>) &lt;&lt; <span class="hljs-number">1</span>) + (tag-&gt;Data[<span class="hljs-number">3</span>] &gt;&gt; <span class="hljs-number">7</span>);<span class="hljs-comment">//UB[4]=.....011 1.......</span>
+        flvAacHead-&gt;channelConfiguration = (tag-&gt;Data[<span class="hljs-number">3</span>] &amp; <span class="hljs-number">0x7F</span>) &gt;&gt; <span class="hljs-number">3</span>;<span class="hljs-comment">//UB[4]=........ .0010...</span>
+        flvAacHead-&gt;other = tag-&gt;Data[<span class="hljs-number">3</span>] &amp; <span class="hljs-number">0x07</span>;<span class="hljs-comment">//&#x4E24;&#x4E2A;&#x5B57;&#x8282;&#x5269;&#x4F59;&#x7684;bit&#xFF0C;&#x4E3A;0&#x4E5F;&#x884C;&#x3002;</span>
+
+        <span class="hljs-comment">//&#x6784;&#x9020;AAC_ADST_HEAD</span>
+        <span class="hljs-keyword">if</span> (aacAdstHead) {
+            <span class="hljs-built_in">free</span>(aacAdstHead);
+        }
+        aacAdstHead = (AAC_ADST_HEAD *) <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(AAC_ADST_HEAD));
+        aacAdstHead-&gt;syncword = <span class="hljs-number">0xFFF</span>;
+        aacAdstHead-&gt;ID = <span class="hljs-number">1</span>;
+        aacAdstHead-&gt;layer = <span class="hljs-number">0</span>;
+        aacAdstHead-&gt;protection_absent = <span class="hljs-number">1</span>;
+        aacAdstHead-&gt;profile = flvAacHead-&gt;audioObjectType;
+<span class="hljs-comment">//        aacAdstHead-&gt;profile = 1;</span>
+        aacAdstHead-&gt;sampling_frequency_index = flvAacHead-&gt;samplingFrequencyIndex;
+        aacAdstHead-&gt;private_bit = <span class="hljs-number">0</span>;
+        aacAdstHead-&gt;channel_configuration = flvAacHead-&gt;channelConfiguration;
+        aacAdstHead-&gt;original_copy = <span class="hljs-number">0</span>;
+        aacAdstHead-&gt;home = <span class="hljs-number">0</span>;
+
+        aacAdstHead-&gt;copyright_identification_bit = <span class="hljs-number">0</span>;
+        aacAdstHead-&gt;copyright_identification_start = <span class="hljs-number">0</span>;
+<span class="hljs-comment">//        aacAdstHead-&gt;frame_length = xx; //&#x5E27;&#x7684;&#x957F;&#x5EA6;&#x52A8;&#x6001;&#x8BA1;&#x7B97;&#x7684;</span>
+        aacAdstHead-&gt;adts_buffer_fullness = <span class="hljs-number">0x7FF</span>;
+        aacAdstHead-&gt;number_of_raw_data_blocks_in_frame = <span class="hljs-number">0</span>;
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;audioObjectType=%d\tsamplingFrequencyIndex=%d\t channelConfiguration=%d\n &quot;</span>,
+               flvAacHead-&gt;audioObjectType, flvAacHead-&gt;samplingFrequencyIndex, flvAacHead-&gt;channelConfiguration);
+        <span class="hljs-built_in">free</span>(flvAacHead);
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (AACPacketType == <span class="hljs-number">1</span>) {<span class="hljs-comment">//1: AAC raw</span>
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;1: AAC raw\n&quot;</span>);
+        <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> *buf = (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> *) <span class="hljs-built_in">malloc</span>(<span class="hljs-number">7</span>);;
+        <span class="hljs-keyword">if</span> (getAACHeadBuf(buf, aacAdstHead, tag-&gt;DataSize - <span class="hljs-number">2</span> + <span class="hljs-number">7</span>) == <span class="hljs-number">-1</span>) {
+            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;get AAC Head Buf Error\n&quot;</span>);
+            ret = <span class="hljs-number">0</span>;
+            <span class="hljs-keyword">goto</span> end;
+        }
+        fwrite(buf, <span class="hljs-number">1</span>, <span class="hljs-number">7</span>, fp_audio);
+        fwrite(tag-&gt;Data + <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, tag-&gt;DataSize - <span class="hljs-number">2</span>, fp_audio);
+        <span class="hljs-built_in">free</span>(buf);
+    }
+
+    end:
+    <span class="hljs-built_in">free</span>(tag-&gt;Data);
+    <span class="hljs-keyword">return</span> ret;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">test</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">if</span> (test()) {<span class="hljs-comment">//&#x975E;0&#x4F4D;true</span>
+        <span class="hljs-built_in">exit</span>(<span class="hljs-number">1</span>);
+    }
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;delete cache video file ? %d\n&quot;</span>, remove(<span class="hljs-string">&quot;output/Kobe.h264&quot;</span>));
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;delete cache audio file ? %d\n&quot;</span>, remove(<span class="hljs-string">&quot;output/Kobe.aac&quot;</span>));
+
+    FILE *fp_in = fopen(<span class="hljs-string">&quot;assets/Kobe.flv&quot;</span>, <span class="hljs-string">&quot;rb+&quot;</span>);
+    FILE *fp_video = fopen(<span class="hljs-string">&quot;output/Kobe.h264&quot;</span>, <span class="hljs-string">&quot;wb+&quot;</span>);
+    FILE *fp_audio = fopen(<span class="hljs-string">&quot;output/Kobe.aac&quot;</span>, <span class="hljs-string">&quot;wb+&quot;</span>);
+    Tag *tag;
+    <span class="hljs-keyword">if</span> (!fp_in) {
+        <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x6E90;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF01;&quot;</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+        <span class="hljs-built_in">exit</span>(<span class="hljs-number">1</span>);
+    }
+    <span class="hljs-keyword">if</span> (!fp_video) {
+        <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF01;&quot;</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+        <span class="hljs-built_in">exit</span>(<span class="hljs-number">1</span>);
+    }
+
+    <span class="hljs-keyword">if</span> (!checkFLV(fp_in)) {
+        <span class="hljs-built_in">exit</span>(<span class="hljs-number">1</span>);
+    }
+
+    <span class="hljs-comment">//&#x8DF3;&#x8FC7;PreviousTagSize(0) 4byte</span>
+    fseek(fp_in, <span class="hljs-number">4</span>, SEEK_CUR);
+    tag = (Tag *) <span class="hljs-built_in">calloc</span>(<span class="hljs-number">1</span>, <span class="hljs-keyword">sizeof</span>(Tag));
+    <span class="hljs-comment">//&#x521D;&#x59CB;&#x5316;h264&#x4E2D;NALU&#x7684;&#x8D77;&#x59CB;&#x7801;&#xFF08;0x00 00 00 01&#x6216;&#x8005;0x00 00 01&#xFF09;</span>
+    buf_start = (<span class="hljs-keyword">char</span> *) <span class="hljs-built_in">malloc</span>(<span class="hljs-number">4</span>);
+    buf_start[<span class="hljs-number">0</span>] = <span class="hljs-number">0x00</span>;
+    buf_start[<span class="hljs-number">1</span>] = <span class="hljs-number">0x00</span>;
+    buf_start[<span class="hljs-number">2</span>] = <span class="hljs-number">0x00</span>;
+    buf_start[<span class="hljs-number">3</span>] = <span class="hljs-number">0x01</span>;
+    <span class="hljs-keyword">if</span> (!tag) {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Alloc Tag Error\n&quot;</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    }
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;---------+----------+----------Tag------------------+----------+-----------------+\n&quot;</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot; TagType | DataSize | Timestamp | TimestampExtended | StreamID | PreviousTagSize |\n&quot;</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;---------+----------+-----------+-------------------+----------+-----------------+\n&quot;</span>);
+    <span class="hljs-keyword">while</span> (!feof(fp_in)) {
+        <span class="hljs-comment">//&#x67E5;&#x627E;&#x4E00;&#x7EC4;&#xFF1A;Tag + PreviousTagSize</span>
+        <span class="hljs-keyword">int</span> data_lenth;
+        <span class="hljs-keyword">int</span> ret;
+        data_lenth = getTagAndTagSize(fp_in, tag);
+
+        <span class="hljs-keyword">if</span> (tag-&gt;TagType == <span class="hljs-number">0x12</span>) {<span class="hljs-comment">//&#x811A;&#x672C;&#x6570;&#x636E;</span>
+
+        }
+        <span class="hljs-keyword">if</span> (tag-&gt;TagType == <span class="hljs-number">0x08</span>) {<span class="hljs-comment">//&#x97F3;&#x9891;&#x6570;&#x636E;</span>
+            ret = audioToAac(fp_audio, tag);
+        }
+        <span class="hljs-keyword">if</span> (tag-&gt;TagType == <span class="hljs-number">0x09</span>) {<span class="hljs-comment">//&#x89C6;&#x9891;&#x6570;&#x636E;</span>
+            ret = videoToH264(fp_video, tag);
+        }
+    }
+    <span class="hljs-keyword">if</span> (sps_nalu) {
+        <span class="hljs-built_in">free</span>(sps_nalu);
+    }
+    <span class="hljs-keyword">if</span> (pps_nalu) {
+        <span class="hljs-built_in">free</span>(pps_nalu);
+    }
+    <span class="hljs-keyword">if</span> (buf_start) {
+        <span class="hljs-built_in">free</span>(buf_start);
+    }
+    fclose(fp_video);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h2 id="&#x4F7F;&#x7528;ffplay&#x67E5;&#x770B;&#x8F93;&#x51FA;&#x6587;&#x4EF6;"><a name="&#x4F7F;&#x7528;ffplay&#x67E5;&#x770B;&#x8F93;&#x51FA;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;ffplay&#x67E5;&#x770B;&#x8F93;&#x51FA;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4F7F;&#x7528;ffplay&#x67E5;&#x770B;&#x8F93;&#x51FA;&#x6587;&#x4EF6;" class="plugin-anchor" href="#&#x4F7F;&#x7528;ffplay&#x67E5;&#x770B;&#x8F93;&#x51FA;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;ffplay&#x67E5;&#x770B;&#x8F93;&#x51FA;&#x6587;&#x4EF6;</h2>
+<p>h264&#x6587;&#x4EF6;&#x64AD;&#x653E;&#xFF1A;</p>
+<blockquote>
+<p>ffplay xxx.h264</p>
+</blockquote>
+<p>aac&#x6587;&#x4EF6;&#x64AD;&#x653E;&#xFF1A;</p>
+<blockquote>
+<p>ffplay xxx.aac</p>
+</blockquote>
+<h2 id="&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x5730;&#x5740;"><a name="&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x5730;&#x5740;" class="anchor-navigation-ex-anchor" href="#&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x5730;&#x5740;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x5730;&#x5740;" class="plugin-anchor" href="#&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x5730;&#x5740;"><i class="fa fa-link" aria-hidden="true"></i></a><a href="07_flv/Kobe.flv">&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x5730;&#x5740;</a></h2>
+<p>&#x53C2;&#x8003;</p>
+<ul>
+<li><a href="https://www.cnblogs.com/chyingp/p/flv-getting-started.html" target="_blank">https://www.cnblogs.com/chyingp/p/flv-getting-started.html</a></li>
+<li>ISO/IEC_14496-3</li>
+</ul>
+<p></p><footer class="page-footer"><span class="copyright">Copyright &#xA9; xhunmon 2022  all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Update: 
+2022-12-26 15:49:14
+</span></footer><hr><div id="vcomments"></div><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el: "#vcomments",appId: 'xMemPde6Lax4ffLfLBkuEi9t-gzGzoHsz',appKey: 'jIVEp2lShgotSTy0GalhgIzm',placeholder: 'Just go go',avatar: '',meta: undefined,pageSize: 10,lang: 'zh-CN',recordIP: false})</script><p></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="06_struct.html" class="navigation navigation-prev " aria-label="Previous page: FFmpeg重要结构体（转载）">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="08_demuxing.html" class="navigation navigation-next " aria-label="Next page: Demuxing（解封装）">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"手撕FLV协议","level":"1.4.7","depth":2,"next":{"title":"Demuxing（解封装）","level":"1.4.8","depth":2,"path":"FFmpeg/08_demuxing.md","ref":"FFmpeg/08_demuxing.md","articles":[]},"previous":{"title":"FFmpeg重要结构体（转载）","level":"1.4.6","depth":2,"path":"FFmpeg/06_struct.md","ref":"FFmpeg/06_struct.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","favicon-absolute","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","highlight","back-to-top-button","code","-lunr","-search","search-pro","tbfed-pagefooter","pageview-count","auto-scroll-table","lightbox","hide-element","valine","embed-pdf","mermaid-gb3","image-wrapper","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy xhunmon 2022 ","modify_label":"Update: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"image-wrapper":{},"github":{"url":"https://github.com/xhunmon"},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"donate":{"alipay":"/source/images/alipayimg.jpeg","alipayText":"支付宝","button":"捐赠","title":"请作者喝杯coffee","wechat":"/source/images/wechatpayimg.jpeg","wechatText":"微信"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"/apple-tou ch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{},"favicon":"/source/images/favicon.png"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"xhunmon","repo":"VABlog","type":"star","count":true,"size":"small"},{"user":"xhunmon","width":"160","type":"follow","count":true,"size":"small"}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"embed-pdf":{},"valine":{"avatar":"","lang":"zh-CN","pageSize":10,"placeholder":"Just go go","recordIP":false,"appId":"xMemPde6Lax4ffLfLBkuEi9t-gzGzoHsz","appKey":"jIVEp2lShgotSTy0GalhgIzm"}},"theme":"default","author":"秦城季","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"秦城季&音视频","language":"zh-hans","links":{"sidebar":{"秦城季&音视频":"https://github.com/xhunmon/VABlog"}},"gitbook":"3.2.3","description":"未来那个项目都不应该缺少音视频！"},"file":{"path":"FFmpeg/07_flv.md","mtime":"2022-12-26T07:49:14.544Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-26T08:27:47.172Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

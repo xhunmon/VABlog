@@ -1,0 +1,2407 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Configure配置选项 (转载) · 秦城季&音视频</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="秦城季">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="02_shell.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"xhunmon","repo":"VABlog","type":"star","count":true,"size":"small"},{"user":"xhunmon","width":"160","type":"follow","count":true,"size":"small"}]};
+    </script>
+
+    
+        <link rel="shortcut icon" href="/source/images/favicon.png" type="image/x-icon">
+    
+    
+    
+    
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-tou ch-icon-precomposed-152.png">
+    
+    
+        
+    
+    
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/xhunmon/VABlog" target="_blank" class="custom-link">秦城季&音视频</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    打怪之路总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../直播推流全过程/">
+            
+                <a href="../直播推流全过程/">
+            
+                    
+                    直播推流全过程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../直播推流全过程/1-yuv.html">
+            
+                <a href="../直播推流全过程/1-yuv.html">
+            
+                    
+                    视频数据源之YUV
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../直播推流全过程/2-pcm.html">
+            
+                <a href="../直播推流全过程/2-pcm.html">
+            
+                    
+                    音频数据源之PCM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../直播推流全过程/3-h264.html">
+            
+                <a href="../直播推流全过程/3-h264.html">
+            
+                    
+                    视频编码之H.264
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../直播推流全过程/4-aac.html">
+            
+                <a href="../直播推流全过程/4-aac.html">
+            
+                    
+                    音频编码之AAC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../直播推流全过程/5-rtmp.html">
+            
+                <a href="../直播推流全过程/5-rtmp.html">
+            
+                    
+                    直播推流编码之RTMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../直播推流全过程/h264-descriptor.html">
+            
+                <a href="../直播推流全过程/h264-descriptor.html">
+            
+                    
+                    其他：H.264符号描述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../直播推流全过程/6-optimize.html">
+            
+                <a href="../直播推流全过程/6-optimize.html">
+            
+                    
+                    其他：直播优化基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../AFPlayer/">
+            
+                <a href="../AFPlayer/">
+            
+                    
+                    AFPlayer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../AFPlayer/01_opensl_es.html">
+            
+                <a href="../AFPlayer/01_opensl_es.html">
+            
+                    
+                    OpenSL ES播放PCM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../AFPlayer/02_opengl_es.html">
+            
+                <a href="../AFPlayer/02_opengl_es.html">
+            
+                    
+                    OpenGL ES播放RGB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../AFPlayer/03_mediacodec.html">
+            
+                <a href="../AFPlayer/03_mediacodec.html">
+            
+                    
+                    FFmpeg实现MediaCodec解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../AFPlayer/04_build_for_android.html">
+            
+                <a href="../AFPlayer/04_build_for_android.html">
+            
+                    
+                    FFmpeg、x264、fdk-aac、openssl的交叉编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    FFmpeg
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="01_configure_help.html">
+            
+                <a href="01_configure_help.html">
+            
+                    
+                    Configure配置选项 (转载)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="02_shell.html">
+            
+                <a href="02_shell.html">
+            
+                    
+                    Shell脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="03_build_ffmpeg.html">
+            
+                <a href="03_build_ffmpeg.html">
+            
+                    
+                    编译FFmpeg4.2.2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="04_import_ffmpeg.html">
+            
+                <a href="04_import_ffmpeg.html">
+            
+                    
+                    FFmpeg导入到Clion（MacOS）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="05_source.html">
+            
+                <a href="05_source.html">
+            
+                    
+                    使用Clion阅读FFmpeg源码（支持跳转）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="06_struct.html">
+            
+                <a href="06_struct.html">
+            
+                    
+                    FFmpeg重要结构体（转载）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="07_flv.html">
+            
+                <a href="07_flv.html">
+            
+                    
+                    手撕FLV协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="08_demuxing.html">
+            
+                <a href="08_demuxing.html">
+            
+                    
+                    Demuxing（解封装）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="09_muxing.html">
+            
+                <a href="09_muxing.html">
+            
+                    
+                    Muxing（封装）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="10_remuxing.html">
+            
+                <a href="10_remuxing.html">
+            
+                    
+                    Remuxing（重新封装）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="11_decode.html">
+            
+                <a href="11_decode.html">
+            
+                    
+                    Decode（解码）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="12_encode.html">
+            
+                <a href="12_encode.html">
+            
+                    
+                    Encode（编码）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="13_transfer.html">
+            
+                <a href="13_transfer.html">
+            
+                    
+                    简单实现转码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="14_filter_v.html">
+            
+                <a href="14_filter_v.html">
+            
+                    
+                    Filter和SDL（Video）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="15_filter_a.html">
+            
+                <a href="15_filter_a.html">
+            
+                    
+                    Filter和SDL（Audio）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="16_transcode.html">
+            
+                <a href="16_transcode.html">
+            
+                    
+                    Transcode(转码)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="17_sync.html">
+            
+                <a href="17_sync.html">
+            
+                    
+                    音视频同步处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="18_command.html">
+            
+                <a href="18_command.html">
+            
+                    
+                    FFmpeg命令使用指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19" data-path="19_swscale.html">
+            
+                <a href="19_swscale.html">
+            
+                    
+                    Swscale（图像转换）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../OpenGL/">
+            
+                <a href="../OpenGL/">
+            
+                    
+                    OpenGL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../OpenGL/01_opengl.html">
+            
+                <a href="../OpenGL/01_opengl.html">
+            
+                    
+                    OpenGL基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../AFPlayer/02_opengl_es.html">
+            
+                <a href="../AFPlayer/02_opengl_es.html">
+            
+                    
+                    OpenGL ES播放RGB
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../其他零散知识/01_c_compile.html">
+            
+                <a href="../其他零散知识/01_c_compile.html">
+            
+                    
+                    其他零散知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../其他零散知识/01_c_compile.html">
+            
+                <a href="../其他零散知识/01_c_compile.html">
+            
+                    
+                    初步认识c/c++编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../其他零散知识/02_net_base.html">
+            
+                <a href="../其他零散知识/02_net_base.html">
+            
+                    
+                    网络基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../其他零散知识/03_adb_dy.html">
+            
+                <a href="../其他零散知识/03_adb_dy.html">
+            
+                    
+                    ADB的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Configure配置选项 (转载)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#configure&#x914D;&#x7F6E;&#x9009;&#x9879;-&#x8F6C;&#x8F7D;"><b></b>Configure&#x914D;&#x7F6E;&#x9009;&#x9879; (&#x8F6C;&#x8F7D;)</a></li><ul><li><span class="title-icon "></span><a href="#&#x5E2E;&#x52A9;&#x9009;&#x9879;help-options"><b></b>&#x5E2E;&#x52A9;&#x9009;&#x9879;&#xFF08;Help options&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x6807;&#x51C6;&#x9009;&#x9879;standard-options"><b></b>&#x6807;&#x51C6;&#x9009;&#x9879;&#xFF08;Standard options&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x8BB8;&#x53EF;&#x8BC1;&#x9009;&#x9879;licensing-options"><b></b>&#x8BB8;&#x53EF;&#x8BC1;&#x9009;&#x9879;&#xFF08;Licensing options&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;&#x9009;&#x9879;configuration-options"><b></b>&#x914D;&#x7F6E;&#x9009;&#x9879;&#xFF08;Configuration options&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x7A0B;&#x5E8F;&#x9009;&#x9879;program-options"><b></b>&#x7A0B;&#x5E8F;&#x9009;&#x9879;&#xFF08;Program options&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x6587;&#x6863;&#x9009;&#x9879;documentation-options"><b></b>&#x6587;&#x6863;&#x9009;&#x9879;&#xFF08;Documentation options&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x7EC4;&#x4EF6;&#x9009;&#x9879;component-options"><b></b>&#x7EC4;&#x4EF6;&#x9009;&#x9879;&#xFF08;Component options&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x4E2A;&#x522B;&#x7EC4;&#x4EF6;&#x9009;&#x9879;individual-component-options"><b></b>&#x4E2A;&#x522B;&#x7EC4;&#x4EF6;&#x9009;&#x9879;&#xFF08;Individual component options&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x6269;&#x5C55;&#x5E93;&#x652F;&#x6301;external-library-support"><b></b>&#x6269;&#x5C55;&#x5E93;&#x652F;&#x6301;&#xFF08;External library support&#xFF09;</a></li><ul><li><span class="title-icon "></span><a href="#&#x786C;&#x4EF6;&#x52A0;&#x901F;&#x529F;&#x80FD;hardware-acceleration-features"><b></b>&#x786C;&#x4EF6;&#x52A0;&#x901F;&#x529F;&#x80FD;&#xFF08;hardware acceleration features&#xFF09;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5DE5;&#x5177;&#x94FE;&#x9009;&#x9879;toolchain-options"><b></b>&#x5DE5;&#x5177;&#x94FE;&#x9009;&#x9879;&#xFF08;Toolchain options&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x9AD8;&#x7EA7;&#x9009;&#x9879;advanced-options"><b></b>&#x9AD8;&#x7EA7;&#x9009;&#x9879;&#xFF08;Advanced options&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x4F18;&#x5316;&#x9009;&#x9879;optimization-options"><b></b>&#x4F18;&#x5316;&#x9009;&#x9879;&#xFF08;Optimization options&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x5F00;&#x53D1;&#x8005;&#x9009;&#x9879;developer-options"><b></b>&#x5F00;&#x53D1;&#x8005;&#x9009;&#x9879;&#xFF08;Developer options&#xFF09;</a></li></ul></ul></div><a href="#configure&#x914D;&#x7F6E;&#x9009;&#x9879;-&#x8F6C;&#x8F7D;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="configure&#x914D;&#x7F6E;&#x9009;&#x9879;-&#x8F6C;&#x8F7D;"><a name="configure&#x914D;&#x7F6E;&#x9009;&#x9879;-&#x8F6C;&#x8F7D;" class="anchor-navigation-ex-anchor" href="#configure&#x914D;&#x7F6E;&#x9009;&#x9879;-&#x8F6C;&#x8F7D;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="configure&#x914D;&#x7F6E;&#x9009;&#x9879;-&#x8F6C;&#x8F7D;" class="plugin-anchor" href="#configure&#x914D;&#x7F6E;&#x9009;&#x9879;-&#x8F6C;&#x8F7D;"><i class="fa fa-link" aria-hidden="true"></i></a>Configure&#x914D;&#x7F6E;&#x9009;&#x9879; (&#x8F6C;&#x8F7D;)</h1>
+
+ 
+ 
+  <article class="baidu_pl"> 
+   <div id="article_content" class="article_content clearfix"> 
+    <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/ck_htmledit_views-b5506197d8.css"> 
+    <div id="content_views" class="markdown_views"> 
+     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"> 
+      <path stroke-linecap="round" d="M5,0 0,2.5 5,5z" id="raphael-marker-block" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"/> 
+     </svg> 
+     <p></p> 
+     <div class="toc"> 
+      <div class="toc"> 
+       <ul>
+        <li> 
+         <ul>
+          <li><a href="#&#x5E2E;&#x52A9;&#x9009;&#x9879;help-options" target="_self">&#x5E2E;&#x52A9;&#x9009;&#x9879;Help options</a></li>
+          <li><a href="#&#x6807;&#x51C6;&#x9009;&#x9879;standard-options" target="_self">&#x6807;&#x51C6;&#x9009;&#x9879;Standard options</a></li>
+          <li><a href="#&#x8BB8;&#x53EF;&#x8BC1;&#x9009;&#x9879;licensing-options" target="_self">&#x8BB8;&#x53EF;&#x8BC1;&#x9009;&#x9879;Licensing options</a></li>
+          <li><a href="#&#x914D;&#x7F6E;&#x9009;&#x9879;configuration-options" target="_self">&#x914D;&#x7F6E;&#x9009;&#x9879;Configuration options</a></li>
+          <li><a href="#&#x7A0B;&#x5E8F;&#x9009;&#x9879;program-options" target="_self">&#x7A0B;&#x5E8F;&#x9009;&#x9879;Program options</a></li>
+          <li><a href="#&#x6587;&#x6863;&#x9009;&#x9879;documentation-options" target="_self">&#x6587;&#x6863;&#x9009;&#x9879;Documentation options</a></li>
+          <li><a href="#&#x7EC4;&#x4EF6;&#x9009;&#x9879;component-options" target="_self">&#x7EC4;&#x4EF6;&#x9009;&#x9879;Component options</a></li>
+          <li><a href="#&#x4E2A;&#x522B;&#x7EC4;&#x4EF6;&#x9009;&#x9879;individual-component-options" target="_self">&#x4E2A;&#x522B;&#x7EC4;&#x4EF6;&#x9009;&#x9879;Individual component options</a></li>
+          <li><a href="#&#x6269;&#x5C55;&#x5E93;&#x652F;&#x6301;external-library-support" target="_self">&#x6269;&#x5C55;&#x5E93;&#x652F;&#x6301;External library support</a> 
+           <ul>
+            <li><a href="#&#x786C;&#x4EF6;&#x52A0;&#x901F;&#x529F;&#x80FD;hardware-acceleration-features" target="_self">&#x786C;&#x4EF6;&#x52A0;&#x901F;&#x529F;&#x80FD;hardware acceleration features</a></li>
+           </ul> </li>
+          <li><a href="#&#x5DE5;&#x5177;&#x94FE;&#x9009;&#x9879;toolchain-options" target="_self">&#x5DE5;&#x5177;&#x94FE;&#x9009;&#x9879;Toolchain options</a></li>
+          <li><a href="#&#x9AD8;&#x7EA7;&#x9009;&#x9879;advanced-options" target="_self">&#x9AD8;&#x7EA7;&#x9009;&#x9879;Advanced options</a></li>
+          <li><a href="#&#x4F18;&#x5316;&#x9009;&#x9879;optimization-options" target="_self">&#x4F18;&#x5316;&#x9009;&#x9879;Optimization options</a></li>
+          <li><a href="#&#x5F00;&#x53D1;&#x8005;&#x9009;&#x9879;developer-options" target="_self">&#x5F00;&#x53D1;&#x8005;&#x9009;&#x9879;Developer options</a></li>
+         </ul> </li>
+       </ul> 
+      </div> 
+     </div> 
+     <p></p> 
+     <h2 id="&#x5E2E;&#x52A9;&#x9009;&#x9879;help-options"><a name="&#x5E2E;&#x52A9;&#x9009;&#x9879;help-options" class="anchor-navigation-ex-anchor" href="#&#x5E2E;&#x52A9;&#x9009;&#x9879;help-options"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5E2E;&#x52A9;&#x9009;&#x9879;help-options" class="plugin-anchor" href="#&#x5E2E;&#x52A9;&#x9009;&#x9879;help-options"><i class="fa fa-link" aria-hidden="true"></i></a><a name="t0"></a><a name="t0"></a>&#x5E2E;&#x52A9;&#x9009;&#x9879;&#xFF08;Help options&#xFF09;</h2> 
+     <p>&#x7528;&#x4E8E;&#x67E5;&#x770B;ffmpeg&#x7684;&#x80FD;&#x529B;</p> 
+     <div class="table-box">
+      <table>
+       <thead>
+        <tr>
+         <th>&#x9009;&#x9879;</th>
+         <th>&#x8BF4;&#x660E;</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>&#x2013;help</td>
+         <td>print this message</td>
+        </tr>
+        <tr>
+         <td>&#x2013;list-decoders</td>
+         <td>&#x663E;&#x793A;&#x6240;&#x6709;&#x53EF;&#x7528;&#x7684;&#x89E3;&#x7801;&#x5668;&#xFF08;h264/mjpeg&#x7B49;&#xFF09;</td>
+        </tr>
+        <tr>
+         <td>&#x2013;list-encoders</td>
+         <td>&#x663E;&#x793A;&#x6240;&#x6709;&#x53EF;&#x7528;&#x7684;&#x7F16;&#x7801;&#x5668;&#xFF08;h264/mjpeg&#x7B49;&#xFF09;</td>
+        </tr>
+        <tr>
+         <td>&#x2013;list-hwaccels</td>
+         <td>&#x663E;&#x793A;&#x6240;&#x6709;&#x652F;&#x6301;&#x7684;&#x786C;&#x7F16;&#x89E3;&#x7801;&#x5668;&#xFF08;h264_videotoolbox/h264_mediacodec&#x7B49;&#xFF09;</td>
+        </tr>
+        <tr>
+         <td>&#x2013;list-demuxers</td>
+         <td>&#x663E;&#x793A;&#x6240;&#x6709;&#x652F;&#x6301;&#x89E3;&#x590D;&#x7528;&#x7684;&#x5BB9;&#x5668;&#xFF08;mp4/h264&#x7B49;&#xFF09;</td>
+        </tr>
+        <tr>
+         <td>&#x2013;list-muxers</td>
+         <td>&#x663E;&#x793A;&#x6240;&#x6709;&#x652F;&#x6301;&#x590D;&#x7528;&#x7684;&#x5BB9;&#x5668;&#xFF08;mp4/h264&#x7B49;&#xFF09;</td>
+        </tr>
+        <tr>
+         <td>&#x2013;list-parsers</td>
+         <td>show all available parsers</td>
+        </tr>
+        <tr>
+         <td>&#x2013;list-protocols</td>
+         <td>&#x663E;&#x793A;&#x6240;&#x6709;&#x652F;&#x6301;&#x7684;&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#xFF08;rtmp/rtp&#x7B49;&#xFF09;</td>
+        </tr>
+        <tr>
+         <td>&#x2013;list-bsfs</td>
+         <td>&#x663E;&#x793A;&#x6240;&#x6709;&#x53EF;&#x7528;&#x7684;&#x683C;&#x5F0F;&#x8F6C;&#x6362;&#xFF08;h264_mp4toannexb/aac_adtstoasc&#x7B49;&#xFF09;</td>
+        </tr>
+        <tr>
+         <td>&#x2013;list-indevs</td>
+         <td>&#x663E;&#x793A;&#x6240;&#x6709;&#x652F;&#x6301;&#x7684;&#x8F93;&#x5165;&#x8BBE;&#x5907;&#xFF08;alsa/v4l2&#x7B49;&#xFF09;</td>
+        </tr>
+        <tr>
+         <td>&#x2013;list-outdevs</td>
+         <td>&#x663E;&#x793A;&#x6240;&#x6709;&#x652F;&#x6301;&#x7684;&#x8F93;&#x51FA;&#x8BBE;&#x5907;&#xFF08;alsa/opengl&#x7B49;&#xFF09;</td>
+        </tr>
+        <tr>
+         <td>&#x2013;list-filters</td>
+         <td>&#x663E;&#x793A;&#x652F;&#x6301;&#x7684;&#x6240;&#x6709;&#x8FC7;&#x6EE4;&#x5668;&#xFF08;scale/volume/fps/allyuv&#x7B49;&#xFF09;</td>
+        </tr>
+       </tbody>
+      </table>
+     </div> 
+     <h2 id="&#x6807;&#x51C6;&#x9009;&#x9879;standard-options"><a name="&#x6807;&#x51C6;&#x9009;&#x9879;standard-options" class="anchor-navigation-ex-anchor" href="#&#x6807;&#x51C6;&#x9009;&#x9879;standard-options"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6807;&#x51C6;&#x9009;&#x9879;standard-options" class="plugin-anchor" href="#&#x6807;&#x51C6;&#x9009;&#x9879;standard-options"><i class="fa fa-link" aria-hidden="true"></i></a><a name="t1"></a><a name="t1"></a>&#x6807;&#x51C6;&#x9009;&#x9879;&#xFF08;Standard options&#xFF09;</h2> 
+     <p>&#x7F16;&#x8BD1;&#x914D;&#x7F6E;</p> 
+     <div class="table-box">
+      <table>
+       <thead>
+        <tr>
+         <th>&#x9009;&#x9879;</th>
+         <th>&#x8BF4;&#x660E;</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>&#x2013;logfile=FILE</td>
+         <td>&#x914D;&#x7F6E;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;log&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#xFF0C;&#x9ED8;&#x8BA4;&#x8F93;&#x51FA;&#x5230;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#x7684;ffbuild/config.log&#x6587;&#x4EF6;</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-logging</td>
+         <td>&#x914D;&#x7F6E;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E0D;&#x8F93;&#x51FA;&#x65E5;&#x5FD7;</td>
+        </tr>
+        <tr>
+         <td>&#x2013;fatal-warnings</td>
+         <td>&#x628A;&#x914D;&#x7F6E;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x8B66;&#x544A;&#x5F53;&#x505A;&#x81F4;&#x547D;&#x7684;&#x9519;&#x8BEF;&#x5904;&#x7406;</td>
+        </tr>
+        <tr>
+         <td>&#x2013;prefix=PREFIX</td>
+         <td>&#x8BBE;&#x5B9A;&#x5B89;&#x88C5;&#x7684;&#x8DDF;&#x76EE;&#x5F55;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;&#x9ED8;&#x8BA4;&#x662F;/usr</td>
+        </tr>
+        <tr>
+         <td>&#x2013;bindir=DIR</td>
+         <td>&#x8BBE;&#x7F6E;&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#x7684;&#x5B89;&#x88C5;&#x4F4D;&#x7F6E;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;[PREFIX/bin]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;datadir=DIR</td>
+         <td>&#x8BBE;&#x7F6E;&#x6D4B;&#x8BD5;&#x7A0B;&#x5E8F;&#x4EE5;&#x53CA;&#x6570;&#x636E;&#x7684;&#x5B89;&#x88C5;&#x4F4D;&#x7F6E;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;[PREFIX/share/ffmpeg]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;docdir=DIR</td>
+         <td>&#x8BBE;&#x7F6E;&#x6587;&#x6863;&#x7684;&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;[PREFIX/share/doc/ffmpeg]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;libdir=DIR</td>
+         <td>&#x8BBE;&#x7F6E;&#x9759;&#x6001;&#x5E93;&#x7684;&#x5B89;&#x88C5;&#x4F4D;&#x7F6E;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;[PREFIX/lib]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;shlibdir=DIR</td>
+         <td>&#x8BBE;&#x7F6E;&#x52A8;&#x6001;&#x5E93;&#x7684;&#x5B89;&#x88C5;&#x4F4D;&#x7F6E;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;[LIBDIR]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;incdir=DIR</td>
+         <td>&#x8BBE;&#x7F6E;&#x5934;&#x6587;&#x4EF6;&#x7684;&#x5B89;&#x88C5;&#x4F4D;&#x7F6E;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;[PREFIX/include]&#xFF1B;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#x7528;&#x4E8E;&#x4F9D;&#x8D56;&#x6B64;&#x5934;&#x6587;&#x4EF6;&#x6765;&#x5F00;&#x53D1;&#x5C31;&#x591F;&#x4E86;</td>
+        </tr>
+        <tr>
+         <td>&#x2013;mandir=DIR</td>
+         <td>&#x8BBE;&#x7F6E;man&#x6587;&#x4EF6;&#x7684;&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;[PREFIX/share/man]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;pkgconfigdir=DIR</td>
+         <td>&#x8BBE;&#x7F6E;pkgconfig&#x7684;&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;[LIBDIR/pkgconfig]&#xFF0C;&#x53EA;&#x6709;<code>--enable-shared</code>&#x4F7F;&#x80FD;&#x7684;&#x65F6;&#x5019;&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x624D;&#x6709;&#x6548;</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-rpath</td>
+         <td>use rpath to allow installing libraries in paths not part of the dynamic linker search path use rpath when linking programs [USE WITH CARE]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;install-name-dir=DIR</td>
+         <td>Darwin directory name for installed targets</td>
+        </tr>
+       </tbody>
+      </table>
+     </div> 
+     <h2 id="&#x8BB8;&#x53EF;&#x8BC1;&#x9009;&#x9879;licensing-options"><a name="&#x8BB8;&#x53EF;&#x8BC1;&#x9009;&#x9879;licensing-options" class="anchor-navigation-ex-anchor" href="#&#x8BB8;&#x53EF;&#x8BC1;&#x9009;&#x9879;licensing-options"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8BB8;&#x53EF;&#x8BC1;&#x9009;&#x9879;licensing-options" class="plugin-anchor" href="#&#x8BB8;&#x53EF;&#x8BC1;&#x9009;&#x9879;licensing-options"><i class="fa fa-link" aria-hidden="true"></i></a><a name="t2"></a><a name="t2"></a>&#x8BB8;&#x53EF;&#x8BC1;&#x9009;&#x9879;&#xFF08;Licensing options&#xFF09;</h2> 
+     <p>&#x9009;&#x62E9;&#x8BB8;&#x53EF;&#x8BC1;&#xFF0C;FFMPEG&#x9ED8;&#x8BA4;&#x8BB8;&#x53EF;&#x8BC1;LGPL 2.1&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x52A0;gpl&#x7684;&#x5E93;&#x9700;&#x8981;&#x4F7F;&#x7528;gpl&#x7684;&#x8BB8;&#x53EF;&#x8BC1;&#xFF0C;&#x4F8B;&#x5982;libx264&#x5C31;&#x662F;gpl&#x7684;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x52A0;&#x5165;libx264&#x5219;&#x9700;&#x8981;<code>--enable-gpl</code>&#x3002;</p> 
+     <div class="table-box">
+      <table>
+       <thead>
+        <tr>
+         <th>&#x9009;&#x9879;</th>
+         <th>&#x8BF4;&#x660E;</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>&#x2013;enable-gpl</td>
+         <td>allow use of GPL code, the resulting libs and binaries will be under GPL [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-version3</td>
+         <td>upgrade (L)GPL to version 3 [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-nonfree</td>
+         <td>allow use of nonfree code, the resulting libs and binaries will be unredistributable [no]</td>
+        </tr>
+       </tbody>
+      </table>
+     </div> 
+     <h2 id="&#x914D;&#x7F6E;&#x9009;&#x9879;configuration-options"><a name="&#x914D;&#x7F6E;&#x9009;&#x9879;configuration-options" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;&#x9009;&#x9879;configuration-options"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x914D;&#x7F6E;&#x9009;&#x9879;configuration-options" class="plugin-anchor" href="#&#x914D;&#x7F6E;&#x9009;&#x9879;configuration-options"><i class="fa fa-link" aria-hidden="true"></i></a><a name="t3"></a><a name="t3"></a>&#x914D;&#x7F6E;&#x9009;&#x9879;&#xFF08;Configuration options&#xFF09;</h2> 
+     <p>&#x7F16;&#x8BD1;&#x9009;&#x9879;&#x7684;&#x914D;&#x7F6E;</p> 
+     <div class="table-box">
+      <table>
+       <thead>
+        <tr>
+         <th>&#x9009;&#x9879;</th>
+         <th>&#x8BF4;&#x660E;</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>&#x2013;disable-static</td>
+         <td>&#x4E0D;&#x751F;&#x4EA7;&#x9759;&#x6001;&#x5E93;&#xFF0C;&#x9ED8;&#x8BA4;&#x751F;&#x6210;&#x9759;&#x6001;&#x5E93;</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-shared</td>
+         <td>&#x751F;&#x6210;&#x52A8;&#x6001;&#x5E93;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E0D;&#x751F;&#x6210;&#x52A8;&#x6001;&#x5E93;</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-small</td>
+         <td>optimize for size instead of speed&#xFF0C;&#x9ED8;&#x8BA4;&#x5F00;&#x542F;</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-runtime-cpudetect</td>
+         <td>disable detecting cpu capabilities at runtime (smaller binary)&#xFF0C;&#x9ED8;&#x8BA4;&#x5F00;&#x542F;</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-gray</td>
+         <td>enable full grayscale support (slower color)</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-swscale-alpha</td>
+         <td>disable alpha channel support in swscale</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-all</td>
+         <td>&#x7981;&#x6B62;&#x7F16;&#x8BD1;&#x6240;&#x6709;&#x5E93;&#x548C;&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-raise-major</td>
+         <td>&#x589E;&#x52A0;&#x4E3B;&#x7248;&#x672C;&#x53F7;</td>
+        </tr>
+       </tbody>
+      </table>
+     </div> 
+     <h2 id="&#x7A0B;&#x5E8F;&#x9009;&#x9879;program-options"><a name="&#x7A0B;&#x5E8F;&#x9009;&#x9879;program-options" class="anchor-navigation-ex-anchor" href="#&#x7A0B;&#x5E8F;&#x9009;&#x9879;program-options"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7A0B;&#x5E8F;&#x9009;&#x9879;program-options" class="plugin-anchor" href="#&#x7A0B;&#x5E8F;&#x9009;&#x9879;program-options"><i class="fa fa-link" aria-hidden="true"></i></a><a name="t4"></a><a name="t4"></a>&#x7A0B;&#x5E8F;&#x9009;&#x9879;&#xFF08;Program options&#xFF09;</h2> 
+     <p>&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#x5F00;&#x542F;&#x9009;&#x9879;&#xFF0C;&#x9ED8;&#x8BA4;&#x7F16;&#x8BD1;ffmpeg&#x4E2D;&#x7684;&#x6240;&#x6709;&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#xFF0C;&#x5305;&#x62EC;ffmpeg&#x3001;ffplay&#x3001;ffprobe&#x3001;ffserver&#xFF0C;&#x4E0D;&#x8FC7;Mac&#x5E73;&#x53F0;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x4E0D;&#x751F;&#x6210;ffplay&#xFF0C;&#x76EE;&#x524D;&#x6682;&#x672A;&#x77E5;&#x9053;&#x5565;&#x539F;&#x56E0;&#x3002;</p> 
+     <div class="table-box">
+      <table>
+       <thead>
+        <tr>
+         <th>&#x9009;&#x9879;</th>
+         <th>&#x8BF4;&#x660E;</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>&#x2013;disable-programs</td>
+         <td>do not build command line programs</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-ffmpeg</td>
+         <td>disable ffmpeg build</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-ffplay</td>
+         <td>disable ffplay build</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-ffprobe</td>
+         <td>disable ffprobe build</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-ffserver</td>
+         <td>disable ffserver build</td>
+        </tr>
+       </tbody>
+      </table>
+     </div> 
+     <h2 id="&#x6587;&#x6863;&#x9009;&#x9879;documentation-options"><a name="&#x6587;&#x6863;&#x9009;&#x9879;documentation-options" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x6863;&#x9009;&#x9879;documentation-options"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6587;&#x6863;&#x9009;&#x9879;documentation-options" class="plugin-anchor" href="#&#x6587;&#x6863;&#x9009;&#x9879;documentation-options"><i class="fa fa-link" aria-hidden="true"></i></a><a name="t5"></a><a name="t5"></a>&#x6587;&#x6863;&#x9009;&#x9879;&#xFF08;Documentation options&#xFF09;</h2> 
+     <p>&#x79BB;&#x7EBF;&#x6587;&#x6863;&#x9009;&#x62E9;</p> 
+     <div class="table-box">
+      <table>
+       <thead>
+        <tr>
+         <th>&#x9009;&#x9879;</th>
+         <th>&#x8BF4;&#x660E;</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>&#x2013;disable-doc</td>
+         <td>do not build documentation</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-htmlpages</td>
+         <td>do not build HTML documentation pages</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-manpages</td>
+         <td>do not build man documentation pages</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-podpages</td>
+         <td>do not build POD documentation pages</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-txtpages</td>
+         <td>do not build text documentation pages</td>
+        </tr>
+       </tbody>
+      </table>
+     </div> 
+     <h2 id="&#x7EC4;&#x4EF6;&#x9009;&#x9879;component-options"><a name="&#x7EC4;&#x4EF6;&#x9009;&#x9879;component-options" class="anchor-navigation-ex-anchor" href="#&#x7EC4;&#x4EF6;&#x9009;&#x9879;component-options"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7EC4;&#x4EF6;&#x9009;&#x9879;component-options" class="plugin-anchor" href="#&#x7EC4;&#x4EF6;&#x9009;&#x9879;component-options"><i class="fa fa-link" aria-hidden="true"></i></a><a name="t6"></a><a name="t6"></a>&#x7EC4;&#x4EF6;&#x9009;&#x9879;&#xFF08;Component options&#xFF09;</h2> 
+     <p>&#x9664;&#x4E86;avresample&#x6A21;&#x5757;&#xFF0C;&#x9ED8;&#x8BA4;&#x7F16;&#x8BD1;&#x6240;&#x6709;&#x6A21;&#x5757;&#x3002;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#x7528;&#x4E8E;&#x8F7B;&#x91CF;&#x5316;ffmpeg&#x5E93;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x53EF;&#x4EE5;&#x4EC5;&#x4EC5;&#x5F00;&#x542F;&#x6307;&#x5B9A;&#x67D0;&#x4E9B;&#x7EC4;&#x4EF6;&#x7684;&#x67D0;&#x4E9B;&#x529F;&#x80FD;&#x3002;</p> 
+     <div class="table-box">
+      <table>
+       <thead>
+        <tr>
+         <th>&#x9009;&#x9879;</th>
+         <th>&#x8BF4;&#x660E;</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>&#x2013;disable-avdevice</td>
+         <td>disable libavdevice build</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-avcodec</td>
+         <td>disable libavcodec build</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-avformat</td>
+         <td>disable libavformat build</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-swresample</td>
+         <td>disable libswresample build</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-swscale</td>
+         <td>disable libswscale build</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-postproc</td>
+         <td>disable libpostproc build</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-avfilter</td>
+         <td>disable libavfilter build</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-avresample</td>
+         <td>enable libavresample build [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-pthreads</td>
+         <td>disable pthreads [autodetect]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-w32threads</td>
+         <td>disable Win32 threads [autodetect]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-os2threads</td>
+         <td>disable OS/2 threads [autodetect]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-network</td>
+         <td>disable network support [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-dct</td>
+         <td>disable DCT code</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-dwt</td>
+         <td>disable DWT code</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-error-resilience</td>
+         <td>disable error resilience code</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-lsp</td>
+         <td>disable LSP code</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-lzo</td>
+         <td>disable LZO decoder code</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-mdct</td>
+         <td>disable MDCT code</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-rdft</td>
+         <td>disable RDFT code</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-fft</td>
+         <td>disable FFT code</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-faan</td>
+         <td>disable floating point AAN (I)DCT code</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-pixelutils</td>
+         <td>disable pixel utils in libavutil</td>
+        </tr>
+       </tbody>
+      </table>
+     </div> 
+     <h2 id="&#x4E2A;&#x522B;&#x7EC4;&#x4EF6;&#x9009;&#x9879;individual-component-options"><a name="&#x4E2A;&#x522B;&#x7EC4;&#x4EF6;&#x9009;&#x9879;individual-component-options" class="anchor-navigation-ex-anchor" href="#&#x4E2A;&#x522B;&#x7EC4;&#x4EF6;&#x9009;&#x9879;individual-component-options"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E2A;&#x522B;&#x7EC4;&#x4EF6;&#x9009;&#x9879;individual-component-options" class="plugin-anchor" href="#&#x4E2A;&#x522B;&#x7EC4;&#x4EF6;&#x9009;&#x9879;individual-component-options"><i class="fa fa-link" aria-hidden="true"></i></a><a name="t7"></a><a name="t7"></a>&#x4E2A;&#x522B;&#x7EC4;&#x4EF6;&#x9009;&#x9879;&#xFF08;Individual component options&#xFF09;</h2> 
+     <p>&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x8BBE;&#x5B9A;&#x5F00;&#x542F;&#x6307;&#x5B9A;&#x529F;&#x80FD;&#xFF0C;&#x4F8B;&#x5982;&#x7981;&#x6B62;&#x6240;&#x6709;encoders&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x5F00;&#x542F;&#x7279;&#x5B9A;&#x7684;encoders&#xFF08;x264&#x3001;aac&#x7B49;&#xFF09;</p> 
+     <div class="table-box">
+      <table>
+       <thead>
+        <tr>
+         <th>&#x9009;&#x9879;</th>
+         <th>&#x8BF4;&#x660E;</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>&#x2013;disable-everything</td>
+         <td>disable all components listed below</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-encoder=NAME</td>
+         <td>disable encoder NAME</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-encoder=NAME</td>
+         <td>enable encoder NAME</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-encoders</td>
+         <td>disable all encoders</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-decoder=NAME</td>
+         <td>disable decoder NAME</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-decoder=NAME</td>
+         <td>enable decoder NAME</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-decoders</td>
+         <td>disable all decoders</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-hwaccel=NAME</td>
+         <td>disable hwaccel NAME</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-hwaccel=NAME</td>
+         <td>enable hwaccel NAME</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-hwaccels</td>
+         <td>disable all hwaccels</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-muxer=NAME</td>
+         <td>disable muxer NAME</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-muxer=NAME</td>
+         <td>enable muxer NAME</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-muxers</td>
+         <td>disable all muxers</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-demuxer=NAME</td>
+         <td>disable demuxer NAME</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-demuxer=NAME</td>
+         <td>enable demuxer NAME</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-demuxers</td>
+         <td>disable all demuxers</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-parser=NAME</td>
+         <td>enable parser NAME</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-parser=NAME</td>
+         <td>disable parser NAME</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-parsers</td>
+         <td>disable all parsers</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-bsf=NAME</td>
+         <td>enable bitstream filter NAME</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-bsf=NAME</td>
+         <td>disable bitstream filter NAME</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-bsfs</td>
+         <td>disable all bitstream filters</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-protocol=NAME</td>
+         <td>enable protocol NAME</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-protocol=NAME</td>
+         <td>disable protocol NAME</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-protocols</td>
+         <td>disable all protocols</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-indev=NAME</td>
+         <td>enable input device NAME</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-indev=NAME</td>
+         <td>disable input device NAME</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-indevs</td>
+         <td>disable input devices</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-outdev=NAME</td>
+         <td>enable output device NAME</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-outdev=NAME</td>
+         <td>disable output device NAME</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-outdevs</td>
+         <td>disable output devices</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-devices</td>
+         <td>disable all devices</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-filter=NAME</td>
+         <td>enable filter NAME</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-filter=NAME</td>
+         <td>disable filter NAME</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-filters</td>
+         <td>disable all filters</td>
+        </tr>
+       </tbody>
+      </table>
+     </div> 
+     <h2 id="&#x6269;&#x5C55;&#x5E93;&#x652F;&#x6301;external-library-support"><a name="&#x6269;&#x5C55;&#x5E93;&#x652F;&#x6301;external-library-support" class="anchor-navigation-ex-anchor" href="#&#x6269;&#x5C55;&#x5E93;&#x652F;&#x6301;external-library-support"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6269;&#x5C55;&#x5E93;&#x652F;&#x6301;external-library-support" class="plugin-anchor" href="#&#x6269;&#x5C55;&#x5E93;&#x652F;&#x6301;external-library-support"><i class="fa fa-link" aria-hidden="true"></i></a><a name="t8"></a><a name="t8"></a>&#x6269;&#x5C55;&#x5E93;&#x652F;&#x6301;&#xFF08;External library support&#xFF09;</h2> 
+     <p>ffmpeg&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x4E9B;&#x529F;&#x80FD;&#x662F;&#x7531;&#x5176;&#x4ED6;&#x6269;&#x5C55;&#x5E93;&#x652F;&#x6301;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x9700;&#x8981;&#x660E;&#x786E;&#x58F0;&#x660E;&#xFF0C;&#x786E;&#x5B9A;&#x7F16;&#x8BD1;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;&#x7684;&#x76EE;&#x6807;&#x67B6;&#x6784;<code>--arch</code>&#x76F8;&#x540C;&#x5C31;&#x597D;&#x4E86;&#xFF0C;&#x5728;&#x7F16;&#x8BD1;ffmpeg&#x7684;&#x65F6;&#x5019;&#x9700;&#x52A0;&#x5165;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;&#x7684;&#x5934;&#x6587;&#x548C;&#x5E93;&#x641C;&#x7D22;&#x8DEF;&#x5F84;&#xFF08;&#x901A;&#x8FC7;<code>extra-cflags</code>&#x548C;<code>extra-ldflags</code>&#x6307;&#x5B9A;&#x5373;&#x53EF;&#xFF09;&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x4E8B;ffmpeg&#x90FD;&#x7ED9;&#x4F60;&#x505A;&#x597D;&#x4E86;&#x3002;</p> 
+     <ul>
+      <li>libx264&#x4F8B;&#x5B50; <br> <a href="https://trac.ffmpeg.org/wiki/CompilationGuide/Quick/libx264" target="_blank" rel="noopener noreferrer">ffmpeg&#x96C6;&#x6210;libx264&#x5B98;&#x65B9;&#x6587;&#x6863;</a></li>
+     </ul> 
+     <pre class="prettyprint" name="code"><code class="hljs smalltalk has-numbering" onclick="mdcp.copyCode(event)" style="position: unset;">$ git clone http://source.ffmpeg.org/git/ffmpeg.git
+$ cd x264
+$ ./configure --prefix=$FFMPEG_PREFIX --enable-static --enable-shared
+$ make -j8 &amp;&amp; make install
+       </code>
+      </pre> 
+     <div class="table-box">
+      <table>
+       <thead>
+        <tr>
+         <th>&#x9009;&#x9879;</th>
+         <th>&#x8BF4;&#x660E;</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>&#x2013;enable-avisynth</td>
+         <td>enable reading of AviSynth script files [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-bzlib</td>
+         <td>disable bzlib [autodetect]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-chromaprint</td>
+         <td>enable audio fingerprinting with chromaprint [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-frei0r</td>
+         <td>enable frei0r video filtering [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-gcrypt</td>
+         <td>enable gcrypt, needed for rtmp(t)e support if openssl, librtmp or gmp is not used [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-gmp</td>
+         <td>enable gmp, needed for rtmp(t)e support if openssl or librtmp is not used [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-gnutls</td>
+         <td>enable gnutls, needed for https support if openssl is not used [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-iconv</td>
+         <td>disable iconv [autodetect]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-jni</td>
+         <td>enable JNI support [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-ladspa</td>
+         <td>enable LADSPA audio filtering [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libass</td>
+         <td>enable libass subtitles rendering, needed for subtitles and ass filter [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libbluray</td>
+         <td>enable BluRay reading using libbluray [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libbs2b</td>
+         <td>enable bs2b DSP library [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libcaca</td>
+         <td>enable textual display using libcaca [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libcelt</td>
+         <td>enable CELT decoding via libcelt [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libcdio</td>
+         <td>enable audio CD grabbing with libcdio [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libdc1394</td>
+         <td>enable IIDC-1394 grabbing using libdc1394 and libraw1394 [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libebur128</td>
+         <td>enable libebur128 for EBU R128 measurement, needed for loudnorm filter [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libfdk-aac</td>
+         <td>enable AAC de/encoding via libfdk-aac [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libflite</td>
+         <td>enable flite (voice synthesis) support via libflite [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libfontconfig</td>
+         <td>enable libfontconfig, useful for drawtext filter [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libfreetype</td>
+         <td>enable libfreetype, needed for drawtext filter [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libfribidi</td>
+         <td>enable libfribidi, improves drawtext filter [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libgme</td>
+         <td>enable Game Music Emu via libgme [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libgsm</td>
+         <td>enable GSM de/encoding via libgsm [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libiec61883</td>
+         <td>enable iec61883 via libiec61883 [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libilbc</td>
+         <td>enable iLBC de/encoding via libilbc [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libkvazaar</td>
+         <td>enable HEVC encoding via libkvazaar [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libmodplug</td>
+         <td>enable ModPlug via libmodplug [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libmp3lame</td>
+         <td>enable MP3 encoding via libmp3lame [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libnut</td>
+         <td>enable NUT (de)muxing via libnut, native (de)muxer exists [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libopencore-amrnb</td>
+         <td>enable AMR-NB de/encoding via libopencore-amrnb [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libopencore-amrwb</td>
+         <td>enable AMR-WB decoding via libopencore-amrwb [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libopencv</td>
+         <td>enable video filtering via libopencv [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libopenh264</td>
+         <td>enable H.264 encoding via OpenH264 [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libopenjpeg</td>
+         <td>enable JPEG 2000 de/encoding via OpenJPEG [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libopenmpt</td>
+         <td>enable decoding tracked files via libopenmpt [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libopus</td>
+         <td>enable Opus de/encoding via libopus [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libpulse</td>
+         <td>enable Pulseaudio input via libpulse [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-librubberband</td>
+         <td>enable rubberband needed for rubberband filter [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-librtmp</td>
+         <td>enable RTMP[E] support via librtmp [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libschroedinger</td>
+         <td>enable Dirac de/encoding via libschroedinger [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libshine</td>
+         <td>enable fixed-point MP3 encoding via libshine [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libsmbclient</td>
+         <td>enable Samba protocol via libsmbclient [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libsnappy</td>
+         <td>enable Snappy compression, needed for hap encoding [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libsoxr</td>
+         <td>enable Include libsoxr resampling [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libspeex</td>
+         <td>enable Speex de/encoding via libspeex [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libssh</td>
+         <td>enable SFTP protocol via libssh [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libtesseract</td>
+         <td>enable Tesseract, needed for ocr filter [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libtheora</td>
+         <td>enable Theora encoding via libtheora [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libtwolame</td>
+         <td>enable MP2 encoding via libtwolame [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libv4l2</td>
+         <td>enable libv4l2/v4l-utils [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libvidstab</td>
+         <td>enable video stabilization using vid.stab [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libvo-amrwbenc</td>
+         <td>enable AMR-WB encoding via libvo-amrwbenc [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libvorbis</td>
+         <td>enable Vorbis en/decoding via libvorbis, native implementation exists [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libvpx</td>
+         <td>enable VP8 and VP9 de/encoding via libvpx [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libwavpack</td>
+         <td>enable wavpack encoding via libwavpack [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libwebp</td>
+         <td>enable WebP encoding via libwebp [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libx264</td>
+         <td>enable H.264 encoding via x264 [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libx265</td>
+         <td>enable HEVC encoding via x265 [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libxavs</td>
+         <td>enable AVS encoding via xavs [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libxcb</td>
+         <td>enable X11 grabbing using XCB [autodetect]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libxcb-shm</td>
+         <td>enable X11 grabbing shm communication [autodetect]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libxcb-xfixes</td>
+         <td>enable X11 grabbing mouse rendering [autodetect]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libxcb-shape</td>
+         <td>enable X11 grabbing shape rendering [autodetect]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libxvid</td>
+         <td>enable Xvid encoding via xvidcore, native MPEG-4/Xvid encoder exists [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libzimg</td>
+         <td>enable z.lib, needed for zscale filter [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libzmq</td>
+         <td>enable message passing via libzmq [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libzvbi</td>
+         <td>enable teletext support via libzvbi [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-lzma</td>
+         <td>disable lzma [autodetect]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-decklink</td>
+         <td>enable Blackmagic DeckLink I/O support [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-mediacodec</td>
+         <td>enable Android MediaCodec support [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-netcdf</td>
+         <td>enable NetCDF, needed for sofalizer filter [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-openal</td>
+         <td>enable OpenAL 1.1 capture support [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-opencl</td>
+         <td>enable OpenCL code</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-opengl</td>
+         <td>enable OpenGL rendering [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-openssl</td>
+         <td>enable openssl, needed for https support if gnutls is not used [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-schannel</td>
+         <td>disable SChannel SSP, needed for TLS support on Windows if openssl and gnutls are not used [autodetect]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-sdl2</td>
+         <td>disable sdl2 [autodetect]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-securetransport</td>
+         <td>disable Secure Transport, needed for TLS support on OSX if openssl and gnutls are not used [autodetect]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-x11grab</td>
+         <td>enable X11 grabbing (legacy) [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-xlib</td>
+         <td>disable xlib [autodetect]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-zlib</td>
+         <td>disable zlib [autodetect]</td>
+        </tr>
+       </tbody>
+      </table>
+     </div> 
+     <h3 id="&#x786C;&#x4EF6;&#x52A0;&#x901F;&#x529F;&#x80FD;hardware-acceleration-features"><a name="&#x786C;&#x4EF6;&#x52A0;&#x901F;&#x529F;&#x80FD;hardware-acceleration-features" class="anchor-navigation-ex-anchor" href="#&#x786C;&#x4EF6;&#x52A0;&#x901F;&#x529F;&#x80FD;hardware-acceleration-features"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x786C;&#x4EF6;&#x52A0;&#x901F;&#x529F;&#x80FD;hardware-acceleration-features" class="plugin-anchor" href="#&#x786C;&#x4EF6;&#x52A0;&#x901F;&#x529F;&#x80FD;hardware-acceleration-features"><i class="fa fa-link" aria-hidden="true"></i></a><a name="t9"></a><a name="t9"></a>&#x786C;&#x4EF6;&#x52A0;&#x901F;&#x529F;&#x80FD;&#xFF08;hardware acceleration features&#xFF09;</h3> 
+     <p>ffmpeg&#x9ED8;&#x8BA4;&#x5B9E;&#x73B0;&#x4E86;&#x79FB;&#x52A8;&#x7AEF;&#xFF08;Android&#x548C;IOS&#xFF09;&#x7684;&#x786C;&#x7F16;&#x89E3;&#x7801;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;disable&#x7684;&#x90FD;&#x662F;&#x9ED8;&#x8BA4;&#x5F00;&#x542F;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x5173;&#x95ED;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;enable&#x7684;&#x90FD;&#x662F;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x89E3;&#x51B3;&#x4F9D;&#x8D56;&#x7684;&#x3002;</p> 
+     <div class="table-box">
+      <table>
+       <thead>
+        <tr>
+         <th>&#x9009;&#x9879;</th>
+         <th>&#x8BF4;&#x660E;</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>&#x2013;disable-audiotoolbox</td>
+         <td>disable Apple AudioToolbox code [autodetect]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-cuda</td>
+         <td>enable dynamically linked Nvidia CUDA code [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-cuvid</td>
+         <td>enable Nvidia CUVID support [autodetect]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-d3d11va</td>
+         <td>disable Microsoft Direct3D 11 video acceleration code [autodetect]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-dxva2</td>
+         <td>disable Microsoft DirectX 9 video acceleration code [autodetect]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libmfx</td>
+         <td>enable Intel MediaSDK (AKA Quick Sync Video) code via libmfx [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-libnpp</td>
+         <td>enable Nvidia Performance Primitives-based code [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-mmal</td>
+         <td>enable Broadcom Multi-Media Abstraction Layer (Raspberry Pi) via MMAL [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-nvenc</td>
+         <td>disable Nvidia video encoding code [autodetect]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-omx</td>
+         <td>enable OpenMAX IL code [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-omx-rpi</td>
+         <td>enable OpenMAX IL code for Raspberry Pi [no]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-vaapi</td>
+         <td>disable Video Acceleration API (mainly Unix/Intel) code [autodetect]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-vda</td>
+         <td>disable Apple Video Decode Acceleration code [autodetect]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-vdpau</td>
+         <td>disable Nvidia Video Decode and Presentation API for Unix code [autodetect]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-videotoolbox</td>
+         <td>disable VideoToolbox code [autodetect]</td>
+        </tr>
+       </tbody>
+      </table>
+     </div> 
+     <h2 id="&#x5DE5;&#x5177;&#x94FE;&#x9009;&#x9879;toolchain-options"><a name="&#x5DE5;&#x5177;&#x94FE;&#x9009;&#x9879;toolchain-options" class="anchor-navigation-ex-anchor" href="#&#x5DE5;&#x5177;&#x94FE;&#x9009;&#x9879;toolchain-options"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5DE5;&#x5177;&#x94FE;&#x9009;&#x9879;toolchain-options" class="plugin-anchor" href="#&#x5DE5;&#x5177;&#x94FE;&#x9009;&#x9879;toolchain-options"><i class="fa fa-link" aria-hidden="true"></i></a><a name="t10"></a><a name="t10"></a>&#x5DE5;&#x5177;&#x94FE;&#x9009;&#x9879;&#xFF08;Toolchain options&#xFF09;</h2> 
+     <p>ffmpeg&#x4EE3;&#x7801;&#x672C;&#x8EAB;&#x662F;&#x652F;&#x6301;&#x8DE8;&#x5E73;&#x53F0;&#x7684;&#xFF0C;&#x8981;&#x7F16;&#x8BD1;&#x4E0D;&#x540C;&#x7684;&#x5E73;&#x53F0;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x4E0D;&#x540C;&#x5E73;&#x53F0;&#x7684;&#x4EA4;&#x53C9;&#x7F16;&#x8BD1;&#x5DE5;&#x5177;&#x94FE;&#x3002;ffmpeg&#x90FD;&#x662F;c&#x4EE3;&#x7801;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x9700;&#x8981;&#x914D;&#x7F6E;c++&#x7684;sysroot&#x3002;&#x5E38;&#x7528;&#x7684;&#x5C31;&#x51E0;&#x4E2A;<code>arch</code>,<code>cpu</code>,<code>cross-prefix</code>,<code>enable-cross-compile</code>,<code>sysroot</code>,<code>target-os</code>,<code>extra-cflags</code>,<code>extra-ldflags</code>,<code>enable-pic</code>&#x3002;&#x73B0;&#x5728;Android&#x548C;IOS&#x51E0;&#x4E4E;&#x6CA1;&#x6709;armv5&#x7684;&#x8BBE;&#x5907;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x7F16;&#x8BD1;&#x8FD9;&#x4E24;&#x4E2A;&#x5E73;&#x53F0;&#x914D;&#x7F6E;armv7&#x548C;armv8&#x5C31;&#x597D;&#x4E86;&#x3002;</p> 
+     <div class="table-box">
+      <table>
+       <thead>
+        <tr>
+         <th>&#x9009;&#x9879;</th>
+         <th>&#x8BF4;&#x660E;</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>&#x2013;arch=ARCH</td>
+         <td>&#x9009;&#x62E9;&#x76EE;&#x6807;&#x67B6;&#x6784;[armv7a/aarch64/x86/x86_64&#x7B49;]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;cpu=CPU</td>
+         <td>&#x9009;&#x62E9;&#x76EE;&#x6807;cpu[armv7-a/armv8-a/x86/x86_64]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;cross-prefix=PREFIX</td>
+         <td>&#x8BBE;&#x5B9A;&#x4EA4;&#x53C9;&#x7F16;&#x8BD1;&#x5DE5;&#x5177;&#x94FE;&#x7684;&#x524D;&#x7F00;,&#x4E0D;&#x7B97;gcc/nm/as&#x547D;&#x4EE4;&#xFF0C;&#x4F8B;&#x5982;android 32&#x4F4D;&#x7684;&#x4EA4;&#x53C9;&#x7F16;&#x8BD1;&#x94FE;<code>$ndk_dir/toolchains/arm-linux-androideabi-$toolchain_version/prebuilt/linux-$host_arch/bin/arm-linux-androideabi-</code></td>
+        </tr>
+        <tr>
+         <td>&#x2013;progs-suffix=SUFFIX</td>
+         <td>program name suffix []</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-cross-compile</td>
+         <td>&#x5982;&#x679C;&#x76EE;&#x6807;&#x5E73;&#x53F0;&#x548C;&#x7F16;&#x8BD1;&#x5E73;&#x53F0;&#x4E0D;&#x540C;&#x5219;&#x9700;&#x8981;&#x4F7F;&#x80FD;&#x5B83;</td>
+        </tr>
+        <tr>
+         <td>&#x2013;sysroot=PATH</td>
+         <td>&#x4EA4;&#x53C9;&#x5DE5;&#x5177;&#x94FE;&#x7684;&#x5934;&#x6587;&#x4EF6;&#x548C;&#x5E93;&#x4F4D;&#xFF0C;&#x4F8B;&#x5982;Android 32&#x4F4D;&#x4F4D;&#x7F6E;<code>$ndk_dir/platforms/android-14/arch-arm</code></td>
+        </tr>
+        <tr>
+         <td>&#x2013;sysinclude=PATH</td>
+         <td>location of cross-build system headers</td>
+        </tr>
+        <tr>
+         <td>&#x2013;target-os=OS</td>
+         <td>&#x8BBE;&#x7F6E;&#x76EE;&#x6807;&#x7CFB;&#x7EDF;</td>
+        </tr>
+        <tr>
+         <td>&#x2013;target-exec=CMD</td>
+         <td>command to run executables on target</td>
+        </tr>
+        <tr>
+         <td>&#x2013;target-path=DIR</td>
+         <td>path to view of build directory on target</td>
+        </tr>
+        <tr>
+         <td>&#x2013;target-samples=DIR</td>
+         <td>path to samples directory on target</td>
+        </tr>
+        <tr>
+         <td>&#x2013;tempprefix=PATH</td>
+         <td>force fixed dir/prefix instead of mktemp for checks</td>
+        </tr>
+        <tr>
+         <td>&#x2013;toolchain=NAME</td>
+         <td>set tool defaults according to NAME</td>
+        </tr>
+        <tr>
+         <td>&#x2013;nm=NM</td>
+         <td>use nm tool NM [nm -g]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;ar=AR</td>
+         <td>use archive tool AR [ar]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;as=AS</td>
+         <td>use assembler AS []</td>
+        </tr>
+        <tr>
+         <td>&#x2013;ln_s=LN_S</td>
+         <td>use symbolic link tool LN_S [ln -s -f]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;strip=STRIP</td>
+         <td>use strip tool STRIP [strip]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;windres=WINDRES</td>
+         <td>use windows resource compiler WINDRES [windres]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;yasmexe=EXE</td>
+         <td>use yasm-compatible assembler EXE [yasm]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;cc=CC</td>
+         <td>use C compiler CC [gcc]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;cxx=CXX</td>
+         <td>use C compiler CXX [g++]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;objcc=OCC</td>
+         <td>use ObjC compiler OCC [gcc]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;dep-cc=DEPCC</td>
+         <td>use dependency generator DEPCC [gcc]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;ld=LD</td>
+         <td>use linker LD []</td>
+        </tr>
+        <tr>
+         <td>&#x2013;pkg-config=PKGCONFIG</td>
+         <td>use pkg-config tool PKGCONFIG [pkg-config]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;pkg-config-flags=FLAGS</td>
+         <td>pass additional flags to pkgconf []</td>
+        </tr>
+        <tr>
+         <td>&#x2013;ranlib=RANLIB</td>
+         <td>use ranlib RANLIB [ranlib]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;doxygen=DOXYGEN</td>
+         <td>use DOXYGEN to generate API doc [doxygen]</td>
+        </tr>
+        <tr>
+         <td>&#x2013;host-cc=HOSTCC</td>
+         <td>use host C compiler HOSTCC</td>
+        </tr>
+        <tr>
+         <td>&#x2013;host-cflags=HCFLAGS</td>
+         <td>use HCFLAGS when compiling for host</td>
+        </tr>
+        <tr>
+         <td>&#x2013;host-cppflags=HCPPFLAGS</td>
+         <td>use HCPPFLAGS when compiling for host</td>
+        </tr>
+        <tr>
+         <td>&#x2013;host-ld=HOSTLD</td>
+         <td>use host linker HOSTLD</td>
+        </tr>
+        <tr>
+         <td>&#x2013;host-ldflags=HLDFLAGS</td>
+         <td>use HLDFLAGS when linking for host</td>
+        </tr>
+        <tr>
+         <td>&#x2013;host-libs=HLIBS</td>
+         <td>use libs HLIBS when linking for host</td>
+        </tr>
+        <tr>
+         <td>&#x2013;host-os=OS</td>
+         <td>compiler host OS []</td>
+        </tr>
+        <tr>
+         <td>&#x2013;extra-cflags=ECFLAGS</td>
+         <td>&#x8BBE;&#x7F6E;cflags&#xFF0C;&#x5982;&#x679C;&#x662F;Android&#x5E73;&#x53F0;&#x53EF;&#x4EE5;&#x6839;&#x636E;ndk&#x5185;&#x7684;&#x8BBE;&#x5B9A;,<a href="https://chromium.googlesource.com/android_tools/+/master-backup/ndk/toolchains/arm-linux-androideabi-4.6/setup.mk" target="_blank" rel="noopener noreferrer">arm-linux-androideabi-4.6/setup.mk</a>&#xFF0C;&#x5EFA;&#x8BAE;&#x53C2;&#x8003;&#x4F60;&#x5F53;&#x524D;&#x7684;setup&#x6765;&#x914D;&#x7F6E;</td>
+        </tr>
+        <tr>
+         <td>&#x2013;extra-cxxflags=ECFLAGS</td>
+         <td>add ECFLAGS to CXXFLAGS []</td>
+        </tr>
+        <tr>
+         <td>&#x2013;extra-objcflags=FLAGS</td>
+         <td>add FLAGS to OBJCFLAGS []</td>
+        </tr>
+        <tr>
+         <td>&#x2013;extra-ldflags=ELDFLAGS</td>
+         <td>&#x53C2;&#x8003;cflags</td>
+        </tr>
+        <tr>
+         <td>&#x2013;extra-ldexeflags=ELDFLAGS</td>
+         <td>add ELDFLAGS to LDEXEFLAGS []</td>
+        </tr>
+        <tr>
+         <td>&#x2013;extra-ldlibflags=ELDFLAGS</td>
+         <td>add ELDFLAGS to LDLIBFLAGS []</td>
+        </tr>
+        <tr>
+         <td>&#x2013;extra-libs=ELIBS</td>
+         <td>add ELIBS []</td>
+        </tr>
+        <tr>
+         <td>&#x2013;extra-version=STRING</td>
+         <td>version string suffix []</td>
+        </tr>
+        <tr>
+         <td>&#x2013;optflags=OPTFLAGS</td>
+         <td>override optimization-related compiler flags</td>
+        </tr>
+        <tr>
+         <td>&#x2013;build-suffix=SUFFIX</td>
+         <td>library name suffix []</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-pic</td>
+         <td>build position-independent code</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-thumb</td>
+         <td>compile for Thumb instruction set</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-lto</td>
+         <td>use link-time optimization</td>
+        </tr>
+        <tr>
+         <td>&#x2013;env=&#x201D;ENV=override&#x201D;</td>
+         <td>override the environment variables</td>
+        </tr>
+       </tbody>
+      </table>
+     </div> 
+     <h2 id="&#x9AD8;&#x7EA7;&#x9009;&#x9879;advanced-options"><a name="&#x9AD8;&#x7EA7;&#x9009;&#x9879;advanced-options" class="anchor-navigation-ex-anchor" href="#&#x9AD8;&#x7EA7;&#x9009;&#x9879;advanced-options"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x9AD8;&#x7EA7;&#x9009;&#x9879;advanced-options" class="plugin-anchor" href="#&#x9AD8;&#x7EA7;&#x9009;&#x9879;advanced-options"><i class="fa fa-link" aria-hidden="true"></i></a><a name="t11"></a><a name="t11"></a>&#x9AD8;&#x7EA7;&#x9009;&#x9879;&#xFF08;Advanced options&#xFF09;</h2> 
+     <div class="table-box">
+      <table>
+       <thead>
+        <tr>
+         <th>&#x9009;&#x9879;</th>
+         <th>&#x8BF4;&#x660E;</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>&#x2013;malloc-prefix=PREFIX</td>
+         <td>prefix malloc and related names with PREFIX</td>
+        </tr>
+        <tr>
+         <td>&#x2013;custom-allocator=NAME</td>
+         <td>use a supported custom allocator</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-symver</td>
+         <td>disable symbol versioning</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-hardcoded-tables</td>
+         <td>use hardcoded tables instead of runtime generation</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-safe-bitstream-reader</td>
+         <td>disable buffer boundary checking in bitreaders (faster, but may crash)</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-memalign-hack</td>
+         <td>emulate memalign, interferes with memory debuggers</td>
+        </tr>
+        <tr>
+         <td>&#x2013;sws-max-filter-size=N</td>
+         <td>the max filter size swscale uses [256]</td>
+        </tr>
+       </tbody>
+      </table>
+     </div> 
+     <h2 id="&#x4F18;&#x5316;&#x9009;&#x9879;optimization-options"><a name="&#x4F18;&#x5316;&#x9009;&#x9879;optimization-options" class="anchor-navigation-ex-anchor" href="#&#x4F18;&#x5316;&#x9009;&#x9879;optimization-options"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4F18;&#x5316;&#x9009;&#x9879;optimization-options" class="plugin-anchor" href="#&#x4F18;&#x5316;&#x9009;&#x9879;optimization-options"><i class="fa fa-link" aria-hidden="true"></i></a><a name="t12"></a><a name="t12"></a>&#x4F18;&#x5316;&#x9009;&#x9879;&#xFF08;Optimization options&#xFF09;</h2> 
+     <p>&#x9ED8;&#x8BA4;&#x5F00;&#x542F;&#x5404;&#x4E2A;&#x5E73;&#x53F0;&#x7684;&#x6C47;&#x7F16;&#x4F18;&#x5316;&#xFF0C;&#x6709;&#x4E9B;&#x5D4C;&#x5165;&#x5F0F;&#x5E73;&#x53F0;&#x53EF;&#x80FD;&#x5E76;&#x4E0D;&#x80FD;&#x5B8C;&#x6574;&#x7684;&#x652F;&#x6301;&#x67B6;&#x6784;&#x7684;&#x6240;&#x6709;&#x6C47;&#x7F16;&#x6307;&#x4EE4;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x5173;&#x95ED;&#x3002;&#xFF08;&#x81EA;&#x5DF1;&#x7406;&#x89E3;&#x7684;&#xFF0C;&#x6CA1;&#x6709;&#x5B9E;&#x6218;&#xFF09;</p> 
+     <div class="table-box">
+      <table>
+       <thead>
+        <tr>
+         <th>&#x9009;&#x9879;</th>
+         <th>&#x8BF4;&#x660E;</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>&#x2013;disable-asm</td>
+         <td>disable all assembly optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-altivec</td>
+         <td>disable AltiVec optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-vsx</td>
+         <td>disable VSX optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-power8</td>
+         <td>disable POWER8 optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-amd3dnow</td>
+         <td>disable 3DNow! optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-amd3dnowext</td>
+         <td>disable 3DNow! extended optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-mmx</td>
+         <td>disable MMX optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-mmxext</td>
+         <td>disable MMXEXT optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-sse</td>
+         <td>disable SSE optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-sse2</td>
+         <td>disable SSE2 optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-sse3</td>
+         <td>disable SSE3 optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-ssse3</td>
+         <td>disable SSSE3 optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-sse4</td>
+         <td>disable SSE4 optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-sse42</td>
+         <td>disable SSE4.2 optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-avx</td>
+         <td>disable AVX optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-xop</td>
+         <td>disable XOP optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-fma3</td>
+         <td>disable FMA3 optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-fma4</td>
+         <td>disable FMA4 optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-avx2</td>
+         <td>disable AVX2 optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-aesni</td>
+         <td>disable AESNI optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-armv5te</td>
+         <td>disable armv5te optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-armv6</td>
+         <td>disable armv6 optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-armv6t2</td>
+         <td>disable armv6t2 optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-vfp</td>
+         <td>disable VFP optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-neon</td>
+         <td>disable NEON optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-inline-asm</td>
+         <td>disable use of inline assembly</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-yasm</td>
+         <td>disable use of nasm/yasm assembly</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-mipsdsp</td>
+         <td>disable MIPS DSP ASE R1 optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-mipsdspr2</td>
+         <td>disable MIPS DSP ASE R2 optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-msa</td>
+         <td>disable MSA optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-mipsfpu</td>
+         <td>disable floating point MIPS optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-mmi</td>
+         <td>disable Loongson SIMD optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-fast-unaligned</td>
+         <td>consider unaligned accesses slow</td>
+        </tr>
+       </tbody>
+      </table>
+     </div> 
+     <h2 id="&#x5F00;&#x53D1;&#x8005;&#x9009;&#x9879;developer-options"><a name="&#x5F00;&#x53D1;&#x8005;&#x9009;&#x9879;developer-options" class="anchor-navigation-ex-anchor" href="#&#x5F00;&#x53D1;&#x8005;&#x9009;&#x9879;developer-options"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5F00;&#x53D1;&#x8005;&#x9009;&#x9879;developer-options" class="plugin-anchor" href="#&#x5F00;&#x53D1;&#x8005;&#x9009;&#x9879;developer-options"><i class="fa fa-link" aria-hidden="true"></i></a><a name="t13"></a><a name="t13"></a>&#x5F00;&#x53D1;&#x8005;&#x9009;&#x9879;&#xFF08;Developer options&#xFF09;</h2> 
+     <p>&#x8C03;&#x8BD5;&#x7528;&#x7684;&#x4E00;&#x4E9B;&#x5F00;&#x5173;</p> 
+     <div class="table-box">
+      <table>
+       <thead>
+        <tr>
+         <th>&#x9009;&#x9879;</th>
+         <th>&#x8BF4;&#x660E;</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>&#x2013;disable-debug</td>
+         <td>disable debugging symbols</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-debug=LEVEL</td>
+         <td>set the debug level []</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-optimizations</td>
+         <td>disable compiler optimizations</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-extra-warnings</td>
+         <td>enable more compiler warnings</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-stripping</td>
+         <td>disable stripping of executables and shared libraries</td>
+        </tr>
+        <tr>
+         <td>&#x2013;assert-level=level</td>
+         <td>0(default), 1 or 2, amount of assertion testing, 2 causes a slowdown at runtime.</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-memory-poisoning</td>
+         <td>fill heap uninitialized allocated space with arbitrary data</td>
+        </tr>
+        <tr>
+         <td>&#x2013;valgrind=VALGRIND</td>
+         <td>run &#x201C;make fate&#x201D; tests through valgrind to detect memory leaks and errors, using the specified valgrind binary. Cannot be combined with &#x2013;target-exec</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-ftrapv</td>
+         <td>Trap arithmetic overflows</td>
+        </tr>
+        <tr>
+         <td>&#x2013;samples=PATH</td>
+         <td>location of test samples for FATE, if not set use $FATE_SAMPLES at make invocation time.</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-neon-clobber-test</td>
+         <td>check NEON registers for clobbering (should be used only for debugging purposes)</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-xmm-clobber-test</td>
+         <td>check XMM registers for clobbering (Win64-only; should be used only for debugging purposes)</td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-random</td>
+         <td>randomly enable/disable components</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-random</td>
+         <td></td>
+        </tr>
+        <tr>
+         <td>&#x2013;enable-random=LIST</td>
+         <td>randomly enable/disable specific components or</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-random=LIST</td>
+         <td>component groups. LIST is a comma-separated list of NAME[:PROB] entries where NAME is a component (group) and PROB the probability associated with</td>
+        </tr>
+        <tr>
+         <td>&#x2013;random-seed=VALUE</td>
+         <td>seed value for &#x2013;enable/disable-random</td>
+        </tr>
+        <tr>
+         <td>&#x2013;disable-valgrind-backtrace</td>
+         <td>do not print a backtrace under Valgrind (only applies to &#x2013;disable-optimizations builds)</td>
+        </tr>
+       </tbody>
+      </table>
+     </div> 
+    </div>
+    <div>
+     <div></div>
+    </div> 
+    <link href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/markdown_views-d7a94ec6ab.css" rel="stylesheet"> 
+    <link href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/style-ba784fbaf8.css" rel="stylesheet"> 
+   </div> 
+  </article>
+ 
+
+
+
+<blockquote>
+<p>&#x8F6C;&#x81EA;&#xFF1A;<a href="https://blog.csdn.net/momo0853/article/details/78043903" target="_blank">https://blog.csdn.net/momo0853/article/details/78043903</a> </p>
+</blockquote>
+<p></p><footer class="page-footer"><span class="copyright">Copyright &#xA9; xhunmon 2022  all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Update: 
+2022-12-26 15:29:13
+</span></footer><hr><div id="vcomments"></div><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el: "#vcomments",appId: 'xMemPde6Lax4ffLfLBkuEi9t-gzGzoHsz',appKey: 'jIVEp2lShgotSTy0GalhgIzm',placeholder: 'Just go go',avatar: '',meta: undefined,pageSize: 10,lang: 'zh-CN',recordIP: false})</script><p></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: FFmpeg">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="02_shell.html" class="navigation navigation-next " aria-label="Next page: Shell脚本">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Configure配置选项 (转载)","level":"1.4.1","depth":2,"next":{"title":"Shell脚本","level":"1.4.2","depth":2,"path":"FFmpeg/02_shell.md","ref":"FFmpeg/02_shell.md","articles":[]},"previous":{"title":"FFmpeg","level":"1.4","depth":1,"path":"FFmpeg/README.md","ref":"FFmpeg/README.md","articles":[{"title":"Configure配置选项 (转载)","level":"1.4.1","depth":2,"path":"FFmpeg/01_configure_help.md","ref":"FFmpeg/01_configure_help.md","articles":[]},{"title":"Shell脚本","level":"1.4.2","depth":2,"path":"FFmpeg/02_shell.md","ref":"FFmpeg/02_shell.md","articles":[]},{"title":"编译FFmpeg4.2.2","level":"1.4.3","depth":2,"path":"FFmpeg/03_build_ffmpeg.md","ref":"FFmpeg/03_build_ffmpeg.md","articles":[]},{"title":"FFmpeg导入到Clion（MacOS）","level":"1.4.4","depth":2,"path":"FFmpeg/04_import_ffmpeg.md","ref":"FFmpeg/04_import_ffmpeg.md","articles":[]},{"title":"使用Clion阅读FFmpeg源码（支持跳转）","level":"1.4.5","depth":2,"path":"FFmpeg/05_source.md","ref":"FFmpeg/05_source.md","articles":[]},{"title":"FFmpeg重要结构体（转载）","level":"1.4.6","depth":2,"path":"FFmpeg/06_struct.md","ref":"FFmpeg/06_struct.md","articles":[]},{"title":"手撕FLV协议","level":"1.4.7","depth":2,"path":"FFmpeg/07_flv.md","ref":"FFmpeg/07_flv.md","articles":[]},{"title":"Demuxing（解封装）","level":"1.4.8","depth":2,"path":"FFmpeg/08_demuxing.md","ref":"FFmpeg/08_demuxing.md","articles":[]},{"title":"Muxing（封装）","level":"1.4.9","depth":2,"path":"FFmpeg/09_muxing.md","ref":"FFmpeg/09_muxing.md","articles":[]},{"title":"Remuxing（重新封装）","level":"1.4.10","depth":2,"path":"FFmpeg/10_remuxing.md","ref":"FFmpeg/10_remuxing.md","articles":[]},{"title":"Decode（解码）","level":"1.4.11","depth":2,"path":"FFmpeg/11_decode.md","ref":"FFmpeg/11_decode.md","articles":[]},{"title":"Encode（编码）","level":"1.4.12","depth":2,"path":"FFmpeg/12_encode.md","ref":"FFmpeg/12_encode.md","articles":[]},{"title":"简单实现转码","level":"1.4.13","depth":2,"path":"FFmpeg/13_transfer.md","ref":"FFmpeg/13_transfer.md","articles":[]},{"title":"Filter和SDL（Video）","level":"1.4.14","depth":2,"path":"FFmpeg/14_filter_v.md","ref":"FFmpeg/14_filter_v.md","articles":[]},{"title":"Filter和SDL（Audio）","level":"1.4.15","depth":2,"path":"FFmpeg/15_filter_a.md","ref":"FFmpeg/15_filter_a.md","articles":[]},{"title":"Transcode(转码)","level":"1.4.16","depth":2,"path":"FFmpeg/16_transcode.md","ref":"FFmpeg/16_transcode.md","articles":[]},{"title":"音视频同步处理","level":"1.4.17","depth":2,"path":"FFmpeg/17_sync.md","ref":"FFmpeg/17_sync.md","articles":[]},{"title":"FFmpeg命令使用指南","level":"1.4.18","depth":2,"path":"FFmpeg/18_command.md","ref":"FFmpeg/18_command.md","articles":[]},{"title":"Swscale（图像转换）","level":"1.4.19","depth":2,"path":"FFmpeg/19_swscale.md","ref":"FFmpeg/19_swscale.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","favicon-absolute","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","highlight","back-to-top-button","code","-lunr","-search","search-pro","tbfed-pagefooter","pageview-count","auto-scroll-table","lightbox","hide-element","valine","embed-pdf","mermaid-gb3","image-wrapper","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy xhunmon 2022 ","modify_label":"Update: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"image-wrapper":{},"github":{"url":"https://github.com/xhunmon"},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"donate":{"alipay":"/source/images/alipayimg.jpeg","alipayText":"支付宝","button":"捐赠","title":"请作者喝杯coffee","wechat":"/source/images/wechatpayimg.jpeg","wechatText":"微信"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"/apple-tou ch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{},"favicon":"/source/images/favicon.png"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"xhunmon","repo":"VABlog","type":"star","count":true,"size":"small"},{"user":"xhunmon","width":"160","type":"follow","count":true,"size":"small"}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"embed-pdf":{},"valine":{"avatar":"","lang":"zh-CN","pageSize":10,"placeholder":"Just go go","recordIP":false,"appId":"xMemPde6Lax4ffLfLBkuEi9t-gzGzoHsz","appKey":"jIVEp2lShgotSTy0GalhgIzm"}},"theme":"default","author":"秦城季","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"秦城季&音视频","language":"zh-hans","links":{"sidebar":{"秦城季&音视频":"https://github.com/xhunmon/VABlog"}},"gitbook":"3.2.3","description":"未来那个项目都不应该缺少音视频！"},"file":{"path":"FFmpeg/01_configure_help.md","mtime":"2022-12-26T07:29:13.882Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-26T08:27:47.172Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
