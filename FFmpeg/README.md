@@ -12,7 +12,6 @@
 - [FFmpeg导入到Clion（MacOS）](./04_import_ffmpeg.md)
 - [使用Clion阅读FFmpeg源码（支持跳转）](./05_source.md)
 - [FFmpeg重要结构体（转载）](./06_struct.md)
-- [手撕FLV协议](./07_flv.md)
 - [Demuxing（解封装）](./08_demuxing.md)
 - [Muxing（封装）](./09_muxing.md)
 - [Remuxing（重新封装）](./10_remuxing.md)

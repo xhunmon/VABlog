@@ -546,4 +546,4 @@ colorspace AVOptions:
 其中播放前的滤镜处理跟ffmpeg使用一样，只用替换成ffplay即可，如：
 > ffplay -vf boxblur=luma_radius=3:luma_power=8 -af aecho=0.8:0.88:60:0.4 Kobe.flv
 
-- [Kobi.flv下载](./07_flv/Kobe.flv)
+- [Kobi.flv下载](../MustRead/01_flv/Kobe.flv)

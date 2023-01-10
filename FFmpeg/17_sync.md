@@ -43,7 +43,7 @@
 ### 同时播放视频和音频
 这里所说是"同时"播放，而非同步，是因为我们并没有做同步处理，只是根据理论知识让它们各自播放，效果上展示出来同步的效果。
 来实践一下？
-1. 把 [Kobe.flv](./07_flv/Kobe.flv) 这个视频解码后做些滤镜等处理后得到yuv、pcm的裸数据后进行播放。解码过程参看：[FFmpeg 简单实现转码](./13_transfer.md) 和 [FFmpeg Transcode(转码)](./16_transcode.md) 。
+1. 把 [Kobe.flv](../MustRead/01_flv/Kobe.flv) 这个视频解码后做些滤镜等处理后得到yuv、pcm的裸数据后进行播放。解码过程参看：[FFmpeg 简单实现转码](./13_transfer.md) 和 [FFmpeg Transcode(转码)](./16_transcode.md) 。
 
 2. 解码后的数据如下：
 ```commandline
