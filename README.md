@@ -129,6 +129,7 @@ OpenGL使用GPU渲染视频，释放宝贵的CPU资源，学习它是必不可�
 - [LearnOpenGL-CN](https://github.com/LearnOpenGL-CN/LearnOpenGL-CN)
 - [OpenGL电子书下载](https://github.com/Canber/OpenGL-ES-for-android)
 - [OpenGL基础知识](./OpenGL/01_opengl.md)
+- [GLSL（着色器语言）中文手册](./OpenGL/02_glsl.md)
 - [AFPlayer：OpenGL ES播放RGB](./AFPlayer/02_opengl_es.md)
 
 
@@ -176,6 +177,10 @@ OpenGL使用GPU渲染视频，释放宝贵的CPU资源，学习它是必不可�
     rtmp.part2.Message-Formats.pdf
     rtmp.part1.Chunk-Stream.pdf
     jni基础介绍.pdf
+    OpenGL ES 2.0 编程指南 中文版.pdf
+    OpenGL+着色语言第三版.pdf
+    OpenGL.ES.2.0.Programming.Guide.pdf
+    OpenGL着色语言.pdf
     ISO_IEC_14496-14_2003-11-15.pdf
     ISO_IEC-14496-3-2009.pdf
     hls-mpeg-ts-VB_WhitePaper_TransportStreamVSProgramStream_rd2.pdf

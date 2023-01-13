@@ -163,6 +163,41 @@ if(!success){
 3）链接到一个用来渲染的着色器程序，同顶点着色器。
 
 ### 几个重要概念
+
+#### [FBO](https://learnopengl-cn.readthedocs.io/zh/latest/04%20Advanced%20OpenGL/05%20Framebuffers/)
+FBO: 帧缓存对象(FrameBuffer Objects)；我们想象一个场景，蛋糕工厂加工时，一个蛋糕会贴上奶油，放各种水果，最后打包出一个可以出售的蛋糕给到商店。在GPU和显示器通讯过程中，CPU是工厂，显示器是商店，而帧缓存对象是流水线，流水线保存着蛋糕，直到最后所有加工完才会输出给显示器。这么做的好处主要有两点：①节省GPU和显示器通讯过程的消耗；②在CPU可以拿到最终的成品（蛋糕），比如：录像过程中，开启了各种美颜、贴纸等操作，我们可以使用帧缓存得到GPU中最终显示的数据，进行编码保存或者推送到服务端等操作。这个技术叫做——离屏渲染。
+
+**使用实例：**
+```c
+//创建帧缓存对象，FBO，之后所有的渲染操作将会渲染到当前绑定帧缓冲的附件中
+GLuint fbo;
+glGenFramebuffers(1, &fbo);
+glBindFramebuffer(GL_FRAMEBUFFER, fbo);
+
+//纹理附件：把一个纹理附加到帧缓冲的时候，所有的渲染指令将会写入到这个纹理中，就像它是一个普通的颜色/深度或模板缓冲一样
+GLuint texture;
+glGenTextures(1, &texture);
+glBindTexture(GL_TEXTURE_2D, texture);
+glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, 800, 600, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+//把创建好的纹理texture，要做的最后一件事就是将它附加到帧缓冲上了
+glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0,GL_TEXTURE_2D, texture, 0);
+
+//在完整性检查执行之前，我们需要给帧缓冲附加一个附件, 要保证所有的渲染操作在主窗口中有视觉效果，我们需要再次激活默认帧缓冲，将它绑定到0
+glBindFramebuffer(GL_FRAMEBUFFER, 0);
+
+
+//当进行绘制到屏幕时，看是否需要推送到屏幕
+
+//这里先将FrameBuffer绑定到当前的绘制环境上，所以，在没解绑之前，所有的GL图形绘制操作，都不是直接绘制到屏幕上，而是绘制到这个FrameBuffer上！
+glBindFramebuffer(GL_FRAMEBUFFER, fbo);//先把所有本来应该渲染到屏幕的数据先推进FBO
+draw(texture);//本来应该是显示的屏幕的，结果到了FBO中。如果draw之前调用glBindFramebuffer(GLES20.GL_FRAMEBUFFER, 0);解绑则会显示到屏幕
+glBindFramebuffer(GL_FRAMEBUFFER, 0);  //最后解绑FBO，下次如果直接调用onDraw则显示到屏幕
+```
+
+
 #### VBO
 VBO：顶点缓冲对象(Vertex Buffer Objects)；它会在GPU内存(通常被称为显存)中储存大量顶点，使用这些缓冲对象的好处是我们可以一次性的发送一大批数据到显卡上，而不是每个顶点发送一次。从CPU把数据发送到显卡相对较慢，所以只要可能我们都要尝试尽量一次性发送尽可能多的数据。当数据发送至显卡的内存中后，顶点着色器几乎能立即访问顶点，这是个非常快的过程。
 

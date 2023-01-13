@@ -35,6 +35,7 @@
     * [Swscale（图像转换）](FFmpeg/19_swscale.md)
 * [OpenGL](OpenGL/README.md)
     * [OpenGL基础知识](OpenGL/01_opengl.md)
+    * [GLSL（着色器语言）中文手册](OpenGL/02_glsl.md)
     * [OpenGL ES播放RGB](AFPlayer/02_opengl_es.md)
 * [重点技术](MustRead/README.md)    
     * [手撕FLV协议](MustRead/01_flv.md)
