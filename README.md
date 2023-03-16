@@ -131,6 +131,7 @@ OpenGL使用GPU渲染视频，释放宝贵的CPU资源，学习它是必不可�
 - [OpenGL基础知识](./OpenGL/01_opengl.md)
 - [GLSL（着色器语言）中文手册](./OpenGL/02_glsl.md)
 - [AFPlayer：OpenGL ES播放RGB](./AFPlayer/02_opengl_es.md)
+- OpenGL ES推荐：WebGL编程指南（资源见下）
 
 
 ## 3.Webrtc
@@ -141,6 +142,7 @@ OpenGL使用GPU渲染视频，释放宝贵的CPU资源，学习它是必不可�
 # 六、实践项目
 
 - [AFPlayer项目](./AFPlayer/README.md) Android实现FFmpeg、OpenSL ES、OpenGL SE、MediaCodec等，实现简单的播放器，主要体现出相关知识点的使用。
+- [OpenGLES基本使用](https://github.com/xhunmon/OpenGLES) ：点、线、三角形、四边形、矩阵、纹理（贴纸）、摄像头显示、FBO、EGL、滤镜叠加、视频流编码输出。
 
 
 #七、最后
@@ -168,6 +170,7 @@ OpenGL使用GPU渲染视频，释放宝贵的CPU资源，学习它是必不可�
     《FFmpeg从入门到精通》.pdf
     《FFmpeg_Basics(260页)》.pdf
     webrtc介绍.pdf
+    WebGL编程指南.zip
     video_file_format_spec_v10_1.pdf
     STL源码剖析简体中文完整版(清晰扫描带目录).pdf
     SDL2-API手册.doc

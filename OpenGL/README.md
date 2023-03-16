@@ -12,6 +12,7 @@ OpenGL使用GPU渲染视频，释放宝贵的CPU资源，学习它是必不可�
 - [OpenGL电子书下载](https://github.com/Canber/OpenGL-ES-for-android)
 - [OpenGL基础知识](./../OpenGL/01_opengl.md)
 - [AFPlayer：OpenGL ES播放RGB](./../AFPlayer/02_opengl_es.md)
+- [OpenGLES基本使用](https://github.com/xhunmon/OpenGLES) ：点、线、三角形、四边形、矩阵、纹理（贴纸）、摄像头显示、FBO、EGL、滤镜叠加、视频流编码输出。
 
 
 
