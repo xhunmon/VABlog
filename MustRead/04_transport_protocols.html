@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>重点技术 · 秦城季&音视频</title>
+        <title>常见的音视频传输协议对比 · 秦城季&音视频</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -107,10 +107,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="01_flv.html" />
+    <link rel="next" href="05_codec.html" />
     
     
-    <link rel="prev" href="../AFPlayer/02_opengl_es.html" />
+    <link rel="prev" href="03_fst.html" />
     
 
     <style>
@@ -679,7 +679,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="./">
+        <li class="chapter " data-level="1.6" data-path="./">
             
                 <a href="./">
             
@@ -732,7 +732,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.4" data-path="04_transport_protocols.html">
+        <li class="chapter active" data-level="1.6.4" data-path="04_transport_protocols.html">
             
                 <a href="04_transport_protocols.html">
             
@@ -864,7 +864,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >重点技术</a>
+        <a href=".." >常见的音视频传输协议对比</a>
     </h1>
 </div>
 
@@ -879,17 +879,79 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x91CD;&#x70B9;&#x6280;&#x672F;"><b></b>&#x91CD;&#x70B9;&#x6280;&#x672F;</a></li></ul></div><a href="#&#x91CD;&#x70B9;&#x6280;&#x672F;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x91CD;&#x70B9;&#x6280;&#x672F;"><a name="&#x91CD;&#x70B9;&#x6280;&#x672F;" class="anchor-navigation-ex-anchor" href="#&#x91CD;&#x70B9;&#x6280;&#x672F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x91CD;&#x70B9;&#x6280;&#x672F;" class="plugin-anchor" href="#&#x91CD;&#x70B9;&#x6280;&#x672F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x91CD;&#x70B9;&#x6280;&#x672F;</h1>
-<ul>
-<li><a href="01_flv.html">&#x624B;&#x6495;FLV&#x534F;&#x8BAE;</a></li>
-<li><a href="02_h265.html">&#x57FA;&#x4E8E;H.264&#x770B;H.265</a></li>
-<li><a href="03_fst.html">&#x9762;&#x8BD5;&#x9898;&#x6574;&#x7406;</a></li>
-<li><a href="MustRead/04_transport_protocols.md">&#x5E38;&#x89C1;&#x7684;&#x97F3;&#x89C6;&#x9891;&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#x5BF9;&#x6BD4;</a></li>
-<li><a href="MustRead/05_codec.md">&#x5E38;&#x89C1;&#x7684;&#x97F3;&#x89C6;&#x9891;&#x7F16;&#x89E3;&#x7801;&#x5668;&#x5BF9;&#x6BD4;</a></li>
-<li><a href="MustRead/06_muxer.md">&#x5E38;&#x89C1;&#x7684;&#x97F3;&#x89C6;&#x9891;&#x5C01;&#x88C5;&#x683C;&#x5F0F;&#x5BF9;&#x6BD4;</a> </li>
-</ul>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5E38;&#x89C1;&#x7684;&#x97F3;&#x89C6;&#x9891;&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#x5BF9;&#x6BD4;"><b></b>&#x5E38;&#x89C1;&#x7684;&#x97F3;&#x89C6;&#x9891;&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#x5BF9;&#x6BD4;</a></li></ul></div><a href="#&#x5E38;&#x89C1;&#x7684;&#x97F3;&#x89C6;&#x9891;&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#x5BF9;&#x6BD4;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5E38;&#x89C1;&#x7684;&#x97F3;&#x89C6;&#x9891;&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#x5BF9;&#x6BD4;"><a name="&#x5E38;&#x89C1;&#x7684;&#x97F3;&#x89C6;&#x9891;&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#x5BF9;&#x6BD4;" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x89C1;&#x7684;&#x97F3;&#x89C6;&#x9891;&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#x5BF9;&#x6BD4;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5E38;&#x89C1;&#x7684;&#x97F3;&#x89C6;&#x9891;&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#x5BF9;&#x6BD4;" class="plugin-anchor" href="#&#x5E38;&#x89C1;&#x7684;&#x97F3;&#x89C6;&#x9891;&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#x5BF9;&#x6BD4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E38;&#x89C1;&#x7684;&#x97F3;&#x89C6;&#x9891;&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#x5BF9;&#x6BD4;</h1>
+<table>
+<thead>
+<tr>
+<th>&#x534F;&#x8BAE;&#x540D;&#x79F0;</th>
+<th>&#x4F5C;&#x7528;</th>
+<th>&#x53D1;&#x5E03;&#x65F6;&#x95F4;</th>
+<th>&#x62E5;&#x6709;&#x8005;</th>
+<th>&#x4F18;&#x70B9;</th>
+<th>&#x7F3A;&#x70B9;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RTP</td>
+<td>&#x5B9E;&#x65F6;&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#xFF08;Real-time Transport Protocol&#xFF09;</td>
+<td>1996</td>
+<td>IETF</td>
+<td>&#x5B9E;&#x65F6;&#x6027;&#x597D;&#x3001;&#x652F;&#x6301;&#x4EFB;&#x610F;&#x7F16;&#x7801;&#x683C;&#x5F0F;&#x3001;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#x901F;&#x5EA6;&#x5FEB;</td>
+<td>&#x65E0;&#x6CD5;&#x4FDD;&#x8BC1;&#x53EF;&#x9760;&#x6027;&#xFF0C;&#x9700;&#x8981;&#x7ED3;&#x5408;RTCP&#x8FDB;&#x884C;&#x63A7;&#x5236;</td>
+</tr>
+<tr>
+<td>RTSP</td>
+<td>&#x5B9E;&#x65F6;&#x6D41;&#x534F;&#x8BAE;&#xFF08;Real Time Streaming Protocol&#xFF09;</td>
+<td>1998</td>
+<td>IETF</td>
+<td>&#x5B9E;&#x73B0;&#x70B9;&#x64AD;&#x548C;&#x76F4;&#x64AD;&#x529F;&#x80FD;&#x3001;&#x652F;&#x6301;&#x64AD;&#x653E;&#x5668;&#x62D6;&#x52A8;&#x7B49;</td>
+<td>&#x6570;&#x636E;&#x5B8C;&#x6574;&#x6027;&#x65E0;&#x6CD5;&#x5F97;&#x5230;&#x4FDD;&#x8BC1;&#xFF0C;&#x4E0D;&#x7A33;&#x5B9A;</td>
+</tr>
+<tr>
+<td>RTMP</td>
+<td>&#x5B9E;&#x65F6;&#x6D88;&#x606F;&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#xFF08;Real-Time Messaging Protocol&#xFF09;</td>
+<td>2002</td>
+<td>Adobe</td>
+<td>&#x5B9E;&#x65F6;&#x6027;&#x597D;&#x3001;&#x652F;&#x6301;&#x6D41;&#x5A92;&#x4F53;&#x6570;&#x636E;&#x548C;&#x4EA4;&#x4E92;&#x5F0F;&#x534F;&#x8BAE;&#x901A;&#x4FE1;</td>
+<td>&#x517C;&#x5BB9;&#x6027;&#x53D7;&#x9650;&#x3001;&#x5B89;&#x5168;&#x6027;&#x95EE;&#x9898;</td>
+</tr>
+<tr>
+<td>HTTP</td>
+<td>&#x8D85;&#x6587;&#x672C;&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#xFF08;HyperText Transfer Protocol&#xFF09;</td>
+<td>1991</td>
+<td>IETF</td>
+<td>&#x517C;&#x5BB9;&#x6027;&#x597D;&#x3001;&#x6613;&#x4E8E;&#x5F00;&#x53D1;&#x3001;&#x652F;&#x6301;&#x591A;&#x79CD;&#x5A92;&#x4F53;&#x683C;&#x5F0F;</td>
+<td>&#x5B9E;&#x65F6;&#x6027;&#x5DEE;&#x3001;&#x5EF6;&#x8FDF;&#x9AD8;</td>
+</tr>
+<tr>
+<td>SIP</td>
+<td>&#x4F1A;&#x8BDD;&#x521D;&#x59CB;&#x5316;&#x534F;&#x8BAE;&#xFF08;Session Initiation Protocol&#xFF09;</td>
+<td>1999</td>
+<td>IETF</td>
+<td>&#x6613;&#x4E8E;&#x6269;&#x5C55;&#x3001;&#x652F;&#x6301;&#x591A;&#x79CD;&#x4F20;&#x8F93;&#x65B9;&#x5F0F;&#xFF08;TCP&#x3001;UDP&#x3001;TLS&#x7B49;&#xFF09;</td>
+<td>&#x5B89;&#x5168;&#x6027;&#x5B58;&#x5728;&#x95EE;&#x9898;</td>
+</tr>
+<tr>
+<td>HLS</td>
+<td>HTTP&#x76F4;&#x64AD;&#x6D41;&#x5A92;&#x4F53;&#x534F;&#x8BAE;&#xFF08;HTTP Live Streaming&#xFF09;</td>
+<td>2009</td>
+<td>Apple</td>
+<td>&#x517C;&#x5BB9;&#x6027;&#x597D;&#x3001;&#x652F;&#x6301;&#x591A;&#x79CD;&#x5BB9;&#x5668;&#x548C;&#x7F16;&#x7801;&#x683C;&#x5F0F;</td>
+<td>&#x5B9E;&#x73B0;&#x8FC7;&#x7A0B;&#x590D;&#x6742;&#x3001;HLS&#x76F4;&#x64AD;&#x7AEF;&#x64AD;&#x653E;&#x5668;&#x6709;&#x5EF6;&#x8FDF;</td>
+</tr>
+<tr>
+<td>WebRTC</td>
+<td>Web&#x5B9E;&#x65F6;&#x901A;&#x4FE1;&#x534F;&#x8BAE;&#xFF08;Web Real-Time Communication&#xFF09;</td>
+<td>2011</td>
+<td>W3C</td>
+<td>&#x96C6;&#x6210;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x5185;&#x3001;&#x65E0;&#x9700;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;</td>
+<td>&#x4E0D;&#x652F;&#x6301;&#x6240;&#x6709;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x9700;&#x8981;&#x670D;&#x52A1;&#x5668;&#x652F;&#x6301;</td>
+</tr>
+</tbody>
+</table>
 <p></p><footer class="page-footer"><span class="copyright">Copyright &#xA9; xhunmon 2022  all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Update: 
-2023-03-28 12:56:08
+2023-03-28 11:57:45
 </span></footer><hr><div id="vcomments"></div><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el: "#vcomments",appId: 'xMemPde6Lax4ffLfLBkuEi9t-gzGzoHsz',appKey: 'jIVEp2lShgotSTy0GalhgIzm',placeholder: 'Just go go',avatar: '',meta: undefined,pageSize: 10,lang: 'zh-CN',recordIP: false})</script><p></p>
 
                                 
@@ -918,12 +980,12 @@
 
             
                 
-                <a href="../AFPlayer/02_opengl_es.html" class="navigation navigation-prev " aria-label="Previous page: OpenGL ES播放RGB">
+                <a href="03_fst.html" class="navigation navigation-prev " aria-label="Previous page: 面试题整理">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="01_flv.html" class="navigation navigation-next " aria-label="Next page: 手撕FLV协议">
+                <a href="05_codec.html" class="navigation navigation-next " aria-label="Next page: 常见的音视频编解码器对比">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -934,7 +996,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"重点技术","level":"1.6","depth":1,"next":{"title":"手撕FLV协议","level":"1.6.1","depth":2,"path":"MustRead/01_flv.md","ref":"MustRead/01_flv.md","articles":[]},"previous":{"title":"OpenGL ES播放RGB","level":"1.5.3","depth":2,"path":"AFPlayer/02_opengl_es.md","ref":"AFPlayer/02_opengl_es.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","favicon-absolute","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","highlight","back-to-top-button","code","-lunr","-search","search-pro","tbfed-pagefooter","pageview-count","auto-scroll-table","lightbox","hide-element","valine","katex","embed-pdf","mermaid-gb3","image-wrapper","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy xhunmon 2022 ","modify_label":"Update: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"image-wrapper":{},"github":{"url":"https://github.com/xhunmon"},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"donate":{"alipay":"/source/images/alipayimg.jpeg","alipayText":"支付宝","button":"捐赠","title":"请作者喝杯coffee","wechat":"/source/images/wechatpayimg.jpeg","wechatText":"微信"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"/apple-tou ch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{},"favicon":"/source/images/favicon.png"},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"xhunmon","repo":"VABlog","type":"star","count":true,"size":"small"},{"user":"xhunmon","width":"160","type":"follow","count":true,"size":"small"}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"embed-pdf":{},"valine":{"avatar":"","lang":"zh-CN","pageSize":10,"placeholder":"Just go go","recordIP":false,"appId":"xMemPde6Lax4ffLfLBkuEi9t-gzGzoHsz","appKey":"jIVEp2lShgotSTy0GalhgIzm"}},"theme":"default","author":"秦城季","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"秦城季&音视频","language":"zh-hans","links":{"sidebar":{"秦城季&音视频":"https://github.com/xhunmon/VABlog"}},"gitbook":"3.2.3","description":"未来那个项目都不应该缺少音视频！"},"file":{"path":"MustRead/README.md","mtime":"2023-03-28T04:56:08.237Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-03-28T09:11:37.536Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"常见的音视频传输协议对比","level":"1.6.4","depth":2,"next":{"title":"常见的音视频编解码器对比","level":"1.6.5","depth":2,"path":"MustRead/05_codec.md","ref":"MustRead/05_codec.md","articles":[]},"previous":{"title":"面试题整理","level":"1.6.3","depth":2,"path":"MustRead/03_fst.md","ref":"MustRead/03_fst.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","favicon-absolute","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","highlight","back-to-top-button","code","-lunr","-search","search-pro","tbfed-pagefooter","pageview-count","auto-scroll-table","lightbox","hide-element","valine","katex","embed-pdf","mermaid-gb3","image-wrapper","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy xhunmon 2022 ","modify_label":"Update: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"image-wrapper":{},"github":{"url":"https://github.com/xhunmon"},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"donate":{"alipay":"/source/images/alipayimg.jpeg","alipayText":"支付宝","button":"捐赠","title":"请作者喝杯coffee","wechat":"/source/images/wechatpayimg.jpeg","wechatText":"微信"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"/apple-tou ch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{},"favicon":"/source/images/favicon.png"},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"xhunmon","repo":"VABlog","type":"star","count":true,"size":"small"},{"user":"xhunmon","width":"160","type":"follow","count":true,"size":"small"}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"embed-pdf":{},"valine":{"avatar":"","lang":"zh-CN","pageSize":10,"placeholder":"Just go go","recordIP":false,"appId":"xMemPde6Lax4ffLfLBkuEi9t-gzGzoHsz","appKey":"jIVEp2lShgotSTy0GalhgIzm"}},"theme":"default","author":"秦城季","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"秦城季&音视频","language":"zh-hans","links":{"sidebar":{"秦城季&音视频":"https://github.com/xhunmon/VABlog"}},"gitbook":"3.2.3","description":"未来那个项目都不应该缺少音视频！"},"file":{"path":"MustRead/04_transport_protocols.md","mtime":"2023-03-28T03:57:45.432Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-03-28T09:11:37.536Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
