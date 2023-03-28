@@ -2,7 +2,7 @@
 
 继[如何编译FFmpeg](./03_build_ffmpeg.md)后，本章也是基于前面来讲解如何把编译后的库文件移入到Clion。
 
-在编译ffmpeg前，有一点需要提前说明的，Mac系统并不支持链接静态库，详细请看[初步认识c/c++编译](../其他零散知识/01_c_compile.md) 这篇文章。针对于平台的差异性，CLion工具在Mac系统中使用CMakelist.txt进行交叉编译并不友好，我试过集成Android平台的ffmpeg，最终以失败而告终，主要报错原因是：无法指向NDK中的 ld 链接器（要是哪位朋友尝试编译通过还望告知）。所以后续如果是Android项目还是老老实实使用Android Studio吧。
+在编译ffmpeg前，有一点需要提前说明的，Mac系统并不支持链接静态库，详细请看[初步认识c/c++编译](../Other/01_c_compile.md) 这篇文章。针对于平台的差异性，CLion工具在Mac系统中使用CMakelist.txt进行交叉编译并不友好，我试过集成Android平台的ffmpeg，最终以失败而告终，主要报错原因是：无法指向NDK中的 ld 链接器（要是哪位朋友尝试编译通过还望告知）。所以后续如果是Android项目还是老老实实使用Android Studio吧。
 
 ##编译MacOS平台的FFmpeg动态库
 在ffmpeg项目根目录编写`build.sh`脚本文件如下：

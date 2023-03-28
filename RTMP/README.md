@@ -1,7 +1,7 @@
 #总纲
 
 
-**本系列介绍了RTMP直播推流全过程** [完整的项目地址](https://github.com/xhunmon/RtmpPush)
+**本系列介绍了Android设备RTMP直播推流全过程** [完整的项目地址](https://github.com/xhunmon/RtmpPush)
 
 ![总纲](img/总纲-总纲.jpg)
 
