@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>其他：H.264符号描述 · 秦城季&音视频</title>
+        <title>ADB的使用 · 秦城季&音视频</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -70,6 +70,10 @@
                 
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
                 
             
@@ -103,10 +107,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="6-optimize.html" />
+    <link rel="next" href="04_jni.html" />
     
     
-    <link rel="prev" href="5-rtmp.html" />
+    <link rel="prev" href="02_net_base.html" />
     
 
     <style>
@@ -183,9 +187,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="../RTMP/">
             
-                <a href="./">
+                <a href="../RTMP/">
             
                     
                     直播推流全过程
@@ -197,9 +201,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="1-yuv.html">
+        <li class="chapter " data-level="1.2.1" data-path="../RTMP/1-yuv.html">
             
-                <a href="1-yuv.html">
+                <a href="../RTMP/1-yuv.html">
             
                     
                     视频数据源之YUV
@@ -210,9 +214,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="2-pcm.html">
+        <li class="chapter " data-level="1.2.2" data-path="../RTMP/2-pcm.html">
             
-                <a href="2-pcm.html">
+                <a href="../RTMP/2-pcm.html">
             
                     
                     音频数据源之PCM
@@ -223,9 +227,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="3-h264.html">
+        <li class="chapter " data-level="1.2.3" data-path="../RTMP/3-h264.html">
             
-                <a href="3-h264.html">
+                <a href="../RTMP/3-h264.html">
             
                     
                     视频编码之H.264
@@ -236,9 +240,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="4-aac.html">
+        <li class="chapter " data-level="1.2.4" data-path="../RTMP/4-aac.html">
             
-                <a href="4-aac.html">
+                <a href="../RTMP/4-aac.html">
             
                     
                     音频编码之AAC
@@ -249,9 +253,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="5-rtmp.html">
+        <li class="chapter " data-level="1.2.5" data-path="../RTMP/5-rtmp.html">
             
-                <a href="5-rtmp.html">
+                <a href="../RTMP/5-rtmp.html">
             
                     
                     直播推流编码之RTMP
@@ -262,9 +266,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.6" data-path="h264-descriptor.html">
+        <li class="chapter " data-level="1.2.6" data-path="../RTMP/h264-descriptor.html">
             
-                <a href="h264-descriptor.html">
+                <a href="../RTMP/h264-descriptor.html">
             
                     
                     其他：H.264符号描述
@@ -275,9 +279,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.7" data-path="6-optimize.html">
+        <li class="chapter " data-level="1.2.7" data-path="../RTMP/6-optimize.html">
             
-                <a href="6-optimize.html">
+                <a href="../RTMP/6-optimize.html">
             
                     
                     其他：直播优化基础
@@ -456,20 +460,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="../FFmpeg/07_flv.html">
-            
-                <a href="../FFmpeg/07_flv.html">
-            
-                    
-                    手撕FLV协议
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.8" data-path="../FFmpeg/08_demuxing.html">
+        <li class="chapter " data-level="1.4.7" data-path="../FFmpeg/08_demuxing.html">
             
                 <a href="../FFmpeg/08_demuxing.html">
             
@@ -482,7 +473,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.9" data-path="../FFmpeg/09_muxing.html">
+        <li class="chapter " data-level="1.4.8" data-path="../FFmpeg/09_muxing.html">
             
                 <a href="../FFmpeg/09_muxing.html">
             
@@ -495,7 +486,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.10" data-path="../FFmpeg/10_remuxing.html">
+        <li class="chapter " data-level="1.4.9" data-path="../FFmpeg/10_remuxing.html">
             
                 <a href="../FFmpeg/10_remuxing.html">
             
@@ -508,7 +499,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.11" data-path="../FFmpeg/11_decode.html">
+        <li class="chapter " data-level="1.4.10" data-path="../FFmpeg/11_decode.html">
             
                 <a href="../FFmpeg/11_decode.html">
             
@@ -521,7 +512,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.12" data-path="../FFmpeg/12_encode.html">
+        <li class="chapter " data-level="1.4.11" data-path="../FFmpeg/12_encode.html">
             
                 <a href="../FFmpeg/12_encode.html">
             
@@ -534,7 +525,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.13" data-path="../FFmpeg/13_transfer.html">
+        <li class="chapter " data-level="1.4.12" data-path="../FFmpeg/13_transfer.html">
             
                 <a href="../FFmpeg/13_transfer.html">
             
@@ -547,7 +538,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.14" data-path="../FFmpeg/14_filter_v.html">
+        <li class="chapter " data-level="1.4.13" data-path="../FFmpeg/14_filter_v.html">
             
                 <a href="../FFmpeg/14_filter_v.html">
             
@@ -560,7 +551,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.15" data-path="../FFmpeg/15_filter_a.html">
+        <li class="chapter " data-level="1.4.14" data-path="../FFmpeg/15_filter_a.html">
             
                 <a href="../FFmpeg/15_filter_a.html">
             
@@ -573,7 +564,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.16" data-path="../FFmpeg/16_transcode.html">
+        <li class="chapter " data-level="1.4.15" data-path="../FFmpeg/16_transcode.html">
             
                 <a href="../FFmpeg/16_transcode.html">
             
@@ -586,7 +577,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.17" data-path="../FFmpeg/17_sync.html">
+        <li class="chapter " data-level="1.4.16" data-path="../FFmpeg/17_sync.html">
             
                 <a href="../FFmpeg/17_sync.html">
             
@@ -599,7 +590,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.18" data-path="../FFmpeg/18_command.html">
+        <li class="chapter " data-level="1.4.17" data-path="../FFmpeg/18_command.html">
             
                 <a href="../FFmpeg/18_command.html">
             
@@ -612,7 +603,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.19" data-path="../FFmpeg/19_swscale.html">
+        <li class="chapter " data-level="1.4.18" data-path="../FFmpeg/19_swscale.html">
             
                 <a href="../FFmpeg/19_swscale.html">
             
@@ -657,7 +648,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../AFPlayer/02_opengl_es.html">
+        <li class="chapter " data-level="1.5.2" data-path="../OpenGL/02_glsl.html">
+            
+                <a href="../OpenGL/02_glsl.html">
+            
+                    
+                    GLSL（着色器语言）中文手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../AFPlayer/02_opengl_es.html">
             
                 <a href="../AFPlayer/02_opengl_es.html">
             
@@ -675,12 +679,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="../其他零散知识/01_c_compile.html">
+        <li class="chapter " data-level="1.6" data-path="../MustRead/">
             
-                <a href="../其他零散知识/01_c_compile.html">
+                <a href="../MustRead/">
             
                     
-                    其他零散知识
+                    重点技术
             
                 </a>
             
@@ -689,9 +693,106 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../其他零散知识/01_c_compile.html">
+        <li class="chapter " data-level="1.6.1" data-path="../MustRead/01_flv.html">
             
-                <a href="../其他零散知识/01_c_compile.html">
+                <a href="../MustRead/01_flv.html">
+            
+                    
+                    手撕FLV协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../MustRead/02_h265.html">
+            
+                <a href="../MustRead/02_h265.html">
+            
+                    
+                    基于H.264看H.265
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../MustRead/03_fst.html">
+            
+                <a href="../MustRead/03_fst.html">
+            
+                    
+                    面试题整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../MustRead/04_transport_protocols.html">
+            
+                <a href="../MustRead/04_transport_protocols.html">
+            
+                    
+                    常见的音视频传输协议对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../MustRead/05_codec.html">
+            
+                <a href="../MustRead/05_codec.html">
+            
+                    
+                    常见的音视频编解码器对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../MustRead/06_muxer.html">
+            
+                <a href="../MustRead/06_muxer.html">
+            
+                    
+                    常见的音视频封装格式对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Null
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="01_c_compile.html">
+            
+                <a href="01_c_compile.html">
             
                     
                     初步认识c/c++编译
@@ -702,9 +803,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="../其他零散知识/02_net_base.html">
+        <li class="chapter " data-level="1.7.2" data-path="02_net_base.html">
             
-                <a href="../其他零散知识/02_net_base.html">
+                <a href="02_net_base.html">
             
                     
                     网络基础知识
@@ -715,12 +816,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="../其他零散知识/03_adb_dy.html">
+        <li class="chapter active" data-level="1.7.3" data-path="03_adb_dy.html">
             
-                <a href="../其他零散知识/03_adb_dy.html">
+                <a href="03_adb_dy.html">
             
                     
                     ADB的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="04_jni.html">
+            
+                <a href="04_jni.html">
+            
+                    
+                    JNI
             
                 </a>
             
@@ -763,7 +877,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >其他：H.264符号描述</a>
+        <a href=".." >ADB的使用</a>
     </h1>
 </div>
 
@@ -778,44 +892,28 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#h264&#x63CF;&#x8FF0;&#x7B26;"><b></b>H.264&#x63CF;&#x8FF0;&#x7B26;</a></li><ul><ul><li><span class="title-icon "></span><a href="#&#x7B80;&#x8FF0;"><b></b>&#x7B80;&#x8FF0;</a></li><li><span class="title-icon "></span><a href="#uev"><b></b>ue(v)</a></li><li><span class="title-icon "></span><a href="#sev"><b></b>se(v)</a></li><li><span class="title-icon "></span><a href="#mev"><b></b>me(v)</a></li><li><span class="title-icon "></span><a href="#tev"><b></b>te(v)</a></li><li><span class="title-icon "></span><a href="#&#x5176;&#x4ED6;"><b></b>&#x5176;&#x4ED6;</a></li><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;"><b></b>&#x53C2;&#x8003;</a></li></ul></ul></ul></div><a href="#h264&#x63CF;&#x8FF0;&#x7B26;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="h264&#x63CF;&#x8FF0;&#x7B26;"><a name="h264&#x63CF;&#x8FF0;&#x7B26;" class="anchor-navigation-ex-anchor" href="#h264&#x63CF;&#x8FF0;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="h264&#x63CF;&#x8FF0;&#x7B26;" class="plugin-anchor" href="#h264&#x63CF;&#x8FF0;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>H.264&#x63CF;&#x8FF0;&#x7B26;</h1>
-<h3 id="&#x7B80;&#x8FF0;"><a name="&#x7B80;&#x8FF0;" class="anchor-navigation-ex-anchor" href="#&#x7B80;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B80;&#x8FF0;" class="plugin-anchor" href="#&#x7B80;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B80;&#x8FF0;</h3>
-<p>H264/AVC&#x6587;&#x6863;&#x4E2D;&#x5B58;&#x5728;&#x7740;&#x5927;&#x91CF;&#x5143;&#x7D20;&#x63CF;&#x8FF0;&#x7B26;ue(v)&#xFF0C;me(v)&#xFF0C;se(v)&#xFF0C;te(v)&#x7B49;&#xFF0C;&#x7F16;&#x7801;&#x4E3A;ue(v)&#xFF0C;me(v)&#xFF0C;&#x6216;&#x8005; se(v) &#x7684;&#x8BED;&#x6CD5;&#x5143;&#x7D20;&#x662F;&#x6307;&#x6570;&#x54E5;&#x4F26;&#x5E03;&#x7F16;&#x7801;&#xFF0C;&#x800C;&#x7F16;&#x7801;&#x4E3A;te(v)&#x7684;&#x8BED;&#x6CD5;&#x5143;&#x7D20;&#x662F;&#x820D;&#x4F4D;&#x6307;&#x6570;&#x54E5;&#x4F26;&#x5E03;&#x7F16;&#x7801;&#x3002;&#x8FD9;&#x4E9B;&#x8BED;&#x6CD5;&#x5143;&#x7D20;&#x7684;&#x89E3;&#x6790;&#x8FC7;&#x7A0B;&#x662F;&#x7531;&#x6BD4;&#x7279;&#x6D41;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#x6BD4;&#x7279;&#x5F00;&#x59CB;&#x8BFB;&#x53D6;&#xFF0C;&#x5305;&#x62EC;&#x975E;0 &#x6BD4;&#x7279;&#xFF0C;&#x76F4;&#x81F3;leading_bits &#x7684;&#x6570;&#x91CF;&#x4E3A;0&#x3002;&#x7531;&#x4E8E;&#x89E3;&#x7801;&#x8FC7;&#x7A0B;&#x4E2D;&#x9700;&#x8981;&#x8BA1;&#x7B97;&#x51FA;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5360;&#x4F4D;(bit&#x6570;&#x91CF;)&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5C31;&#x4E0D;&#x5F97;&#x4E0D;&#x7406;&#x89E3;&#x8FD9;&#x4E9B;&#x63CF;&#x8FF0;&#x7B26;&#x4E86;&#x3002;</p>
-<h3 id="uev"><a name="uev" class="anchor-navigation-ex-anchor" href="#uev"><i class="fa fa-link" aria-hidden="true"></i></a><a name="uev" class="plugin-anchor" href="#uev"><i class="fa fa-link" aria-hidden="true"></i></a>ue(v)</h3>
-<p>&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x6570;&#x6307;&#x6570;&#x54E5;&#x4F26;&#x5E03;&#x7801;&#x7F16;&#x7801;&#x7684;&#x8BED;&#x6CD5;&#x5143;&#x7D20;&#xFF0C;&#x5DE6;&#x4F4D;&#x5728;&#x5148;&#x3002;&#x8BA1;&#x7B97;&#x516C;&#x5F0F;&#xFF1A;</p>
-<p>&#x200B;    codeNum = 2 ^leadingZeroBits^ &#x2212; 1 + read_bits( leadingZeroBits )</p>
-<ul>
-<li><strong>codeNum&#xFF1A;</strong> &#x5360;&#x7684;&#x4F4D;&#x6570;&#xFF08;bit&#x6570;&#x91CF;&#xFF09;</li>
-<li><strong>leadingZeroBits&#xFF1A;</strong> &#x9047;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;1&#x524D;&#x9762;0&#x7684;&#x4E2A;&#x6570;&#xFF1B;&#x5982;&#xFF1A;0010 1011&#xFF0C;leadingZeroBits&#x7684;&#x503C;&#x4E3A;2&#xFF1B;</li>
-<li><strong>read_bits( leadingZeroBits )&#xFF1A;</strong> &#x9047;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;1&#x540E;&#x9762;leadingZeroBits&#x4E2A;&#x7EC4;&#x6210;&#x7684;&#x65E0;&#x7B26;&#x53F7;&#x4E8C;&#x8FDB;&#x5236;&#x503C;&#xFF1B;&#x5982;&#xFF1A;0010 1011&#xFF0C;&#x503C;&#x4E3A;...0 1...&#xFF0C;&#x5373;01&#xFF0C;&#x5373;1&#xFF1B;</li>
-</ul>
-<p>&#x4E3E;&#x4E24;&#x4E2A;&#x6817;&#x5B50;&#xFF1A;</p>
-<p>&#xFF08;1&#xFF09;0001 1001 =&gt;leadingZeroBits== 000. ....= 3&#xFF0C;read_bits( 3 )==.... 100.=4&#xFF0C;&#x6240;&#x4EE5;&#xFF1A;codeNum=2^3^-1+4=13
-&#xFF08;2&#xFF09;0000 0101  0000 0000 =&gt; leadingZeroBits=5&#xFF0C;read_bits( 5 ) = .... ..01 000. ....=8&#xFF0C;codeNum=2^5^-1+8=39</p>
-<h3 id="sev"><a name="sev" class="anchor-navigation-ex-anchor" href="#sev"><i class="fa fa-link" aria-hidden="true"></i></a><a name="sev" class="plugin-anchor" href="#sev"><i class="fa fa-link" aria-hidden="true"></i></a>se(v)</h3>
-<p>&#x6709;&#x7B26;&#x53F7;&#x6574;&#x6570;&#x6307;&#x6570;&#x54E5;&#x4F26;&#x5E03;&#x7801;&#x7F16;&#x7801;&#x7684;&#x8BED;&#x6CD5;&#x5143;&#x7D20;&#x4F4D;&#x5728;&#x5148;&#x3002;&#x5728;&#x6309;&#x7167;&#x4E0A;&#x9762;ue(v)&#x516C;&#x5F0F;&#x8BA1;&#x7B97;&#x51FA;codeNum&#x540E;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;&#x8BE5;&#x8BA1;&#x7B97;&#x516C;&#x5F0F;&#xFF1A;</p>
-<p>value = (&#x2212;1)^k+1^ Ceil( k&#xF7;2 )</p>
-<ul>
-<li><strong>Ceil&#xFF1A;</strong> &#x8FD4;&#x56DE;&#x5927;&#x4E8E;&#x6216;&#x8005;&#x7B49;&#x4E8E;&#x6307;&#x5B9A;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x6700;&#x5C0F;&#x6574;&#x6570;&#xFF0C;&#x5982;&#xFF1A; Ceil(1.5)= 2</li>
-</ul>
-<p>&#x5982;&#x4E0A;&#x4F8B;&#xFF08;1&#xFF09;0001 1001 =&gt; codeNum=2^3^-1+4=13&#xFF0C;value = (-1)^13+1^Ceil(13&#xF7;2)=Ceil(6.5)=7</p>
-<h3 id="mev"><a name="mev" class="anchor-navigation-ex-anchor" href="#mev"><i class="fa fa-link" aria-hidden="true"></i></a><a name="mev" class="plugin-anchor" href="#mev"><i class="fa fa-link" aria-hidden="true"></i></a>me(v)</h3>
-<p>&#x6620;&#x5C04;&#x7684;&#x6307;&#x6570;&#x54E5;&#x4F26;&#x5E03;&#x7801;&#x7F16;&#x7801;&#x7684;&#x8BED;&#x6CD5;&#x5143;&#x7D20;&#xFF0C;&#x5DE6;&#x4F4D;&#x5728;&#x5148;&#x3002;&#x5728;&#x6309;&#x7167;&#x4E0A;&#x9762;ue(v)&#x516C;&#x5F0F;&#x8BA1;&#x7B97;&#x51FA;codeNum&#x540E;&#xFF0C;&#x7136;&#x540E;&#x67E5;&#x8868;&#x3002;&#xFF08;&#x5728;H.264-AVC-ISO_IEC_14496-10&#x7684;9.1.2 &#x7AE0;&#x8282;&#x4E2D;&#x8868;9-4&#xFF09;</p>
-<h3 id="tev"><a name="tev" class="anchor-navigation-ex-anchor" href="#tev"><i class="fa fa-link" aria-hidden="true"></i></a><a name="tev" class="plugin-anchor" href="#tev"><i class="fa fa-link" aria-hidden="true"></i></a>te(v)</h3>
-<p>&#x820D;&#x4F4D;&#x6307;&#x6570;&#x54E5;&#x4F26;&#x5E03;&#x7801;&#x7F16;&#x7801;&#x8BED;&#x6CD5;&#x5143;&#x7D20;&#xFF0C;&#x5DE6;&#x4F4D;&#x5728;&#x5148;&#x3002;&#x660E;&#x786E;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x5728;0-x&#xFF1B;&#x5F53;x&gt;1&#x65F6;&#xFF0C;te(v)&#x5C31;&#x662F;ue(v)&#xFF1B;&#x5426;&#x5219;(x=1)&#xFF0C;b = read_bits( 1 )&#xFF0C;codeNum = !b</p>
-<h3 id="&#x5176;&#x4ED6;"><a name="&#x5176;&#x4ED6;" class="anchor-navigation-ex-anchor" href="#&#x5176;&#x4ED6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5176;&#x4ED6;" class="plugin-anchor" href="#&#x5176;&#x4ED6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5176;&#x4ED6;</h3>
-<ul>
-<li><strong>ae(v)&#xFF1A;</strong> &#x4E0A;&#x4E0B;&#x6587;&#x81EA;&#x9002;&#x5E94;&#x7B97;&#x672F;&#x71B5;&#x7F16;&#x7801;&#x8BED;&#x6CD5;&#x5143;&#x7D20;</li>
-<li><strong>b(8)&#xFF1A;</strong> &#x4EFB;&#x610F;&#x5F62;&#x5F0F;&#x7684;8&#x6BD4;&#x7279;&#x5B57;&#x8282;&#x3002;</li>
-<li><strong>f(n)&#xFF1A;</strong> n&#x4F4D;&#x56FA;&#x5B9A;&#x6A21;&#x5F0F;&#x6BD4;&#x7279;&#x4E32;&#xFF08;&#x7531;&#x5DE6;&#x81F3;&#x53F3;&#xFF09;&#xFF0C;&#x5DE6;&#x4F4D;&#x5728;&#x5148;&#x3002;</li>
-<li><strong>i(n)&#xFF1A;</strong> &#x4F7F;&#x7528;n&#x6BD4;&#x7279;&#x7684;&#x6709;&#x7B26;&#x53F7;&#x6574;&#x6570;&#x3002;</li>
-<li><strong>u(n)&#xFF1A;</strong> n&#x4F4D;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x6570;&#x3002;</li>
-</ul>
-<h3 id="&#x53C2;&#x8003;"><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x53C2;&#x8003;" class="plugin-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x8003;</h3>
-<p>(1).<a href="http://103.23.20.16/srs/trunk/doc/H.264-AVC-ISO_IEC_14496-10.pdf" target="_blank">H.264-AVC-ISO_IEC_14496-10</a></p>
-<p>(2).<a href="https://blog.csdn.net/lizhijian21/article/details/80982403" target="_blank">https://blog.csdn.net/lizhijian21/article/details/80982403</a> </p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#adb&#x7684;&#x4F7F;&#x7528;"><b></b>ADB&#x7684;&#x4F7F;&#x7528;</a></li><ul><li><span class="title-icon "></span><a href="#adb&#x7684;&#x547D;&#x4EE4;&#x4F7F;&#x7528;&#x5927;&#x5168;"><b></b>ADB&#x7684;&#x547D;&#x4EE4;&#x4F7F;&#x7528;&#x5927;&#x5168;</a></li><li><span class="title-icon "></span><a href="#&#x5176;&#x4ED6;&#x7B80;&#x5355;&#x5B9E;&#x7528;"><b></b>&#x5176;&#x4ED6;&#x7B80;&#x5355;&#x5B9E;&#x7528;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6253;&#x5F00;&#x5E94;&#x7528;&#xFF0C;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x8F93;&#x5165;&#x8BE5;&#x547D;&#x4EE4;&#x6765;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x5728;&#x524D;&#x53F0;&#x7684;activity&#xFF1A;"><b></b>&#x6253;&#x5F00;&#x5E94;&#x7528;&#xFF0C;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x8F93;&#x5165;&#x8BE5;&#x547D;&#x4EE4;&#x6765;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x5728;&#x524D;&#x53F0;&#x7684;activity&#xFF1A;</a></li><li><span class="title-icon "></span><a href="#&#x7F16;&#x5199;shell&#x811A;&#x672C;&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C;&#xFF1A;"><b></b>&#x7F16;&#x5199;shell&#x811A;&#x672C;&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C;&#xFF1A;</a></li></ul></ul></ul></div><a href="#adb&#x7684;&#x4F7F;&#x7528;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="adb&#x7684;&#x4F7F;&#x7528;"><a name="adb&#x7684;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#adb&#x7684;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="adb&#x7684;&#x4F7F;&#x7528;" class="plugin-anchor" href="#adb&#x7684;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>ADB&#x7684;&#x4F7F;&#x7528;</h1>
+<h2 id="adb&#x7684;&#x547D;&#x4EE4;&#x4F7F;&#x7528;&#x5927;&#x5168;"><a name="adb&#x7684;&#x547D;&#x4EE4;&#x4F7F;&#x7528;&#x5927;&#x5168;" class="anchor-navigation-ex-anchor" href="#adb&#x7684;&#x547D;&#x4EE4;&#x4F7F;&#x7528;&#x5927;&#x5168;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="adb&#x7684;&#x547D;&#x4EE4;&#x4F7F;&#x7528;&#x5927;&#x5168;" class="plugin-anchor" href="#adb&#x7684;&#x547D;&#x4EE4;&#x4F7F;&#x7528;&#x5927;&#x5168;"><i class="fa fa-link" aria-hidden="true"></i></a>ADB&#x7684;&#x547D;&#x4EE4;&#x4F7F;&#x7528;&#x5927;&#x5168;</h2>
+<p><a href="https://github.com/mzlogin/awesome-adb" target="_blank">awesome-adb</a></p>
+<h2 id="&#x5176;&#x4ED6;&#x7B80;&#x5355;&#x5B9E;&#x7528;"><a name="&#x5176;&#x4ED6;&#x7B80;&#x5355;&#x5B9E;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x5176;&#x4ED6;&#x7B80;&#x5355;&#x5B9E;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5176;&#x4ED6;&#x7B80;&#x5355;&#x5B9E;&#x7528;" class="plugin-anchor" href="#&#x5176;&#x4ED6;&#x7B80;&#x5355;&#x5B9E;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5176;&#x4ED6;&#x7B80;&#x5355;&#x5B9E;&#x7528;</h2>
+<h3 id="&#x6253;&#x5F00;&#x5E94;&#x7528;&#xFF0C;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x8F93;&#x5165;&#x8BE5;&#x547D;&#x4EE4;&#x6765;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x5728;&#x524D;&#x53F0;&#x7684;activity&#xFF1A;"><a name="&#x6253;&#x5F00;&#x5E94;&#x7528;&#xFF0C;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x8F93;&#x5165;&#x8BE5;&#x547D;&#x4EE4;&#x6765;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x5728;&#x524D;&#x53F0;&#x7684;activity&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x6253;&#x5F00;&#x5E94;&#x7528;&#xFF0C;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x8F93;&#x5165;&#x8BE5;&#x547D;&#x4EE4;&#x6765;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x5728;&#x524D;&#x53F0;&#x7684;activity&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6253;&#x5F00;&#x5E94;&#x7528;&#xFF0C;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x8F93;&#x5165;&#x8BE5;&#x547D;&#x4EE4;&#x6765;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x5728;&#x524D;&#x53F0;&#x7684;activity&#xFF1A;" class="plugin-anchor" href="#&#x6253;&#x5F00;&#x5E94;&#x7528;&#xFF0C;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x8F93;&#x5165;&#x8BE5;&#x547D;&#x4EE4;&#x6765;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x5728;&#x524D;&#x53F0;&#x7684;activity&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6253;&#x5F00;&#x5E94;&#x7528;&#xFF0C;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x8F93;&#x5165;&#x8BE5;&#x547D;&#x4EE4;&#x6765;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x5728;&#x524D;&#x53F0;&#x7684;activity&#xFF1A;</h3>
+<pre><code class="lang-c">qincji:Downloads mac$ adb shell dumpsys activity activities | grep mResumedActivity
+    mResumedActivity: ActivityRecord{e3c2d05 u0 com.ss.android.ugc.aweme.lite/com.ss.android.ugc.aweme.splash.SplashActivity t122}
+</code></pre>
+<h3 id="&#x7F16;&#x5199;shell&#x811A;&#x672C;&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C;&#xFF1A;"><a name="&#x7F16;&#x5199;shell&#x811A;&#x672C;&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x7F16;&#x5199;shell&#x811A;&#x672C;&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7F16;&#x5199;shell&#x811A;&#x672C;&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C;&#xFF1A;" class="plugin-anchor" href="#&#x7F16;&#x5199;shell&#x811A;&#x672C;&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a><a href="../FFmpeg/02_shell.html">&#x7F16;&#x5199;shell&#x811A;&#x672C;</a>&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C;&#xFF1A;</h3>
+<pre><code class="lang-c">#!/bin/bash
+adb shell am start -n  com.ss.android.ugc.aweme.lite/com.ss.android.ugc.aweme.splash.SplashActivity
+sleep <span class="hljs-number">10</span>s
+a=<span class="hljs-number">1</span>
+<span class="hljs-keyword">while</span> (($a &lt; <span class="hljs-number">500</span>)); <span class="hljs-keyword">do</span>
+  adb shell input swipe <span class="hljs-number">300</span> <span class="hljs-number">1000</span> <span class="hljs-number">300</span> <span class="hljs-number">500</span>
+  echo <span class="hljs-string">&quot;while&#x8BED;&#x53E5;&#xFF0C;&#x6ED1;&#x52A8;&#x5C4F;&#x5E55;&#xFF1A;$a&quot;</span>
+  let <span class="hljs-string">&quot;a++&quot;</span>
+  sleep <span class="hljs-number">10</span>s
+done
+</code></pre>
 <p></p><footer class="page-footer"><span class="copyright">Copyright &#xA9; xhunmon 2022  all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Update: 
-2022-12-26 11:48:24
+2023-01-13 16:59:51
 </span></footer><hr><div id="vcomments"></div><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el: "#vcomments",appId: 'xMemPde6Lax4ffLfLBkuEi9t-gzGzoHsz',appKey: 'jIVEp2lShgotSTy0GalhgIzm',placeholder: 'Just go go',avatar: '',meta: undefined,pageSize: 10,lang: 'zh-CN',recordIP: false})</script><p></p>
 
                                 
@@ -844,12 +942,12 @@
 
             
                 
-                <a href="5-rtmp.html" class="navigation navigation-prev " aria-label="Previous page: 直播推流编码之RTMP">
+                <a href="02_net_base.html" class="navigation navigation-prev " aria-label="Previous page: 网络基础知识">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="6-optimize.html" class="navigation navigation-next " aria-label="Next page: 其他：直播优化基础">
+                <a href="04_jni.html" class="navigation navigation-next " aria-label="Next page: JNI">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -860,7 +958,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"其他：H.264符号描述","level":"1.2.6","depth":2,"next":{"title":"其他：直播优化基础","level":"1.2.7","depth":2,"path":"直播推流全过程/6-optimize.md","ref":"直播推流全过程/6-optimize.md","articles":[]},"previous":{"title":"直播推流编码之RTMP","level":"1.2.5","depth":2,"path":"直播推流全过程/5-rtmp.md","ref":"直播推流全过程/5-rtmp.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","favicon-absolute","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","highlight","back-to-top-button","code","-lunr","-search","search-pro","tbfed-pagefooter","pageview-count","auto-scroll-table","lightbox","hide-element","valine","embed-pdf","mermaid-gb3","image-wrapper","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy xhunmon 2022 ","modify_label":"Update: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"image-wrapper":{},"github":{"url":"https://github.com/xhunmon"},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"donate":{"alipay":"/source/images/alipayimg.jpeg","alipayText":"支付宝","button":"捐赠","title":"请作者喝杯coffee","wechat":"/source/images/wechatpayimg.jpeg","wechatText":"微信"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"/apple-tou ch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{},"favicon":"/source/images/favicon.png"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"xhunmon","repo":"VABlog","type":"star","count":true,"size":"small"},{"user":"xhunmon","width":"160","type":"follow","count":true,"size":"small"}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"embed-pdf":{},"valine":{"avatar":"","lang":"zh-CN","pageSize":10,"placeholder":"Just go go","recordIP":false,"appId":"xMemPde6Lax4ffLfLBkuEi9t-gzGzoHsz","appKey":"jIVEp2lShgotSTy0GalhgIzm"}},"theme":"default","author":"秦城季","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"秦城季&音视频","language":"zh-hans","links":{"sidebar":{"秦城季&音视频":"https://github.com/xhunmon/VABlog"}},"gitbook":"3.2.3","description":"未来那个项目都不应该缺少音视频！"},"file":{"path":"直播推流全过程/h264-descriptor.md","mtime":"2022-12-26T03:48:24.357Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-26T08:27:47.172Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ADB的使用","level":"1.7.3","depth":2,"next":{"title":"JNI","level":"1.7.4","depth":2,"path":"Other/04_jni.md","ref":"Other/04_jni.md","articles":[]},"previous":{"title":"网络基础知识","level":"1.7.2","depth":2,"path":"Other/02_net_base.md","ref":"Other/02_net_base.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","favicon-absolute","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","highlight","back-to-top-button","code","-lunr","-search","search-pro","tbfed-pagefooter","pageview-count","auto-scroll-table","lightbox","hide-element","valine","katex","embed-pdf","mermaid-gb3","image-wrapper"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy xhunmon 2022 ","modify_label":"Update: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"image-wrapper":{},"github":{"url":"https://github.com/xhunmon"},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"donate":{"alipay":"/source/images/alipayimg.jpeg","alipayText":"支付宝","button":"捐赠","title":"请作者喝杯coffee","wechat":"/source/images/wechatpayimg.jpeg","wechatText":"微信"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"/apple-tou ch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{},"favicon":"/source/images/favicon.png"},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"xhunmon","repo":"VABlog","type":"star","count":true,"size":"small"},{"user":"xhunmon","width":"160","type":"follow","count":true,"size":"small"}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"embed-pdf":{},"valine":{"avatar":"","lang":"zh-CN","pageSize":10,"placeholder":"Just go go","recordIP":false,"appId":"xMemPde6Lax4ffLfLBkuEi9t-gzGzoHsz","appKey":"jIVEp2lShgotSTy0GalhgIzm"}},"theme":"default","author":"秦城季","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"秦城季&音视频","language":"zh-hans","links":{"sidebar":{"秦城季&音视频":"https://github.com/xhunmon/VABlog"}},"gitbook":"3.2.3","description":"未来那个项目都不应该缺少音视频！"},"file":{"path":"Other/03_adb_dy.md","mtime":"2023-01-13T08:59:51.516Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-03-30T03:29:02.330Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -928,10 +1026,6 @@
     
         
         <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
