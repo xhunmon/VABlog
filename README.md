@@ -160,6 +160,7 @@ OpenGL使用GPU渲染视频，释放宝贵的CPU资源，学习它是必不可�
 | librubberband | librubberband 是 Rubber Band Audio 的 C++ 接口，简化了音频处理操作。 | Linux、macOS、Windows   |  https://github.com/breakfastquay/rubberband/tree/master/src   |
 | SoundTouch | SoundTouch 可用进行音频连续变速变调处理，包括作品（“chipway/Pydub-Playground”），可实现歌曲同步播放。| Windows、macOS、Linux、Android、iOS   |  https://gitlab.com/soundtouch/soundtouch   |
 | Sonic | Sonic   可实现音频变速、变调等处理，运用于 播客、游戏等领域。 | Windows、macOS、Linux、Android、iOS   | https://github.com/waywardgeek/sonic | 
+| Oboe | Oboe是一个C++库，它使在Android上建立高性能的音频应用变得容易。| Android   | https://github.com/google/oboe | 
 
 
 ## 4.视频相关处理库
