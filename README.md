@@ -284,6 +284,7 @@ OpenGL使用GPU渲染视频，释放宝贵的CPU资源，学习它是必不可�
     H.264-AVC-ISO_IEC_14496-10.pdf
     ffmpeg命令大全.pdf
     FFmpeg命令大全.docx
+    ffmpeg翻译文档.pdf
     FFMPEG_FFPLAY源码剖析.7z
     CMake中文手册.pdf
     Cmake在Android studio Ndk使用.pdf
