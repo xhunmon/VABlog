@@ -33,6 +33,7 @@
     * [音视频同步处理](FFmpeg/17_sync.md)
     * [FFmpeg命令使用指南](FFmpeg/18_command.md)
     * [Swscale（图像转换）](FFmpeg/19_swscale.md)
+    * [FFmpeg添加字幕的详细操作](FFmpeg/20_subtitle_ffmpeg.md)
 * [OpenGL](OpenGL/README.md)
     * [OpenGL基础知识](OpenGL/01_opengl.md)
     * [GLSL（着色器语言）中文手册](OpenGL/02_glsl.md)

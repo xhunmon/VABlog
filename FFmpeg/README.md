@@ -24,3 +24,4 @@
 - [音视频同步处理](./17_sync.md)
 - [FFmpeg命令使用指南](./18_command.md)
 - [Swscale（图像转换）](./19_swscale.md)
+- [FFmpeg添加字幕的详细操作](./20_subtitle_ffmpeg.md)
