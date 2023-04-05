@@ -2,7 +2,7 @@
 
 ## 播放流程
 
-![播放流程](17_sync/sync-clock.png)
+![播放流程](img/17_sync/sync-clock.png)
 
 从图中我们得到一个重要的名称，叫做"时钟"。视频和音频是两个不相干的线程，各自进行播放，而各自播放的进度都需要参考这个"时钟"，才能使得播放同步。其实这里说的"进度"就是我们熟悉`pts`，所以下面主要扒编解码中`pts`的那些点。讲之前，先讲讲三种类型的时钟处理。
 
@@ -43,7 +43,7 @@
 ### 同时播放视频和音频
 这里所说是"同时"播放，而非同步，是因为我们并没有做同步处理，只是根据理论知识让它们各自播放，效果上展示出来同步的效果。
 来实践一下？
-1. 把 [Kobe.flv](../MustRead/01_flv/Kobe.flv) 这个视频解码后做些滤镜等处理后得到yuv、pcm的裸数据后进行播放。解码过程参看：[FFmpeg 简单实现转码](./13_transfer.md) 和 [FFmpeg Transcode(转码)](./16_transcode.md) 。
+1. 把 [Kobe.flv](../MustRead/img/01_flv/Kobe.flv) 这个视频解码后做些滤镜等处理后得到yuv、pcm的裸数据后进行播放。解码过程参看：[FFmpeg 简单实现转码](./13_transfer.md) 和 [FFmpeg Transcode(转码)](./16_transcode.md) 。
 
 2. 解码后的数据如下：
 ```commandline
@@ -54,7 +54,7 @@ qincji:VAFFmpeg mac$ ls -lsh source/
 
 3. 进行播放
 我这使用`Audition`播放音频，设置如下：
-![Audition参数](17_sync/sync-audition.jpg)
+![Audition参数](img/17_sync/sync-audition.jpg)
 若使用ffplay，则使用命令：
 > ffplay -ar 44100 -channels 2 -f f32le -i  source/Kobe-44100-2-32-33ks.pcm
 
@@ -62,7 +62,7 @@ qincji:VAFFmpeg mac$ ls -lsh source/
 > ffplay -f rawvideo -framerate 15 -video_size 384x216 source/Kobe-384x216-15fps.yuv
 
 播放显示的同步效果：
-![同时播放](17_sync/sync-same-play.jpg)
+![同时播放](img/17_sync/sync-same-play.jpg)
 
 
 ## 编解码同步处理
@@ -75,7 +75,7 @@ qincji:VAFFmpeg mac$ ls -lsh source/
 
 ### 转码流程回顾
 
-![转码流程](17_sync/sync-transcode.png)
+![转码流程](img/17_sync/sync-transcode.png)
 
 上图中三个具有颜色的点，红色是转码过程中必须要处理的，而绿色则根据实际情况而定。
 以下处理的代码位置在[FFmpeg Transcode(转码)](./16_transcode.md) 中。

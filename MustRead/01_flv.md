@@ -4,7 +4,7 @@
 纯代码实现分离FLV音视频流，并组装成AAC和H264文件，最后能正常播放。注：本文只对有AAC和H264格式音视频流组成的flv进行分离。
 
 ##FLV协议
-![FLV协议](01_flv/flv-pr.jpg)
+![FLV协议](img/01_flv/flv-pr.jpg)
 
 注：脚本部分本文未使用，[可前往这查看](https://www.cnblogs.com/chyingp/p/flv-getting-started.html)。
 

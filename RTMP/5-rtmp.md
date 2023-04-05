@@ -6,7 +6,7 @@ Adobe 公司的实时消息传输协议 (RTMP) 通过一个可靠地流传输提
 
 ### Handshake Diagram（握手流程）
 
-![01-handshake](5-rtmp/rtmp-01-handshake.png)
+![01-handshake](img/5-rtmp/rtmp-01-handshake.png)
 
 - **Uninitialized (未初始化)：** 客户端发送C0包(1 字节，版本信息)，如果服务器支持这个版本会响应S0和S1，否则终止连接。
 - **Version Sent (版本已发送)：** 当服务器接收到版本号后(已发送S0和S1)，客户端等S1，服务器等C1，当都接收后，客户端发送C2，服务器发送S2，然后两者状态变成Ack Sent。
@@ -21,7 +21,7 @@ Adobe 公司的实时消息传输协议 (RTMP) 通过一个可靠地流传输提
 
 下图大致的概括了一块的组成，从当前块的 **第一个字节** 大致能分析出该块头的组成信息。 `Extended Timestamp` 和 `Chunk Data`具体计算在下面介绍。
 
-![chumk-format](5-rtmp/rtmp-chumk-format.png)
+![chumk-format](img/5-rtmp/rtmp-chumk-format.png)
 
 #### Basic Header（块基本头）
 
@@ -83,7 +83,7 @@ tmpdump 是一个用来处理 RTMP 流媒体的工具包，支持 rtmp://, rtmpt
 
 （2）把源码导入到as中，如下图所示：
 
-![rtmp-as-lib](5-rtmp/rtmp-as-lib.jpg)
+![rtmp-as-lib](img/5-rtmp/rtmp-as-lib.jpg)
 
 librtmp/CMakeLists.txt文件配置：
 

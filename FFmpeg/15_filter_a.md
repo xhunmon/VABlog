@@ -12,7 +12,7 @@
 输出：avfilter_get_by_name("buffersink") -> avfilter_get_by_name("abuffersink")
 ```
 
-![视频滤镜使用流程](./14_filter_v/filter-process.png)
+![视频滤镜使用流程](img/14_filter_v/filter-process.png)
 
 其中，AVFormatContext、AVPacket等重要的结构体请看：[FFmpeg重要结构体](./06_struct.md) 。
 
@@ -374,7 +374,7 @@ int main(int argc, char **argv) {
 }
 ```
 
-##[测试文件下载地址](../MustRead/01_flv/Kobe.flv)
+##[测试文件下载地址](../MustRead/img/01_flv/Kobe.flv)
 
 参考
 - https://blog.csdn.net/leixiaohua1020/article/details/40544521

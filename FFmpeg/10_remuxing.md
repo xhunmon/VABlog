@@ -4,7 +4,7 @@
 
 ##FFmpeg解封装流程
 
-![重新封装流程](10_remuxing/remuxing-process.png)
+![重新封装流程](img/10_remuxing/remuxing-process.png)
 
 其中，AVFormatContext、AVPacket等重要的结构体请看：[FFmpeg重要结构体（转载）](./06_struct.md) 。
 
@@ -178,4 +178,4 @@ int main(int argc, char **argv) {
 
 ```
 
-##测试文件下载地址: [Kobe.flv](../MustRead/01_flv/Kobe.flv) 。
+##测试文件下载地址: [Kobe.flv](../MustRead/img/01_flv/Kobe.flv) 。

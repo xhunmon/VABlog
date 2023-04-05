@@ -32,7 +32,7 @@ OpenSL ES全称 Open Sound Library for Embedded Systems，即嵌入式系统的�
 - `SLAndroidSimpleBufferQueueItf`：数据队列接口。
 
 ## 播放流程
-![](01_opensl_es/opensles-process.png)
+![](img/01_opensl_es/opensles-process.png)
 
 通过上图可知：
 - 只有接口拥有调用其他函数的功能；即：`SLEngineItf`调用了`CreateOutputMix`和`CreateAudioPlayer`。

@@ -4,7 +4,7 @@
 
 ##结构体间联系
 
-![结构体间联系](06_struct/struct-relationship.jpeg)
+![结构体间联系](img/06_struct/struct-relationship.jpeg)
 
 ###a)解协议（http,rtsp,rtmp,mms）
 AVIOContext，URLProtocol，URLContext主要存储视音频使用的协议的类型以及状态。URLProtocol存储输入视音频使用的封装格式。每种协议都对应一个URLProtocol结构。（注意：FFMPEG中文件也被当做一种协议“file”）

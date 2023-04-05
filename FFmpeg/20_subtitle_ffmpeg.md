@@ -4,7 +4,7 @@
 
 而本文最后实现的效果为：默认中英文字幕，可选英文字幕的软字幕的实现：
 
-![中英多通道字幕](20_subtitle_ffmpeg/ch_en_en.jpg)
+![中英多通道字幕](img/20_subtitle_ffmpeg/ch_en_en.jpg)
 
 
 ## 1. 硬字幕和软字幕的简介

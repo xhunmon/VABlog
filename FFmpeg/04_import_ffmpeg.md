@@ -28,18 +28,18 @@ build_macosx
 ```
 然后在控制台上执行编译脚本`./build.sh`，建议使用IDE，如我使用CLion导入ffmpeg源码就行操作如下：
 
-![CLion导入ffmpeg源码](04_import_ffmpeg/import-source.jpg)
+![CLion导入ffmpeg源码](img/04_import_ffmpeg/import-source.jpg)
 
 等待编译成功后，会在当前目录的macox文件夹生成动态库，如下：
 
-![编译成功](04_import_ffmpeg/import-build-success.jpg)
+![编译成功](img/04_import_ffmpeg/import-build-success.jpg)
 
 
 ##将生成的库导入到Clion
 （1）在Clion新建C++项目，项目名称为`VAFFmpeg`。
 （2）将生成的`include`和`lib`复制到项目跟目录。如图下图所示：
 
-![导入ffmpeg编译后文件](04_import_ffmpeg/import-cmake.jpg)
+![导入ffmpeg编译后文件](img/04_import_ffmpeg/import-cmake.jpg)
 
 （3）编写`CMakeLists.txt`文件，分别引入刚刚复制过来的头文件和动态库，如下：
 ```cmake
@@ -81,4 +81,4 @@ int main() {
 }
 ```
 执行能正常输出，如下：
-![使用ffmpeg库](04_import_ffmpeg/import-main-source.jpg)
+![使用ffmpeg库](img/04_import_ffmpeg/import-main-source.jpg)

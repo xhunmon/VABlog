@@ -5,7 +5,7 @@
 
 ##FFmpeg解封装流程
 
-![封装流程](09_muxing/muxing-process.png)
+![封装流程](img/09_muxing/muxing-process.png)
 
 其中，AVFormatContext、AVPacket等重要的结构体请看：[FFmpeg重要结构体（转载）](./06_struct.md) 。
 
@@ -290,7 +290,7 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-##测试文件下载地址: [Kobe.aac](./09_muxing/Kobe.aac) 、 [Kobe.h264](./09_muxing/kobe.h264) 。
+##测试文件下载地址: [Kobe.aac](img/09_muxing/Kobe.aac) 、 [Kobe.h264](img/09_muxing/kobe.h264) 。
 
 
 参考

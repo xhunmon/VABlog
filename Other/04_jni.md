@@ -46,7 +46,7 @@ ect类型被映射为jobject类型。如，java中的字符串：Ljava/lang/Stri
 
 JNI的使用大概类似如下图所示：
 
-![](./04/jni_native.jpg)
+![](img/04/jni_native.jpg)
 
 ### 静态注册案例
 

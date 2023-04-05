@@ -3,7 +3,7 @@
 
 ##FFmpeg编码流程
 
-![编码流程](12_encode/encode-process.png)
+![编码流程](img/12_encode/encode-process.png)
 
 其中，AVFormatContext、AVPacket等重要的结构体请看：[FFmpeg重要结构体（转载）](./06_struct.md) 。
 

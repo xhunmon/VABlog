@@ -6,7 +6,7 @@ OpenGL（英语：Open Graphics Library，译名：开放图形库或者“开�
 ## 屏幕图像显示流程
 下图所示为常见的 CPU、GPU、显示器工作方式（网上找的）。CPU 计算好显示内容提交至 GPU，GPU 渲染完成后将渲染结果存入帧缓冲区，视频控制器会按照 VSync 信号逐帧读取帧缓冲区的数据，经过数据转换后最终由显示器进行显示。
 
-![](./02_opengl_es/opengles-cpu-gpu-m.png)
+![](img/02_opengl_es/opengles-cpu-gpu-m.png)
 
 所以在本节涉及到的内容主要有：
 CPU：获取本地数据（图像）并计算好作为GPU的输入数据。
@@ -18,7 +18,7 @@ Monitor：在Android中需要通过EGL作为桥梁衔接屏幕进行显示（因
 ### OpenGL渲染管线
 **图形渲染管线（Graphics Pipeline）：** 大多译为管线，实际上指的是一堆原始<font color=#008000>图形数据</font><font color=#888888>（顶点信息(坐标、法向量等)和像素信息(图像、纹理等)）</font>途经一个输送管道，期间经过各种变化处理最终出现在屏幕的过程。
 
-![](02_opengl_es/opengles-all-process.png)
+![](img/02_opengl_es/opengles-all-process.png)
 
 #### 图形渲染管线的主要工作可以被划分为两个部分
 - 1）把 3D 坐标转换为 2D 坐标（在OpenGL中，任何事物都在3D空间中，而屏幕和窗口却是2D像素数组）。
@@ -26,7 +26,7 @@ Monitor：在Android中需要通过EGL作为桥梁衔接屏幕进行显示（因
 
 
 #### 图形渲染管线的具体实现可分为六个阶段
-![着色器在渲染管线中的使用](02_opengl_es/openglse-shader.png)
+![着色器在渲染管线中的使用](img/02_opengl_es/openglse-shader.png)
 
 - 注：蓝色部分代表着色器的部分。
 
@@ -56,7 +56,7 @@ Monitor：在Android中需要通过EGL作为桥梁衔接屏幕进行显示（因
 主要的目的是把3D坐标转为另一种3D坐标(标准化设备坐标)，以及顶点着色器允许我们对顶点属性进行一些基本处理。
 
 标准化设备坐标（就是下文纹理说的OpenGL物体表面坐标）是一个x、y和z值在-1.0到1.0的一小段空间。任何落在范围外的坐标都会被丢弃/裁剪，不会显示在你的屏幕上。下面你会看到我们定义的在标准化设备坐标中的三角形(忽略z轴)：
-![](02_opengl_es/openglse-ndc.png)
+![](img/02_opengl_es/openglse-ndc.png)
 
 与通常的屏幕坐标不同，y轴正方向为向上，(0, 0)坐标是这个图像的中心，而不是左上角。最终你希望所有(变换过的)坐标都在这个坐标空间中，否则它们就不可见了。你的标准化设备坐标接着会变换为屏幕空间坐标(Screen-space Coordinates)，这是使用你通过`glViewport`函数提供的数据，进行视口变换(Viewport Transform)完成的。所得的屏幕空间坐标又会被变换为片段输入到片段着色器中。
 
@@ -227,7 +227,7 @@ VAO：顶点数组对象(Vertex Array Object)；可以像顶点缓冲对象那�
 - `glEnableVertexAttribArray`和`glDisableVertexAttribArray`的调用。
 - 通过`glVertexAttribPointer`设置的顶点属性配置。
 - 通过`glVertexAttribPointer`调用进行的顶点缓冲对象与顶点属性链接。
-![](02_opengl_es/opengles-vao.png)
+![](img/02_opengl_es/opengles-vao.png)
 
 **使用实例：**
 ```c
@@ -270,7 +270,7 @@ glBindVertexArray(0);
 "layout (location = 2) in vec2 texCoord;\n"
 ```
 说明一个顶点中存在了：3个向量顶点位置 + 3个向量RGB颜色 + 2个向量纹理 = 8个向量；根据下图更容易理解是如何如何计算寻找下一个顶点位置的纹理位置：
-![](02_opengl_es/opengles-vap.png)
+![](img/02_opengl_es/opengles-vap.png)
 
 
 #### EBO
@@ -303,7 +303,7 @@ GLuint indices[] = { // 注意索引从0开始!
 };
 ```
 下图为通过图：
-![](02_opengl_es/opengles-ebo.png)
+![](img/02_opengl_es/opengles-ebo.png)
 
 **下面使用索引绘制两个三角形拼成一个矩形，使用实例：**
 ```c
@@ -322,7 +322,7 @@ glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);//使用当前绑定到GL_EL
 - 参4：指定EBO中的偏移量，（或者传递一个索引数组，但是这是当你不在使用索引缓冲对象的时候）。
 
 注意：VAO绑定时正在绑定的索引缓冲对象会被保存为VAO的元素缓冲对象。绑定VAO的同时也会自动绑定EBO，如图:
-![](02_opengl_es/opengles-vao_ebo.png)
+![](img/02_opengl_es/opengles-vao_ebo.png)
 
 #### VBO、VAO、EBO总结
 VBO在GPU中缓存大量顶点数据，VAO存储顶点属性(函数)的调用，而EBO则根据索引来绘制顶点（三角形->矩形）。
@@ -343,13 +343,13 @@ VBO在GPU中缓存大量顶点数据，VAO存储顶点属性(函数)的调用，
 计算机图像纹理坐标 -> OpenGL纹理坐标 -> OpenGL物体表面坐标
 ```
 以下为三者的坐标系：
-![](02_opengl_es/opengles-coord1.png)
+![](img/02_opengl_es/opengles-coord1.png)
 
 当我们直接把解析出来的数据（图：坐着电脑前的人）直接使用在 "OpenGL纹理坐标" 上，就会上下颠倒了，如下：
-![](02_opengl_es/opengles-coord2.png)
+![](img/02_opengl_es/opengles-coord2.png)
 
 正确姿势如下（看"计算机图像纹理坐标"和"OpenGL物体表面坐标"对应的坐标与图像的变化）：
-![](02_opengl_es/opengles-coord3.png)
+![](img/02_opengl_es/opengles-coord3.png)
 
 坐标理解非常重要，处理不好导致的效果就是歪画面。这里纹理还需要对应着顶点的坐标，见下面【纹理的使用】中定义的`vertices`纹理坐标。
 

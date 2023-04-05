@@ -4,7 +4,7 @@
 
 ##FFmpeg解码流程
 
-![解码流程](11_decode/decode-process.png)
+![解码流程](img/11_decode/decode-process.png)
 
 其中，AVFormatContext、AVPacket等重要的结构体请看：[FFmpeg重要结构体（转载）](./06_struct.md) 。
 
@@ -180,7 +180,7 @@ int main(int argc, char **argv)
 }
 ```
 
-- 测试文件下载地址: [Kobe.aac](./09_muxing/Kobe.aac) 。
+- 测试文件下载地址: [Kobe.aac](img/09_muxing/Kobe.aac) 。
 - 解析后的pcm原始数据可以使用ffplay或者audition等工具播放，而播放前必须先知道该原始数据的初始化信息，如通道数、位宽等，可以使用`ffprobe`进行查看解码前的aac文件，如：
 ```commandline
 qincji:usr mac$ ffprobe ./VAFFmpeg/source/Kobe.aac 
@@ -200,7 +200,7 @@ Input #0, aac, from '/Users/Qincji/Desktop/develop/android/project/va/VAFFmpeg/s
     Stream #0:0: Audio: aac (HE-AAC), 44100 Hz, stereo, fltp, 34 kb/s
 ```
 - 使用audition输入出文件实例：
-![播放PCM裸流](11_decode/decode-audio.jpg)
+![播放PCM裸流](img/11_decode/decode-audio.jpg)
 
 
 ##官方例子【Video】
@@ -356,7 +356,7 @@ int main(int argc, char **argv)
     return 0;
 }
 ```
-- 测试文件下载地址:  [Kobe.h264](./09_muxing/kobe.h264) 。
+- 测试文件下载地址:  [Kobe.h264](img/09_muxing/kobe.h264) 。
 - 解析后的yuv原始数据可以使用ffplay等工具播放，而播放前必须先知道该原始数据的宽高等信息，可以使用`ffprobe`进行查看解码前的h264文件，如：
 ```commandline
 qincji:usr mac$ ffprobe /Users/Qincji/Desktop/develop/android/project/va/VAFFmpeg/source/Kobe.h264 
@@ -379,5 +379,5 @@ Input #0, h264, from '/Users/Qincji/Desktop/develop/android/project/va/VAFFmpeg/
 > ffplay -f rawvideo -video_size 384x216 output/Kobe.yuv
 
 输入出文件实例：
-![播放YUV裸流](11_decode/decode-video.jpg)
+![播放YUV裸流](img/11_decode/decode-video.jpg)
 

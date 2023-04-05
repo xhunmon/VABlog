@@ -6,7 +6,7 @@
 
 ##使用滤镜流程
 
-![FFmpeg使用滤镜流程](14_filter_v/filter-process.png)
+![FFmpeg使用滤镜流程](img/14_filter_v/filter-process.png)
 
 
 其中，AVFormatContext、AVPacket等重要的结构体请看：[FFmpeg重要结构体](./06_struct.md) 。
@@ -424,7 +424,7 @@ target_link_libraries(
 )
 ```
 
-##[测试文件下载地址](../MustRead/01_flv/Kobe.flv)
+##[测试文件下载地址](../MustRead/img/01_flv/Kobe.flv)
 
 
 参考

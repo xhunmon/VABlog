@@ -10,15 +10,15 @@
 
 在Clion新建c++项目项目`File->New Project->Create`，如下图：
 
-![创建1](05_source/source-create1.jpg)
+![创建1](img/05_source/source-create1.jpg)
 
-![创建2](05_source/source-create2.jpg)
+![创建2](img/05_source/source-create2.jpg)
 
 
 ###步骤2
 将FFmpeg源码复制到根目录，如下图：
 
-![复制源码](05_source/source-copy.jpg)
+![复制源码](img/05_source/source-copy.jpg)
 
 
 ###步骤3
@@ -41,7 +41,7 @@ add_executable(SourceFFmpeg ${EX_DIR})
 
 到这已经完成了，这里我们查看一下源码之间的跳转，以及一些方法的被调用，可以从`doc/examples`例子看看源码能不能正常跳转等，我这如下：
 
-![查看](05_source/source-look.jpg)
+![查看](img/05_source/source-look.jpg)
 
 
 ##方案二（需要编译源码）
@@ -55,7 +55,7 @@ add_executable(SourceFFmpeg ${EX_DIR})
 
 编译源码生成动态库/静态库，目的需要头文件，然后把生成的头文件复制到项目中，如下：
 
-![文件件](05_source/source-head.jpg)
+![文件件](img/05_source/source-head.jpg)
 
 ###步骤4
 

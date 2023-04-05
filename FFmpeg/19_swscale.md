@@ -3,7 +3,7 @@
 本文对应官方例子：`doc/examples/scaling_video.c`。
 
 ## FFmpeg图像转换流程
-![图像转换流程](19_swscale/swsscale-process.png)
+![图像转换流程](img/19_swscale/swsscale-process.png)
 
 
 只有三个简单的函数就可以实现了，而在[FFmpeg Transcode(转码)](./16_transcode.md) 中的应用就是对应着处理音频重采样的地方。重采样是对解码后的裸流数据（AVFrame中的data）进行格式转换等，而图像转换则是视频对解码后的裸流数据（AVFrame中的data）进行格式转换。
@@ -113,5 +113,5 @@ int main(int argc, char **argv) {
 }
 ```
 
-- [Kobe.flv](../MustRead/01_flv/Kobe.flv)
+- [Kobe.flv](../MustRead/img/01_flv/Kobe.flv)
 

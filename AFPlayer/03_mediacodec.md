@@ -183,7 +183,7 @@ jint JNI_OnLoad(JavaVM *vm, void *res) {
 ```
 
 #### 2）API流程
-![](03_mediacodec/mediacodec-process.png)
+![](img/03_mediacodec/mediacodec-process.png)
 
 #### 3）关键代码
 ```c++

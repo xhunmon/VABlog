@@ -2,21 +2,21 @@
 
 ### 程序的生命周期
 通过了解程序的生命周期，而直到编译所在生命周期的哪一个部分。
-![编译过程](01_c_compile/compile-life.png)
+![编译过程](img/01_c_compile/compile-life.png)
 
 ### 编译过程与编译器
 编译过程是指编写的源代码通过编译器进行编译，最后生成cpu所能识别的二进制形式存在的源代码的过程。而编译器则是指能够使源代码编译生成二进制形式的工具，根据平台不同，工具也不同，如window是XXX.exe可执行程序，unix系统侧不定后缀名，系统根据文件的头部信息来判断。
-![编译过程](01_c_compile/compile-compile.png)
+![编译过程](img/01_c_compile/compile-compile.png)
 例如：在屏幕上输出“VIP会员”，C语言的写法为：
 ```c
 puts("VIP会员");
 ```
 二进制的写法为：
-![二进制](01_c_compile/compile-puts.jpg)
+![二进制](img/01_c_compile/compile-puts.jpg)
 
 ### gcc/g++编译器执行过程
 gcc/g++编译器能把一个源文件生成一个执行文件，这是因为该编译器是集成了各种程序（预处理器、汇编器等），这个过程中的工作如下：
-![执行过程](01_c_compile/compile-process.png)
+![执行过程](img/01_c_compile/compile-process.png)
 
 例子：编写 `test.c` 如下：
 ```c
@@ -49,7 +49,7 @@ qincji:build mac$
 
 ### 静态库与动态库(Linux)
 动态库与静态库统称为函数库，根据系统不一样，后缀名标识也不一定，如图：
-![函数库](01_c_compile/compile-lib.png)
+![函数库](img/01_c_compile/compile-lib.png)
 
 #### 静态库
 静态库是指编译链接时，把库文件的代码全部加入到可执行文件中，因此生成的文件比较大，但在运行时也就不再需要库文件了。优点：静态库节省时间，不需要再进行动态链接，需要调用的代码直接就在代码内部。

@@ -6,12 +6,12 @@
 
 先看雷神的一张图：
 
-![转码流程](13_transfer/transfer-process.jpeg)
+![转码流程](img/13_transfer/transfer-process.jpeg)
 
 
 上图描述的很明白，上完图发现已经不需要语言描述了[Dog]。 但还是画个来说明一下这块之间的联系：
 
-![FFmpeg转码流程](13_transfer/transfer-process2.png)
+![FFmpeg转码流程](img/13_transfer/transfer-process2.png)
 
 
 其中，AVFormatContext、AVPacket等重要的结构体请看：[FFmpeg重要结构体](./06_struct.md) 。

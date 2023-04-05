@@ -17,11 +17,11 @@ AAC的音频文件格式有两种ADIF和ADTS。这两种格式主要区别：ADI
 
 Audio Data Interchange Format 音频数据交换格式。这种格式的特征是可以确定的找到这个音频数据的开始，不需进行在音频数据流中间开始的解码，即它的解码必须在明确定义的开始处进行。故这种格式常用在磁盘文件中。编码格式如下：
 
-![adif格式](4-aac/aac-adif格式.png)
+![adif格式](img/4-aac/aac-adif格式.png)
 
 在MPEG-2 AAC中ADIF语法规则如下：
 
-![aac-adif](4-aac/aac-adif.png)
+![aac-adif](img/4-aac/aac-adif.png)
 
 #### ADTS
 
@@ -29,11 +29,11 @@ Audio Data Transport Stream 音频数据传输流。这种格式的特征是它�
 
 下图为ADTS的组成部分以及在**MPEG-2** AAC的语法结构：
 
-![acc-adts-mpeg2](4-aac/acc-adts-mpeg2.png)
+![acc-adts-mpeg2](img/4-aac/acc-adts-mpeg2.png)
 
 下图为ADTS的组成部分以及在**MPEG-4** AAC的语法结构：
 
-![adts-mpeg4](4-aac/aac-adts-mpeg4.png)
+![adts-mpeg4](img/4-aac/aac-adts-mpeg4.png)
 
  注：ES：全称elementary stream，这里意为编码后的音频数据。
 
@@ -49,11 +49,11 @@ Audio Data Transport Stream 音频数据传输流。这种格式的特征是它�
 
 - **profile(MPEG-4:profile_ObjectType)** 见下表（左边是MPEG-2版本；右边是MPEG-4版本，Profile_ObjectType的值）：
 
-  ![profile](4-aac/aac-profile.png)
+  ![profile](img/4-aac/aac-profile.png)
 
 - **sampling_frequency_index** 采样率的数组下标，即：sampling frequeny[sampling_frequency_index] ：
 
-  ![采样率数组](4-aac/aac-采样率数组.png)
+  ![采样率数组](img/4-aac/aac-采样率数组.png)
 
 - **private_bit**  私有位，编码时设置为0，解码时忽略。
 
@@ -73,7 +73,7 @@ Audio Data Transport Stream 音频数据传输流。这种格式的特征是它�
 
 下图为一个ADTS格式的文件开头部分
 
-![adts例子](4-aac/aac-adts例子.png)
+![adts例子](img/4-aac/aac-adts例子.png)
 
 我们来数一个第一个frame的header
 
@@ -141,7 +141,7 @@ make install
 
 （3）移入项目中
 
-![faac-as](4-aac/aac-faac-as.png)
+![faac-as](img/4-aac/aac-faac-as.png)
 
 并且配置CMakeList.txt文件
 

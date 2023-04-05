@@ -9,14 +9,14 @@
 - (1)`configure`：通过`configure --help`查看我们所能选择的配置。[前往查看configure配置选项注释](./01_configure_help.md)。这一步后会生成许多`Makefile`编译所需要的东西。其中在 `ffbuild/config.log` 可查看当前执行的日志。
 - (2)`make install`：编译生成我们所配置的东西。如果之前编译过需要`make clean`清除之前编译过的数据再执行`make install`。
 
-![FFmpeg编译流程](03_build_ffmpeg/build-proccess.png)
+![FFmpeg编译流程](img/03_build_ffmpeg/build-proccess.png)
 
 注：生成的执行文件或可移植类库时根据系统会不一样，比如生成`ffplay`时：Unix系统会是`ffplay`，windows会是`ffplay.exe`。
 
 ##FFmpeg基本组成结构
 从`configure`配置文件中阅读可知，FFmpeg基本组成结构可以下部分（下图）：
 
-![FFmpeg基本组成结构](03_build_ffmpeg/build-struct.png)
+![FFmpeg基本组成结构](img/03_build_ffmpeg/build-struct.png)
 
 主要由`AVCodec`（编解码相关）、`AVDevice`（输入/输出设备相关）、`AVFilter`（滤波处理相关）和`AVFormat`（数据格式处理相关）四大基本模块构成。在这四大模块下又细分了一些小模块，这里对小模块作用简单做一下说明：
 - `bsfs`：格式转换。通过`./configure --list-bsfs`查看所有能支持转换的格式。
@@ -60,7 +60,7 @@ make clean
 make install
 ```
 然后在控制台中看到输出信息，发现只有ffplay程序将要被编译。
-![显示ffplay](03_build_ffmpeg/build-ffplay-hint.jpg)
+![显示ffplay](img/03_build_ffmpeg/build-ffplay-hint.jpg)
 
 等待十几分钟后，我们发现在项目的根目录仅仅生成ffplay可执行文件，我们在控制台执行`du -sh ./ffplay`命令看看生成文件的大小有20M。
 ```c
@@ -68,7 +68,7 @@ qincji:ffmpeg mac$ du -sh ./ffplay
  20M    ./ffplay
 ```
 执行命令播放一个rtmp：`./ffplay -window_title "版本1" rtmp://slive.ytn.co.kr/dmb/ydlive_20140419_1`，结果如下：
-![ffplay播放rtmp](03_build_ffmpeg/build-ffplay-rtmp.jpg)
+![ffplay播放rtmp](img/03_build_ffmpeg/build-ffplay-rtmp.jpg)
 
 好了，我们编译的ffplay播放器能正常使用了。使用`./ffplay --help`查看具体用法。
 
@@ -156,11 +156,11 @@ make clean
 make install
 ```
 然后在控制台中看到输出信息，发现`Enabled protocols:`中已经没有了`rtmp`协议了！
-![显示Enabled protocols](03_build_ffmpeg/build-rtmp-hint.jpg)
+![显示Enabled protocols](img/03_build_ffmpeg/build-rtmp-hint.jpg)
 
 等待编译完成，执行命令播放一个rtmp：`./ffplay -window_title "版本2" rtmp://slive.ytn.co.kr/dmb/ydlive_20140419_1`，结果如下：
 
-![ffplay播放rtmp结果](03_build_ffmpeg/build-rtmp-nofound.jpg)
+![ffplay播放rtmp结果](img/03_build_ffmpeg/build-rtmp-nofound.jpg)
 
 开启或者禁用其他组件的道理也是一样哦。
 
@@ -198,7 +198,7 @@ build_ffmpeg
 ```
 
 编译过程中，我们留意到控制台的到输出信息，发现`libx264`协议被启用了：
-![显示libx264被启用](03_build_ffmpeg/build-x264-enable.jpg)
+![显示libx264被启用](img/03_build_ffmpeg/build-x264-enable.jpg)
 
 等待编译成功后，验证当前生成的`ffmpeg`程序是否已经集成了`libx264`，找个mp4视频放到当前目录，命名为input.mp4。然后执行以下命令，如果没报错说了已成功集成：
 `./ffmpeg -re -i input.mp4 -vcodec libx264 -an output.mp4`
@@ -257,7 +257,7 @@ build_android
 ```
 等待编译完成，我们发现能成功编译出动态库：
 
-![显示libx264被启用](03_build_ffmpeg/build-android-susccess.jpg)
+![显示libx264被启用](img/03_build_ffmpeg/build-android-susccess.jpg)
 
 ##总结
 好了，ffmpeg编译已经基本讲述完了。这里总结一下我所编译过程的一些想法：

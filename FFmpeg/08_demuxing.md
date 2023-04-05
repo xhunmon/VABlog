@@ -2,7 +2,7 @@
 
 ##FFmpeg解封装流程
 
-![解封装流程](08_demuxing/demuxing-process.png)
+![解封装流程](img/08_demuxing/demuxing-process.png)
 
 其中，AVFormatContext、AVPacket等重要的结构体请看：[FFmpeg重要结构体（转自雷神）](./06_struct.md) 。
 
@@ -88,4 +88,4 @@ int main() {
 }
 ```
 
-##[测试文件下载地址](../MustRead/01_flv/Kobe.flv)
+##[测试文件下载地址](../MustRead/img/01_flv/Kobe.flv)
