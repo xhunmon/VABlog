@@ -97,6 +97,7 @@
 - [阅读官方文档](http://ffmpeg.org/ffmpeg.html)
 - 学习官方例子（源码中`doc/examples/xxx`）
 - [[总结]FFMPEG视音频编解码零基础学习方法](https://blog.csdn.net/leixiaohua1020/article/details/15811977)
+- [FFmpeg原理](https://ffmpeg.xianwaizhiyin.net/)
 - [FFmpeg 中文文档](https://github.com/leandromoreira/ffmpeg-libav-tutorial/blob/master/README-cn.md)
 - 书籍（电子书往最后翻）
 > - [1.FFmpeg从入门到精通(京东)](https://item.jd.com/12349436.html)
