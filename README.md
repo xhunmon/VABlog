@@ -145,7 +145,7 @@ OpenGL使用GPU渲染视频，释放宝贵的CPU资源，学习它是必不可�
 - [OpenGL电子书下载](https://github.com/Canber/OpenGL-ES-for-android)
 - [OpenGL基础知识](./OpenGL/01_opengl.md)
 - [GLSL（着色器语言）中文手册](./OpenGL/02_glsl.md)
-- [AFPlayer：OpenGL ES播放RGB](./AFPlayer/02_opengl_es.md)
+- [Android OpenGL ES 3.0 从入门到精通系统性学习教程](https://github.com/githubhaohao/NDK_OpenGLES_3_0)
 - OpenGL ES推荐：WebGL编程指南（资源见下）
 
 
