@@ -83,6 +83,7 @@
 | VideoEye    | 来自雷神的强大实时视频码流分析软件。                |[地址](https://blog.csdn.net/leixiaohua1020/article/details/34553607)|
 | Codecian    | H264/H265等分析工具（跨平台）。                   |[地址](http://codecian.com/)|
 | H264Visa    | H.264/AVC实时视频分析工具。                       |（略）|
+|Elecard StreamEye|编码视频的可视化表现，流结构分析，这些流是MPEG-1/2/4 or AVC/H.264 VES(视频基本流)、SS（MPEG1的系统流）、PS(MPEG2的程序流)、TS(mpeg2的传输流)。|（略）|
 | Hxd Hex Editor| 16进制查看工具。                              |[地址](https://mh-nexus.de/en/downloads.php?product=HxD20)|
 | ffprobe     | ffmpeg中自带的分析工具，非常强大，不过上手有难度。    |[参考](FFmpeg/18_command.md)|
 
