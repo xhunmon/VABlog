@@ -114,7 +114,7 @@
 [编译ffmpeg4.2.2](./FFmpeg/03_build_ffmpeg.md)通过这篇文章我们基本可以编译出我们想要的FFmpeg库
 
 #### 1.2.2.源码阅读
-- 源码导入：[FFmpeg导入到Clion（MacOS）](./FFmpeg/04_import_ffmpeg.md) 、 [使用Clion阅读FFmpeg源码（支持跳转）](./FFmpeg/05_source.md) 
+- 源码导入：[FFmpeg调试环境搭建](https://ffmpeg.xianwaizhiyin.net/debug-ffmpeg/debug-ffmpeg.html)
 - 阅读参考：[FFMPEG_FFPLAY源码剖析(CSDN)](https://download.csdn.net/detail/leixiaohua1020/6377803) 、[雷神的FFmpeg源代码系列](https://blog.csdn.net/leixiaohua1020/article/details/44220151) 
 
 #### 1.2.3.学习官方例子
