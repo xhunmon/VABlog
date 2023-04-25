@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Remuxing（重新封装） · 秦城季&音视频</title>
+        <title>如何深入学习解封装？ · 秦城季&音视频</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -107,10 +107,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="11_decode.html" />
+    <link rel="next" href="../OpenGL/" />
     
     
-    <link rel="prev" href="09_muxing.html" />
+    <link rel="prev" href="20_subtitle_ffmpeg.html" />
     
 
     <style>
@@ -486,7 +486,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.9" data-path="10_remuxing.html">
+        <li class="chapter " data-level="1.4.9" data-path="10_remuxing.html">
             
                 <a href="10_remuxing.html">
             
@@ -629,7 +629,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.20" data-path="21_deep_demuxing.html">
+        <li class="chapter active" data-level="1.4.20" data-path="21_deep_demuxing.html">
             
                 <a href="21_deep_demuxing.html">
             
@@ -903,7 +903,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Remuxing（重新封装）</a>
+        <a href=".." >如何深入学习解封装？</a>
     </h1>
 </div>
 
@@ -918,180 +918,34 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#remuxing&#xFF08;&#x91CD;&#x65B0;&#x5C01;&#x88C5;&#xFF09;"><b></b>Remuxing&#xFF08;&#x91CD;&#x65B0;&#x5C01;&#x88C5;&#xFF09;</a></li><ul><li><span class="title-icon "></span><a href="#ffmpeg&#x89E3;&#x5C01;&#x88C5;&#x6D41;&#x7A0B;"><b></b>FFmpeg&#x89E3;&#x5C01;&#x88C5;&#x6D41;&#x7A0B;</a></li><li><span class="title-icon "></span><a href="#&#x5B98;&#x65B9;&#x4F8B;&#x5B50;"><b></b>&#x5B98;&#x65B9;&#x4F8B;&#x5B50;</a></li><li><span class="title-icon "></span><a href="#&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x5730;&#x5740;-kobeflv-&#x3002;"><b></b>&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x5730;&#x5740;: Kobe.flv &#x3002;</a></li></ul></ul></div><a href="#remuxing&#xFF08;&#x91CD;&#x65B0;&#x5C01;&#x88C5;&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="remuxing&#xFF08;&#x91CD;&#x65B0;&#x5C01;&#x88C5;&#xFF09;"><a name="remuxing&#xFF08;&#x91CD;&#x65B0;&#x5C01;&#x88C5;&#xFF09;" class="anchor-navigation-ex-anchor" href="#remuxing&#xFF08;&#x91CD;&#x65B0;&#x5C01;&#x88C5;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="remuxing&#xFF08;&#x91CD;&#x65B0;&#x5C01;&#x88C5;&#xFF09;" class="plugin-anchor" href="#remuxing&#xFF08;&#x91CD;&#x65B0;&#x5C01;&#x88C5;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>Remuxing&#xFF08;&#x91CD;&#x65B0;&#x5C01;&#x88C5;&#xFF09;</h1>
-<p>&#x672C;&#x6587;&#x6765;&#x81EA;&#x5B98;&#x65B9;&#x4F8B;&#x5B50;<code>doc/examples/remuxing.c</code> &#x3002;</p>
-<h2 id="ffmpeg&#x89E3;&#x5C01;&#x88C5;&#x6D41;&#x7A0B;"><a name="ffmpeg&#x89E3;&#x5C01;&#x88C5;&#x6D41;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#ffmpeg&#x89E3;&#x5C01;&#x88C5;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="ffmpeg&#x89E3;&#x5C01;&#x88C5;&#x6D41;&#x7A0B;" class="plugin-anchor" href="#ffmpeg&#x89E3;&#x5C01;&#x88C5;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>FFmpeg&#x89E3;&#x5C01;&#x88C5;&#x6D41;&#x7A0B;</h2>
-<p><a href="img/10_remuxing/remuxing-process.png" data-lightbox="335d3d5a-b878-475e-ac01-aa045b281837" data-title="&#x91CD;&#x65B0;&#x5C01;&#x88C5;&#x6D41;&#x7A0B;"><div class="image-wrapper"><img src="img/10_remuxing/remuxing-process.png" alt="&#x91CD;&#x65B0;&#x5C01;&#x88C5;&#x6D41;&#x7A0B;"></div></a></p>
-<p>&#x5176;&#x4E2D;&#xFF0C;AVFormatContext&#x3001;AVPacket&#x7B49;&#x91CD;&#x8981;&#x7684;&#x7ED3;&#x6784;&#x4F53;&#x8BF7;&#x770B;&#xFF1A;<a href="06_struct.html">FFmpeg&#x91CD;&#x8981;&#x7ED3;&#x6784;&#x4F53;&#xFF08;&#x8F6C;&#x8F7D;&#xFF09;</a> &#x3002;</p>
-<p>&#x91CD;&#x65B0;&#x5C01;&#x88C5;&#x7684;&#x539F;&#x7406;&#x5C31;&#x662F;&#x628A;&#x8F93;&#x5165;&#x6587;&#x4EF6; <a href="08_demuxing.html">&#x89E3;&#x5C01;&#x88C5;</a> &#x4E4B;&#x540E;&#xFF0C;&#x518D;&#x8FDB;&#x884C; <a href="09_muxing.html">&#x5C01;&#x88C5;</a> &#x8F93;&#x51FA;&#x5230;&#x65B0;&#x7684;&#x6587;&#x4EF6;&#x4E2D;&#x3002;</p>
-<h2 id="&#x5B98;&#x65B9;&#x4F8B;&#x5B50;"><a name="&#x5B98;&#x65B9;&#x4F8B;&#x5B50;" class="anchor-navigation-ex-anchor" href="#&#x5B98;&#x65B9;&#x4F8B;&#x5B50;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5B98;&#x65B9;&#x4F8B;&#x5B50;" class="plugin-anchor" href="#&#x5B98;&#x65B9;&#x4F8B;&#x5B50;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B98;&#x65B9;&#x4F8B;&#x5B50;</h2>
-<pre><code class="lang-c"><span class="hljs-comment">/**
- * @author &#x79E6;&#x57CE;&#x5B63;
- * @email xhunmon@126.com
- * @Blog https://qincji.gitee.io
- * @date 2021/01/04
- * description: FFmpeg &#x91CD;&#x65B0;&#x5C01;&#x88C5;  &lt;br&gt;
- */</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> __STDC_CONSTANT_MACROS</span>
-<span class="hljs-keyword">extern</span> <span class="hljs-string">&quot;C&quot;</span> {
-<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;libavutil/timestamp.h&gt;</span></span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;libavformat/avformat.h&gt;</span></span>
-}
-
-<span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">log_packet</span><span class="hljs-params">(<span class="hljs-keyword">const</span> AVFormatContext *fmt_ctx, <span class="hljs-keyword">const</span> AVPacket *pkt, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *tag)</span> </span>{
-    AVRational *time_base = &amp;fmt_ctx-&gt;streams[pkt-&gt;stream_index]-&gt;time_base;
-
-    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s: pts:%s pts_time:%s dts:%s dts_time:%s duration:%s duration_time:%s stream_index:%d\n&quot;</span>,
-           tag,
-           av_ts2str(pkt-&gt;pts), av_ts2timestr(pkt-&gt;pts, time_base),
-           av_ts2str(pkt-&gt;dts), av_ts2timestr(pkt-&gt;dts, time_base),
-           av_ts2str(pkt-&gt;duration), av_ts2timestr(pkt-&gt;duration, time_base),
-           pkt-&gt;stream_index);
-}
-
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span> **argv)</span> </span>{
-    AVOutputFormat *ofmt = <span class="hljs-literal">NULL</span>;
-    AVFormatContext *ifmt_ctx = <span class="hljs-literal">NULL</span>, *ofmt_ctx = <span class="hljs-literal">NULL</span>;
-    AVPacket pkt;
-    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *in_filename, *out_filename;
-    <span class="hljs-keyword">int</span> ret, i;
-    <span class="hljs-keyword">int</span> stream_index = <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">int</span> *stream_mapping = <span class="hljs-literal">NULL</span>;
-    <span class="hljs-keyword">int</span> stream_mapping_size = <span class="hljs-number">0</span>;
-
-    in_filename = <span class="hljs-string">&quot;source/Kobe.flv&quot;</span>;
-    out_filename = <span class="hljs-string">&quot;output/Kobe.mp4&quot;</span>;
-
-    <span class="hljs-keyword">if</span> ((ret = avformat_open_input(&amp;ifmt_ctx, in_filename, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)) &lt; <span class="hljs-number">0</span>) {
-        <span class="hljs-built_in">fprintf</span>(<span class="hljs-built_in">stderr</span>, <span class="hljs-string">&quot;Could not open input file &apos;%s&apos;&quot;</span>, in_filename);
-        <span class="hljs-keyword">goto</span> end;
-    }
-
-    <span class="hljs-keyword">if</span> ((ret = avformat_find_stream_info(ifmt_ctx, <span class="hljs-number">0</span>)) &lt; <span class="hljs-number">0</span>) {
-        <span class="hljs-built_in">fprintf</span>(<span class="hljs-built_in">stderr</span>, <span class="hljs-string">&quot;Failed to retrieve input stream information&quot;</span>);
-        <span class="hljs-keyword">goto</span> end;
-    }
-
-    av_dump_format(ifmt_ctx, <span class="hljs-number">0</span>, in_filename, <span class="hljs-number">0</span>);
-
-    avformat_alloc_output_context2(&amp;ofmt_ctx, <span class="hljs-literal">NULL</span>, <span class="hljs-literal">NULL</span>, out_filename);
-    <span class="hljs-keyword">if</span> (!ofmt_ctx) {
-        <span class="hljs-built_in">fprintf</span>(<span class="hljs-built_in">stderr</span>, <span class="hljs-string">&quot;Could not create output context\n&quot;</span>);
-        ret = AVERROR_UNKNOWN;
-        <span class="hljs-keyword">goto</span> end;
-    }
-
-    stream_mapping_size = ifmt_ctx-&gt;nb_streams;
-    stream_mapping = <span class="hljs-keyword">static_cast</span>&lt;<span class="hljs-keyword">int</span> *&gt;(av_mallocz_array(stream_mapping_size, <span class="hljs-keyword">sizeof</span>(*stream_mapping)));
-    <span class="hljs-keyword">if</span> (!stream_mapping) {
-        ret = AVERROR(ENOMEM);
-        <span class="hljs-keyword">goto</span> end;
-    }
-
-    ofmt = ofmt_ctx-&gt;oformat;
-
-    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; ifmt_ctx-&gt;nb_streams; i++) {
-        AVStream *out_stream;
-        AVStream *in_stream = ifmt_ctx-&gt;streams[i];
-        AVCodecParameters *in_codecpar = in_stream-&gt;codecpar;
-
-        <span class="hljs-keyword">if</span> (in_codecpar-&gt;codec_type != AVMEDIA_TYPE_AUDIO &amp;&amp;
-            in_codecpar-&gt;codec_type != AVMEDIA_TYPE_VIDEO &amp;&amp;
-            in_codecpar-&gt;codec_type != AVMEDIA_TYPE_SUBTITLE) {
-            stream_mapping[i] = <span class="hljs-number">-1</span>;
-            <span class="hljs-keyword">continue</span>;
-        }
-
-        stream_mapping[i] = stream_index++;
-
-        out_stream = avformat_new_stream(ofmt_ctx, <span class="hljs-literal">NULL</span>);
-        <span class="hljs-keyword">if</span> (!out_stream) {
-            <span class="hljs-built_in">fprintf</span>(<span class="hljs-built_in">stderr</span>, <span class="hljs-string">&quot;Failed allocating output stream\n&quot;</span>);
-            ret = AVERROR_UNKNOWN;
-            <span class="hljs-keyword">goto</span> end;
-        }
-
-        ret = avcodec_parameters_copy(out_stream-&gt;codecpar, in_codecpar);
-        <span class="hljs-keyword">if</span> (ret &lt; <span class="hljs-number">0</span>) {
-            <span class="hljs-built_in">fprintf</span>(<span class="hljs-built_in">stderr</span>, <span class="hljs-string">&quot;Failed to copy codec parameters\n&quot;</span>);
-            <span class="hljs-keyword">goto</span> end;
-        }
-        out_stream-&gt;codecpar-&gt;codec_tag = <span class="hljs-number">0</span>;
-    }
-    av_dump_format(ofmt_ctx, <span class="hljs-number">0</span>, out_filename, <span class="hljs-number">1</span>);
-
-    <span class="hljs-keyword">if</span> (!(ofmt-&gt;flags &amp; AVFMT_NOFILE)) {
-        ret = avio_open(&amp;ofmt_ctx-&gt;pb, out_filename, AVIO_FLAG_WRITE);
-        <span class="hljs-keyword">if</span> (ret &lt; <span class="hljs-number">0</span>) {
-            <span class="hljs-built_in">fprintf</span>(<span class="hljs-built_in">stderr</span>, <span class="hljs-string">&quot;Could not open output file &apos;%s&apos;&quot;</span>, out_filename);
-            <span class="hljs-keyword">goto</span> end;
-        }
-    }
-
-    ret = avformat_write_header(ofmt_ctx, <span class="hljs-literal">NULL</span>);
-    <span class="hljs-keyword">if</span> (ret &lt; <span class="hljs-number">0</span>) {
-        <span class="hljs-built_in">fprintf</span>(<span class="hljs-built_in">stderr</span>, <span class="hljs-string">&quot;Error occurred when opening output file\n&quot;</span>);
-        <span class="hljs-keyword">goto</span> end;
-    }
-
-    <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) {
-        AVStream *in_stream, *out_stream;
-
-        ret = av_read_frame(ifmt_ctx, &amp;pkt);
-        <span class="hljs-keyword">if</span> (ret &lt; <span class="hljs-number">0</span>)
-            <span class="hljs-keyword">break</span>;
-
-        in_stream = ifmt_ctx-&gt;streams[pkt.stream_index];
-        <span class="hljs-keyword">if</span> (pkt.stream_index &gt;= stream_mapping_size ||
-            stream_mapping[pkt.stream_index] &lt; <span class="hljs-number">0</span>) {
-            av_packet_unref(&amp;pkt);
-            <span class="hljs-keyword">continue</span>;
-        }
-
-        pkt.stream_index = stream_mapping[pkt.stream_index];
-        out_stream = ofmt_ctx-&gt;streams[pkt.stream_index];
-        log_packet(ifmt_ctx, &amp;pkt, <span class="hljs-string">&quot;in&quot;</span>);
-
-        <span class="hljs-comment">/* copy packet */</span>
-        pkt.pts = av_rescale_q_rnd(pkt.pts, in_stream-&gt;time_base, out_stream-&gt;time_base,
-                                   <span class="hljs-keyword">static_cast</span>&lt;AVRounding&gt;(AV_ROUND_NEAR_INF | AV_ROUND_PASS_MINMAX));
-        pkt.dts = av_rescale_q_rnd(pkt.dts, in_stream-&gt;time_base, out_stream-&gt;time_base,
-                                   <span class="hljs-keyword">static_cast</span>&lt;AVRounding&gt;(AV_ROUND_NEAR_INF | AV_ROUND_PASS_MINMAX));
-        pkt.duration = av_rescale_q(pkt.duration, in_stream-&gt;time_base, out_stream-&gt;time_base);
-        pkt.pos = <span class="hljs-number">-1</span>;
-        log_packet(ofmt_ctx, &amp;pkt, <span class="hljs-string">&quot;out&quot;</span>);
-
-        ret = av_interleaved_write_frame(ofmt_ctx, &amp;pkt);
-        <span class="hljs-keyword">if</span> (ret &lt; <span class="hljs-number">0</span>) {
-            <span class="hljs-built_in">fprintf</span>(<span class="hljs-built_in">stderr</span>, <span class="hljs-string">&quot;Error muxing packet\n&quot;</span>);
-            <span class="hljs-keyword">break</span>;
-        }
-        av_packet_unref(&amp;pkt);
-    }
-
-    av_write_trailer(ofmt_ctx);
-    end:
-
-    avformat_close_input(&amp;ifmt_ctx);
-
-    <span class="hljs-comment">/* close output */</span>
-    <span class="hljs-keyword">if</span> (ofmt_ctx &amp;&amp; !(ofmt-&gt;flags &amp; AVFMT_NOFILE))
-        avio_closep(&amp;ofmt_ctx-&gt;pb);
-    avformat_free_context(ofmt_ctx);
-
-    av_freep(&amp;stream_mapping);
-
-    <span class="hljs-keyword">if</span> (ret &lt; <span class="hljs-number">0</span> &amp;&amp; ret != AVERROR_EOF) {
-        <span class="hljs-built_in">fprintf</span>(<span class="hljs-built_in">stderr</span>, <span class="hljs-string">&quot;Error occurred: %s\n&quot;</span>, av_err2str(ret));
-        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
-    }
-
-    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-}
-</code></pre>
-<h2 id="&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x5730;&#x5740;-kobeflv-&#x3002;"><a name="&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x5730;&#x5740;-kobeflv-&#x3002;" class="anchor-navigation-ex-anchor" href="#&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x5730;&#x5740;-kobeflv-&#x3002;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x5730;&#x5740;-kobeflv-&#x3002;" class="plugin-anchor" href="#&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x5730;&#x5740;-kobeflv-&#x3002;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x5730;&#x5740;: <a href="../MustRead/img/01_flv/Kobe.flv">Kobe.flv</a> &#x3002;</h2>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5982;&#x4F55;&#x6DF1;&#x5165;&#x5B66;&#x4E60;&#x89E3;&#x5C01;&#x88C5;&#xFF1F;"><b></b>&#x5982;&#x4F55;&#x6DF1;&#x5165;&#x5B66;&#x4E60;&#x89E3;&#x5C01;&#x88C5;&#xFF1F;</a></li><ul><li><span class="title-icon "></span><a href="#1&#x67E5;&#x770B;&#x534F;&#x8BAE;"><b></b>1.&#x67E5;&#x770B;&#x534F;&#x8BAE;</a></li><li><span class="title-icon "></span><a href="#2&#x642D;&#x5EFA;&#x8C03;&#x8BD5;&#x73AF;&#x5883;"><b></b>2.&#x642D;&#x5EFA;&#x8C03;&#x8BD5;&#x73AF;&#x5883;</a></li><li><span class="title-icon "></span><a href="#3&#x5728;&#x8C03;&#x8BD5;&#x4E2D;&#x5B66;&#x4E60;&#x89E3;&#x5C01;&#x88C5;"><b></b>3.&#x5728;&#x8C03;&#x8BD5;&#x4E2D;&#x5B66;&#x4E60;&#x89E3;&#x5C01;&#x88C5;</a></li><ul><li><span class="title-icon "></span><a href="#31&#x672A;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x5C1D;&#x8BD5;&#x63A2;&#x7D22;&#x5339;&#x914D;&#x5C01;&#x88C5;&#x683C;&#x5F0F;"><b></b>3.1.&#x672A;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x5C1D;&#x8BD5;&#x63A2;&#x7D22;&#x5339;&#x914D;&#x5C01;&#x88C5;&#x683C;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#32&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x518D;&#x6B21;&#x5C1D;&#x8BD5;&#x63A2;&#x7D22;&#x5339;&#x914D;&#x5C01;&#x88C5;&#x683C;&#x5F0F;"><b></b>3.2.&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x518D;&#x6B21;&#x5C1D;&#x8BD5;&#x63A2;&#x7D22;&#x5339;&#x914D;&#x5C01;&#x88C5;&#x683C;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#33&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x5C01;&#x88C5;&#x534F;&#x8BAE;&#xFF0C;&#x5728;&#x8BE5;&#x534F;&#x8BAE;&#x5185;&#xFF0C;&#x6BCF;&#x6B21;&#x8BFB;&#x53D6;&#x4E00;&#x4E2A;avpacket"><b></b>3.3.&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x5C01;&#x88C5;&#x534F;&#x8BAE;&#xFF0C;&#x5728;&#x8BE5;&#x534F;&#x8BAE;&#x5185;&#xFF0C;&#x6BCF;&#x6B21;&#x8BFB;&#x53D6;&#x4E00;&#x4E2A;AVPacket</a></li><li><span class="title-icon "></span><a href="#34&#x628A;&#x8BFB;&#x53D6;&#x7684;avpacket&#x4FDD;&#x5B58;&#x5230;ffformatcontext-packetbuffer&#x94FE;&#x8868;&#x4E2D;"><b></b>3.4.&#x628A;&#x8BFB;&#x53D6;&#x7684;AVPacket&#x4FDD;&#x5B58;&#x5230;FFFormatContext-&gt;packet_buffer&#x94FE;&#x8868;&#x4E2D;</a></li><li><span class="title-icon "></span><a href="#35&#x5F53;&#x6211;&#x4EEC;&#x8C03;&#x7528;avreadframe&#x8BFB;&#x53D6;avpacket&#x65F6;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x662F;&#x4ECE;packetbuffer&#x4E2D;&#x83B7;&#x53D6;"><b></b>3.5.&#x5F53;&#x6211;&#x4EEC;&#x8C03;&#x7528;av_read_frame&#x8BFB;&#x53D6;AVPacket&#x65F6;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x662F;&#x4ECE;packet_buffer&#x4E2D;&#x83B7;&#x53D6;</a></li></ul></ul></ul></div><a href="#&#x5982;&#x4F55;&#x6DF1;&#x5165;&#x5B66;&#x4E60;&#x89E3;&#x5C01;&#x88C5;&#xFF1F;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5982;&#x4F55;&#x6DF1;&#x5165;&#x5B66;&#x4E60;&#x89E3;&#x5C01;&#x88C5;&#xFF1F;"><a name="&#x5982;&#x4F55;&#x6DF1;&#x5165;&#x5B66;&#x4E60;&#x89E3;&#x5C01;&#x88C5;&#xFF1F;" class="anchor-navigation-ex-anchor" href="#&#x5982;&#x4F55;&#x6DF1;&#x5165;&#x5B66;&#x4E60;&#x89E3;&#x5C01;&#x88C5;&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5982;&#x4F55;&#x6DF1;&#x5165;&#x5B66;&#x4E60;&#x89E3;&#x5C01;&#x88C5;&#xFF1F;" class="plugin-anchor" href="#&#x5982;&#x4F55;&#x6DF1;&#x5165;&#x5B66;&#x4E60;&#x89E3;&#x5C01;&#x88C5;&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5982;&#x4F55;&#x6DF1;&#x5165;&#x5B66;&#x4E60;&#x89E3;&#x5C01;&#x88C5;&#xFF1F;</h1>
+<p>&#x6BEB;&#x65E0;&#x7591;&#x95EE;&#xFF0C;&#x901A;&#x8FC7;&#x8C03;&#x8BD5;&#x6E90;&#x7801;&#x662F;&#x6700;&#x597D;&#x7684;&#x5B66;&#x4E60;&#x7684;&#x65B9;&#x5F0F;&#xFF01;</p>
+<h2 id="1&#x67E5;&#x770B;&#x534F;&#x8BAE;"><a name="1&#x67E5;&#x770B;&#x534F;&#x8BAE;" class="anchor-navigation-ex-anchor" href="#1&#x67E5;&#x770B;&#x534F;&#x8BAE;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="1&#x67E5;&#x770B;&#x534F;&#x8BAE;" class="plugin-anchor" href="#1&#x67E5;&#x770B;&#x534F;&#x8BAE;"><i class="fa fa-link" aria-hidden="true"></i></a>1.&#x67E5;&#x770B;&#x534F;&#x8BAE;</h2>
+<p>&#x8981;&#x5B66;&#x4E60;&#x5C01;&#x88C5;&#x7684;&#x5177;&#x4F53;&#x7EC6;&#x8282;&#xFF0C;&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x5F97;&#x77E5;&#x9053;&#x89C4;&#x5219;&#xFF0C;&#x4E0D;&#x7136;&#x770B;&#x6E90;&#x7801;&#x5B9E;&#x73B0;&#x4E5F;&#x662F;&#x5F88;&#x96BE;&#x660E;&#x767D;<code>&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x8FD9;&#x6837;&#x7684;&#xFF1F;</code>&#x3002;&#x6211;&#x4EEC;&#x4E5F;&#x8BB8;&#x662F;&#x770B;MP4&#x3001;AVI&#x6216;&#x8005;RTMP&#x3001;HLS&#x7B49;&#x6D41;&#x5A92;&#x4F53;&#xFF0C;&#x672C;&#x4EBA;&#x6BD4;&#x8F83;&#x5EFA;&#x8BAE;&#x62FF;&#x5206;&#x6790;&#x5DE5;&#x5177;&#x5BF9;&#x5E94;&#x7740;&#x770B;&#x6BCF;&#x4E2A;&#x5B57;&#x8282;&#x6216;bit&#x6240;&#x8868;&#x793A;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x76F4;&#x63A5;&#x770B;&#x5B98;&#x65B9;&#x7F51;&#x70B9;&#x5206;&#x6790;&#x534F;&#x8BAE;&#x5F88;&#x662F;&#x8D39;&#x52B2;&#x7684;&#x3002;</p>
+<p>&#x5728;&#x6211;&#x770B;&#x6765;&#xFF0C;&#x8FD9;&#x4E9B;&#x534F;&#x8BAE;&#x4E0D;&#x7528;&#x8BB0;&#xFF0C;&#x4E5F;&#x8BB0;&#x4E0D;&#x4F4F;&#x3002;&#x77E5;&#x9053;&#x600E;&#x4E48;&#x5206;&#x6790;&#x51FA;&#x5176;&#x6240;&#x8868;&#x793A;&#x7684;&#x610F;&#x601D;&#x5373;&#x53EF;&#x3002;</p>
+<h2 id="2&#x642D;&#x5EFA;&#x8C03;&#x8BD5;&#x73AF;&#x5883;"><a name="2&#x642D;&#x5EFA;&#x8C03;&#x8BD5;&#x73AF;&#x5883;" class="anchor-navigation-ex-anchor" href="#2&#x642D;&#x5EFA;&#x8C03;&#x8BD5;&#x73AF;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="2&#x642D;&#x5EFA;&#x8C03;&#x8BD5;&#x73AF;&#x5883;" class="plugin-anchor" href="#2&#x642D;&#x5EFA;&#x8C03;&#x8BD5;&#x73AF;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a>2.&#x642D;&#x5EFA;&#x8C03;&#x8BD5;&#x73AF;&#x5883;</h2>
+<p>&#x53C2;&#x8003;<a href="https://ffmpeg.xianwaizhiyin.net/debug-ffmpeg/debug-ffmpeg.html" target="_blank">FFmpeg&#x539F;&#x7406;&#x2014;&#x2014;FFmpeg&#x8C03;&#x8BD5;&#x73AF;&#x5883;&#x642D;&#x5EFA;</a> &#x3002;</p>
+<p>&#x6211;&#x8FD9;&#x91CC;&#x662F;&#x5728;Mac&#x4E0A;&#x7528;Clion&#x6F14;&#x793A;&#x5206;&#x6790;&#x3002;</p>
+<h2 id="3&#x5728;&#x8C03;&#x8BD5;&#x4E2D;&#x5B66;&#x4E60;&#x89E3;&#x5C01;&#x88C5;"><a name="3&#x5728;&#x8C03;&#x8BD5;&#x4E2D;&#x5B66;&#x4E60;&#x89E3;&#x5C01;&#x88C5;" class="anchor-navigation-ex-anchor" href="#3&#x5728;&#x8C03;&#x8BD5;&#x4E2D;&#x5B66;&#x4E60;&#x89E3;&#x5C01;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="3&#x5728;&#x8C03;&#x8BD5;&#x4E2D;&#x5B66;&#x4E60;&#x89E3;&#x5C01;&#x88C5;" class="plugin-anchor" href="#3&#x5728;&#x8C03;&#x8BD5;&#x4E2D;&#x5B66;&#x4E60;&#x89E3;&#x5C01;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>3.&#x5728;&#x8C03;&#x8BD5;&#x4E2D;&#x5B66;&#x4E60;&#x89E3;&#x5C01;&#x88C5;</h2>
+<p><a href="08_demuxing.html">&#x8C03;&#x7528;API&#x5B9E;&#x73B0;&#x89E3;&#x5C01;&#x88C5;&#x5F88;&#x7B80;&#x5355;</a>&#xFF0C;&#x4F46;&#x662F;&#x60F3;&#x8981;&#x6DF1;&#x5165;&#x5B66;&#x4E60;&#x5374;&#x662F;&#x4E00;&#x4EF6;&#x67AF;&#x69C1;&#x8270;&#x96BE;&#x7684;&#x4E8B;&#x60C5;&#x3002;</p>
+<h3 id="31&#x672A;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x5C1D;&#x8BD5;&#x63A2;&#x7D22;&#x5339;&#x914D;&#x5C01;&#x88C5;&#x683C;&#x5F0F;"><a name="31&#x672A;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x5C1D;&#x8BD5;&#x63A2;&#x7D22;&#x5339;&#x914D;&#x5C01;&#x88C5;&#x683C;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#31&#x672A;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x5C1D;&#x8BD5;&#x63A2;&#x7D22;&#x5339;&#x914D;&#x5C01;&#x88C5;&#x683C;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="31&#x672A;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x5C1D;&#x8BD5;&#x63A2;&#x7D22;&#x5339;&#x914D;&#x5C01;&#x88C5;&#x683C;&#x5F0F;" class="plugin-anchor" href="#31&#x672A;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x5C1D;&#x8BD5;&#x63A2;&#x7D22;&#x5339;&#x914D;&#x5C01;&#x88C5;&#x683C;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1.&#x672A;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x5C1D;&#x8BD5;&#x63A2;&#x7D22;&#x5339;&#x914D;&#x5C01;&#x88C5;&#x683C;&#x5F0F;</h3>
+<p><a href="img/21_deep_demuxing/img_4.png" data-lightbox="1e802f4b-c7b5-480e-9de2-d9268f2f902a" data-title="img_4.png"><div class="image-wrapper"><img src="img/21_deep_demuxing/img_4.png" alt="img_4.png"></div></a></p>
+<blockquote>
+<p>&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x770B;<code>read_probe</code>&#x5BF9;&#x5E94;&#x7684;&#x534F;&#x8BAE;&#x6240;&#x5339;&#x914D;&#x7684;&#x903B;&#x8F91;&#x3002;</p>
+</blockquote>
+<h3 id="32&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x518D;&#x6B21;&#x5C1D;&#x8BD5;&#x63A2;&#x7D22;&#x5339;&#x914D;&#x5C01;&#x88C5;&#x683C;&#x5F0F;"><a name="32&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x518D;&#x6B21;&#x5C1D;&#x8BD5;&#x63A2;&#x7D22;&#x5339;&#x914D;&#x5C01;&#x88C5;&#x683C;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#32&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x518D;&#x6B21;&#x5C1D;&#x8BD5;&#x63A2;&#x7D22;&#x5339;&#x914D;&#x5C01;&#x88C5;&#x683C;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="32&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x518D;&#x6B21;&#x5C1D;&#x8BD5;&#x63A2;&#x7D22;&#x5339;&#x914D;&#x5C01;&#x88C5;&#x683C;&#x5F0F;" class="plugin-anchor" href="#32&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x518D;&#x6B21;&#x5C1D;&#x8BD5;&#x63A2;&#x7D22;&#x5339;&#x914D;&#x5C01;&#x88C5;&#x683C;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2.&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x518D;&#x6B21;&#x5C1D;&#x8BD5;&#x63A2;&#x7D22;&#x5339;&#x914D;&#x5C01;&#x88C5;&#x683C;&#x5F0F;</h3>
+<p><a href="img/21_deep_demuxing/img_5.png" data-lightbox="a092b714-118a-4c1a-a181-c6fc183eecf1" data-title="img_5.png"><div class="image-wrapper"><img src="img/21_deep_demuxing/img_5.png" alt="img_5.png"></div></a></p>
+<h3 id="33&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x5C01;&#x88C5;&#x534F;&#x8BAE;&#xFF0C;&#x5728;&#x8BE5;&#x534F;&#x8BAE;&#x5185;&#xFF0C;&#x6BCF;&#x6B21;&#x8BFB;&#x53D6;&#x4E00;&#x4E2A;avpacket"><a name="33&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x5C01;&#x88C5;&#x534F;&#x8BAE;&#xFF0C;&#x5728;&#x8BE5;&#x534F;&#x8BAE;&#x5185;&#xFF0C;&#x6BCF;&#x6B21;&#x8BFB;&#x53D6;&#x4E00;&#x4E2A;avpacket" class="anchor-navigation-ex-anchor" href="#33&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x5C01;&#x88C5;&#x534F;&#x8BAE;&#xFF0C;&#x5728;&#x8BE5;&#x534F;&#x8BAE;&#x5185;&#xFF0C;&#x6BCF;&#x6B21;&#x8BFB;&#x53D6;&#x4E00;&#x4E2A;avpacket"><i class="fa fa-link" aria-hidden="true"></i></a><a name="33&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x5C01;&#x88C5;&#x534F;&#x8BAE;&#xFF0C;&#x5728;&#x8BE5;&#x534F;&#x8BAE;&#x5185;&#xFF0C;&#x6BCF;&#x6B21;&#x8BFB;&#x53D6;&#x4E00;&#x4E2A;avpacket" class="plugin-anchor" href="#33&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x5C01;&#x88C5;&#x534F;&#x8BAE;&#xFF0C;&#x5728;&#x8BE5;&#x534F;&#x8BAE;&#x5185;&#xFF0C;&#x6BCF;&#x6B21;&#x8BFB;&#x53D6;&#x4E00;&#x4E2A;avpacket"><i class="fa fa-link" aria-hidden="true"></i></a>3.3.&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x5C01;&#x88C5;&#x534F;&#x8BAE;&#xFF0C;&#x5728;&#x8BE5;&#x534F;&#x8BAE;&#x5185;&#xFF0C;&#x6BCF;&#x6B21;&#x8BFB;&#x53D6;&#x4E00;&#x4E2A;<code>AVPacket</code></h3>
+<p><a href="img/21_deep_demuxing/img_1.png" data-lightbox="c55dfd04-c9d5-4e86-91fa-2ec827f8bde7" data-title="img_1.png"><div class="image-wrapper"><img src="img/21_deep_demuxing/img_1.png" alt="img_1.png"></div></a></p>
+<blockquote>
+<p>&#x53EF;&#x5177;&#x4F53;&#x770B;&#x5BF9;&#x5E94;&#x7684;&#x534F;&#x8BAE;&#xFF0C;&#x5177;&#x4F53;&#x8BFB;&#x53D6;<code>AVPacket</code>&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x6839;&#x636E;&#x534F;&#x8BAE;&#xFF0C;&#x8FDB;&#x884C;&#x89E3;&#x5C01;&#x88C5;&#x64CD;&#x4F5C;&#x3002;&#x5982;&#xFF1A;&#x6839;&#x636E;<a href="../MustRead/01_flv.html">flv&#x534F;&#x8BAE;</a>&#x8BFB;&#x53D6;&#x51FA;&#x6BCF;&#x4E00;&#x4E2A;<code>AVPacket</code>&#xFF0C;&#x7136;&#x540E;&#x89E3;&#x6790;&#x51FA;&#x97F3;&#x9891;&#x3001;&#x89C6;&#x9891;&#x3001;&#x89E3;&#x7801;&#x5668;&#x7B49;&#x4FE1;&#x606F;&#x3002;</p>
+</blockquote>
+<h3 id="34&#x628A;&#x8BFB;&#x53D6;&#x7684;avpacket&#x4FDD;&#x5B58;&#x5230;ffformatcontext-packetbuffer&#x94FE;&#x8868;&#x4E2D;"><a name="34&#x628A;&#x8BFB;&#x53D6;&#x7684;avpacket&#x4FDD;&#x5B58;&#x5230;ffformatcontext-packetbuffer&#x94FE;&#x8868;&#x4E2D;" class="anchor-navigation-ex-anchor" href="#34&#x628A;&#x8BFB;&#x53D6;&#x7684;avpacket&#x4FDD;&#x5B58;&#x5230;ffformatcontext-packetbuffer&#x94FE;&#x8868;&#x4E2D;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="34&#x628A;&#x8BFB;&#x53D6;&#x7684;avpacket&#x4FDD;&#x5B58;&#x5230;ffformatcontext-packetbuffer&#x94FE;&#x8868;&#x4E2D;" class="plugin-anchor" href="#34&#x628A;&#x8BFB;&#x53D6;&#x7684;avpacket&#x4FDD;&#x5B58;&#x5230;ffformatcontext-packetbuffer&#x94FE;&#x8868;&#x4E2D;"><i class="fa fa-link" aria-hidden="true"></i></a>3.4.&#x628A;&#x8BFB;&#x53D6;&#x7684;<code>AVPacket</code>&#x4FDD;&#x5B58;&#x5230;<code>FFFormatContext-&gt;packet_buffer</code>&#x94FE;&#x8868;&#x4E2D;</h3>
+<p><a href="img/21_deep_demuxing/img_2.png" data-lightbox="143bd408-464e-492d-ad3f-4184db637bb8" data-title="img_2.png"><div class="image-wrapper"><img src="img/21_deep_demuxing/img_2.png" alt="img_2.png"></div></a></p>
+<h3 id="35&#x5F53;&#x6211;&#x4EEC;&#x8C03;&#x7528;avreadframe&#x8BFB;&#x53D6;avpacket&#x65F6;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x662F;&#x4ECE;packetbuffer&#x4E2D;&#x83B7;&#x53D6;"><a name="35&#x5F53;&#x6211;&#x4EEC;&#x8C03;&#x7528;avreadframe&#x8BFB;&#x53D6;avpacket&#x65F6;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x662F;&#x4ECE;packetbuffer&#x4E2D;&#x83B7;&#x53D6;" class="anchor-navigation-ex-anchor" href="#35&#x5F53;&#x6211;&#x4EEC;&#x8C03;&#x7528;avreadframe&#x8BFB;&#x53D6;avpacket&#x65F6;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x662F;&#x4ECE;packetbuffer&#x4E2D;&#x83B7;&#x53D6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="35&#x5F53;&#x6211;&#x4EEC;&#x8C03;&#x7528;avreadframe&#x8BFB;&#x53D6;avpacket&#x65F6;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x662F;&#x4ECE;packetbuffer&#x4E2D;&#x83B7;&#x53D6;" class="plugin-anchor" href="#35&#x5F53;&#x6211;&#x4EEC;&#x8C03;&#x7528;avreadframe&#x8BFB;&#x53D6;avpacket&#x65F6;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x662F;&#x4ECE;packetbuffer&#x4E2D;&#x83B7;&#x53D6;"><i class="fa fa-link" aria-hidden="true"></i></a>3.5.&#x5F53;&#x6211;&#x4EEC;&#x8C03;&#x7528;<code>av_read_frame</code>&#x8BFB;&#x53D6;<code>AVPacket</code>&#x65F6;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x662F;&#x4ECE;<code>packet_buffer</code>&#x4E2D;&#x83B7;&#x53D6;</h3>
+<p><a href="img/21_deep_demuxing/img_6.png" data-lightbox="ea09d06b-c40b-4ddd-8920-a15f4d097f39" data-title="img_6.png"><div class="image-wrapper"><img src="img/21_deep_demuxing/img_6.png" alt="img_6.png"></div></a></p>
 <p></p><footer class="page-footer"><span class="copyright">Copyright &#xA9; xhunmon 2022  all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Update: 
-2023-04-05 20:03:04
+2023-04-25 11:34:33
 </span></footer><hr><div id="vcomments"></div><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el: "#vcomments",appId: 'xMemPde6Lax4ffLfLBkuEi9t-gzGzoHsz',appKey: 'jIVEp2lShgotSTy0GalhgIzm',placeholder: 'Just go go',avatar: '',meta: undefined,pageSize: 10,lang: 'zh-CN',recordIP: false})</script><p></p>
 
                                 
@@ -1120,12 +974,12 @@
 
             
                 
-                <a href="09_muxing.html" class="navigation navigation-prev " aria-label="Previous page: Muxing（封装）">
+                <a href="20_subtitle_ffmpeg.html" class="navigation navigation-prev " aria-label="Previous page: FFmpeg添加字幕的详细操作">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="11_decode.html" class="navigation navigation-next " aria-label="Next page: Decode（解码）">
+                <a href="../OpenGL/" class="navigation navigation-next " aria-label="Next page: OpenGL">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1136,7 +990,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Remuxing（重新封装）","level":"1.4.9","depth":2,"next":{"title":"Decode（解码）","level":"1.4.10","depth":2,"path":"FFmpeg/11_decode.md","ref":"FFmpeg/11_decode.md","articles":[]},"previous":{"title":"Muxing（封装）","level":"1.4.8","depth":2,"path":"FFmpeg/09_muxing.md","ref":"FFmpeg/09_muxing.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","favicon-absolute","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","highlight","back-to-top-button","code","-lunr","-search","search-pro","tbfed-pagefooter","pageview-count","auto-scroll-table","lightbox","hide-element","valine","katex","embed-pdf","mermaid-gb3","image-wrapper","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy xhunmon 2022 ","modify_label":"Update: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"image-wrapper":{},"github":{"url":"https://github.com/xhunmon"},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"donate":{"alipay":"/source/images/alipayimg.jpeg","alipayText":"支付宝","button":"捐赠","title":"请作者喝杯coffee","wechat":"/source/images/wechatpayimg.jpeg","wechatText":"微信"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"/apple-tou ch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{},"favicon":"/source/images/favicon.png"},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"xhunmon","repo":"VABlog","type":"star","count":true,"size":"small"},{"user":"xhunmon","width":"160","type":"follow","count":true,"size":"small"}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"embed-pdf":{},"valine":{"avatar":"","lang":"zh-CN","pageSize":10,"placeholder":"Just go go","recordIP":false,"appId":"xMemPde6Lax4ffLfLBkuEi9t-gzGzoHsz","appKey":"jIVEp2lShgotSTy0GalhgIzm"}},"theme":"default","author":"秦城季","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"秦城季&音视频","language":"zh-hans","links":{"sidebar":{"秦城季&音视频":"https://github.com/xhunmon/VABlog"}},"gitbook":"3.2.3","description":"未来那个项目都不应该缺少音视频！"},"file":{"path":"FFmpeg/10_remuxing.md","mtime":"2023-04-05T12:03:04.297Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-25T03:46:12.957Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"如何深入学习解封装？","level":"1.4.20","depth":2,"next":{"title":"OpenGL","level":"1.5","depth":1,"path":"OpenGL/README.md","ref":"OpenGL/README.md","articles":[{"title":"OpenGL基础知识","level":"1.5.1","depth":2,"path":"OpenGL/01_opengl.md","ref":"OpenGL/01_opengl.md","articles":[]},{"title":"GLSL（着色器语言）中文手册","level":"1.5.2","depth":2,"path":"OpenGL/02_glsl.md","ref":"OpenGL/02_glsl.md","articles":[]},{"title":"OpenGL ES播放RGB","level":"1.5.3","depth":2,"path":"AFPlayer/02_opengl_es.md","ref":"AFPlayer/02_opengl_es.md","articles":[]}]},"previous":{"title":"FFmpeg添加字幕的详细操作","level":"1.4.19","depth":2,"path":"FFmpeg/20_subtitle_ffmpeg.md","ref":"FFmpeg/20_subtitle_ffmpeg.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","favicon-absolute","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","highlight","back-to-top-button","code","-lunr","-search","search-pro","tbfed-pagefooter","pageview-count","auto-scroll-table","lightbox","hide-element","valine","katex","embed-pdf","mermaid-gb3","image-wrapper","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy xhunmon 2022 ","modify_label":"Update: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"image-wrapper":{},"github":{"url":"https://github.com/xhunmon"},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"donate":{"alipay":"/source/images/alipayimg.jpeg","alipayText":"支付宝","button":"捐赠","title":"请作者喝杯coffee","wechat":"/source/images/wechatpayimg.jpeg","wechatText":"微信"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"/apple-tou ch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{},"favicon":"/source/images/favicon.png"},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"xhunmon","repo":"VABlog","type":"star","count":true,"size":"small"},{"user":"xhunmon","width":"160","type":"follow","count":true,"size":"small"}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"embed-pdf":{},"valine":{"avatar":"","lang":"zh-CN","pageSize":10,"placeholder":"Just go go","recordIP":false,"appId":"xMemPde6Lax4ffLfLBkuEi9t-gzGzoHsz","appKey":"jIVEp2lShgotSTy0GalhgIzm"}},"theme":"default","author":"秦城季","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"秦城季&音视频","language":"zh-hans","links":{"sidebar":{"秦城季&音视频":"https://github.com/xhunmon/VABlog"}},"gitbook":"3.2.3","description":"未来那个项目都不应该缺少音视频！"},"file":{"path":"FFmpeg/21_deep_demuxing.md","mtime":"2023-04-25T03:34:33.080Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-25T03:46:12.957Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
