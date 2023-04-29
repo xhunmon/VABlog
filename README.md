@@ -298,6 +298,12 @@ OpenGL使用GPU渲染视频，释放宝贵的CPU资源，学习它是必不可�
     amf3_spec_121207.pdf
     amf0_spec_121207.pdf
     Advanced C and C++ Compiling.pdf
+    AAC解码算法原理详解.pdf
+    WebRTC权威指南（第三版中文版）.pdf
+    音频编码(高泽华)上.pdf
+    视频技术手册.pdf
+    高级音频编解码器资料.pdf
+    《数字信号处理》视频：https://www.bilibili.com/video/BV13P411P7Pv
 ```
 
 ---------------------------------------------
